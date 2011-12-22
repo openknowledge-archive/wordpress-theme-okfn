@@ -1,0 +1,559 @@
+/*
+ * ===================================================
+ * Used to build okfn.css.
+ * 
+ * Written in Less, the dynamic stylesheet language::
+ *   http://lesscss.org/
+ * ===================================================
+ */
+/* =========== */
+/* Colorscheme */
+/* =========== */
+/* ======= */
+/* Imports */
+/* ======= */
+/*
+ Used to build okfn.css.
+
+ Written in Less, the dynamic stylesheet language::
+   http://lesscss.org/
+
+ Based on::
+   Mark Dotto's Preboot https://github.com/markdotto/Preboot.less
+ With::
+   Custom mods by Tom Rees :-)
+*/
+/* Variables
+-------------------------------------------------- */
+/* Mixins
+-------------------------------------------------- */
+/* WP Widget UL */
+/* ------------ */
+ul.xoxo {
+  list-style-type: none;
+  margin-left: 0;
+}
+ul.xoxo ul li {
+  padding-bottom: 4px;
+}
+div.item-options {
+  padding: 10px 0;
+}
+div.item-options a {
+  margin: 0 5px;
+}
+ul#members-list {
+  list-style-type: none;
+  margin-left: 0;
+}
+/* WP VCard */
+/* -------- */
+.vcard {
+  padding: 0 !important;
+  background: rgba(220, 220, 220, 0.2);
+  vertical-align: top;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+.vcard .item-avatar {
+  display: inline-block;
+  margin: 5px;
+}
+.vcard .item {
+  position: absolute;
+  left: 66px;
+  top: 8px;
+  display: inline-block;
+}
+/* Main site-wide text-size */
+.entry p {
+  font-size: 15px;
+}
+/* WP Sidebar */
+/* ---------- */
+#sidebar #sidebar-login-form, #sidebar #sidebar-me, #sidebar .widget {
+  background: #3e8f80;
+  padding: 4px 6px 8px 6px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+/* Normal sidebar widget */
+#sidebar .widget {
+  /* Tweet Blender */
+
+  /* ------------- */
+
+}
+#sidebar .widget h3.widgettitle {
+  color: #fff;
+  padding-bottom: 5px;
+}
+#sidebar .widget h3.widgettitle a {
+  color: #fff;
+}
+#sidebar .widget > div {
+  background: #fff;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  padding: 7px;
+  color: #000;
+}
+#sidebar .widget > div a {
+  color: #000;
+}
+#sidebar .widget > div form {
+  margin: 8px 0;
+}
+#sidebar .widget > div form input[type=submit] {
+  margin: 10px 0 0 20px;
+}
+#sidebar .widget > ul {
+  list-style: none;
+  margin: 0;
+}
+#sidebar .widget > ul li {
+  background: #fff;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  padding: 2px 7px;
+  color: #000;
+  margin: 2px 0;
+  font-size: 90%;
+}
+#sidebar .widget > ul li a {
+  color: #000;
+}
+#sidebar .widget .tb_tweet {
+  padding: 10px 0;
+}
+#sidebar .widget .tb_footer {
+  margin: 6px auto;
+  display: block;
+}
+#sidebar .widget .tb_footer * {
+  float: none;
+}
+#sidebar .widget .tb-widget-configuration {
+  margin: 0;
+}
+/* Sidebar you-are-logged-in box */
+#sidebar-me > a:first-child {
+  float: left;
+  margin-top: 6px;
+  margin-right: 14px;
+}
+#sidebar-me a {
+  color: #fff;
+}
+#sidebar-me h4 {
+  padding-bottom: 2px;
+  line-height: 25px;
+}
+/* Sidebar login form */
+#sidebar #sidebar-login-form {
+  background-color: #eee;
+  padding-left: 10px;
+}
+#sidebar #sidebar-login-form label {
+  width: 130px;
+  text-align: left;
+}
+#sidebar #sidebar-login-form .forgetmenot label {
+  width: 170px;
+}
+#sidebar #sidebar-login-form input[type="text"], #sidebar #sidebar-login-form input[type="password"] {
+  margin: 0;
+  width: 110px;
+}
+#sidebar #sidebar-login-form input[type="submit"] {
+  margin-top: 5px;
+}
+/* Hack the #login-text to connect to the #sidebar-login-form */
+#sidebar p#login-text {
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+  background: #eee;
+  padding: 8px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#sidebar form#sidebar-login-form {
+  -webkit-border-top-left-radius: 0px;
+  -moz-border-radius-topleft: 0px;
+  border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  border-top-right-radius: 0px;
+}
+/* End-of-article response form */
+#respond {
+  background: #f0f0f0;
+  padding: 8px;
+  padding-top: 2px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+#respond h3 {
+  color: #ffffff;
+}
+#respond form {
+  background: #fff;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  padding: 10px;
+}
+#respond form label {
+  margin-right: 10px;
+}
+#respond form textarea {
+  width: 80%;
+}
+#respond .comment-avatar-box {
+  float: right;
+}
+#respond code {
+  display: block;
+  line-height: 16px;
+}
+/* Buddypress links at the top slightly customised */
+body#bp-default #wp-admin-bar {
+  background: rgba(0, 0, 0, 0.8);
+}
+body#bp-default #wp-admin-bar .padder {
+  background: none;
+  width: 940px;
+}
+body#bp-default #wp-admin-bar .padder > a:first-child {
+  display: none;
+}
+body#bp-default #wp-admin-bar .padder > ul {
+  position: absolute;
+  right: 0;
+}
+body#bp-default #wp-admin-bar .padder > ul > li {
+  position: static;
+  right: none;
+}
+/* ========================= */
+/* Pink/Green Drowndown Menu */
+/* ========================= */
+.okfn-dropdown {
+  position: relative;
+}
+.okfn-dropdown:hover {
+  -webkit-box-shadow: 2px -3px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px -3px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px -3px 5px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  /* Transforms when hovered */
+
+}
+.okfn-dropdown:hover > a:first-child {
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -moz-border-radius-topright: 0;
+  border-top-right-radius: 0;
+}
+.okfn-dropdown:hover .okfn-dropdown-items {
+  display: block;
+}
+.okfn-dropdown a {
+  display: block;
+  background-color: #3e8f80;
+  color: #fff;
+  padding: 11px 18px;
+  font-size: 18px;
+  position: relative;
+  word-spacing: 3px;
+}
+.okfn-dropdown a:hover {
+  background-color: #e96283;
+  text-decoration: none;
+  color: #fff;
+}
+.okfn-dropdown > a.background-heart, .okfn-dropdown > a.background-bubble, .okfn-dropdown > a.background-cog {
+  background-position: 98% 20%;
+  background-repeat: no-repeat;
+}
+.okfn-dropdown > a.background-cog {
+  background-image: url('../images/menu-icon-1.png');
+}
+.okfn-dropdown > a.background-bubble {
+  background-image: url('../images/menu-icon-2.png');
+}
+.okfn-dropdown > a.background-heart {
+  background-image: url('../images/menu-icon-3.png');
+}
+.okfn-dropdown > a:first-child {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.okfn-dropdown-items {
+  display: none;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+  margin-bottom: 40px;
+  z-index: 1;
+  -webkit-box-shadow: 2px -3px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px -3px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px -3px 5px rgba(0, 0, 0, 0.5);
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+}
+.okfn-dropdown-items a {
+  border-bottom: 2px dotted rgba(255, 255, 255, 0.4);
+}
+.okfn-dropdown-items > a:first-child {
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+}
+/* ============ */
+/* Post Content */
+/* ============ */
+img.alignleft {
+  float: left;
+  display: inline;
+  margin-right: 24px;
+  margin-top: 4px;
+}
+img.alignright {
+  float: right;
+  display: inline;
+  margin-left: 24px;
+  margin-top: 4px;
+}
+img.alignleft, img.alignright {
+  margin-bottom: 12px;
+}
+div#toc_container {
+  width: 400px;
+}
+/* ========== */
+/* Front-page */
+/* ========== */
+body.home-page .st_facebook_buttons {
+  display: none;
+}
+body.home-page .st_twitter_buttons {
+  display: none;
+}
+body.home-page .st_email_buttons {
+  display: none;
+}
+body.home-page .st_sharethis_buttons {
+  display: none;
+}
+body.home-page .st_fblike_buttons {
+  display: none;
+}
+body.home-page .st_plusone_buttons {
+  display: none;
+}
+/* ============= */
+/* Embedded Font */
+/* ============= */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url('lato300.woff') format('woff');
+}
+/* =========== */
+/* POSITIONING */
+/* =========== */
+#sidebar {
+  display: inline-block;
+  vertical-align: top;
+  width: 280px;
+  /* 4px Hack to avoid whitespace glitch between inline-block elements */
+
+  margin-left: 16px;
+}
+#content {
+  display: inline-block;
+  width: 640px;
+}
+/* ======== */
+/* Main CSS */
+/* ======== */
+html {
+  background: #222222;
+}
+body {
+  /* The canonical logo font is HelveticaNeue-Light. But we can't legally embed that in
+   * the page, not can we assume its available on the user's machine. We use Lato, an
+   * attractive (and similar) font from Google Web Fonts. */
+
+  font-family: 'Lato', serif;
+  background: #fff;
+  color: #000;
+}
+a {
+  color: #3e8f80;
+}
+a:hover {
+  color: #1f4840;
+  text-decoration: underline;
+}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+  text-decoration: none;
+}
+label,
+input,
+select,
+textarea {
+  /* Override bootstrap.css */
+
+  font-family: 'Lato', serif;
+}
+/* Use our own top-padding (coloured black) rather than BuddyPress' hack. */
+/* ---------------------------------------------------------------------- */
+body {
+  padding-top: 0 !important;
+}
+.headspace {
+  height: 25px;
+  background: #363636;
+}
+/* ========== */
+/* Page Style */
+/* ========== */
+header {
+  margin-bottom: 15px;
+  /* CSS Dropdown menu */
+
+}
+header .topbar {
+  /* Height of the OKFN header */
+
+  /* Those couple of pixels of gradient which bootstrap puts after the black bar */
+
+  position: static;
+  height: 46px;
+}
+header .topbar .fill {
+  height: 40px;
+}
+header .topbar .fill a.brand img {
+  display: block;
+  float: left;
+  margin-top: -4px;
+  margin-right: 12px;
+}
+header .topbar .fill .featurelinks {
+  margin-top: 8px;
+  float: right;
+}
+header .search-form {
+  display: none;
+}
+header li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.strapline {
+  color: #555;
+  text-shadow: 2px 2px #eee;
+  margin-bottom: 15px;
+}
+.strapline > .inner {
+  border: 2px dotted #aaa;
+  border-left: none;
+  border-right: none;
+  background: url('../images/header-strapline.png') left no-repeat;
+  padding: 10px 0 10px 100px;
+  line-height: 26px;
+  font-size: 21px;
+}
+#content .post {
+  margin-bottom: 30px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: #f7f7f7;
+  -webkit-box-shadow: 2px 2px 4px #eeeeee;
+  -moz-box-shadow: 2px 2px 4px #eeeeee;
+  box-shadow: 2px 2px 4px #eeeeee;
+  padding: 10px;
+}
+#content .post .author-box {
+  float: right;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+#content .post .post-content {
+  margin-top: -20px;
+}
+#content .post h2 a {
+  color: #000;
+}
+#content h2 {
+  font-size: 20px;
+  margin-top: 12px;
+}
+#content h2.pagetitle {
+  font-size: 26px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+footer {
+  background: #222222 url('../images/footer-watermark copy.png') top right no-repeat;
+  margin-top: 50px;
+  padding: 0;
+}
+footer > .inner {
+  background: url('../images/footer-bevel.png') top repeat-x;
+  padding: 10px 0 30px 0;
+  color: #fff;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+  min-height: 190px;
+}
+footer > .inner a, footer > .inner a:hover {
+  color: #aeebdf;
+}
+footer > .inner a:hover {
+  text-decoration: underline;
+}
+footer > .inner p {
+  margin-bottom: 4px;
+}
+footer > .inner h1, footer > .inner h2, footer > .inner h3 {
+  color: #fff;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+footer li {
+  color: #fff;
+}

@@ -1,0 +1,100 @@
+/* ========================= */
+/* Pink/Green Drowndown Menu */
+/* ========================= */
+.okfn-dropdown {
+  position: relative;
+  &:hover {
+    .box-shadow(2px -3px 5px rgba(0,0,0,0.5));
+    .border-radius(6px);
+    /* Transforms when hovered */
+    > a:first-child {
+      .border-top-left-radius(0);
+      .border-top-right-radius(0);
+    }
+    .okfn-dropdown-items {
+      display: block;
+    }
+  }
+  a {
+    display: block;
+    background-color: @col_green;
+    color: #fff;
+    padding: 11px 18px;
+    font-size: 18px;
+    position: relative;
+    word-spacing: 3px;
+    &:hover {
+      background-color: @col_pink;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  > a.background-heart,
+  > a.background-bubble,
+  > a.background-cog    { 
+    background-position: 98% 20%;
+    background-repeat: no-repeat; 
+  }
+  > a.background-cog      { background-image: url('../images/menu-icon-1.png'); }
+  > a.background-bubble   { background-image: url('../images/menu-icon-2.png'); }
+  > a.background-heart    { background-image: url('../images/menu-icon-3.png'); }
+  > a:first-child {
+    .border-radius(6px);
+  }
+}
+.okfn-dropdown-items {
+  display: none;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+  margin-bottom: 40px;
+  z-index: 1;
+  .box-shadow(2px -3px 5px rgba(0,0,0,0.5));
+  .border-top-left-radius(6px);
+  .border-top-right-radius(6px);
+  a {
+    border-bottom: 2px dotted rgba(255,255,255,0.4);
+  }
+  > a:first-child {
+    .border-top-left-radius(6px);
+    .border-top-right-radius(6px);
+  }
+}
+
+
+/* ============ */
+/* Post Content */
+/* ============ */
+img.alignleft {
+  float: left;
+  display: inline;
+  margin-right: 24px;
+  margin-top: 4px;
+}
+img.alignright {
+  float: right;
+  display: inline;
+  margin-left: 24px;
+  margin-top: 4px;
+}
+img.alignleft,
+img.alignright {
+  margin-bottom: 12px;
+}
+div#toc_container {
+  width: 400px;
+}
+
+
+/* ========== */
+/* Front-page */
+/* ========== */
+body.home-page {
+  .st_facebook_buttons  { display: none; }
+  .st_twitter_buttons   { display: none; }
+  .st_email_buttons     { display: none; }
+  .st_sharethis_buttons { display: none; }
+  .st_fblike_buttons    { display: none; }
+  .st_plusone_buttons   { display: none; }
+}

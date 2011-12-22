@@ -1,0 +1,202 @@
+/* WP Widget UL */
+/* ------------ */
+ul.xoxo {
+  list-style-type: none;
+  margin-left: 0;
+  ul li {
+    padding-bottom: 4px;
+  }
+}
+div.item-options {
+  padding: 10px 0;
+  a {
+    margin: 0 5px; 
+  }
+}
+ul#members-list {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+/* WP VCard */
+/* -------- */
+.vcard {
+  padding: 0 !important;
+  background: rgba(220,220,220,0.2);
+  vertical-align: top;
+  .border-radius(5px);
+  position: relative;
+  .item-avatar {
+    display: inline-block;
+    margin: 5px;
+  }
+  .item {
+    position: absolute;
+    left: 66px;
+    top: 8px;
+    display: inline-block;
+  }
+}
+
+/* Main site-wide text-size */
+.entry p {
+  font-size: 15px;
+}
+
+/* WP Sidebar */
+/* ---------- */
+#sidebar #sidebar-login-form,
+#sidebar #sidebar-me,
+#sidebar .widget {
+  background: @col_green;
+  padding: 4px 6px 8px 6px;
+  .border-radius(8px);
+  margin-bottom: 10px;
+}
+/* Normal sidebar widget */
+#sidebar .widget {
+  h3.widgettitle {
+    color: #fff;
+    a { color: #fff; }
+    padding-bottom: 5px;
+  }
+  > div {
+    background: #fff;
+    .border-radius(6px);
+    padding: 7px;
+    color: #000;
+    a {
+      color: #000;
+    }
+    form {
+      margin: 8px 0;
+      input[type=submit] {
+        margin: 10px 0 0 20px;
+      }
+    }
+  }
+  > ul {
+    list-style: none;
+    margin: 0;
+    li {
+      background: #fff;
+      .border-radius(6px);
+      padding: 2px 7px;
+      color: #000;
+      margin: 2px 0;
+      font-size: 90%;
+      a {
+        color: #000;
+      }
+    }
+  }
+
+  /* Tweet Blender */
+  /* ------------- */
+  .tb_tweet {
+    padding: 10px 0;
+  }
+  .tb_footer {
+    margin: 6px auto;
+    display: block;
+    * { float: none; }
+  }
+  .tb-widget-configuration {
+    margin: 0;
+  }
+}
+
+/* Sidebar you-are-logged-in box */
+#sidebar-me {
+  > a:first-child {
+    float: left;
+    margin-top: 6px;
+    margin-right: 14px;
+  }
+  a {
+    color: #fff;
+  }
+  h4 {
+    padding-bottom: 2px;
+    line-height: 25px;
+  }
+}
+
+/* Sidebar login form */
+#sidebar #sidebar-login-form {
+  background-color: #eee;
+  padding-left: 10px;
+  label {
+    width: 130px;
+    text-align: left;
+  }
+  .forgetmenot label {
+    width: 170px;
+  }
+  input[type="text"],
+  input[type="password"] {
+    margin: 0;
+    width: 110px;
+  }
+  input[type="submit"] { 
+    margin-top: 5px;
+  }
+}
+
+/* Hack the #login-text to connect to the #sidebar-login-form */
+#sidebar p#login-text {
+  .border-top-left-radius(8px);
+  .border-top-right-radius(8px);
+  background: #eee;
+  padding: 8px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#sidebar form#sidebar-login-form {
+  .border-top-left-radius(0px);
+  .border-top-right-radius(0px);
+}
+
+/* End-of-article response form */
+#respond {
+  background: #f0f0f0;
+  padding: 8px;
+  padding-top: 2px;
+  .border-radius(8px);
+  h3 { color: #fff }
+  form {
+    background: #fff;
+    .border-radius(6px);
+    padding: 10px;
+    label { margin-right: 10px; }
+    textarea { width: 80%; }
+  }
+  .comment-avatar-box {
+    float: right;
+  }
+  code {
+    display: block;
+    line-height: 16px;
+  }
+}
+
+
+/* Buddypress links at the top slightly customised */
+body#bp-default #wp-admin-bar {
+  background: rgba(0,0,0,0.8);
+  .padder {
+    background: none;
+    width: 940px;
+    > a:first-child {
+      display: none;
+    }
+    > ul {
+      position: absolute;
+      right: 0;
+      > li {
+        position: static;
+        right: none;
+      }
+    }
+  }
+}
