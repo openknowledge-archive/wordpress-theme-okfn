@@ -21,7 +21,7 @@ Okfn.createCarousel = function(items, domElement) {
   }
 
   function showBubble(something,somethingElse,nextId) {
-    autoScroll = setTimeout(function() { $('.jcarousel-next').click(); }, 9000);
+    autoScroll = setTimeout(function() { $('.jcarousel-next').click(); }, 15000);
     // Can you tell I hacked the callbacks until I got what I wanted?
     var id = (((nextId-1) % items.length) + items.length) % items.length;
     var item = items[id];
