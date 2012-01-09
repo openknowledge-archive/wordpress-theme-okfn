@@ -344,7 +344,7 @@ ul#groups-list .item:after {
   border: 1px solid #eee;
   margin: 8px;
 }
-#item-header-content {
+#item-header-content:after {
   /* Clearfix */
 
   clear: both;
