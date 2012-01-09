@@ -446,27 +446,27 @@ h5 {
 h6 {
   line-height: 16px;
 }
-.page h1 {
+#content h1 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.page h2 {
+#content h2 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.page h3 {
+#content h3 {
   margin-top: 20px;
   margin-bottom: 7px;
 }
-.page h4 {
+#content h4 {
   margin-top: 20px;
   margin-bottom: 5px;
 }
-.page h5 {
+#content h5 {
   margin-top: 20px;
   margin-bottom: 5px;
 }
-.page h6 {
+#content h6 {
   margin-top: 20px;
   margin-bottom: 5px;
 }
