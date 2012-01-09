@@ -5,7 +5,6 @@
 add_filter('bp_sidebar_login_form', 'filter_login_form');
 add_filter('wp_nav_menu', 'filter_nav_menu'); 
 add_filter('comment_form', 'filter_comment_form'); 
-add_filter('widget_text', 'filter_buttons'); 
 
 /*
  * Use the simple_html_dom library to perform 
@@ -59,11 +58,6 @@ function filter_comment_form() {
 }
 							
 
-function filter_buttons($widget) {
-  // Add 'class="btn"'
-  $widget = preg_replace('/(type="submit")/i', '$1 class="btn"', $widget);
-  return $widget;
-}
 function filter_buttons_primary($widget) {
   // Add 'class="btn"'
   $widget = preg_replace('/(type="submit")/i', '$1 class="btn primary"', $widget);

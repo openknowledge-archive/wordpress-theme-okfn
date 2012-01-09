@@ -597,3 +597,16 @@ footer > .inner h1, footer > .inner h2, footer > .inner h3 {
 footer li {
   color: #fff;
 }
+/* ============================ */
+/* BuddyPress: Groups directory */
+/* ============================ */
+ul#groups-list {
+  list-style: none;
+  margin: 10px 0;
+  margin-left: 0;
+}
+ul#groups-list li {
+  border-bottom: 1px solid #ccc;
+  background: #f7f7f7;
+  padding: 12px;
+}

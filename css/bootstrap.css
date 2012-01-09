@@ -612,8 +612,10 @@ label {
   padding-top: 6px;
   font-size: 13px;
   line-height: 18px;
+  /*
   float: left;
   width: 130px;
+  */
   text-align: right;
   color: #404040;
 }
@@ -1870,6 +1872,7 @@ footer {
   border-color: #339bb9 #339bb9 #22697d;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
+button, input[type=submit], input[type=reset],
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -1901,11 +1904,12 @@ footer {
   -o-transition: 0.1s linear all;
   transition: 0.1s linear all;
 }
-.btn:hover {
+button:hover, input[type=submit]:hover, input[type=reset]:hover,
   background-position: 0 -15px;
   color: #333;
   text-decoration: none;
 }
+button:focus, input[type=submit]:focus, input[type=reset]:focus,
 .btn:focus {
   outline: 1px dotted #666;
 }
@@ -1925,6 +1929,7 @@ footer {
   border-color: #0064cd #0064cd #003f81;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
+button:active, input[type=submit]:active, input[type=reset]:focus,
 .btn.active, .btn :active {
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -1942,6 +1947,7 @@ footer {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+button[disabled], input[type=submit][disabled], input[type=reset][disabled],
 .btn[disabled] {
   cursor: default;
   background-image: none;
@@ -1969,6 +1975,7 @@ footer {
 :root .alert-message, :root .btn {
   border-radius: 0 \0;
 }
+button::-moz-focus-inner, input[type=submit]::-moz-focus-inner {
 button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   padding: 0;
   border: 0;
