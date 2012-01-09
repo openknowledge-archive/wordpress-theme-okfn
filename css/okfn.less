@@ -11,6 +11,7 @@
 /* Colorscheme */
 /* =========== */
 @col_green: #3e8f80;
+@col_green_hover: lighten(@col_green, 40%);
 @col_pink: #e96283;
 @col_grey: #222;
 
@@ -31,7 +32,7 @@
 /* POSITIONING */
 /* =========== */
 @total-width: 940px;
-@sidebar-width: 280px;
+@sidebar-width: 240px;
 @sidebar-gap: 20px; 
 @content-width: @total-width - @sidebar-width - @sidebar-gap;
 #sidebar {
@@ -84,6 +85,10 @@ h6 { line-height: 16px; }
 #content h4 { margin-top: 20px; margin-bottom: 5px; }
 #content h5 { margin-top: 20px; margin-bottom: 5px; }
 #content h6 { margin-top: 20px; margin-bottom: 5px; }
+
+input[type="image"] { 
+  width: auto;
+}
 
 label, input, select, textarea {
   /* Override bootstrap.css */
@@ -219,18 +224,3 @@ footer {
 }
 
 
-
-/* ============================ */
-/* BuddyPress: Groups directory */
-/* ============================ */
-
-ul#groups-list {
-  list-style: none;
-  margin: 10px 0;
-  margin-left: 0;
-  li {
-    border-bottom: 1px solid #ccc;
-    background: #f7f7f7;
-    padding: 12px;
-  }
-}

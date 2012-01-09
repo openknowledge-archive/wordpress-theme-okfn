@@ -576,15 +576,14 @@ fieldset {
 }
 fieldset legend {
   display: block;
-  padding-left: 150px;
   font-size: 19.5px;
   line-height: 1;
   color: #404040;
-  *padding: 0 0 5px 145px;
   /* IE6-7 */
 
   *line-height: 1.5;
   /* IE6-7 */
+  padding: 0 20px 5px 20px;
 
 }
 form .clearfix {
@@ -1633,12 +1632,14 @@ a.menu:after, .dropdown-toggle:after {
 .dropdown.open .dropdown-menu {
   display: block;
 }
-.tabs, .pills {
+.item-list-tabs ul, .tabs, .pills {
   margin: 0 0 18px;
   padding: 0;
   list-style: none;
   zoom: 1;
 }
+.item-list-tabs ul:before, 
+.item-list-tabs ul:after, 
 .tabs:before,
 .pills:before,
 .tabs:after,
@@ -1647,25 +1648,26 @@ a.menu:after, .dropdown-toggle:after {
   content: "";
   zoom: 1;
 }
+.item-list-tabs ul:after, 
 .tabs:after, .pills:after {
   clear: both;
 }
-.tabs > li, .pills > li {
+.item-list-tabs > ul > li, .tabs > li, .pills > li {
   float: left;
 }
-.tabs > li > a, .pills > li > a {
+.item-list-tabs > ul > li > a, .tabs > li > a, .pills > li > a {
   display: block;
 }
-.tabs {
+.item-list-tabs ul, .tabs {
   border-color: #ddd;
   border-style: solid;
   border-width: 0 0 1px;
 }
-.tabs > li {
+.item-list-tabs > ul > li, .tabs > li {
   position: relative;
   margin-bottom: -1px;
 }
-.tabs > li > a {
+.item-list-tabs > ul > li > a, .tabs > li > a {
   padding: 0 15px;
   margin-right: 2px;
   line-height: 34px;
@@ -1674,12 +1676,17 @@ a.menu:after, .dropdown-toggle:after {
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-.tabs > li > a:hover {
+.item-list-tabs > ul > li > a:hover, .tabs > li > a:hover {
   text-decoration: none;
   background-color: #eee;
   border-color: #eee #eee #ddd;
 }
-.tabs .active > a, .tabs .active > a:hover {
+.item-list-tabs .selected > a, 
+.item-list-tabs .current > a, 
+.item-list-tabs .current > a:hover, 
+.item-list-tabs .selected > a:hover, 
+.tabs .active > a, 
+.tabs .active > a:hover {
   color: #808080;
   background-color: #ffffff;
   border: 1px solid #ddd;
@@ -1704,7 +1711,7 @@ a.menu:after, .dropdown-toggle:after {
 .tabs li.open a.menu:after, .tabs .dropdown.open .dropdown-toggle:after {
   border-top-color: #555;
 }
-.pills a {
+.item-list-tabs#subnav a, .pills a {
   margin: 5px 3px 5px 0;
   padding: 0 15px;
   line-height: 30px;
@@ -1713,13 +1720,13 @@ a.menu:after, .dropdown-toggle:after {
   -moz-border-radius: 15px;
   border-radius: 15px;
 }
-.pills a:hover {
+.item-list-tabs#subnav a:hover, .pills a:hover {
   color: #ffffff;
   text-decoration: none;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
   background-color: #00438a;
 }
-.pills .active a {
+.item-list-tabs#subnav .current a, .item-list-tabs#subnav .selected a, .pills .active a {
   color: #ffffff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
   background-color: #0069d6;

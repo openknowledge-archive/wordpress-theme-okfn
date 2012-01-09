@@ -91,6 +91,7 @@ ul#members-list {
 #sidebar .widget h3.widgettitle {
   color: #fff;
   padding-bottom: 5px;
+  font-size: 14px;
 }
 #sidebar .widget h3.widgettitle a {
   color: #fff;
@@ -108,6 +109,9 @@ ul#members-list {
 }
 #sidebar .widget > div form {
   margin: 8px 0;
+}
+#sidebar .widget > div form input[type="text"] {
+  width: 204px;
 }
 #sidebar .widget > div form input[type=submit] {
   margin: 10px 0 0 20px;
@@ -161,15 +165,19 @@ ul#members-list {
   padding-left: 10px;
 }
 #sidebar #sidebar-login-form label {
-  width: 130px;
+  width: 95px;
   text-align: left;
+  float: left;
+}
+#sidebar #sidebar-login-form label:first-child {
+  margin-right: 15px;
 }
 #sidebar #sidebar-login-form .forgetmenot label {
   width: 170px;
 }
 #sidebar #sidebar-login-form input[type="text"], #sidebar #sidebar-login-form input[type="password"] {
   margin: 0;
-  width: 110px;
+  width: 95px;
 }
 #sidebar #sidebar-login-form input[type="submit"] {
   margin-top: 5px;
@@ -245,6 +253,176 @@ body#bp-default #wp-admin-bar .padder > ul {
 body#bp-default #wp-admin-bar .padder > ul > li {
   position: static;
   right: none;
+}
+/* ============================ */
+/* BuddyPress: Groups directory */
+/* ============================ */
+ul.item-list, ul#groups-list {
+  /* Groups directory */
+
+  list-style: none;
+  margin: 10px 0;
+  margin-left: 0;
+}
+ul.item-list li, ul#groups-list li {
+  border-bottom: 1px solid #ccc;
+  background: #f7f7f7;
+  padding: 12px;
+}
+ul.item-list li .activity-avatar,
+ul#groups-list li .activity-avatar,
+ul.item-list li .item-avatar,
+ul#groups-list li .item-avatar {
+  float: right;
+  padding: 3px;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+ul.item-list p img, ul#groups-list p img {
+  vertical-align: middle;
+  margin: 4px;
+}
+ul.item-list .activity-content:after,
+ul#groups-list .activity-content:after,
+ul.item-list .item:after,
+ul#groups-list .item:after {
+  /* Clearfix */
+
+  clear: both;
+  display: block;
+  content: ".";
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.activity-meta > * {
+  margin: 0 12px;
+}
+.activity-meta > *:first-child {
+  margin-left: 0;
+}
+.activity-meta > * span {
+  color: #999;
+}
+.activity-meta > * span:before {
+  content: "(";
+}
+.activity-meta > * span:after {
+  content: ")";
+}
+.padder {
+  position: relative;
+}
+#item-actions {
+  /* Admin list */
+
+  float: right;
+  margin: 0 0 10px 10px;
+  padding: 4px 10px 8px 10px;
+}
+#item-actions h3 {
+  margin-top: 0;
+  font-size: 9px;
+}
+#item-actions ul {
+  text-align: center;
+  list-style: none;
+  margin: 0 0 0 0;
+}
+#item-header {
+  /* Push the nav bar below the major avatar */
+
+  min-height: 190px;
+}
+#item-header-avatar {
+  /* Major group avatar */
+
+  float: left;
+  padding: 5px;
+  border: 1px solid #eee;
+  margin: 8px;
+}
+.item-list-tabs ul li a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.item-list-tabs ul li a span {
+  color: #999;
+}
+.item-list-tabs ul li a span:before {
+  content: "(";
+}
+.item-list-tabs ul li a span:after {
+  content: ")";
+}
+.item-list-tabs ul .last {
+  float: right;
+}
+.item-list-tabs#subnav ul {
+  margin-top: -8px;
+  margin-bottom: 20px;
+  border: none;
+}
+.item-list-tabs#subnav ul .current a, .item-list-tabs#subnav ul .current a:hover {
+  background-color: #3e8f80;
+  color: #fff;
+}
+.item-list-tabs#subnav ul .current a span, .item-list-tabs#subnav ul .current a:hover span {
+  color: #fff;
+}
+.item-list-tabs#subnav ul a:hover {
+  background-color: #f0f0f0;
+  color: #3e8f80;
+}
+/* ======================== */
+/* My account: Special case */
+/* ======================== */
+body.my-account .item-list-tabs ul li a {
+  font-size: 13px;
+  padding: 0 7px;
+  line-height: 26px;
+}
+/* ========================= */
+/* Buddypress: Members lists */
+/* ========================= */
+#members-list {
+  font-size: 0;
+}
+#members-list li {
+  display: block;
+  float: left;
+  font-size: 12px;
+  background: #eee;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  width: 304px;
+  margin: 5px 3px;
+  padding: 9px 7px;
+  height: 52px;
+  overflow: hidden;
+}
+#members-list li .item-avatar {
+  float: left;
+  margin-right: 14px;
+}
+#members-list li .item-title {
+  font-size: 14px;
+}
+#members-list li .item-title .update {
+  display: none;
+}
+#members-list:after {
+  /* Clearfix */
+
+  clear: both;
+  display: block;
+  content: ".";
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 /* ========================= */
 /* Pink/Green Drowndown Menu */
@@ -391,14 +569,14 @@ body.home-page .st_plusone_buttons {
 #sidebar {
   display: inline-block;
   vertical-align: top;
-  width: 280px;
+  width: 240px;
   /* 4px Hack to avoid whitespace glitch between inline-block elements */
 
   margin-left: 16px;
 }
 #content {
   display: inline-block;
-  width: 640px;
+  width: 680px;
 }
 /* ======== */
 /* Main CSS */
@@ -469,6 +647,9 @@ h6 {
 #content h6 {
   margin-top: 20px;
   margin-bottom: 5px;
+}
+input[type="image"] {
+  width: auto;
 }
 label,
 input,
@@ -596,17 +777,4 @@ footer > .inner h1, footer > .inner h2, footer > .inner h3 {
 }
 footer li {
   color: #fff;
-}
-/* ============================ */
-/* BuddyPress: Groups directory */
-/* ============================ */
-ul#groups-list {
-  list-style: none;
-  margin: 10px 0;
-  margin-left: 0;
-}
-ul#groups-list li {
-  border-bottom: 1px solid #ccc;
-  background: #f7f7f7;
-  padding: 12px;
 }
