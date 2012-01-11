@@ -568,22 +568,22 @@ body.home-page .st_plusone_buttons {
 /* Embedded Font */
 /* ============= */
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url('opensans-light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
   font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url('lato-italic.woff') format('woff');
+  font-weight: normal;
+  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url('opensans-light-italic.woff') format('woff');
 }
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Open Sans';
   font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url('lato-regular.woff') format('woff');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url('lato-bold.woff') format('woff');
+  font-weight: bold;
+  src: local('Open Sans'), local('OpenSans'), url('opensans.woff') format('woff');
 }
 /* =========== */
 /* POSITIONING */
@@ -608,10 +608,11 @@ html {
 }
 body {
   /* The canonical logo font is HelveticaNeue-Light. But we can't legally embed that in
-   * the page, not can we assume its available on the user's machine. We use Lato, an
+   * the page, not can we assume its available on the user's machine. We use @okfn-font-name, an
    * attractive (and similar) font from Google Web Fonts. */
 
-  font-family: 'Lato', serif;
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
   background: #fff;
   color: #000;
 }
@@ -621,6 +622,9 @@ a {
 a:hover {
   color: #1f4840;
   text-decoration: underline;
+}
+p {
+  font-weight: 300;
 }
 h1 a:hover,
 h2 a:hover,
@@ -679,7 +683,7 @@ select,
 textarea {
   /* Override bootstrap.css */
 
-  font-family: 'Lato', serif;
+  font-family: 'Open Sans', serif;
 }
 /* Use our own top-padding (coloured black) rather than BuddyPress' hack. */
 /* ---------------------------------------------------------------------- */
