@@ -16,8 +16,6 @@
 @col_grey: #222;
 
 @okfn-font-name: 'Open Sans';
-@okfn-font-weight: 300;
-@okfn-font-weight-bold: 400;
 
 /* ======= */
 /* Imports */
@@ -79,7 +77,6 @@ body {
    * the page, not can we assume its available on the user's machine. We use @okfn-font-name, an
    * attractive (and similar) font from Google Web Fonts. */
   font-family: @okfn-font-name, serif;
-  font-weight: @okfn-font-weight;
   background: #fff;
   color: #000;
 }
@@ -90,13 +87,12 @@ a:hover {
   color: darken(@col_green, 20%);
   text-decoration: underline;
 }
-p {
-  font-weight: @okfn-font-weight;
-}
 h1,h2,h3,h4,h5,h6 {
   a:hover {
     text-decoration: none;
   }
+  /* Override stupid Bootstrap rule */
+  font-weight: normal;
 }
 /* Override stupid Bootstrap rule */
 h2 { line-height: 26px; }

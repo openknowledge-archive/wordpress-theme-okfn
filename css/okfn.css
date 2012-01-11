@@ -611,7 +611,6 @@ body {
    * attractive (and similar) font from Google Web Fonts. */
 
   font-family: 'Open Sans', serif;
-  font-weight: 300;
   background: #fff;
   color: #000;
 }
@@ -622,8 +621,15 @@ a:hover {
   color: #1f4840;
   text-decoration: underline;
 }
-p {
-  font-weight: 300;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Override stupid Bootstrap rule */
+
+  font-weight: normal;
 }
 h1 a:hover,
 h2 a:hover,
