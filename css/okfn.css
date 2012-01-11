@@ -569,8 +569,21 @@ body.home-page .st_plusone_buttons {
 /* ============= */
 @font-face {
   font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url('lato-italic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lato';
   font-style: normal;
-  src: local('Lato Light'), local('Lato-Light'), url('lato300.woff') format('woff');
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url('lato-regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url('lato-bold.woff') format('woff');
 }
 /* =========== */
 /* POSITIONING */
