@@ -570,7 +570,6 @@ body.home-page .st_plusone_buttons {
 @font-face {
   font-family: 'Lato';
   font-style: normal;
-  font-weight: 300;
   src: local('Lato Light'), local('Lato-Light'), url('lato300.woff') format('woff');
 }
 /* =========== */
