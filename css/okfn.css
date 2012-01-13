@@ -567,22 +567,11 @@ body.home-page .st_plusone_buttons {
 /* Embedded Font */
 /* ============= */
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
+  font-family: 'OpenSansRegular';
+  src: url('opensans-webfont.eot');
+  src: url('opensans-webfont.eot?#iefix') format('embedded-opentype'), url('opensans-webfont.woff') format('woff'), url('opensans-webfont.ttf') format('truetype'), url('opensans-webfont.svg#OpenSansRegular') format('svg');
   font-weight: normal;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url('opensans-light.woff') format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: normal;
-  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url('opensans-light-italic.woff') format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
   font-style: normal;
-  font-weight: bold;
-  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url('opensans-semibold.woff') format('woff');
 }
 /* =========== */
 /* POSITIONING */
@@ -610,8 +599,7 @@ body {
    * the page, not can we assume its available on the user's machine. We use @okfn-font-name, an
    * attractive (and similar) font from Google Web Fonts. */
 
-  font-family: 'Open Sans', serif;
-  font-weight: 300;
+  font-family: OpenSansRegular, serif;
   background: #fff;
   color: #000;
 }
@@ -682,7 +670,7 @@ select,
 textarea {
   /* Override bootstrap.css */
 
-  font-family: 'Open Sans', serif;
+  font-family: OpenSansRegular, serif;
 }
 /* Use our own top-padding (coloured black) rather than BuddyPress' hack. */
 /* ---------------------------------------------------------------------- */

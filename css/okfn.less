@@ -15,9 +15,7 @@
 @col_pink: #e96283;
 @col_grey: #222;
 
-@okfn-font-name: 'Open Sans';
-@okfn-font-weight: 300;
-@okfn-font-weight-bold: 400;
+@okfn-font-name: OpenSansRegular;
 
 /* ======= */
 /* Imports */
@@ -30,22 +28,15 @@
 /* Embedded Font */
 /* ============= */
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url('opensans-light.woff') format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: normal;
-  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url('opensans-light-italic.woff') format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: bold;
-  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url('opensans-semibold.woff') format('woff');
+    font-family: 'OpenSansRegular';
+    src: url('opensans-webfont.eot');
+    src: url('opensans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-webfont.woff') format('woff'),
+         url('opensans-webfont.ttf') format('truetype'),
+         url('opensans-webfont.svg#OpenSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 
@@ -79,7 +70,6 @@ body {
    * the page, not can we assume its available on the user's machine. We use @okfn-font-name, an
    * attractive (and similar) font from Google Web Fonts. */
   font-family: @okfn-font-name, serif;
-  font-weight: @okfn-font-weight;
   background: #fff;
   color: #000;
 }
@@ -91,7 +81,7 @@ a:hover {
   text-decoration: underline;
 }
 p {
-  font-weight: @okfn-font-weight;
+  font-weight: 300;
 }
 h1,h2,h3,h4,h5,h6 {
   a:hover {
