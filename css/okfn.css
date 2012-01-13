@@ -567,9 +567,9 @@ body.home-page .st_plusone_buttons {
 /* Embedded Font */
 /* ============= */
 @font-face {
-  font-family: 'OpenSansRegular';
-  src: url('opensans-webfont.eot');
-  src: url('opensans-webfont.eot?#iefix') format('embedded-opentype'), url('opensans-webfont.woff') format('woff'), url('opensans-webfont.ttf') format('truetype'), url('opensans-webfont.svg#OpenSansRegular') format('svg');
+  font-family: 'OpenSansLight';
+  src: url('opensans-light-webfont.eot');
+  src: url('opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('opensans-light-webfont.woff') format('woff'), url('opensans-light-webfont.ttf') format('truetype'), url('opensans-light-webfont.svg#OpenSansLight') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -599,7 +599,7 @@ body {
    * the page, not can we assume its available on the user's machine. We use @okfn-font-name, an
    * attractive (and similar) font from Google Web Fonts. */
 
-  font-family: OpenSansRegular, serif;
+  font-family: OpenSansLight, serif;
   background: #fff;
   color: #000;
 }
@@ -670,7 +670,7 @@ select,
 textarea {
   /* Override bootstrap.css */
 
-  font-family: OpenSansRegular, serif;
+  font-family: OpenSansLight, serif;
 }
 /* Use our own top-padding (coloured black) rather than BuddyPress' hack. */
 /* ---------------------------------------------------------------------- */
