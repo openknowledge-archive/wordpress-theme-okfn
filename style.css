@@ -1,13 +1,11 @@
 /*
-Theme Name:     OKFN Theme
-Theme URI:      zephod.github.com/redesign/
-Description:    The default theme for the OKFN. Built on the Buddypress core theme.
+Theme Name:     OKFN Master Theme
+Theme URI:      http://github.com/okfn/okfn-master-wordpress-theme
+Description:    The default theme for OKFN websites. Built on the Buddypress core theme.
 Author:         Tom Rees
 Template:       bp-default
 Tags:           buddypress
-Version:        2.0
+Version:        1.0
 */
 
-@import url('css/bootstrap.css');
-@import url('css/carousel.css');
 @import url('css/okfn.css');

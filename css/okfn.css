@@ -1,10 +1,18 @@
+@import 'bootstrap.modified.css';
 /*
- * ===================================================
- * Used to build okfn.css.
+ * =======================================================
+ * OKFN.CSS IS AN AUTO-GENERATED FILE!!!
+ *
+ * To modify: 
+ * - Change the appropriate file:
+ *   - okfn.less            :: Core page structure & global tags
+ *   - okfn-content.less    :: Website content theming.
+ * - Then recompile the CSS with the Less Compiler:
+ *   `lessc okfn.less`
  * 
- * Written in Less, the dynamic stylesheet language::
+ * To learn about Less, the dynamic stylesheet language:
  *   http://lesscss.org/
- * ===================================================
+ * =======================================================
  */
 /* =========== */
 /* Colorscheme */
@@ -13,22 +21,17 @@
 /* Imports */
 /* ======= */
 /*
- Used to build okfn.css.
-
- Written in Less, the dynamic stylesheet language::
-   http://lesscss.org/
-
- Based on::
-   Mark Dotto's Preboot https://github.com/markdotto/Preboot.less
- With::
-   Custom mods by Tom Rees :-)
-*/
-/* Variables
--------------------------------------------------- */
-/* Mixins
--------------------------------------------------- */
-/* WP Widget UL */
-/* ------------ */
+ * ========================
+ *  functions.less
+ *  --------------
+ *  Custom Less functions file by Tom Rees.
+ *  Based on Mark Dotto's Preboot:
+ *     https://github.com/markdotto/Preboot.less
+ * ========================
+ */
+/* ==================== */
+/* Wordpress: Widget UL */
+/* ==================== */
 ul.xoxo {
   list-style-type: none;
   margin-left: 0;
@@ -46,8 +49,9 @@ ul#members-list {
   list-style-type: none;
   margin-left: 0;
 }
-/* WP VCard */
-/* -------- */
+/* ================ */
+/* Wordpress: VCard */
+/* ================ */
 .vcard {
   padding: 0 !important;
   background: rgba(220, 220, 220, 0.2);
@@ -67,12 +71,15 @@ ul#members-list {
   top: 8px;
   display: inline-block;
 }
-/* Main site-wide text-size */
+/* ===================== */
+/* Wordpress: Blog Entry */
+/* ===================== */
 .entry p {
   font-size: 15px;
 }
-/* WP Sidebar */
-/* ---------- */
+/* ================== */
+/* Wordpress: Sidebar */
+/* ================== */
 #sidebar #sidebar-login-form, #sidebar #sidebar-me, #sidebar .widget {
   background: #3e8f80;
   padding: 4px 6px 8px 6px;
@@ -146,7 +153,9 @@ ul#members-list {
 #sidebar .widget .tb-widget-configuration {
   margin: 0;
 }
-/* Sidebar you-are-logged-in box */
+/* ======================================== */
+/* Wordpress: Sidebar you-are-logged-in box */
+/* ======================================== */
 #sidebar-me > a:first-child {
   float: left;
   margin-top: 6px;
@@ -159,7 +168,9 @@ ul#members-list {
   padding-bottom: 2px;
   line-height: 25px;
 }
-/* Sidebar login form */
+/* ============================= */
+/* Wordpress: Sidebar login form */
+/* ============================= */
 #sidebar #sidebar-login-form {
   background-color: #eee;
   padding-left: 10px;
@@ -182,7 +193,9 @@ ul#members-list {
 #sidebar #sidebar-login-form input[type="submit"] {
   margin-top: 5px;
 }
-/* Hack the #login-text to connect to the #sidebar-login-form */
+/* ========================================================== */
+/* Wordpress: #login-text connects to the #sidebar-login-form */
+/* ========================================================== */
 #sidebar p#login-text {
   -webkit-border-top-left-radius: 8px;
   -moz-border-radius-topleft: 8px;
@@ -203,7 +216,9 @@ ul#members-list {
   -moz-border-radius-topright: 0px;
   border-top-right-radius: 0px;
 }
-/* End-of-article response form */
+/* ======================================= */
+/* Wordpress: End-of-article response form */
+/* ======================================= */
 #respond {
   background: #f0f0f0;
   padding: 8px;
@@ -235,7 +250,9 @@ ul#members-list {
   display: block;
   line-height: 16px;
 }
-/* Buddypress links at the top slightly customised */
+/* ================================== */
+/* Buddypress: Top links (customised) */
+/* ================================== */
 body#bp-default #wp-admin-bar {
   background: rgba(0, 0, 0, 0.8);
 }
@@ -386,9 +403,9 @@ ul#groups-list .item:after {
   background-color: #f0f0f0;
   color: #3e8f80;
 }
-/* ======================== */
-/* My account: Special case */
-/* ======================== */
+/* ==================================== */
+/* Buddypress: My account: Special case */
+/* ==================================== */
 body.my-account .item-list-tabs ul li a {
   font-size: 13px;
   padding: 0 7px;
@@ -433,6 +450,130 @@ body.my-account .item-list-tabs ul li a {
   visibility: hidden;
   line-height: 0;
   height: 0;
+}
+/* ========== */
+/* Front-page */
+/* ========== */
+body.home-page .st_facebook_buttons {
+  display: none;
+}
+body.home-page .st_twitter_buttons {
+  display: none;
+}
+body.home-page .st_email_buttons {
+  display: none;
+}
+body.home-page .st_sharethis_buttons {
+  display: none;
+}
+body.home-page .st_fblike_buttons {
+  display: none;
+}
+body.home-page .st_plusone_buttons {
+  display: none;
+}
+/* ================== */
+/* Frontpage Carousel */
+/* ================== */
+div.frontpage-carousel {
+  margin: 0 auto;
+  width: 940px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+div.frontpage-carousel .edge {
+  height: 246px;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-left: none;
+  border-right: none;
+}
+div.frontpage-carousel .jcarousel-container {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #D4D0C8;
+  border: 1px solid #808080;
+}
+div.frontpage-carousel .jcarousel-direction-rtl {
+  direction: rtl;
+}
+div.frontpage-carousel .jcarousel-container-horizontal {
+  width: 940px;
+  padding: 20px 40px;
+}
+div.frontpage-carousel .jcarousel-clip {
+  overflow: hidden;
+  width: 940px;
+  height: 250px;
+}
+div.frontpage-carousel .jcarousel-item {
+  width: 940px;
+  height: 250px;
+}
+div.frontpage-carousel .jcarousel-item:hover, div.frontpage-carousel .jcarousel-item:focus {
+  border-color: #808080;
+}
+div.frontpage-carousel .jcarousel-item-horizontal {
+  margin-left: 0;
+  margin-right: 7px;
+}
+div.frontpage-carousel .jcarousel-direction-rtl .jcarousel-item-horizontal {
+  margin-left: 7px;
+  margin-right: 0;
+}
+div.frontpage-carousel .jcarousel-next, div.frontpage-carousel .jcarousel-prev {
+  display: none !important;
+  position: absolute;
+  top: 50px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
+  content: '';
+  text-align: center;
+  padding: 8px 18px 8px 18px;
+  font-family: 'Lato', sans-serif;
+  color: #000;
+}
+div.frontpage-carousel .frontpage-carousel:hover .jcarousel-next, div.frontpage-carousel .frontpage-carousel:hover .jcarousel-prev {
+  display: block !important;
+}
+div.frontpage-carousel .jcarousel-next {
+  right: 0px;
+  border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+}
+div.frontpage-carousel .jcarousel-prev {
+  left: 0px;
+  border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+}
+div.frontpage-carousel .jcarousel-prev:hover,
+div.frontpage-carousel .jcarousel-prev:focus,
+div.frontpage-carousel .jcarousel-next:hover,
+div.frontpage-carousel .jcarousel-next:focus,
+div.frontpage-carousel .jcarousel-prev:active,
+div.frontpage-carousel .jcarousel-next:active {
+  color: #933;
+}
+/* ================================== */
+/* Frontpage Carousel's speech bubble */
+/* ================================== */
+.carousel-bubble {
+  width: 300px;
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  background: #fff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  overflow: hidden;
+}
+.carousel-bubble > .inner {
+  width: 220px;
+  padding: 20px 24px;
 }
 /* ========================= */
 /* Pink/Green Drowndown Menu */
@@ -542,27 +683,6 @@ img.alignleft, img.alignright {
 div#toc_container {
   width: 400px;
 }
-/* ========== */
-/* Front-page */
-/* ========== */
-body.home-page .st_facebook_buttons {
-  display: none;
-}
-body.home-page .st_twitter_buttons {
-  display: none;
-}
-body.home-page .st_email_buttons {
-  display: none;
-}
-body.home-page .st_sharethis_buttons {
-  display: none;
-}
-body.home-page .st_fblike_buttons {
-  display: none;
-}
-body.home-page .st_plusone_buttons {
-  display: none;
-}
 /* ============= */
 /* Embedded Font */
 /* ============= */
@@ -595,9 +715,7 @@ html {
   background: #222222;
 }
 body {
-  /* The canonical logo font is HelveticaNeue-Light. But we can't legally embed that in
-   * the page, not can we assume its available on the user's machine. We use @okfn-font-name, an
-   * attractive (and similar) font from Google Web Fonts. */
+  /* We use OpenSansLight, an attractive openly-licenced font from Google Web Fonts. */
 
   font-family: OpenSansLight, serif;
   background: #fff;
@@ -692,7 +810,7 @@ header {
 header .topbar {
   /* Height of the OKFN header */
 
-  /* Those couple of pixels of gradient which bootstrap puts after the black bar */
+  /* Bootstrap's tiny gradient after the black bar */
 
   position: static;
   height: 46px;

@@ -1,10 +1,17 @@
 /*
- * ===================================================
- * Used to build okfn.css.
+ * =======================================================
+ * OKFN.CSS IS AN AUTO-GENERATED FILE!!!
+ *
+ * To modify: 
+ * - Change the appropriate file:
+ *   - okfn.less            :: Core page structure & global tags
+ *   - okfn-content.less    :: Website content theming.
+ * - Then recompile the CSS with the Less Compiler:
+ *   `lessc okfn.less`
  * 
- * Written in Less, the dynamic stylesheet language::
+ * To learn about Less, the dynamic stylesheet language:
  *   http://lesscss.org/
- * ===================================================
+ * =======================================================
  */
 
 /* =========== */
@@ -15,13 +22,11 @@
 @col_pink: #e96283;
 @col_grey: #222;
 
-@okfn-font-name: OpenSansLight;
-
 /* ======= */
 /* Imports */
 /* ======= */
-@import 'tom-mixins.less';
-@import 'wordpress.less';
+@import 'bootstrap.modified.css';
+@import 'functions.less';
 @import 'okfn-content.less';
 
 /* ============= */
@@ -37,7 +42,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 
 
 /* =========== */
@@ -66,10 +70,8 @@ html {
   background: @col_grey;
 }
 body {
-  /* The canonical logo font is HelveticaNeue-Light. But we can't legally embed that in
-   * the page, not can we assume its available on the user's machine. We use @okfn-font-name, an
-   * attractive (and similar) font from Google Web Fonts. */
-  font-family: @okfn-font-name, serif;
+  /* We use OpenSansLight, an attractive openly-licenced font from Google Web Fonts. */
+  font-family: OpenSansLight, serif;
   background: #fff;
   color: #000;
 }
@@ -107,7 +109,7 @@ input[type="image"] {
 
 label, input, select, textarea {
   /* Override bootstrap.css */
-  font-family: @okfn-font-name, serif;
+  font-family: OpenSansLight, serif;
 }
 /* Use our own top-padding (coloured black) rather than BuddyPress' hack. */
 /* ---------------------------------------------------------------------- */
@@ -128,7 +130,7 @@ header {
   .topbar {
     /* Height of the OKFN header */
     @okfn-headspace: 40px;
-    /* Those couple of pixels of gradient which bootstrap puts after the black bar */
+    /* Bootstrap's tiny gradient after the black bar */
     @okfn-blendspace: 6px;
 
     position: static;
