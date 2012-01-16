@@ -1,6 +1,6 @@
-=========================
-Wordpress OKFN v2.0 Theme
-=========================
+=================
+OKFN Master Theme
+=================
 This is a child theme of the BuddyPress bp-default theme. 
 http://codex.buddypress.org/theme-development/building-a-buddypress-child-theme/
 
@@ -23,5 +23,7 @@ To modify the page style, open up the .less files and hack around. Run::
   lessc okfn.less
 
 ... to recompile the core CSS file and commit your changes to the page. See css/README.markdown for further details.
+
+Note that we use a fork of Twitter Bootstrap as the basis for our CSS. It 99% matches the vanilla version, with occasional shims to make BuddyPress render nicely.
 
 
