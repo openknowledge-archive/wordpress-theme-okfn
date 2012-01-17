@@ -594,12 +594,18 @@ li.last {
   }
 }
 div.error {
-  display: inline-block;
-  width: 16%;
-  padding: 0 5px;
   font-size: 10px;
   color: #c00;
+  margin-bottom: 4px;
   &:before { content: '('; }
   &:after  { content: ')'; }
 }
-
+label[for="pwd"] {
+  span { color: #999; }
+}
+table.notification-settings {
+  width: 100%;
+  tr td:nth-child(2) { 
+    width: 500px;
+  }
+}

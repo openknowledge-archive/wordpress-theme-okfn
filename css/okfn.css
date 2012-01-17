@@ -698,17 +698,24 @@ li.last label {
   width: auto;
 }
 div.error {
-  display: inline-block;
-  width: 16%;
-  padding: 0 5px;
   font-size: 10px;
   color: #c00;
+  margin-bottom: 4px;
 }
 div.error:before {
   content: '(';
 }
 div.error:after {
   content: ')';
+}
+label[for="pwd"] span {
+  color: #999;
+}
+table.notification-settings {
+  width: 100%;
+}
+table.notification-settings tr td:nth-child(2) {
+  width: 500px;
 }
 /* ============= */
 /* Embedded Font */
@@ -818,16 +825,18 @@ textarea {
   font-family: OpenSansLight, serif;
 }
 label {
-  display: inline-block;
-  width: 30%;
+  display: block;
+  text-align: left;
+  margin-top: 6px;
+  width: 70%;
 }
 label input {
   width: 190px;
 }
 input {
-  width: 47%;
-}
-input[type="submit"] {
+  width: 50%;
+  display: block;
+  margin-bottom: 4px;
   display: inline-block;
 }
 /* Use our own top-padding (coloured black) rather than BuddyPress' hack. */

@@ -781,9 +781,7 @@ select.mini {
   width: 60px;
 }
 .input-small,
-input.small,
-textarea.small,
-select.small {
+{
   width: 90px;
 }
 .input-medium,

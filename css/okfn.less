@@ -112,17 +112,19 @@ label, input, select, textarea {
   font-family: OpenSansLight, serif;
 }
 label {
-  display: inline-block;
-  width: 30%;
+  display: block;
+  text-align: left;
+  margin-top: 6px;
+  width: 70%;
   input {
     width: 190px;
   }
 }
 input {
-  width: 47%;
-  &[type="submit"] {
-    display: inline-block;
-  }
+  width: 50%;
+  display: block;
+  margin-bottom: 4px;
+  display: inline-block;
 }
 
 /* Use our own top-padding (coloured black) rather than BuddyPress' hack. */
@@ -253,5 +255,4 @@ footer {
     color: #fff;
   }
 }
-
 
