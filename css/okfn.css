@@ -813,7 +813,6 @@ label input {
 }
 input {
   width: 47%;
-  margin-right: 20%;
 }
 input[type="submit"] {
   display: inline-block;
