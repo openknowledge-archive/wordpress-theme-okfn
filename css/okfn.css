@@ -697,6 +697,19 @@ div.submit, p.submit {
 li.last label {
   width: auto;
 }
+div.error {
+  display: inline-block;
+  width: 16%;
+  padding: 0 5px;
+  font-size: 10px;
+  color: #c00;
+}
+div.error:before {
+  content: '(';
+}
+div.error:after {
+  content: ')';
+}
 /* ============= */
 /* Embedded Font */
 /* ============= */
