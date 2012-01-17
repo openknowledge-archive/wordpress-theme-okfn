@@ -835,9 +835,8 @@ label input {
 }
 input {
   width: 50%;
-  display: block;
-  margin-bottom: 4px;
   display: inline-block;
+  margin-bottom: 4px;
 }
 /* Use our own top-padding (coloured black) rather than BuddyPress' hack. */
 /* ---------------------------------------------------------------------- */
