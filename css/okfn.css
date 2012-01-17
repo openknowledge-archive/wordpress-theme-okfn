@@ -183,15 +183,19 @@ ul#members-list {
 #sidebar #sidebar-login-form label:first-child {
   margin-right: 15px;
 }
+#sidebar #sidebar-login-form .forgetmenot {
+  display: inline-block;
+}
 #sidebar #sidebar-login-form .forgetmenot label {
-  width: 170px;
+  width: 130px;
+  float: none;
 }
 #sidebar #sidebar-login-form input[type="text"], #sidebar #sidebar-login-form input[type="password"] {
   margin: 0;
   width: 95px;
 }
 #sidebar #sidebar-login-form input[type="submit"] {
-  margin-top: 5px;
+  margin: 5px 0 0 0;
 }
 /* ========================================================== */
 /* Wordpress: #login-text connects to the #sidebar-login-form */
@@ -683,6 +687,16 @@ img.alignleft, img.alignright {
 div#toc_container {
   width: 400px;
 }
+/* ================ */
+/* Buddypress Forms */
+/* ================ */
+div.submit, p.submit {
+  margin-left: 32%;
+  margin-top: 4px;
+}
+li.last label {
+  width: auto;
+}
 /* ============= */
 /* Embedded Font */
 /* ============= */
@@ -789,6 +803,20 @@ textarea {
   /* Override bootstrap.css */
 
   font-family: OpenSansLight, serif;
+}
+label {
+  display: inline-block;
+  width: 30%;
+}
+label input {
+  width: 190px;
+}
+input {
+  width: 47%;
+  margin-right: 20%;
+}
+input[type="submit"] {
+  display: inline-block;
 }
 /* Use our own top-padding (coloured black) rather than BuddyPress' hack. */
 /* ---------------------------------------------------------------------- */

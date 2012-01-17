@@ -1920,6 +1920,7 @@ button:focus, input[type=submit]:focus, input[type=reset]:focus,
 .btn:focus {
   outline: 1px dotted #666;
 }
+input[type="submit"],
 .btn.primary {
   color: #ffffff;
   background-color: #0064cd;
