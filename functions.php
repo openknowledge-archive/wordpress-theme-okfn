@@ -2,9 +2,7 @@
 /* 
  * Register a series of DOM-manipulating filters.
  */
-add_filter('bp_sidebar_login_form', 'filter_login_form');
 add_filter('wp_nav_menu', 'filter_nav_menu'); 
-add_filter('comment_form', 'filter_comment_form'); 
 add_filter('bp_before_account_details_fields', 'register_form_blurb'); 
 
 /*
@@ -43,19 +41,6 @@ function filter_nav_menu( $header ) {
   }
 
   return $header;
-}
-
-function filter_login_form() {
-  // Add a gorgeous Bootstrap button
-  echo '<input type="submit" class="btn primary" name="wp-submit" id="sidebar-wp-submit-custom" value="Log In" tabindex="100" />';
-  // Hide the ugly existing button
-  echo '<style type="text/css">#sidebar-wp-submit { display: none; }</style>';
-}
-function filter_comment_form() {
-  // Add a gorgeous Bootstrap button
-  echo '<input name="submit" type="submit" id="submit-custom" class="btn primary" value="Post Comment" />';
-  // Hide the ugly existing button
-  echo '<style type="text/css">input[type="submit"]#submit { display: none; }</style>';
 }
 
 function test($a) {
