@@ -1,5 +1,5 @@
 /*
- * =======================================================
+  =======================================================
  * OKFN.CSS IS AN AUTO-GENERATED FILE!!!
  *
  * To modify: 
@@ -81,9 +81,6 @@ a {
 a:hover {
   color: darken(@col_green, 20%);
   text-decoration: underline;
-}
-p {
-  font-weight: 300;
 }
 h1,h2,h3,h4,h5,h6 {
   a:hover {
@@ -192,26 +189,61 @@ header {
 
 #content {
   .post {
-    margin-bottom: 30px;
-    .border-radius(10px);
-    background: #f7f7f7;
-    .box-shadow(2px 2px 4px #eee);
-    padding: 10px;
+    margin-bottom: 50px;
+    p {
+      font-size: 12px;
+    }
+    p.date {
+      padding-left: 4px;
+    }
+    .postmetadata {
+      background: #eee;
+      .border-radius(6px);
+      padding: 7px;
+      font-size: 12px;
+    }
     .author-box {
       float: right;
-      padding-left: 20px;
-      padding-bottom: 10px;
+      background: #eee;
+      .border-radius(6px);
+      padding: 10px;
+      margin: 2px 0 5px 10px;
+      p { 
+        margin: 0; 
+        display: inline-block;
+      }
+      img { 
+        vertical-align: middle; 
+        margin-right: 3px; 
+        width: 32px;
+        height: 32px;
+      }
     }
-    .post-content {
-      margin-top: -20px;
-    }
-    h2 a {
-      color: #000;
+    .entry {
+      padding: 4px 0;
+      p {
+        font-size: 15px;
+      }
+      img {
+        background: #f0f0f0;
+        border: 1px dashed #e0e0e0;
+        padding: 10px;
+        display: block;
+        margin: 10px auto;
+      }
     }
   }
+
   h2 {
     font-size: 20px;
     margin-top: 12px;
+    &.posttitle {
+      font-size: 32px;
+      letter-spacing: -1px;
+      line-height: 34px;
+      margin-bottom: 6px;
+      a { color: #000; }
+    }
     &.pagetitle {
       font-size: 26px;
       margin-bottom: 10px;
@@ -255,3 +287,6 @@ footer {
   }
 }
 
+.posttitle {
+  margin-top: 8px;
+}
