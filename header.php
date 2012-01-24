@@ -76,13 +76,16 @@
     </header>
 		<?php do_action( 'bp_after_header' ) ?>
 
-    <div class="container">
-      <div class="strapline">
-      <div class="inner">
-        We build tools and communities to promote open knowledge around the world.
-      </div><!-- /inner     -->
-      </div><!-- /strapline -->
-    </div><!-- /container -->
+				<h2 id="site-description"></h2>
+    <?php if (get_bloginfo( 'description' )): ?>
+      <div class="container">
+        <div class="strapline">
+        <div class="inner">
+          <?php echo bloginfo( 'description' ); ?>
+        </div><!-- /inner     -->
+        </div><!-- /strapline -->
+      </div><!-- /container -->
+    <?php endif; ?>
 
 		<?php do_action( 'bp_before_container' ) ?>
     <div class="container">
