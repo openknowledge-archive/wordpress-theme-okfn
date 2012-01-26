@@ -70,18 +70,5 @@ function register_form_blurb( $args ) {
     ."<p><a href=\"/governance/#community-membership\">Read more about Community Membership &raquo;</a></p>";
 }
 
-// **** "Log In" and "Sign Up" links (Visible when not logged in) ********
-function bp_adminbar_login_menu() {
-	global $bp;
-
-	if ( is_user_logged_in() )
-		return false;
-  echo '<li class="bp-login no-arrow"><a href="' . esc_url( wp_login_url('') ) . '">' . __( 'Log In', 'buddypress' ) . '</a></li>';
-
-	// Show "Sign Up" link if user registrations are allowed
-	if ( bp_get_signup_allowed() )
-		echo '<li class="bp-signup no-arrow"><a href="' . bp_get_signup_page(false) . '">' . __( 'Sign Up', 'buddypress' ) . '</a></li>';
-}
-
 
 ?>
