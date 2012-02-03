@@ -16,7 +16,7 @@
 			wp_head();
 		?>
     <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url'); ?>"/>
-    <link rel="shortcut icon" href="<?php echo bloginfo('stylesheet_directory'); ?>/images/favicon.ico" />
+    <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
 
     <script type="text/javascript">
       var Okfn = Okfn || {};
