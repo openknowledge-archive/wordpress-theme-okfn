@@ -42,7 +42,7 @@
             <div class="container">
               <a title="<?php _ex( 'Home', 'Home page banner link title', 'buddypress' ); ?>" 
                 class="brand" 
-                href="<?php echo home_url(); ?>"><img alt="logo" src="<?php echo bloginfo('stylesheet_directory'); ?>/images/topbar-logo%20copy.png"/><?php bp_site_name(); ?></a>
+                href="<?php echo home_url(); ?>"><img alt="logo" src="http://assets.okfn.org/p/datapatterns/img/header-logo.png"/><?php bp_site_name(); ?></a>
               <nav>
                 <?php  
                   wp_nav_menu( array( 
