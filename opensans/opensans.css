@@ -1,0 +1,15 @@
+/*
+ * Embedded Font
+ * -------------
+ * (Must be hosted from the same domain!)
+ */
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('opensans-light-webfont.eot');
+    src: url('opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-light-webfont.woff') format('woff'),
+         url('opensans-light-webfont.ttf') format('truetype'),
+         url('opensans-light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
