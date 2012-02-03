@@ -80,7 +80,9 @@ ul#members-list {
 /* ================== */
 /* Wordpress: Sidebar */
 /* ================== */
-#sidebar #sidebar-login-form, #sidebar #sidebar-me, #sidebar .widget {
+#sidebar #sidebar-login-form,
+#sidebar #sidebar-me,
+#sidebar .widget {
   background: #3e8f80;
   padding: 4px 6px 8px 6px;
   -webkit-border-radius: 8px;
@@ -190,7 +192,8 @@ ul#members-list {
   width: 130px;
   float: none;
 }
-#sidebar #sidebar-login-form input[type="text"], #sidebar #sidebar-login-form input[type="password"] {
+#sidebar #sidebar-login-form input[type="text"],
+#sidebar #sidebar-login-form input[type="password"] {
   margin: 0;
   width: 95px;
 }
@@ -278,14 +281,16 @@ body#bp-default #wp-admin-bar .padder > ul > li {
 /* ============================ */
 /* BuddyPress: Groups directory */
 /* ============================ */
-ul.item-list, ul#groups-list {
+ul.item-list,
+ul#groups-list {
   /* Groups directory */
 
   list-style: none;
   margin: 10px 0;
   margin-left: 0;
 }
-ul.item-list li, ul#groups-list li {
+ul.item-list li,
+ul#groups-list li {
   border-bottom: 1px solid #ccc;
   background: #f7f7f7;
   padding: 12px;
@@ -301,7 +306,8 @@ ul#groups-list li .item-avatar {
   margin-left: 8px;
   margin-bottom: 8px;
 }
-ul.item-list p img, ul#groups-list p img {
+ul.item-list p img,
+ul#groups-list p img {
   vertical-align: middle;
   margin: 4px;
 }
@@ -396,11 +402,13 @@ ul#groups-list .item:after {
   margin-bottom: 20px;
   border: none;
 }
-.item-list-tabs#subnav ul .current a, .item-list-tabs#subnav ul .current a:hover {
+.item-list-tabs#subnav ul .current a,
+.item-list-tabs#subnav ul .current a:hover {
   background-color: #3e8f80;
   color: #fff;
 }
-.item-list-tabs#subnav ul .current a span, .item-list-tabs#subnav ul .current a:hover span {
+.item-list-tabs#subnav ul .current a span,
+.item-list-tabs#subnav ul .current a:hover span {
   color: #fff;
 }
 .item-list-tabs#subnav ul a:hover {
@@ -514,7 +522,8 @@ div.frontpage-carousel .jcarousel-item {
   width: 940px;
   height: 250px;
 }
-div.frontpage-carousel .jcarousel-item:hover, div.frontpage-carousel .jcarousel-item:focus {
+div.frontpage-carousel .jcarousel-item:hover,
+div.frontpage-carousel .jcarousel-item:focus {
   border-color: #808080;
 }
 div.frontpage-carousel .jcarousel-item-horizontal {
@@ -525,7 +534,8 @@ div.frontpage-carousel .jcarousel-direction-rtl .jcarousel-item-horizontal {
   margin-left: 7px;
   margin-right: 0;
 }
-div.frontpage-carousel .jcarousel-next, div.frontpage-carousel .jcarousel-prev {
+div.frontpage-carousel .jcarousel-next,
+div.frontpage-carousel .jcarousel-prev {
   display: none !important;
   position: absolute;
   top: 50px;
@@ -537,7 +547,8 @@ div.frontpage-carousel .jcarousel-next, div.frontpage-carousel .jcarousel-prev {
   font-family: 'Lato', sans-serif;
   color: #000;
 }
-div.frontpage-carousel .frontpage-carousel:hover .jcarousel-next, div.frontpage-carousel .frontpage-carousel:hover .jcarousel-prev {
+div.frontpage-carousel .frontpage-carousel:hover .jcarousel-next,
+div.frontpage-carousel .frontpage-carousel:hover .jcarousel-prev {
   display: block !important;
 }
 div.frontpage-carousel .jcarousel-next {
@@ -619,7 +630,9 @@ div.frontpage-carousel .jcarousel-next:active {
   text-decoration: none;
   color: #fff;
 }
-.okfn-dropdown > a.background-heart, .okfn-dropdown > a.background-bubble, .okfn-dropdown > a.background-cog {
+.okfn-dropdown > a.background-heart,
+.okfn-dropdown > a.background-bubble,
+.okfn-dropdown > a.background-cog {
   background-position: 98% 20%;
   background-repeat: no-repeat;
 }
@@ -681,7 +694,8 @@ img.alignright {
   margin-left: 24px;
   margin-top: 4px;
 }
-img.alignleft, img.alignright {
+img.alignleft,
+img.alignright {
   margin-bottom: 12px;
 }
 div#toc_container {
@@ -690,7 +704,8 @@ div#toc_container {
 /* ================ */
 /* Buddypress Forms */
 /* ================ */
-div.submit, p.submit {
+div.submit,
+p.submit {
   margin-left: 32%;
   margin-top: 4px;
 }
@@ -722,8 +737,8 @@ table.notification-settings tr td:nth-child(2) {
 /* ============= */
 @font-face {
   font-family: 'OpenSansLight';
-  src: url('opensans-light-webfont.eot');
-  src: url('opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('opensans-light-webfont.woff') format('woff'), url('opensans-light-webfont.ttf') format('truetype'), url('opensans-light-webfont.svg#OpenSansLight') format('svg');
+  src: url('http://assets.okfn.org/web/opensans/opensans-light-webfont.eot');
+  src: url('http://assets.okfn.org/web/opensans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('http://assets.okfn.org/web/opensans/opensans-light-webfont.woff') format('woff'), url('http://assets.okfn.org/web/opensans/opensans-light-webfont.ttf') format('truetype'), url('http://assets.okfn.org/web/opensans/opensans-light-webfont.svg#OpenSansLight') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -972,7 +987,8 @@ footer > .inner {
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
   min-height: 190px;
 }
-footer > .inner a, footer > .inner a:hover {
+footer > .inner a,
+footer > .inner a:hover {
   color: #aeebdf;
 }
 footer > .inner a:hover {
@@ -981,7 +997,9 @@ footer > .inner a:hover {
 footer > .inner p {
   margin-bottom: 4px;
 }
-footer > .inner h1, footer > .inner h2, footer > .inner h3 {
+footer > .inner h1,
+footer > .inner h2,
+footer > .inner h3 {
   color: #fff;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
   font-weight: bold;
