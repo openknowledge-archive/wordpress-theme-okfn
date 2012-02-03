@@ -54,9 +54,6 @@
                   ; ?>
               </nav>
               <!-- Disabled until I've got separate images and confirmed link addresses -->
-              <!--div class="featurelinks">
-                <img class="featurelink" src="<?php echo bloginfo('stylesheet_directory'); ?>/images/featurelinks%20copy.png" />
-              </div -->
             </div>
           </div>
         </div>

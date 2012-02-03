@@ -884,10 +884,6 @@ header .topbar .fill a.brand img {
   margin-top: -4px;
   margin-right: 12px;
 }
-header .topbar .fill .featurelinks {
-  margin-top: 8px;
-  float: right;
-}
 header .search-form {
   display: none;
 }
