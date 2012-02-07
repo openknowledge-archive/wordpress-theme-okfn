@@ -50,10 +50,13 @@
     preg_match($regex, $post_content_raw, $matches);
     $post_img = 'http://openglam.org/files/2012/01/6022670080_a7495afde0_z.jpg';
     if (count($matches)) $post_img = $matches[1];
+    // Strip stupid markup
+    $regex = '/\*\*[^\*]*\*\*/';
+    $post_content = preg_replace($regex, '', $post_content);
 		echo '<div class="box post '.$post_class.'">';
     echo '<div class="padder"> <a class="image" href="#"> <img src="'.$post_img.'"/> </a>';
     echo '<div class="text">';
-    echo '<h2><a href="'; the_permalink(); echo '"rel="bookmark" title="' . _e( 'Permanent Link to', 'buddypress' ) . ' ' . the_title_attribute() . '">'; the_title(); echo '</a></h2>';
+    echo '<h2><a href="'.get_permalink().'"rel="bookmark">'; the_title(); echo '</a></h2>';
     echo '<span class="entry-meta">'; 
     printf( __( '%1$s <span>in %2$s</span>', 'buddypress' ), get_the_date(), get_the_category_list( ', ' ) );
     echo 'by ' . bp_core_get_userlink( $post->post_author );
