@@ -1125,6 +1125,9 @@ body#bp-default #wp-admin-bar .padder {
   height: 162px;
   padding: 0px 10px;
 }
+.magazine .post .text {
+  margin-bottom: 8px;
+}
 .magazine .post.preview .button {
   margin: 20px 10px 10px 10px;
 }
