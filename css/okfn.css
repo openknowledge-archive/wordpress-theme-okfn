@@ -1160,7 +1160,7 @@ body#bp-default #wp-admin-bar .padder {
 #content .entry ul li small, #content .entry ol li small {
   line-height: 1.4em;
 }
-#content h2.posttitle {
+#content h2.posttitle, #content h2.pagetitle {
   font-family: OpenSansSemibold;
   font-weight: 600;
 }
