@@ -13,3 +13,16 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+@font-face {
+  font-family: 'OpenSansSemibold';
+  src: url('opensans-light-webfont.eot');
+    src: url('opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-semibold-webfont.woff') format('woff'),
+         url('opensans-semibold-webfont.ttf') format('truetype'),
+         url('opensans-semibold-webfont.svg#OpenSansLight') format('svg');
+         
+  font-style: normal;
+  font-weight: 600;
+}
