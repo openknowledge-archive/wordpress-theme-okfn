@@ -1404,6 +1404,12 @@ footer > .inner h3 {
 footer li {
   color: #fff;
 }
+footer .widget-area {
+  display: inline;
+  float: left;
+  margin-left: 20px;
+  width: 300px;
+}
 .posttitle {
   margin-top: 8px;
 }

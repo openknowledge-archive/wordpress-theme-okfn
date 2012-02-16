@@ -22,10 +22,7 @@
         ?>
           <style type="text/css">
             #footer-widget-area > div {
-              display: inline;
-              float: left;
-              margin-left: 20px;
-              width: <?php echo $footer_width; ?>px;
+              width: <?php echo $footer_width; ?>px !important;
           </style>
           <div class="row">
           <div id="footer-widgets">
