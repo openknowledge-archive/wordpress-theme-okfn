@@ -19,6 +19,7 @@
 /* =========== */
 @col_green: #3e8f80;
 @col_green_hover: lighten(@col_green, 40%);
+@col_green_text: darken(@col_green, 10%); /* a slightly darker green for text */ 
 @col_pink: #e96283;
 @col_grey: #222;
 
@@ -28,6 +29,7 @@
 @import 'bootstrap.modified.css';
 @import 'functions.less';
 @import 'okfn-content.less';
+@import 'fixes.less';
 
 
 /* =========== */
@@ -62,10 +64,10 @@ body {
   color: #000;
 }
 a {
-  color: @col_green;
+  color: @col_green_text;
 }
 a:hover {
-  color: darken(@col_green, 20%);
+  color: darken(@col_green_text, 20%);
   text-decoration: underline;
 }
 h1,h2,h3,h4,h5,h6 {

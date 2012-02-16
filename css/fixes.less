@@ -1,0 +1,38 @@
+/*
+ * fixes.less 
+ *
+ * just a few quick fixes to the ugly typography in blog posts
+ * @author: gka
+ *
+ */
+ 
+#content {
+	.entry {
+		p {
+			line-height: 1.4em;
+			strong { 
+				line-height: 1.4em; 
+				font-family: OpenSansSemibold;
+				font-weight: 600;
+			}
+		}
+		ul,ol {
+			
+			margin: 1.8em 0 1.8em 25px;
+			
+			li { 
+				color: #000000; 
+				font-size: 15px; 
+				margin: 0 0 1ex;
+				line-height: 1.4em;
+				
+				small { line-height: 1.4em; }
+			}
+		}
+	}
+	
+	h2.posttitle, h2.pagetitle {
+		font-family: OpenSansSemibold;
+		font-weight: 600;
+	}
+}

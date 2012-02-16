@@ -17,7 +17,7 @@
 /* =========== */
 /* Colorscheme */
 /* =========== */
-/* ======= */
+/* a slightly darker green for text *//* ======= */
 /* Imports */
 /* ======= */
 /*
@@ -80,9 +80,7 @@ ul#members-list {
 /* ================== */
 /* Wordpress: Sidebar */
 /* ================== */
-#sidebar #sidebar-login-form,
-#sidebar #sidebar-me,
-#sidebar .widget {
+#sidebar #sidebar-login-form, #sidebar #sidebar-me, #sidebar .widget {
   background: #3e8f80;
   padding: 4px 6px 8px 6px;
   -webkit-border-radius: 8px;
@@ -192,8 +190,7 @@ ul#members-list {
   width: 130px;
   float: none;
 }
-#sidebar #sidebar-login-form input[type="text"],
-#sidebar #sidebar-login-form input[type="password"] {
+#sidebar #sidebar-login-form input[type="text"], #sidebar #sidebar-login-form input[type="password"] {
   margin: 0;
   width: 95px;
 }
@@ -281,16 +278,14 @@ body#bp-default #wp-admin-bar .padder > ul > li {
 /* ============================ */
 /* BuddyPress: Groups directory */
 /* ============================ */
-ul.item-list,
-ul#groups-list {
+ul.item-list, ul#groups-list {
   /* Groups directory */
 
   list-style: none;
   margin: 10px 0;
   margin-left: 0;
 }
-ul.item-list li,
-ul#groups-list li {
+ul.item-list li, ul#groups-list li {
   border-bottom: 1px solid #ccc;
   background: #f7f7f7;
   padding: 12px;
@@ -306,8 +301,7 @@ ul#groups-list li .item-avatar {
   margin-left: 8px;
   margin-bottom: 8px;
 }
-ul.item-list p img,
-ul#groups-list p img {
+ul.item-list p img, ul#groups-list p img {
   vertical-align: middle;
   margin: 4px;
 }
@@ -402,13 +396,11 @@ ul#groups-list .item:after {
   margin-bottom: 20px;
   border: none;
 }
-.item-list-tabs#subnav ul .current a,
-.item-list-tabs#subnav ul .current a:hover {
+.item-list-tabs#subnav ul .current a, .item-list-tabs#subnav ul .current a:hover {
   background-color: #3e8f80;
   color: #fff;
 }
-.item-list-tabs#subnav ul .current a span,
-.item-list-tabs#subnav ul .current a:hover span {
+.item-list-tabs#subnav ul .current a span, .item-list-tabs#subnav ul .current a:hover span {
   color: #fff;
 }
 .item-list-tabs#subnav ul a:hover {
@@ -522,8 +514,7 @@ div.frontpage-carousel .jcarousel-item {
   width: 940px;
   height: 250px;
 }
-div.frontpage-carousel .jcarousel-item:hover,
-div.frontpage-carousel .jcarousel-item:focus {
+div.frontpage-carousel .jcarousel-item:hover, div.frontpage-carousel .jcarousel-item:focus {
   border-color: #808080;
 }
 div.frontpage-carousel .jcarousel-item-horizontal {
@@ -534,8 +525,7 @@ div.frontpage-carousel .jcarousel-direction-rtl .jcarousel-item-horizontal {
   margin-left: 7px;
   margin-right: 0;
 }
-div.frontpage-carousel .jcarousel-next,
-div.frontpage-carousel .jcarousel-prev {
+div.frontpage-carousel .jcarousel-next, div.frontpage-carousel .jcarousel-prev {
   display: none !important;
   position: absolute;
   top: 50px;
@@ -547,8 +537,7 @@ div.frontpage-carousel .jcarousel-prev {
   font-family: 'Lato', sans-serif;
   color: #000;
 }
-div.frontpage-carousel .frontpage-carousel:hover .jcarousel-next,
-div.frontpage-carousel .frontpage-carousel:hover .jcarousel-prev {
+div.frontpage-carousel .frontpage-carousel:hover .jcarousel-next, div.frontpage-carousel .frontpage-carousel:hover .jcarousel-prev {
   display: block !important;
 }
 div.frontpage-carousel .jcarousel-next {
@@ -630,9 +619,7 @@ div.frontpage-carousel .jcarousel-next:active {
   text-decoration: none;
   color: #fff;
 }
-.okfn-dropdown > a.background-heart,
-.okfn-dropdown > a.background-bubble,
-.okfn-dropdown > a.background-cog {
+.okfn-dropdown > a.background-heart, .okfn-dropdown > a.background-bubble, .okfn-dropdown > a.background-cog {
   background-position: 98% 20%;
   background-repeat: no-repeat;
 }
@@ -694,18 +681,24 @@ img.alignright {
   margin-left: 24px;
   margin-top: 4px;
 }
-img.alignleft,
-img.alignright {
+img.alignleft, img.alignright {
   margin-bottom: 12px;
 }
 div#toc_container {
   width: 400px;
 }
+li.toc-level-2 {
+  font-weight: bold;
+  list-style: none;
+  margin: 10px 0px 0px -15px;
+}
+li.toc-level-2 a {
+  color: #222222;
+}
 /* ================ */
 /* Buddypress Forms */
 /* ================ */
-div.submit,
-p.submit {
+div.submit, p.submit {
   margin-left: 32%;
   margin-top: 4px;
 }
@@ -775,8 +768,7 @@ table.notification-settings tr td:nth-child(2) {
 .box.black h4 {
   color: #FFF;
 }
-.ribbon,
-.magazine h3.ribbon {
+.ribbon, .magazine h3.ribbon {
   position: absolute;
   top: 20px;
   left: -2px;
@@ -874,8 +866,7 @@ ul.scrollButtons li a {
   text-indent: -500px;
   overflow: hidden;
 }
-ul.scrollButtons li.left,
-ul.scrollButtons li.right {
+ul.scrollButtons li.left, ul.scrollButtons li.right {
   float: left;
 }
 ul.scrollButtons li.left a {
@@ -1142,6 +1133,37 @@ body#bp-default #wp-admin-bar .padder {
 .magazine .post h2 a {
   color: #282828;
 }
+/*
+ * fixes.less 
+ *
+ * just a few quick fixes to the ugly typography in blog posts
+ * @author: gka
+ *
+ */
+#content .entry p {
+  line-height: 1.4em;
+}
+#content .entry p strong {
+  line-height: 1.4em;
+  font-family: OpenSansSemibold;
+  font-weight: 600;
+}
+#content .entry ul, #content .entry ol {
+  margin: 1.8em 0 1.8em 25px;
+}
+#content .entry ul li, #content .entry ol li {
+  color: #000000;
+  font-size: 15px;
+  margin: 0 0 1ex;
+  line-height: 1.4em;
+}
+#content .entry ul li small, #content .entry ol li small {
+  line-height: 1.4em;
+}
+#content h2.posttitle, #content h2.pagetitle {
+  font-family: OpenSansSemibold;
+  font-weight: 600;
+}
 /* =========== */
 /* POSITIONING */
 /* =========== */
@@ -1171,10 +1193,10 @@ body {
   color: #000;
 }
 a {
-  color: #3e8f80;
+  color: #2f6b60;
 }
 a:hover {
-  color: #1f4840;
+  color: #102420;
   text-decoration: underline;
 }
 h1 a:hover,
@@ -1383,8 +1405,7 @@ footer > .inner {
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
   min-height: 190px;
 }
-footer > .inner a,
-footer > .inner a:hover {
+footer > .inner a, footer > .inner a:hover {
   color: #aeebdf;
 }
 footer > .inner a:hover {
@@ -1393,9 +1414,7 @@ footer > .inner a:hover {
 footer > .inner p {
   margin-bottom: 4px;
 }
-footer > .inner h1,
-footer > .inner h2,
-footer > .inner h3 {
+footer > .inner h1, footer > .inner h2, footer > .inner h3 {
   color: #fff;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
   font-weight: bold;

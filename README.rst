@@ -20,7 +20,8 @@ Usage
 -----
 To modify the page style, open up the .less files and hack around. Run::
 
-  lessc okfn.less
+  cd css/
+  lessc okfn.less > okfn.css
 
 ... to recompile the core CSS file and commit your changes to the page. See css/README.markdown for further details.
 
