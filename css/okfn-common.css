@@ -1,5 +1,4 @@
 @import url("bootstrap.min.css");
-@import url("../fonts/fonts.css");
 
 /*
    =======================================
@@ -54,13 +53,13 @@ input:focus, textarea:focus {
 }
 
 .nav-list .active > a, .nav-list .active > a:hover {
-    background-color: #2B8271;
+  background-color: #2B8271;
 }
 
 .navbar .brand {
-    padding: 0px 10px 0px 0px;
-		margin:0px;
-		line-height:40px;
+  padding: 0px 10px 0px 0px;
+	margin:0px;
+	line-height:40px;
 }
 .navbar .brand img {
 	display: block;
@@ -70,8 +69,8 @@ input:focus, textarea:focus {
 }
 
 .navbar .dropdown-menu {
-  margin-top: 0px;
-  -webkit-border-radius: 4px;
+	margin-top: 0px;
+	-webkit-border-radius: 4px;
 	-webkit-border-top-left-radius: 0px;
 	-webkit-border-top-right-radius: 0px;
 	-moz-border-radius: 4px;
@@ -173,18 +172,18 @@ header li.dropdown:hover .dropdown-menu {
 }
 
 header .dropdown-toggle:after {
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 4px solid #FFFFFF;
-    content: "↓";
-    display: inline-block;
-    height: 0;
-    margin-left: 4px;
-    margin-top: 8px;
-    opacity: 0.5;
-    text-indent: -99999px;
-    vertical-align: top;
-    width: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #FFFFFF;
+	content: "↓";
+	display: inline-block;
+	height: 0;
+	margin-left: 4px;
+	margin-top: 8px;
+	opacity: 0.5;
+	text-indent: -99999px;
+  vertical-align: top;
+  width: 0;
 }
 
 .strapline {
