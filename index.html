@@ -1,117 +1,247 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Page Title | Open Knowledge Foundation</title>
-    <script type='text/javascript' src='http://okfn.org/wp-includes/js/jquery/jquery.js?ver=1.6.1'></script>
-    <link rel="stylesheet" href="http://okfn.org/wp-content/themes/wordpress-theme-okfn/style.css"/>
-    <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
-    <script type="text/javascript" src="http://okfn.org/wp-content/themes/wordpress-theme-okfn/js/app.js"></script>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Page Title | Open Knowledge Foundation</title>
+<meta name="description" content="">
+<meta name="author" content="">
 
-  <body>
-    <header>
-    <div class="topbar">
-      <div class="fill">
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- styles -->
+<link href="css/okfn-common.css" rel="stylesheet">
+<link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico">
+</head>
+
+<body>
+	<header>
+    <div class="navbar">
+      <div class="navbar-inner">
         <div class="container">
-          <a title="Home" 
-            class="brand" 
-            href="http://okfn.org">
-            <img alt="logo" src="http://assets.okfn.org/web/images/header-logo.png"/>My Website</a>
-          <nav>
-          <ul id="nav" class="nav">
-            <li class="dropdown" data-dropdown="dropdown"><a href="http://okfn.org" class="dropdown-toggle">Dropdown Menu</a> 
-            <ul class="sub-menu dropdown-menu">   
-              <li><a href="http://okfn.org">Option One</a></li>   
-              <li><a href="http://okfn.org">Option Two</a></li> 
-            </ul> 
-            </li> 
-            <li><a href="http://blog.okfn.org/">OKFN Blog</a></li> 
-          </ul>              
-          </nav>
+          <a title="Home" class="brand" href="http://okfn.org">
+            <img alt="logo" src="http://assets.okfn.org/web/images/header-logo.png"/>My Website
+          </a>
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li class="dropdown" data-dropdown="dropdown">
+                <a href="http://okfn.org" class="dropdown-toggle">Dropdown Menu</a> 
+              <ul class="sub-menu dropdown-menu">   
+                <li><a href="http://okfn.org">Option One</a></li>   
+                <li><a href="http://okfn.org">Option Two</a></li> 
+              </ul> 
+              </li> 
+              <li><a href="http://blog.okfn.org/">OKFN Blog</a></li>
+            </ul>
         </div>
       </div>
     </div>
-  </div>
   </header>
-    
   <div class="container">
     <div class="strapline">
-      <div class="inner">
-        A website for the Open Knowledge Foundation
-      </div>
+      <div class="inner"> A website for the Open Knowledge Foundation </div>
     </div>
-  </div><!-- /container -->
-    
+  </div>
+  <!-- /container -->
+  
   <div class="container">
     <div id="content">
       <div class="page" id="blog-page" role="main">
         <h2 class="pagetitle">Working Groups</h2>
         <div class="entry">
-          <p>Page content goes here.</p>
+          <div class="row">
+            <div class="span4">
+              <h3>Example body text</h3>
+              <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui.</p>
+            </div>
+            <div class="span4">
+              <div class="well">
+                <h1>h1. Heading 1</h1>
+                <h2>h2. Heading 2</h2>
+                <h3>h3. Heading 3</h3>
+                <h4>h4. Heading 4</h4>
+                <h5>h5. Heading 5</h5>
+                <h6>h6. Heading 6</h6>
+              </div>
+            </div>
+          </div>
+
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Button</th>
+                <th>Class</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#" class="btn">Default</a></td>
+                <td><code>.btn</code></td>
+                <td>Standard gray button with gradient</td>
+              </tr>
+              <tr>
+                <td><a href="#" class="btn btn-primary">Primary</a></td>
+                <td><code>.btn-primary</code></td>
+                <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+              </tr>
+              <tr>
+                <td><a href="#" class="btn btn-info">Info</a></td>
+                <td><code>.btn-info</code></td>
+                <td>Used as an alternate to the default styles</td>
+              </tr>
+              <tr>
+                <td><a href="#" class="btn btn-success">Success</a></td>
+                <td><code>.btn-success</code></td>
+                <td>Indicates a successful or positive action</td>
+              </tr>
+              <tr>
+                <td><a href="#" class="btn btn-warning">Warning</a></td>
+                <td><code>.btn-warning</code></td>
+                <td>Indicates caution should be taken with this action</td>
+              </tr>
+              <tr>
+                <td><a href="#" class="btn btn-danger">Danger</a></td>
+                <td><code>.btn-danger</code></td>
+                <td>Indicates a dangerous or potentially negative action</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="row">
+            <div class="span4">
+              <div style="margin-bottom: 9px" class="btn-toolbar">
+                <div class="btn-group">
+                  <a href="#" class="btn"><i class="icon-align-left"></i></a>
+                  <a href="#" class="btn"><i class="icon-align-center"></i></a>
+                  <a href="#" class="btn"><i class="icon-align-right"></i></a>
+                  <a href="#" class="btn"><i class="icon-align-justify"></i></a>
+                </div>
+                <div class="btn-group">
+                  <a href="#" class="btn btn-primary"><i class="icon white user"></i> User</a>
+                  <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+                    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                    <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="i"></i> Make admin</a></li>
+                  </ul>
+                </div>
+              </div>
+              <p>
+                <a href="#" class="btn"><i class="icon-refresh"></i> Refresh</a>
+                <a href="#" class="btn btn-success"><i class="icon-shopping-cart icon-white"></i> Checkout</a>
+                <a href="#" class="btn btn-danger"><i class="icon-trash icon-white"></i> Delete</a>
+              </p>
+              <p>
+                <a href="#" class="btn btn-large"><i class="icon-comment"></i> Comment</a>
+                <a href="#" class="btn btn-small"><i class="icon-cog"></i> Settings</a>
+                <a href="#" class="btn btn-small btn-info"><i class="icon-info-sign icon-white"></i> More Info</a>
+              </p>
+            </div>
+            <div class="span4">
+              <div style="padding: 8px 0;" class="well">
+                <ul class="nav nav-list">
+                  <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+                  <li><a href="#"><i class="icon-book"></i> Library</a></li>
+                  <li><a href="#"><i class="icon-pencil"></i> Applications</a></li>
+                  <li><a href="#"><i class="i"></i> Misc</a></li>
+                </ul>
+              </div> <!-- /well -->
+            </div>
+            <div class="span4">
+              <form>
+                <div class="control-group">
+                  <label for="prependedInput" class="control-label">Email address</label>
+                  <div class="controls">
+                    <div class="input-prepend">
+                      <span class="add-on"><i class="icon-envelope"></i></span>
+                      <input type="text" id="iconInput" class="span2">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          
         </div>
-      </div><!-- .page -->
-    </div><!-- #content -->
-
+      </div>
+      <!-- .page --> 
+    </div>
+    <!-- #content -->
+    
     <div id="sidebar" role="complementary">
-
       <div class="widget">
-        <h3 class="widgettitle">Widget Title</h3>      
+        <h3 class="widgettitle">Widget Title</h3>
         <div>Widget content goes here. Lorem ipsum...</div>
       </div>
       <div class="widget">
-        <h3 class="widgettitle">Widget Title</h3>      
+        <h3 class="widgettitle">Widget Title</h3>
         <div>Widget content goes here. Lorem ipsum...</div>
       </div>
-
-    </div><!-- #sidebar -->
-  </div> <!-- /container -->
+    </div>
+    <!-- #sidebar --> 
+    
+  </div>
+  <!-- /container -->
+  
   <footer>
     <div class="inner">
       <div class="container">
-                  <style type="text/css">
-          </style>
-      <div class="row">
-        <div id="footer-widget-area">
-        <div id="first" class="widget-area">
-          <ul class="xoxo">
-            <li id="nav_menu-3" class="widget widget_nav_menu">
-            <h3 class="widgettitle">About</h3>
-            <div class="menu-footer-imprint-container">
-              <ul id="menu-footer-imprint" class="menu">
-                <li><a href="http://okfn.org/about/">About Us</a></li> 
-                <li><a href="http://okfn.org/media/">Media</a></li> 
-                <li><a href="http://okfn.org/contact/">Contact Our Team</a></li> 
-                <li><a href="http://okfn.org/privacy-policy/">Privacy policy</a></li> 
-                <li><a href="http://okfn.org/ip-policy/">IP Policy</a></li> 
+        <style type="text/css">
+            </style>
+        <div class="row">
+          <div id="footer-widget-area">
+            <div id="first" class="widget-area">
+              <ul class="xoxo">
+                <li id="nav_menu-3" class="widget widget_nav_menu">
+                  <h3 class="widgettitle">About</h3>
+                  <div class="menu-footer-imprint-container">
+                    <ul id="menu-footer-imprint" class="menu">
+                      <li><a href="http://okfn.org/about/">About Us</a></li>
+                      <li><a href="http://okfn.org/media/">Media</a></li>
+                      <li><a href="http://okfn.org/contact/">Contact Our Team</a></li>
+                      <li><a href="http://okfn.org/privacy-policy/">Privacy policy</a></li>
+                      <li><a href="http://okfn.org/ip-policy/">IP Policy</a></li>
+                    </ul>
+                  </div>
+                </li>
               </ul>
             </div>
-            </li>          
-          </ul>
-        </div><!-- #first .widget-area -->
-
-        <div id="second" class="widget-area">&nbsp;
-        </div><!-- #second .widget-area -->
-
-        <div id="third" class="widget-area">
-          <ul class="xoxo">
-            <li id="text-3" class="widget widget_text">
-            <h3 class="widgettitle">IP Policy</h3>      
-            <div class="textwidget">
-              The content of this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a> (all jurisdictions).
-              <br/><br/>
-              <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">
-                <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" />
-              </a>
+            <!-- #first .widget-area -->
+            
+            <div id="second" class="widget-area">&nbsp; </div>
+            <!-- #second .widget-area -->
+            
+            <div id="third" class="widget-area">
+              <ul class="xoxo">
+                <li id="text-3" class="widget widget_text">
+                  <h3 class="widgettitle">IP Policy</h3>
+                  <div class="textwidget"> The content of this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a> (all jurisdictions). <br/>
+                    <br/>
+                    <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"> <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /> </a> </div>
+                </li>
+              </ul>
             </div>
-            </li>          
-          </ul>
-        </div><!-- #third .widget-area -->
-        
+            <!-- #third .widget-area --> 
+            
+          </div>
         </div>
-      </div><!-- /row -->
-      </div><!-- /container -->
-    </div><!-- /inner -->
+        <!-- /row --> 
+      </div>
+      <!-- /container --> 
+    </div>
+    <!-- /inner --> 
   </footer>
+
+<!-- Javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="http://okfn.org/wp-includes/js/jquery/jquery.js?ver=1.6.1"></script> 
+<script src="../js/bootstrap.min.js"></script>
+
 </body>
 </html>
