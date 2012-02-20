@@ -37,8 +37,8 @@
     <div class="headspace"></div>
 
     <header>
-        <div class="topbar">
-          <div class="fill">
+        <div class="navbar">
+      		<div class="navbar-inner">
             <div class="container">
               <a title="<?php _ex( 'Home', 'Home page banner link title', 'buddypress' ); ?>" 
                 class="brand" 

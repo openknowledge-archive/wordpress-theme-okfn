@@ -2,11 +2,12 @@
 Theme Name:     OKFN Master Theme
 Theme URI:      http://github.com/okfn/okfn-master-wordpress-theme
 Description:    The default theme for OKFN websites. Built on the Buddypress core theme.
-Author:         Tom Rees
+Author:         Tom Rees and Sam Smith
 Template:       bp-default
 Tags:           buddypress
-Version:        1.0
+Version:        1.1
 */
 
 @import url('opensans/opensans.css');
-@import url('css/okfn.css');
+@import url('http://okfnlabs.org/theme-okfn/css/okfn-common.css');
+@import url('css/okfn-wordpress.css');

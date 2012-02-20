@@ -1,44 +1,111 @@
-@import 'bootstrap.modified.css';
-/*
-  =======================================================
- * OKFN.CSS IS AN AUTO-GENERATED FILE!!!
- *
- * To modify: 
- * - Change the appropriate file:
- *   - okfn.less            :: Core page structure & global tags
- *   - okfn-content.less    :: Website content theming.
- * - Then recompile the CSS with the Less Compiler:
- *   `lessc okfn.less`
- * 
- * To learn about Less, the dynamic stylesheet language:
- *   http://lesscss.org/
- * =======================================================
- */
-/* =========== */
-/* Colorscheme */
-/* =========== */
-/* a slightly darker green for text *//* ======= */
-/* Imports */
-/* ======= */
-/*
- * ========================
- *  functions.less
- *  --------------
- *  Custom Less functions file by Tom Rees.
- *  Based on Mark Dotto's Preboot:
- *     https://github.com/markdotto/Preboot.less
- * ========================
- */
-/* ==================== */
+
+/* ======================= */
+/* Bootstrap Modifications */
+/* ======================= */
+
+button, input[type=submit], input[type=reset],
+.btn {
+  display: inline-block;
+  padding: 4px 10px 4px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #FFF;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #2b7d78;
+  background-image: -moz-linear-gradient(top, #2b8271, #2b7682);
+  background-image: -ms-linear-gradient(top, #2b8271, #2b7682);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2b8271), to(#2b7682));
+  background-image: -webkit-linear-gradient(top, #2b8271, #2b7682);
+  background-image: -o-linear-gradient(top, #2b8271, #2b7682);
+  background-image: linear-gradient(top, #2b8271, #2b7682);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2b8271', endColorstr='#2b7682', GradientType=0);
+  border-color: #2b7682 #2b7682 #184249;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  *margin-left: .3em;
+}
+button:hover, input[type=submit]:hover, input[type=reset]:hover,
+.btn:hover {
+  color: #FFF;
+  text-decoration: none;
+  background-color: #2b7682;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -ms-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+button:focus, input[type=submit]:focus, input[type=reset]:focus,
+.btn:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+input[type=\"submit\"],
+.btn-primary {
+  background-color: #2b7d78;
+  background-image: -moz-linear-gradient(top, #2b8271, #2b7682);
+  background-image: -ms-linear-gradient(top, #2b8271, #2b7682);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2b8271), to(#2b7682));
+  background-image: -webkit-linear-gradient(top, #2b8271, #2b7682);
+  background-image: -o-linear-gradient(top, #2b8271, #2b7682);
+  background-image: linear-gradient(top, #2b8271, #2b7682);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2b8271', endColorstr='#2b7682', GradientType=0);
+  border-color: #2b7682 #2b7682 #184249;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+button:active, input[type=submit]:active, input[type=reset]:focus,
+.btn-primary:active, .btn-primary.active {
+  background-color: #1e535c \9;
+}
+button:active, input[type=submit]:active, input[type=reset]:focus,
+.btn.active, .btn:active {
+  background-image: none;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  color: rgba(0, 0, 0, 0.5);
+  outline: 0;
+}
+button:active, input[type=submit]:active, input[type=reset]:focus,
+.btn.disabled, .btn[disabled] {
+  cursor: default;
+  background-image: none;
+  background-color: #e6e6e6;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+button::-moz-focus-inner, input[type=submit]::-moz-focus-inner,
+button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+
+/* ================ */
+/* Wordpress Layout */
+/* ================ */
+
+
 /* Wordpress: Widget UL */
 /* ==================== */
-ul.xoxo {
-  list-style-type: none;
-  margin-left: 0;
-}
-ul.xoxo ul li {
-  padding-bottom: 4px;
-}
 div.item-options {
   padding: 10px 0;
 }
@@ -49,7 +116,7 @@ ul#members-list {
   list-style-type: none;
   margin-left: 0;
 }
-/* ================ */
+
 /* Wordpress: VCard */
 /* ================ */
 .vcard {
@@ -71,16 +138,18 @@ ul#members-list {
   top: 8px;
   display: inline-block;
 }
-/* ===================== */
+
 /* Wordpress: Blog Entry */
 /* ===================== */
 .entry p {
   font-size: 15px;
 }
-/* ================== */
+
 /* Wordpress: Sidebar */
 /* ================== */
-#sidebar #sidebar-login-form, #sidebar #sidebar-me, #sidebar .widget {
+#sidebar #sidebar-login-form,
+#sidebar #sidebar-me,
+#sidebar .widget {
   background: #3e8f80;
   padding: 4px 6px 8px 6px;
   -webkit-border-radius: 8px;
@@ -153,7 +222,7 @@ ul#members-list {
 #sidebar .widget .tb-widget-configuration {
   margin: 0;
 }
-/* ======================================== */
+
 /* Wordpress: Sidebar you-are-logged-in box */
 /* ======================================== */
 #sidebar-me > a:first-child {
@@ -168,7 +237,7 @@ ul#members-list {
   padding-bottom: 2px;
   line-height: 25px;
 }
-/* ============================= */
+
 /* Wordpress: Sidebar login form */
 /* ============================= */
 #sidebar #sidebar-login-form {
@@ -197,7 +266,7 @@ ul#members-list {
 #sidebar #sidebar-login-form input[type="submit"] {
   margin: 5px 0 0 0;
 }
-/* ========================================================== */
+
 /* Wordpress: #login-text connects to the #sidebar-login-form */
 /* ========================================================== */
 #sidebar p#login-text {
@@ -220,7 +289,7 @@ ul#members-list {
   -moz-border-radius-topright: 0px;
   border-top-right-radius: 0px;
 }
-/* ======================================= */
+
 /* Wordpress: End-of-article response form */
 /* ======================================= */
 #respond {
@@ -254,7 +323,7 @@ ul#members-list {
   display: block;
   line-height: 16px;
 }
-/* ================================== */
+
 /* Buddypress: Top links (customised) */
 /* ================================== */
 body#bp-default #wp-admin-bar {
@@ -275,7 +344,7 @@ body#bp-default #wp-admin-bar .padder > ul > li {
   position: static;
   right: none;
 }
-/* ============================ */
+
 /* BuddyPress: Groups directory */
 /* ============================ */
 ul.item-list, ul#groups-list {
@@ -407,7 +476,7 @@ ul#groups-list .item:after {
   background-color: #f0f0f0;
   color: #3e8f80;
 }
-/* ==================================== */
+
 /* Buddypress: My account: Special case */
 /* ==================================== */
 body.my-account .item-list-tabs ul li a {
@@ -415,7 +484,7 @@ body.my-account .item-list-tabs ul li a {
   padding: 0 7px;
   line-height: 26px;
 }
-/* ========================= */
+
 /* Buddypress: Members lists */
 /* ========================= */
 #members-list {
@@ -455,7 +524,7 @@ body.my-account .item-list-tabs ul li a {
   line-height: 0;
   height: 0;
 }
-/* ========== */
+
 /* Front-page */
 /* ========== */
 body.home-page .st_facebook_buttons {
@@ -476,7 +545,7 @@ body.home-page .st_fblike_buttons {
 body.home-page .st_plusone_buttons {
   display: none;
 }
-/* ================== */
+
 /* Frontpage Carousel */
 /* ================== */
 div.frontpage-carousel {
@@ -562,7 +631,7 @@ div.frontpage-carousel .jcarousel-prev:active,
 div.frontpage-carousel .jcarousel-next:active {
   color: #933;
 }
-/* ================================== */
+
 /* Frontpage Carousel's speech bubble */
 /* ================================== */
 .carousel-bubble {
@@ -579,7 +648,7 @@ div.frontpage-carousel .jcarousel-next:active {
   width: 220px;
   padding: 20px 24px;
 }
-/* ========================= */
+
 /* Pink/Green Drowndown Menu */
 /* ========================= */
 .okfn-dropdown {
@@ -666,7 +735,7 @@ div.frontpage-carousel .jcarousel-next:active {
   -moz-border-radius-topright: 6px;
   border-top-right-radius: 6px;
 }
-/* ============ */
+
 /* Post Content */
 /* ============ */
 img.alignleft {
@@ -695,7 +764,7 @@ li.toc-level-2 {
 li.toc-level-2 a {
   color: #222222;
 }
-/* ================ */
+
 /* Buddypress Forms */
 /* ================ */
 div.submit, p.submit {
@@ -725,7 +794,7 @@ table.notification-settings {
 table.notification-settings tr td:nth-child(2) {
   width: 500px;
 }
-/* ==================== */
+
 /* Magazine Front Pages */
 /* ==================== */
 .box {
@@ -1133,120 +1202,11 @@ body#bp-default #wp-admin-bar .padder {
 .magazine .post h2 a {
   color: #282828;
 }
-/*
- * fixes.less 
- *
- * just a few quick fixes to the ugly typography in blog posts
- * @author: gka
- *
- */
-#content .entry p {
-  line-height: 1.4em;
-}
-#content .entry p strong {
-  line-height: 1.4em;
-  font-family: OpenSansSemibold;
-  font-weight: 600;
-}
-#content .entry ul, #content .entry ol {
-  margin: 1.8em 0 1.8em 25px;
-}
-#content .entry ul li, #content .entry ol li {
-  color: #000000;
-  font-size: 15px;
-  margin: 0 0 1ex;
-  line-height: 1.4em;
-}
-#content .entry ul li small, #content .entry ol li small {
-  line-height: 1.4em;
-}
-#content h2.posttitle, #content h2.pagetitle {
-  font-family: OpenSansSemibold;
-  font-weight: 600;
-}
+
 /* =========== */
 /* POSITIONING */
 /* =========== */
-#sidebar {
-  display: inline-block;
-  vertical-align: top;
-  width: 240px;
-  /* 4px Hack to avoid whitespace glitch between inline-block elements */
 
-  margin-left: 16px;
-}
-#content {
-  display: inline-block;
-  width: 680px;
-}
-/* ======== */
-/* Main CSS */
-/* ======== */
-html {
-  background: #222222;
-}
-body {
-  /* We use OpenSansLight, an attractive openly-licenced font from Google Web Fonts. */
-
-  font-family: OpenSansLight, serif;
-  background: #fff;
-  color: #000;
-}
-a {
-  color: #2f6b60;
-}
-a:hover {
-  color: #102420;
-  text-decoration: underline;
-}
-h1 a:hover,
-h2 a:hover,
-h3 a:hover,
-h4 a:hover,
-h5 a:hover,
-h6 a:hover {
-  text-decoration: none;
-}
-/* Override stupid Bootstrap rule */
-h2 {
-  line-height: 26px;
-}
-h3 {
-  line-height: 23px;
-}
-h4 {
-  line-height: 19px;
-}
-h5 {
-  line-height: 16px;
-}
-h6 {
-  line-height: 16px;
-}
-#content h1 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-#content h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-#content h3 {
-  margin-top: 20px;
-  margin-bottom: 7px;
-}
-#content h4 {
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-#content h5 {
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-#content h6 {
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
 input[type="image"] {
   width: auto;
 }
@@ -1281,51 +1241,7 @@ body {
   height: 25px;
   background: #363636;
 }
-/* ========== */
-/* Page Style */
-/* ========== */
-header {
-  margin-bottom: 15px;
-  /* CSS Dropdown menu */
 
-}
-header .topbar {
-  /* Height of the OKFN header */
-
-  /* Bootstrap's tiny gradient after the black bar */
-
-  position: static;
-  height: 46px;
-}
-header .topbar .fill {
-  height: 40px;
-}
-header .topbar .fill a.brand img {
-  display: block;
-  float: left;
-  margin-top: -4px;
-  margin-right: 12px;
-}
-header .search-form {
-  display: none;
-}
-header li.dropdown:hover .dropdown-menu {
-  display: block;
-}
-.strapline {
-  color: #555;
-  text-shadow: 2px 2px #eee;
-  margin-bottom: 15px;
-}
-.strapline > .inner {
-  border: 2px dotted #aaa;
-  border-left: none;
-  border-right: none;
-  background: url('http://assets.okfn.org/web/images/header-strapline.png') left no-repeat;
-  padding: 10px 0 10px 100px;
-  line-height: 26px;
-  font-size: 21px;
-}
 #content .post {
   margin-bottom: 50px;
 }
@@ -1393,42 +1309,7 @@ header li.dropdown:hover .dropdown-menu {
   margin-bottom: 10px;
   font-weight: bold;
 }
-footer {
-  background: #222222 url('http://assets.okfn.org/web/images/footer-watermark.png') top right no-repeat;
-  margin-top: 50px;
-  padding: 0;
-}
-footer > .inner {
-  background: url('http://assets.okfn.org/web/images/footer-bevel.png') top repeat-x;
-  padding: 10px 0 30px 0;
-  color: #fff;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
-  min-height: 190px;
-}
-footer > .inner a, footer > .inner a:hover {
-  color: #aeebdf;
-}
-footer > .inner a:hover {
-  text-decoration: underline;
-}
-footer > .inner p {
-  margin-bottom: 4px;
-}
-footer > .inner h1, footer > .inner h2, footer > .inner h3 {
-  color: #fff;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
-  padding-bottom: 4px;
-}
-footer li {
-  color: #fff;
-}
-footer .widget-area {
-  display: inline;
-  float: left;
-  margin-left: 20px;
-  width: 300px;
-}
+
 .posttitle {
   margin-top: 8px;
 }
