@@ -33,6 +33,7 @@ p {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2b8271', endColorstr='#2b7682', GradientType=0);
   border-color: #2b7682 #2b7682 #184249;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); /* Not modified, but ie seems to not render radius without it */
 }
 .btn-primary:hover,
 .btn-primary:active,
@@ -205,6 +206,7 @@ header .dropdown-toggle:after {
 #content {
   display: inline-block;
   width: 680px;
+	zoom:1; *display: inline; /* fix inline-block for ie7 */
 }
 
 #content h1 {
@@ -238,6 +240,7 @@ header .dropdown-toggle:after {
   vertical-align: top;
   width: 240px;
   margin-left: 16px; /* 4px Hack to avoid whitespace glitch between inline-block elements */
+	zoom:1; *display: inline; /* fix inline-block for ie7 */
 }
 
 #sidebar #sidebar-login-form,
