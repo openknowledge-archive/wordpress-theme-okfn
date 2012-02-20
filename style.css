@@ -8,6 +8,6 @@ Tags:           buddypress
 Version:        1.1
 */
 
-@import url('opensans/opensans.css');
+@import url('theme-okfn/fonts/fonts.min.css');
 @import url('theme-okfn/css/okfn-common.css');
 @import url('css/okfn-wordpress.css');
