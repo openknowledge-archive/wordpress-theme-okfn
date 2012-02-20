@@ -99,10 +99,39 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 }
 
 
+/* ====== */
+/* Styles */
+/* ====== */
+
+.box {
+  background-color: #FFF;
+  border: 1px solid #dee0df;
+  margin: 0px 4px 8px 4px;
+  position: relative;
+}
+.box .padder {
+  padding: 10px;
+}
+.box.black {
+  background: #353535;  /* Old browsers */
+  background: -moz-linear-gradient(top, #353535 0%, #202020 100%);  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #353535), color-stop(100%, #202020));  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #353535 0%, #202020 100%);  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #353535 0%, #202020 100%);  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #353535 0%, #202020 100%);  /* IE10+ */
+  background: linear-gradient(top, #353535 0%, #202020 100%);  /* W3C */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#353535', endColorstr='#202020', GradientType=0);  /* IE6-9 */
+  border: 1px solid #202020;
+  color: #FFF;
+}
+.box.black h4 {
+  color: #FFF;
+}
+
+
 /* ================ */
 /* Wordpress Layout */
 /* ================ */
-
 
 /* Wordpress: Widget UL */
 /* ==================== */
@@ -795,48 +824,126 @@ table.notification-settings tr td:nth-child(2) {
   width: 500px;
 }
 
+
+/* =========== */
+/* POSITIONING */
+/* =========== */
+
+input[type="image"] {
+  width: auto;
+}
+label,
+input,
+select,
+textarea {
+  /* Override bootstrap.css */
+
+  font-family: OpenSansLight, serif;
+}
+label {
+  display: block;
+  text-align: left;
+  margin-top: 6px;
+  width: 70%;
+}
+label input {
+  width: 190px;
+}
+input {
+  width: 50%;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+/* Use our own top-padding (coloured black) rather than BuddyPress' hack. */
+/* ---------------------------------------------------------------------- */
+body {
+  padding-top: 0 !important;
+}
+.headspace {
+  height: 25px;
+  background: #363636;
+}
+
+#content .post {
+  margin-bottom: 50px;
+}
+#content .post p {
+  font-size: 12px;
+}
+#content .post p.date {
+  padding-left: 4px;
+}
+#content .post .postmetadata {
+  background: #eee;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  padding: 7px;
+  font-size: 12px;
+}
+#content .post .author-box {
+  float: right;
+  background: #eee;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 2px 0 5px 10px;
+}
+#content .post .author-box p {
+  margin: 0;
+  display: inline-block;
+}
+#content .post .author-box img {
+  vertical-align: middle;
+  margin-right: 3px;
+  width: 32px;
+  height: 32px;
+}
+#content .post .entry {
+  padding: 4px 0;
+}
+#content .post .entry p {
+  font-size: 15px;
+}
+#content .post .entry img {
+  background: #f0f0f0;
+  border: 1px dashed #e0e0e0;
+  padding: 10px;
+  display: block;
+  margin: 10px auto;
+}
+#content h2 {
+  font-size: 20px;
+  margin-top: 12px;
+}
+#content h2.posttitle {
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 34px;
+  margin-bottom: 6px;
+}
+#content h2.posttitle a {
+  color: #000;
+}
+#content h2.pagetitle {
+  font-size: 26px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.posttitle {
+  margin-top: 8px;
+}
+
+
+/* ==== */
+/* Blog */
+/* ==== */
+
 /* Magazine Front Pages */
 /* ==================== */
-.box {
-  background-color: #FFF;
-  border: 1px solid #dee0df;
-  margin: 0px 4px 8px 4px;
-  position: relative;
-}
-.box .padder {
-  padding: 10px;
-}
-.box.black {
-  background: #353535;
-  /* Old browsers */
 
-  background: -moz-linear-gradient(top, #353535 0%, #202020 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #353535), color-stop(100%, #202020));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(top, #353535 0%, #202020 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(top, #353535 0%, #202020 100%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(top, #353535 0%, #202020 100%);
-  /* IE10+ */
-
-  background: linear-gradient(top, #353535 0%, #202020 100%);
-  /* W3C */
-
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#353535', endColorstr='#202020', GradientType=0);
-  /* IE6-9 */
-
-  border: 1px solid #202020;
-  color: #FFF;
-}
-.box.black h4 {
-  color: #FFF;
-}
 .ribbon, .magazine h3.ribbon {
   position: absolute;
   top: 20px;
@@ -858,30 +965,14 @@ table.notification-settings tr td:nth-child(2) {
   line-height: 30px;
   text-align: center;
   min-width: 70px;
-  background: #434343;
-  /* Old browsers */
-
-  background: -moz-linear-gradient(top, #434343 0%, #0a0a0a 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #434343), color-stop(100%, #0a0a0a));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(top, #434343 0%, #0a0a0a 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(top, #434343 0%, #0a0a0a 100%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(top, #434343 0%, #0a0a0a 100%);
-  /* IE10+ */
-
-  background: linear-gradient(top, #434343 0%, #0a0a0a 100%);
-  /* W3C */
-
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#434343', endColorstr='#0a0a0a', GradientType=0);
-  /* IE6-9 */
-
+  background: #434343;  /* Old browsers */
+  background: -moz-linear-gradient(top, #434343 0%, #0a0a0a 100%);  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #434343), color-stop(100%, #0a0a0a));  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #434343 0%, #0a0a0a 100%);  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #434343 0%, #0a0a0a 100%);  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #434343 0%, #0a0a0a 100%);  /* IE10+ */
+  background: linear-gradient(top, #434343 0%, #0a0a0a 100%);  /* W3C */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#434343', endColorstr='#0a0a0a', GradientType=0);  /* IE6-9 */
   color: #FFFFFF;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   -webkit-border-radius: 3px;
@@ -893,30 +984,14 @@ table.notification-settings tr td:nth-child(2) {
 }
 a.magazine-button:hover {
   color: #FFFFFF;
-  background: #35897b;
-  /* Old browsers */
-
-  background: -moz-linear-gradient(top, #35897b 0%, #1e5e54 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #35897b), color-stop(100%, #1e5e54));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(top, #35897b 0%, #1e5e54 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(top, #35897b 0%, #1e5e54 100%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(top, #35897b 0%, #1e5e54 100%);
-  /* IE10+ */
-
-  background: linear-gradient(top, #35897b 0%, #1e5e54 100%);
-  /* W3C */
-
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#35897b', endColorstr='#1e5e54', GradientType=0);
-  /* IE6-9 */
-
+  background: #35897b;  /* Old browsers */
+  background: -moz-linear-gradient(top, #35897b 0%, #1e5e54 100%);  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #35897b), color-stop(100%, #1e5e54));  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #35897b 0%, #1e5e54 100%);  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #35897b 0%, #1e5e54 100%);  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #35897b 0%, #1e5e54 100%);  /* IE10+ */
+  background: linear-gradient(top, #35897b 0%, #1e5e54 100%);  /* W3C */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#35897b', endColorstr='#1e5e54', GradientType=0);  /* IE6-9 */
   text-decoration: none;
 }
 ul.scrollButtons {
@@ -1082,9 +1157,7 @@ body#bp-default #wp-admin-bar .padder {
 }
 */
 .magazine .strapline {
-  /* Magazine pages don't use a strapline. */
-
-  display: none;
+  display: none;  /* Magazine pages don't use a strapline. */
 }
 .magazine .post .image {
   overflow: hidden;
@@ -1102,45 +1175,19 @@ body#bp-default #wp-admin-bar .padder {
   position: absolute;
   left: 10px;
   bottom: 10px;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-  /* IE 8 */
-
-  filter: alpha(opacity=90);
-  /* IE 5-7 */
-
-  -moz-opacity: 0.9;
-  /* Netscape */
-
-  -khtml-opacity: 0.9;
-  /* Safari 1.x */
-
-  opacity: 0.9;
-  /* Good browsers */
-
-  background: #2e2e2e;
-  /* Old browsers */
-
-  background: -moz-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2e2e2e), color-stop(100%, #1d1d1d));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);
-  /* IE10+ */
-
-  background: linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);
-  /* W3C */
-
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#1d1d1d', GradientType=0);
-  /* IE6-9 */
-
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";  /* IE 8 */
+  filter: alpha(opacity=90);  /* IE 5-7 */
+  -moz-opacity: 0.9;  /* Netscape */
+  -khtml-opacity: 0.9;  /* Safari 1.x */
+  opacity: 0.9;  /* Good browsers */
+  background: #2e2e2e;  /* Old browsers */
+  background: -moz-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2e2e2e), color-stop(100%, #1d1d1d));  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* IE10+ */
+  background: linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* W3C */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#1d1d1d', GradientType=0);  /* IE6-9 */
   width: 620px;
   color: #FFF;
   padding: 10px 15px 5px 15px;
@@ -1149,6 +1196,9 @@ body#bp-default #wp-admin-bar .padder {
   border-bottom-width: 10px;
   border-bottom-style: solid;
   border-bottom-color: #1d1d1d;
+}
+.magazine .post.featured .text strong {
+	font-weight:normal;
 }
 .magazine .post .entry-meta {
   color: #9b9b9b;
@@ -1189,10 +1239,13 @@ body#bp-default #wp-admin-bar .padder {
   padding: 0px 10px;
   margin-bottom: 8px;
 }
+.magazine .post.preview .text strong {
+	font-weight:normal;
+}
 .magazine .post.preview .button {
   margin: 20px 10px 10px 10px;
 }
-.magazine .post {
+.magazine #content .post {
   margin-bottom: 8px;
 }
 .magazine .post h2 {
@@ -1201,115 +1254,4 @@ body#bp-default #wp-admin-bar .padder {
 }
 .magazine .post h2 a {
   color: #282828;
-}
-
-/* =========== */
-/* POSITIONING */
-/* =========== */
-
-input[type="image"] {
-  width: auto;
-}
-label,
-input,
-select,
-textarea {
-  /* Override bootstrap.css */
-
-  font-family: OpenSansLight, serif;
-}
-label {
-  display: block;
-  text-align: left;
-  margin-top: 6px;
-  width: 70%;
-}
-label input {
-  width: 190px;
-}
-input {
-  width: 50%;
-  display: inline-block;
-  margin-bottom: 4px;
-}
-/* Use our own top-padding (coloured black) rather than BuddyPress' hack. */
-/* ---------------------------------------------------------------------- */
-body {
-  padding-top: 0 !important;
-}
-.headspace {
-  height: 25px;
-  background: #363636;
-}
-
-#content .post {
-  margin-bottom: 50px;
-}
-#content .post p {
-  font-size: 12px;
-}
-#content .post p.date {
-  padding-left: 4px;
-}
-#content .post .postmetadata {
-  background: #eee;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  padding: 7px;
-  font-size: 12px;
-}
-#content .post .author-box {
-  float: right;
-  background: #eee;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  padding: 10px;
-  margin: 2px 0 5px 10px;
-}
-#content .post .author-box p {
-  margin: 0;
-  display: inline-block;
-}
-#content .post .author-box img {
-  vertical-align: middle;
-  margin-right: 3px;
-  width: 32px;
-  height: 32px;
-}
-#content .post .entry {
-  padding: 4px 0;
-}
-#content .post .entry p {
-  font-size: 15px;
-}
-#content .post .entry img {
-  background: #f0f0f0;
-  border: 1px dashed #e0e0e0;
-  padding: 10px;
-  display: block;
-  margin: 10px auto;
-}
-#content h2 {
-  font-size: 20px;
-  margin-top: 12px;
-}
-#content h2.posttitle {
-  font-size: 32px;
-  letter-spacing: -1px;
-  line-height: 34px;
-  margin-bottom: 6px;
-}
-#content h2.posttitle a {
-  color: #000;
-}
-#content h2.pagetitle {
-  font-size: 26px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.posttitle {
-  margin-top: 8px;
 }
