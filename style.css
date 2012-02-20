@@ -9,5 +9,5 @@ Version:        1.1
 */
 
 @import url('opensans/opensans.css');
-@import url('http://okfnlabs.org/theme-okfn/css/okfn-common.css');
+@import url('theme-okfn/css/okfn-common.css');
 @import url('css/okfn-wordpress.css');
