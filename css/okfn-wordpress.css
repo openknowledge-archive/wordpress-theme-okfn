@@ -1012,10 +1012,6 @@ body#bp-default #wp-admin-bar .padder {
 	width:950px;
 	min-width:950px;
 }
-.nav {
-	float:right;
-	padding-top:8px;
-}
 
 .topbar .brand {
 	padding-top:16px;
