@@ -4,7 +4,6 @@
  */
 add_filter('wp_nav_menu', 'filter_nav_menu'); 
 add_filter('bp_before_account_details_fields', 'register_form_blurb'); 
-add_filter('bp_get_signup_slug', 'get_signup_slug');
 
 /*
  * Use the simple_html_dom library to perform 
@@ -18,12 +17,6 @@ include('simple_html_dom.php');
 if ( !function_exists( 'bp_dtheme_enqueue_styles' ) ) :
     function bp_dtheme_enqueue_styles() {}
 endif;
-
-function get_signup_slug( $old_slug) {
-  // Buddypress produces the wrong slug on subsites. See:
-  // https://buddypress.trac.wordpress.org/ticket/4032
-  return 'http://okfn.org/register';
-}
 
 /*
  * Modify the DOM to enable bootstrap dropdown menus.
