@@ -3,8 +3,7 @@
 /* Bootstrap Modifications */
 /* ======================= */
 
-button, input[type=submit], input[type=reset],
-.btn {
+button, input[type=submit], input[type=reset] {
   display: inline-block;
   padding: 4px 10px 4px;
   font-size: 13px;
@@ -32,8 +31,7 @@ button, input[type=submit], input[type=reset],
   cursor: pointer;
   *margin-left: .3em;
 }
-button:hover, input[type=submit]:hover, input[type=reset]:hover,
-.btn:hover {
+button:hover, input[type=submit]:hover, input[type=reset]:hover {
   color: #FFF;
   text-decoration: none;
   background-color: #2b7682;
@@ -44,15 +42,13 @@ button:hover, input[type=submit]:hover, input[type=reset]:hover,
   -o-transition: background-position 0.1s linear;
   transition: background-position 0.1s linear;
 }
-button:focus, input[type=submit]:focus, input[type=reset]:focus,
-.btn:focus {
+button:focus, input[type=submit]:focus, input[type=reset]:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-input[type=\"submit\"],
-.btn-primary {
+input[type=\"submit\"] {
   background-color: #2b7d78;
   background-image: -moz-linear-gradient(top, #2b8271, #2b7682);
   background-image: -ms-linear-gradient(top, #2b8271, #2b7682);
@@ -66,12 +62,10 @@ input[type=\"submit\"],
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
-button:active, input[type=submit]:active, input[type=reset]:focus,
-.btn-primary:active, .btn-primary.active {
+button:active, input[type=submit]:active, input[type=reset]:focus {
   background-color: #1e535c \9;
 }
-button:active, input[type=submit]:active, input[type=reset]:focus,
-.btn.active, .btn:active {
+button:active, input[type=submit]:active, input[type=reset]:focus {
   background-image: none;
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -81,8 +75,7 @@ button:active, input[type=submit]:active, input[type=reset]:focus,
   color: rgba(0, 0, 0, 0.5);
   outline: 0;
 }
-button:active, input[type=submit]:active, input[type=reset]:focus,
-.btn.disabled, .btn[disabled] {
+button:active, input[type=submit]:active, input[type=reset]:focus {
   cursor: default;
   background-image: none;
   background-color: #e6e6e6;
@@ -958,42 +951,7 @@ body {
   -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.magazine-button {
-  display: inline-block;
-  padding: 0px 15px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  min-width: 70px;
-  background: #434343;  /* Old browsers */
-  background: -moz-linear-gradient(top, #434343 0%, #0a0a0a 100%);  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #434343), color-stop(100%, #0a0a0a));  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #434343 0%, #0a0a0a 100%);  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #434343 0%, #0a0a0a 100%);  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #434343 0%, #0a0a0a 100%);  /* IE10+ */
-  background: linear-gradient(top, #434343 0%, #0a0a0a 100%);  /* W3C */
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#434343', endColorstr='#0a0a0a', GradientType=0);  /* IE6-9 */
-  color: #FFFFFF;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: 0px 0px 2px 0px #000000;
-  -moz-box-shadow: 0px 0px 2px 0px #000000;
-  box-shadow: 0px 0px 2px 0px #000000;
-}
-a.magazine-button:hover {
-  color: #FFFFFF;
-  background: #35897b;  /* Old browsers */
-  background: -moz-linear-gradient(top, #35897b 0%, #1e5e54 100%);  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #35897b), color-stop(100%, #1e5e54));  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #35897b 0%, #1e5e54 100%);  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #35897b 0%, #1e5e54 100%);  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #35897b 0%, #1e5e54 100%);  /* IE10+ */
-  background: linear-gradient(top, #35897b 0%, #1e5e54 100%);  /* W3C */
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#35897b', endColorstr='#1e5e54', GradientType=0);  /* IE6-9 */
-  text-decoration: none;
-}
+
 ul.scrollButtons {
   margin: 0px;
 }
@@ -1025,7 +983,17 @@ ul.scrollButtons li.left a:hover {
 ul.scrollButtons li.right a:hover {
   background-position: -10px 0px;
 }
+
+
 /* Layout */
+/* ====== */
+.magazine #content {
+	width:692px;
+}
+.magazine #sidebar {
+	margin-left:4px; 
+}
+
 /* -------------------------------- */
 /* Magazine styles: To integrate... */
 /* -------------------------------- */
@@ -1160,13 +1128,18 @@ body#bp-default #wp-admin-bar .padder {
   display: none;  /* Magazine pages don't use a strapline. */
 }
 .magazine .post .image {
-  overflow: hidden;
-  display: block;
+	overflow: hidden;
+	display: block;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	background-position: center center;
 }
 .magazine .post.featured .image {
-  max-height: 419px;
-  min-height: 140px;
-  background-color: #f3f4f3;
+	height: 419px;
+	background-color: #f3f4f3;
+	background-position: center top;
 }
 .magazine .post.featured .image img {
   width: 690px;
@@ -1188,7 +1161,7 @@ body#bp-default #wp-admin-bar .padder {
   background: -ms-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* IE10+ */
   background: linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* W3C */
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#1d1d1d', GradientType=0);  /* IE6-9 */
-  width: 620px;
+  width: 632px;
   color: #FFF;
   padding: 10px 15px 5px 15px;
   max-height: 60px;
@@ -1225,9 +1198,9 @@ body#bp-default #wp-admin-bar .padder {
 }
 .magazine .post.preview {
   float: left;
-  width: 330px;
+  width: 336px;
 }
-.magazine .featured .magazine-button {
+.magazine .featured .btn {
   display: none;
 }
 .magazine .post.preview .image {
@@ -1242,7 +1215,7 @@ body#bp-default #wp-admin-bar .padder {
 .magazine .post.preview .text strong {
 	font-weight:normal;
 }
-.magazine .post.preview .button {
+.magazine .post.preview .btn {
   margin: 20px 10px 10px 10px;
 }
 .magazine #content .post {
