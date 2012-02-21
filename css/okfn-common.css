@@ -123,6 +123,10 @@ input:focus, textarea:focus {
   display: none;
 }
 
+.navbar .nav {
+  float: right;
+	margin:0px;
+}
 
 
 /* Main CSS */
