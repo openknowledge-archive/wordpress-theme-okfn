@@ -54,7 +54,7 @@
     $regex = '/\*\*[^\*]*\*\*/';
     $post_content = preg_replace($regex, '', $post_content);
 		echo '<div class="box post '.$post_class.'">';
-    echo '<div class="padder"> <a class="image" href="#"> <img src="'.$post_img.'"/> </a>';
+    echo '<div class="padder"> <a class="image" href="#" style="background-image:url('.$post_img.');"></a>';
     echo '<div class="text">';
     echo '<h2><a href="'.get_permalink().'"rel="bookmark">'; the_title(); echo '</a></h2>';
     echo '<span class="entry-meta">'; 
@@ -63,7 +63,7 @@
     echo '</span>';
     echo $post_content;
     echo '</div>';
-    echo '<a href="#" class="magazine-button">Full Post</a> </div>';
+    echo '<a href="#" class="btn btn-info">Full Post</a> </div>';
     echo '<h3 class="ribbon">Featured</h3>';
 		echo '</div>';
   }

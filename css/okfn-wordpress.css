@@ -3,8 +3,7 @@
 /* Bootstrap Modifications */
 /* ======================= */
 
-button, input[type=submit], input[type=reset],
-.btn {
+button, input[type=submit], input[type=reset] {
   display: inline-block;
   padding: 4px 10px 4px;
   font-size: 13px;
@@ -32,8 +31,7 @@ button, input[type=submit], input[type=reset],
   cursor: pointer;
   *margin-left: .3em;
 }
-button:hover, input[type=submit]:hover, input[type=reset]:hover,
-.btn:hover {
+button:hover, input[type=submit]:hover, input[type=reset]:hover {
   color: #FFF;
   text-decoration: none;
   background-color: #2b7682;
@@ -44,15 +42,13 @@ button:hover, input[type=submit]:hover, input[type=reset]:hover,
   -o-transition: background-position 0.1s linear;
   transition: background-position 0.1s linear;
 }
-button:focus, input[type=submit]:focus, input[type=reset]:focus,
-.btn:focus {
+button:focus, input[type=submit]:focus, input[type=reset]:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-input[type=\"submit\"],
-.btn-primary {
+input[type=\"submit\"] {
   background-color: #2b7d78;
   background-image: -moz-linear-gradient(top, #2b8271, #2b7682);
   background-image: -ms-linear-gradient(top, #2b8271, #2b7682);
@@ -66,12 +62,10 @@ input[type=\"submit\"],
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
-button:active, input[type=submit]:active, input[type=reset]:focus,
-.btn-primary:active, .btn-primary.active {
+button:active, input[type=submit]:active, input[type=reset]:focus {
   background-color: #1e535c \9;
 }
-button:active, input[type=submit]:active, input[type=reset]:focus,
-.btn.active, .btn:active {
+button:active, input[type=submit]:active, input[type=reset]:focus {
   background-image: none;
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -81,8 +75,7 @@ button:active, input[type=submit]:active, input[type=reset]:focus,
   color: rgba(0, 0, 0, 0.5);
   outline: 0;
 }
-button:active, input[type=submit]:active, input[type=reset]:focus,
-.btn.disabled, .btn[disabled] {
+button:active, input[type=submit]:active, input[type=reset]:focus {
   cursor: default;
   background-image: none;
   background-color: #e6e6e6;
@@ -99,10 +92,39 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 }
 
 
+/* ====== */
+/* Styles */
+/* ====== */
+
+.box {
+  background-color: #FFF;
+  border: 1px solid #dee0df;
+  margin: 0px 4px 8px 4px;
+  position: relative;
+}
+.box .padder {
+  padding: 10px;
+}
+.box.black {
+  background: #353535;  /* Old browsers */
+  background: -moz-linear-gradient(top, #353535 0%, #202020 100%);  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #353535), color-stop(100%, #202020));  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #353535 0%, #202020 100%);  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #353535 0%, #202020 100%);  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #353535 0%, #202020 100%);  /* IE10+ */
+  background: linear-gradient(top, #353535 0%, #202020 100%);  /* W3C */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#353535', endColorstr='#202020', GradientType=0);  /* IE6-9 */
+  border: 1px solid #202020;
+  color: #FFF;
+}
+.box.black h4 {
+  color: #FFF;
+}
+
+
 /* ================ */
 /* Wordpress Layout */
 /* ================ */
-
 
 /* Wordpress: Widget UL */
 /* ==================== */
@@ -795,413 +817,6 @@ table.notification-settings tr td:nth-child(2) {
   width: 500px;
 }
 
-/* Magazine Front Pages */
-/* ==================== */
-.box {
-  background-color: #FFF;
-  border: 1px solid #dee0df;
-  margin: 0px 4px 8px 4px;
-  position: relative;
-}
-.box .padder {
-  padding: 10px;
-}
-.box.black {
-  background: #353535;
-  /* Old browsers */
-
-  background: -moz-linear-gradient(top, #353535 0%, #202020 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #353535), color-stop(100%, #202020));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(top, #353535 0%, #202020 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(top, #353535 0%, #202020 100%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(top, #353535 0%, #202020 100%);
-  /* IE10+ */
-
-  background: linear-gradient(top, #353535 0%, #202020 100%);
-  /* W3C */
-
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#353535', endColorstr='#202020', GradientType=0);
-  /* IE6-9 */
-
-  border: 1px solid #202020;
-  color: #FFF;
-}
-.box.black h4 {
-  color: #FFF;
-}
-.ribbon, .magazine h3.ribbon {
-  position: absolute;
-  top: 20px;
-  left: -2px;
-  background-color: #272727;
-  color: #FFF;
-  margin: 0px !important;
-  padding: 5px 15px 5px 20px;
-  text-transform: uppercase;
-  font-size: 14px;
-  -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
-}
-.magazine-button {
-  display: inline-block;
-  padding: 0px 15px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  min-width: 70px;
-  background: #434343;
-  /* Old browsers */
-
-  background: -moz-linear-gradient(top, #434343 0%, #0a0a0a 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #434343), color-stop(100%, #0a0a0a));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(top, #434343 0%, #0a0a0a 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(top, #434343 0%, #0a0a0a 100%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(top, #434343 0%, #0a0a0a 100%);
-  /* IE10+ */
-
-  background: linear-gradient(top, #434343 0%, #0a0a0a 100%);
-  /* W3C */
-
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#434343', endColorstr='#0a0a0a', GradientType=0);
-  /* IE6-9 */
-
-  color: #FFFFFF;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: 0px 0px 2px 0px #000000;
-  -moz-box-shadow: 0px 0px 2px 0px #000000;
-  box-shadow: 0px 0px 2px 0px #000000;
-}
-a.magazine-button:hover {
-  color: #FFFFFF;
-  background: #35897b;
-  /* Old browsers */
-
-  background: -moz-linear-gradient(top, #35897b 0%, #1e5e54 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #35897b), color-stop(100%, #1e5e54));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(top, #35897b 0%, #1e5e54 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(top, #35897b 0%, #1e5e54 100%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(top, #35897b 0%, #1e5e54 100%);
-  /* IE10+ */
-
-  background: linear-gradient(top, #35897b 0%, #1e5e54 100%);
-  /* W3C */
-
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#35897b', endColorstr='#1e5e54', GradientType=0);
-  /* IE6-9 */
-
-  text-decoration: none;
-}
-ul.scrollButtons {
-  margin: 0px;
-}
-ul.scrollButtons li {
-  display: block;
-  padding: 6px;
-}
-ul.scrollButtons li a {
-  display: block;
-  background-image: url(../images/arrow-sprite.png);
-  background-repeat: no-repeat;
-  width: 5px;
-  height: 9px;
-  text-indent: -500px;
-  overflow: hidden;
-}
-ul.scrollButtons li.left, ul.scrollButtons li.right {
-  float: left;
-}
-ul.scrollButtons li.left a {
-  background-position: 0px -10px;
-}
-ul.scrollButtons li.right a {
-  background-position: -10px -10px;
-}
-ul.scrollButtons li.left a:hover {
-  background-position: 0px 0px;
-}
-ul.scrollButtons li.right a:hover {
-  background-position: -10px 0px;
-}
-/* Layout */
-/* -------------------------------- */
-/* Magazine styles: To integrate... */
-/* -------------------------------- */
-/*
-body {
-	background-color:#f1f3f2;
-}
-header {
-    margin-bottom: 10px;
-}
-header .topbar,
-header .topbar .fill {
-    height: 55px;
-}
-body#bp-default #wp-admin-bar .padder {
-	width:950px;
-	min-width:950px;
-}
-.nav {
-	float:right;
-	padding-top:8px;
-}
-
-.topbar .brand {
-	padding-top:16px;
-}
-
-.topbar .subBrand {
-	display:block;
-	float:left;
-	color:#FFF;
-	line-height:55px;
-	font-family: 'Nothing You Could Do', cursive;
-	font-size:36px;
-	text-decoration:none;
-	margin-left:-5px;
-}
-
-.container {
-	width:960px;
-}
-
-#content {
-	width:720px;
-}
-
-#sidebar {
-	margin:0px;
-	width:240px;
-	margin-left:-4px; // compensate for inline-block white space 
-}
-
-#sidebar h4 {
-	font-size:14px;
-	padding:5px 0px 7px 0px;
-}
-
-#sidebar .subscribe {
-	padding:10px;
-	margin:0px;
-}
-#sidebar .subscribe fieldset {
-	position:relative;
-	padding:0px;
-	margin:5px 0px 0px 0px;
-}
-#sidebar .subscribe fieldset label {
-	display:none;
-}
-#sidebar .subscribe input[type="text"] {
-	width:170px;
-	padding-right:30px;
-}
-#sidebar .subscribe input.submit {
-	border:none;
-	position:absolute;
-	top:0px;
-	right:5px;
-	-webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-	-moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0); 
-}
-
-#sidebar .authors .padder {
-	padding-right:0px;
-}
-#sidebar .authors ul.scrollButtons {
-	position:absolute;
-	top:14px;
-	right:8px;
-}
-#sidebar .authors .author-list {
-	overflow:hidden;
-	height:290px;
-	margin:0px;
-}
-#sidebar .authors .author-list li {
-	display:inline-block;
-	margin:6px 4px 0px 0px;
-}
-#sidebar .authors .author-list a {
-	display:block;
-	width:64px;
-	height:64px;
-	background-color: #f3f4f3;
-	overflow:hidden;
-}
-#sidebar .authors .author-list img {
-	width:64px;
-	height:64px;
-}
-
-
-#sidebar .categories {
-	margin:0px;
-}
-#sidebar .categories li {
-	display:block;
-	float:left;
-	padding:0px 0px 0px 0px;
-}
-#sidebar .categories li a {
-	padding:10px;
-	display:block;
-	border: 1px solid #dee0df;
-	margin:0px 4px 8px 4px;
-	position:relative;
-	background-color:#FFF;
-}
-*/
-.magazine .strapline {
-  /* Magazine pages don't use a strapline. */
-
-  display: none;
-}
-.magazine .post .image {
-  overflow: hidden;
-  display: block;
-}
-.magazine .post.featured .image {
-  max-height: 419px;
-  min-height: 140px;
-  background-color: #f3f4f3;
-}
-.magazine .post.featured .image img {
-  width: 690px;
-}
-.magazine .post.featured .text {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-  /* IE 8 */
-
-  filter: alpha(opacity=90);
-  /* IE 5-7 */
-
-  -moz-opacity: 0.9;
-  /* Netscape */
-
-  -khtml-opacity: 0.9;
-  /* Safari 1.x */
-
-  opacity: 0.9;
-  /* Good browsers */
-
-  background: #2e2e2e;
-  /* Old browsers */
-
-  background: -moz-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2e2e2e), color-stop(100%, #1d1d1d));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);
-  /* IE10+ */
-
-  background: linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);
-  /* W3C */
-
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#1d1d1d', GradientType=0);
-  /* IE6-9 */
-
-  width: 620px;
-  color: #FFF;
-  padding: 10px 15px 5px 15px;
-  max-height: 60px;
-  overflow: hidden;
-  border-bottom-width: 10px;
-  border-bottom-style: solid;
-  border-bottom-color: #1d1d1d;
-}
-.magazine .post .entry-meta {
-  color: #9b9b9b;
-  font-size: 11px;
-  display: block;
-  margin-bottom: 4px;
-}
-.magazine .featured .text h2 {
-  color: #FFF;
-  margin: 0px !important;
-  font-size: 18px;
-}
-.magazine .featured .text h2 a {
-  color: #FFF;
-}
-.magazine .featured .text .entry-meta {
-  display: none;
-}
-.magazine .featured .button {
-  display: none;
-}
-.magazine .featured .ribbon {
-  background-color: #267f70;
-}
-.magazine .post.preview {
-  float: left;
-  width: 330px;
-}
-.magazine .featured .magazine-button {
-  display: none;
-}
-.magazine .post.preview .image {
-  height: 196px;
-}
-.magazine .post.preview .text {
-  overflow: hidden;
-  height: 162px;
-  padding: 0px 10px;
-  margin-bottom: 8px;
-}
-.magazine .post.preview .button {
-  margin: 20px 10px 10px 10px;
-}
-.magazine .post {
-  margin-bottom: 8px;
-}
-.magazine .post h2 {
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-.magazine .post h2 a {
-  color: #282828;
-}
 
 /* =========== */
 /* POSITIONING */
@@ -1312,4 +927,300 @@ body {
 
 .posttitle {
   margin-top: 8px;
+}
+
+
+/* ==== */
+/* Blog */
+/* ==== */
+
+/* Magazine Front Pages */
+/* ==================== */
+
+.ribbon, .magazine h3.ribbon {
+  position: absolute;
+  top: 20px;
+  left: -2px;
+  background-color: #272727;
+  color: #FFF;
+  margin: 0px !important;
+  padding: 5px 15px 5px 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+ul.scrollButtons {
+  margin: 0px;
+}
+ul.scrollButtons li {
+  display: block;
+  padding: 6px;
+}
+ul.scrollButtons li a {
+  display: block;
+  background-image: url(../images/arrow-sprite.png);
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 9px;
+  text-indent: -500px;
+  overflow: hidden;
+}
+ul.scrollButtons li.left, ul.scrollButtons li.right {
+  float: left;
+}
+ul.scrollButtons li.left a {
+  background-position: 0px -10px;
+}
+ul.scrollButtons li.right a {
+  background-position: -10px -10px;
+}
+ul.scrollButtons li.left a:hover {
+  background-position: 0px 0px;
+}
+ul.scrollButtons li.right a:hover {
+  background-position: -10px 0px;
+}
+
+
+/* Layout */
+/* ====== */
+.magazine #content {
+	width:692px;
+}
+.magazine #sidebar {
+	margin-left:4px; 
+}
+
+/* -------------------------------- */
+/* Magazine styles: To integrate... */
+/* -------------------------------- */
+/*
+body {
+	background-color:#f1f3f2;
+}
+header {
+    margin-bottom: 10px;
+}
+header .topbar,
+header .topbar .fill {
+    height: 55px;
+}
+body#bp-default #wp-admin-bar .padder {
+	width:950px;
+	min-width:950px;
+}
+
+.topbar .brand {
+	padding-top:16px;
+}
+
+.topbar .subBrand {
+	display:block;
+	float:left;
+	color:#FFF;
+	line-height:55px;
+	font-family: 'Nothing You Could Do', cursive;
+	font-size:36px;
+	text-decoration:none;
+	margin-left:-5px;
+}
+
+.container {
+	width:960px;
+}
+
+#content {
+	width:720px;
+}
+
+#sidebar {
+	margin:0px;
+	width:240px;
+	margin-left:-4px; // compensate for inline-block white space 
+}
+
+#sidebar h4 {
+	font-size:14px;
+	padding:5px 0px 7px 0px;
+}
+
+#sidebar .subscribe {
+	padding:10px;
+	margin:0px;
+}
+#sidebar .subscribe fieldset {
+	position:relative;
+	padding:0px;
+	margin:5px 0px 0px 0px;
+}
+#sidebar .subscribe fieldset label {
+	display:none;
+}
+#sidebar .subscribe input[type="text"] {
+	width:170px;
+	padding-right:30px;
+}
+#sidebar .subscribe input.submit {
+	border:none;
+	position:absolute;
+	top:0px;
+	right:5px;
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	-moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0); 
+}
+
+#sidebar .authors .padder {
+	padding-right:0px;
+}
+#sidebar .authors ul.scrollButtons {
+	position:absolute;
+	top:14px;
+	right:8px;
+}
+#sidebar .authors .author-list {
+	overflow:hidden;
+	height:290px;
+	margin:0px;
+}
+#sidebar .authors .author-list li {
+	display:inline-block;
+	margin:6px 4px 0px 0px;
+}
+#sidebar .authors .author-list a {
+	display:block;
+	width:64px;
+	height:64px;
+	background-color: #f3f4f3;
+	overflow:hidden;
+}
+#sidebar .authors .author-list img {
+	width:64px;
+	height:64px;
+}
+
+
+#sidebar .categories {
+	margin:0px;
+}
+#sidebar .categories li {
+	display:block;
+	float:left;
+	padding:0px 0px 0px 0px;
+}
+#sidebar .categories li a {
+	padding:10px;
+	display:block;
+	border: 1px solid #dee0df;
+	margin:0px 4px 8px 4px;
+	position:relative;
+	background-color:#FFF;
+}
+*/
+.magazine .strapline {
+  display: none;  /* Magazine pages don't use a strapline. */
+}
+.magazine .post .image {
+	overflow: hidden;
+	display: block;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	background-position: center center;
+}
+.magazine .post.featured .image {
+	height: 419px;
+	background-color: #f3f4f3;
+	background-position: center top;
+}
+.magazine .post.featured .image img {
+  width: 690px;
+}
+.magazine .post.featured .text {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";  /* IE 8 */
+  filter: alpha(opacity=90);  /* IE 5-7 */
+  -moz-opacity: 0.9;  /* Netscape */
+  -khtml-opacity: 0.9;  /* Safari 1.x */
+  opacity: 0.9;  /* Good browsers */
+  background: #2e2e2e;  /* Old browsers */
+  background: -moz-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2e2e2e), color-stop(100%, #1d1d1d));  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* IE10+ */
+  background: linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* W3C */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#1d1d1d', GradientType=0);  /* IE6-9 */
+  width: 632px;
+  color: #FFF;
+  padding: 10px 15px 5px 15px;
+  max-height: 60px;
+  overflow: hidden;
+  border-bottom-width: 10px;
+  border-bottom-style: solid;
+  border-bottom-color: #1d1d1d;
+}
+.magazine .post.featured .text strong {
+	font-weight:normal;
+}
+.magazine .post .entry-meta {
+  color: #9b9b9b;
+  font-size: 11px;
+  display: block;
+  margin-bottom: 4px;
+}
+.magazine .featured .text h2 {
+  color: #FFF;
+  margin: 0px !important;
+  font-size: 18px;
+}
+.magazine .featured .text h2 a {
+  color: #FFF;
+}
+.magazine .featured .text .entry-meta {
+  display: none;
+}
+.magazine .featured .button {
+  display: none;
+}
+.magazine .featured .ribbon {
+  background-color: #267f70;
+}
+.magazine .post.preview {
+  float: left;
+  width: 336px;
+}
+.magazine .featured .btn {
+  display: none;
+}
+.magazine .post.preview .image {
+  height: 196px;
+}
+.magazine .post.preview .text {
+  overflow: hidden;
+  height: 162px;
+  padding: 0px 10px;
+  margin-bottom: 8px;
+}
+.magazine .post.preview .text strong {
+	font-weight:normal;
+}
+.magazine .post.preview .btn {
+  margin: 20px 10px 10px 10px;
+}
+.magazine #content .post {
+  margin-bottom: 8px;
+}
+.magazine .post h2 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.magazine .post h2 a {
+  color: #282828;
 }
