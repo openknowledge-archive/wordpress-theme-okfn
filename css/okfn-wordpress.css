@@ -1257,6 +1257,17 @@ table tbody th {
   vertical-align: top;
 }
 
+/* overwrite bootstrap label class */
+table td.label {
+	background-color: #FFF;
+  border-radius: 3px 3px 3px 3px;
+  color: #000;
+  font-size: inherit;
+  font-weight: normal;
+  padding: 10px 10px 9px 0px;
+  text-transform: capitalize;
+}
+
 
 /* item-list-tabs from old bootstrap */
 
