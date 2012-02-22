@@ -1224,3 +1224,100 @@ body#bp-default #wp-admin-bar .padder {
 .magazine .post h2 a {
   color: #282828;
 }
+
+
+/* Members */
+/* ------- */
+
+/* Tables from old bootstrap */
+
+table {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 0;
+  font-size: 13px;
+  border-collapse: collapse;
+}
+table th, table td {
+  padding: 10px 10px 9px;
+  line-height: 18px;
+  text-align: left;
+}
+table th {
+  padding-top: 9px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+table td {
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+table tbody th {
+  border-top: 1px solid #ddd;
+  vertical-align: top;
+}
+
+
+/* item-list-tabs from old bootstrap */
+
+.item-list-tabs ul, .tabs, .pills {
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+  zoom: 1;
+}
+.item-list-tabs ul:before, 
+.item-list-tabs ul:after, 
+.tabs:before,
+.pills:before,
+.tabs:after,
+.pills:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+.item-list-tabs ul:after, 
+.tabs:after, .pills:after {
+  clear: both;
+}
+.item-list-tabs > ul > li, .tabs > li, .pills > li {
+  float: left;
+}
+.item-list-tabs > ul > li > a, .tabs > li > a, .pills > li > a {
+  display: block;
+}
+.item-list-tabs ul, .tabs {
+  border-color: #ddd;
+  border-style: solid;
+  border-width: 0 0 1px;
+}
+.item-list-tabs > ul > li, .tabs > li {
+  position: relative;
+  margin-bottom: -1px;
+}
+.item-list-tabs > ul > li > a, .tabs > li > a {
+  padding: 0 15px;
+  margin-right: 2px;
+  line-height: 34px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.item-list-tabs > ul > li > a:hover, .tabs > li > a:hover {
+  text-decoration: none;
+  background-color: #eee;
+  border-color: #eee #eee #ddd;
+}
+.item-list-tabs .selected > a, 
+.item-list-tabs .current > a, 
+.item-list-tabs .current > a:hover, 
+.item-list-tabs .selected > a:hover, 
+.tabs .active > a, 
+.tabs .active > a:hover {
+  color: #808080;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
