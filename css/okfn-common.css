@@ -129,6 +129,11 @@ input:focus, textarea:focus {
 	margin:0px;
 }
 
+.carousel-control {
+    font-size: 44px;
+    line-height: 27px;
+}
+
 
 /* Main CSS */
 /* ======== */
