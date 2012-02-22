@@ -179,19 +179,49 @@ ul.xoxo ul li {
 /* Header */
 header {
   margin-bottom: 15px; /* CSS Dropdown menu */
+	margin-top:25px; /* for topbar */
 }
-header .topbar {
-  position: static;
-  height: 46px; /* Height of the OKFN header */
+.topbar {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+    font-size: 11px;
+    height: 25px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
-header .topbar .fill {
-  height: 40px;
+.topbar .padder {
+	width:940px;
+	height: 25px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
 }
-header .topbar .fill a.brand img {
-  display: block;
-  float: left;
-  margin-top: -4px;
-  margin-right: 12px;
+.topbar ul {
+	float:right;
+	cursor: pointer;
+  height: auto;
+  line-height: 1;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+.topbar ul li a {
+    display: block;
+}
+.topbar li a {
+    color: #EEEEEE;
+    padding: 3px 15px;
+    text-decoration: none;
+}
+.topbar .social {
+	float:right;
+	padding:4px 5px 0px 5px;
+}
+.topbar .social > span {
+	display:inline-block;
+	width:20px;
 }
 header .search-form {
   display: none;
