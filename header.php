@@ -24,7 +24,7 @@
       Okfn.theme_directory = '<?php echo bloginfo('stylesheet_directory'); ?>';
     </script>
 
-    <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/js/app.js"></script>
 	</head>
 
