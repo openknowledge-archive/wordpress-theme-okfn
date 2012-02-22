@@ -34,7 +34,6 @@
       /* Javascript includes */
       do_action( 'bp_before_header' ) 
     ?>
-    <div class="headspace"></div>
 
     <header>
         <div class="navbar">
