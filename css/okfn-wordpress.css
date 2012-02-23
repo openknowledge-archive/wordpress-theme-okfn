@@ -349,7 +349,7 @@ ul#members-list {
 /* Buddypress: Top links (customised) */
 /* ================================== */
 body#bp-default #wp-admin-bar {
-  background: rgba(0, 0, 0, 0.8);
+  background-color: #060606;
 }
 body#bp-default #wp-admin-bar .padder {
   background: none;
