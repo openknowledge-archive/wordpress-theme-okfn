@@ -179,6 +179,32 @@ ul.xoxo ul li {
 }
 
 
+.box {
+  background-color: #FFF;
+  border: 1px solid #dee0df;
+  margin: 0px 4px 8px 4px;
+  position: relative;
+}
+.box .padder {
+  padding: 10px;
+}
+.box.black {
+  background: #353535;  /* Old browsers */
+  background: -moz-linear-gradient(top, #353535 0%, #202020 100%);  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #353535), color-stop(100%, #202020));  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #353535 0%, #202020 100%);  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #353535 0%, #202020 100%);  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #353535 0%, #202020 100%);  /* IE10+ */
+  background: linear-gradient(top, #353535 0%, #202020 100%);  /* W3C */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#353535', endColorstr='#202020', GradientType=0);  /* IE6-9 */
+  border: 1px solid #202020;
+  color: #FFF;
+}
+.box.black h4 {
+  color: #FFF;
+}
+
+
 /* Layout */
 /* ====== */
 
