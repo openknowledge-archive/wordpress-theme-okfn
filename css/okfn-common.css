@@ -188,14 +188,18 @@ header {
 	margin-top:25px; /* for topbar */
 }
 .topbar {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
-    font-size: 11px;
-    height: 25px;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+	font-size: 11px;
+	height: 25px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	background-attachment: scroll;
+	background-color: #060606;
+	background-image: none;
+	background-repeat: repeat;
+	background-position: 0 0;
 }
 .topbar .padder {
 	width:940px;
