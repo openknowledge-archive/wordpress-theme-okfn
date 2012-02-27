@@ -200,7 +200,12 @@ ul.xoxo ul li {
   border: 1px solid #202020;
   color: #FFF;
 }
-.box.black h4 {
+.box.black h1,
+.box.black h2,
+.box.black h3,
+.box.black h4,
+.box.black h5,
+.box.black h6 {
   color: #FFF;
 }
 
