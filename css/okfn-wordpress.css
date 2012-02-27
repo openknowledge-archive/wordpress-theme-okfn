@@ -310,6 +310,8 @@ ul#members-list {
 }
 #sidebar .widget.widget_categories ul {
 	margin:0px;
+	overflow:auto;
+	max-height:400px;
 }
 #sidebar .widget.widget_categories ul li {
 	border:none;
