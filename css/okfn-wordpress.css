@@ -1159,16 +1159,15 @@ body#bp-default #wp-admin-bar .padder {
 .magazine .post .image {
 	overflow: hidden;
 	display: block;
-	-webkit-background-size: contain;
-	-moz-background-size: contain;
-	-o-background-size: contain;
-	background-size: contain;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	background-position: center center;
 }
 .magazine .post.featured .image {
 	height: 419px;
 	background-color: #f3f4f3;
-	background-position: center top;
 }
 .magazine .post.featured .image img {
   width: 690px;
