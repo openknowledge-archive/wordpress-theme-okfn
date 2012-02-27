@@ -233,17 +233,7 @@ ul#members-list {
 	bottom:10px;
 }
 
-/* Archive Widget */
-#sidebar .widget.widget_archive select {
-	margin-left:10px;
-}
-
-/* Authors Widget */
-#sidebar .widget.Authors {
-	
-}
-
-
+/* Twitter Widget */
 #sidebar .widget .tb_tweet {
   padding: 10px 0;
 }
@@ -256,6 +246,71 @@ ul#members-list {
 }
 #sidebar .widget .tb-widget-configuration {
   margin: 0;
+}
+
+/* Archive Widget */
+#sidebar .widget.widget_archive select {
+	margin-left:10px;
+}
+
+/* Authors Widget */
+#sidebar .widget.Top.Authors {
+	background-color:#FFF;
+	background-image:none;
+	border: 1px solid #dee0df;
+	color:#212121;
+}
+#sidebar .widget.Top.Authors h3 {
+	color:#212121;
+}
+#sidebar .widget.Top.Authors ul {
+	margin:0px 5px 10px 10px;
+}
+#sidebar .widget.Top.Authors ul li {
+	display:inline-block;
+	margin:6px 6px 0px 0px;
+	padding:0px;
+	border: 1px solid #dee0df;
+}
+#sidebar .widget.Top.Authors ul li a {
+	display:block;
+	width:64px;
+	height:64px;
+	background-color: #f3f4f3;
+	overflow:hidden;
+}
+
+/* Categories Widget */
+#sidebar .widget.widget_categories {
+	background-image:none;
+	border:none;
+}
+#sidebar .widget.widget_categories h3 {
+	display:none;
+}
+#sidebar .widget.widget_categories ul {
+	margin:0px;
+}
+#sidebar .widget.widget_categories ul li {
+	border:none;
+	display:block;
+	float:left;
+	padding:0px;
+}
+#sidebar .widget.widget_categories ul li a {
+	padding:8px 10px;
+	display:block;
+	border: 1px solid #dee0df;
+	margin:0px 8px 8px 0px;
+	position:relative;
+	background-color:#FFF;
+	color:#212121;
+}
+#sidebar .widget.widget_categories ul li a:hover {
+	background-color:#3E8F80;
+	text-decoration:none;
+	border-color:#3E8F80;
+	color:#FFF;
 }
 
 
@@ -1094,53 +1149,6 @@ body#bp-default #wp-admin-bar .padder {
 	-webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 	-moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0); 
-}
-
-#sidebar .authors .padder {
-	padding-right:0px;
-}
-#sidebar .authors ul.scrollButtons {
-	position:absolute;
-	top:14px;
-	right:8px;
-}
-#sidebar .authors .author-list {
-	overflow:hidden;
-	height:290px;
-	margin:0px;
-}
-#sidebar .authors .author-list li {
-	display:inline-block;
-	margin:6px 4px 0px 0px;
-}
-#sidebar .authors .author-list a {
-	display:block;
-	width:64px;
-	height:64px;
-	background-color: #f3f4f3;
-	overflow:hidden;
-}
-#sidebar .authors .author-list img {
-	width:64px;
-	height:64px;
-}
-
-
-#sidebar .categories {
-	margin:0px;
-}
-#sidebar .categories li {
-	display:block;
-	float:left;
-	padding:0px 0px 0px 0px;
-}
-#sidebar .categories li a {
-	padding:10px;
-	display:block;
-	border: 1px solid #dee0df;
-	margin:0px 4px 8px 4px;
-	position:relative;
-	background-color:#FFF;
 }
 */
 .magazine .strapline {
