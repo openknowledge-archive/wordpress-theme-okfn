@@ -311,7 +311,7 @@ ul#members-list {
 #sidebar .widget.widget_categories ul {
 	margin:0px;
 	overflow:auto;
-	max-height:400px;
+	max-height:436px;
 }
 #sidebar .widget.widget_categories ul li {
 	border:none;
@@ -460,7 +460,7 @@ body#bp-default #wp-admin-bar .padder > a:first-child {
 }
 body#bp-default #wp-admin-bar .padder > ul {
   position: absolute;
-  right: 0;
+  right: 10px;
 }
 body#bp-default #wp-admin-bar .padder > ul > li {
   position: static;
@@ -1146,33 +1146,13 @@ body#bp-default #wp-admin-bar .padder {
 	font-size:14px;
 	padding:5px 0px 7px 0px;
 }
+*/
 
-#sidebar .subscribe {
-	padding:10px;
-	margin:0px;
-}
-#sidebar .subscribe fieldset {
-	position:relative;
-	padding:0px;
-	margin:5px 0px 0px 0px;
-}
-#sidebar .subscribe fieldset label {
+.magazine #sidebar #sidebar-me,
+.magazine #sidebar #sidebar-login-form {
 	display:none;
 }
-#sidebar .subscribe input[type="text"] {
-	width:170px;
-	padding-right:30px;
-}
-#sidebar .subscribe input.submit {
-	border:none;
-	position:absolute;
-	top:0px;
-	right:5px;
-	-webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-	-moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0); 
-}
-*/
+
 .magazine .strapline {
   display: none;  /* Magazine pages don't use a strapline. */
 }
