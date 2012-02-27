@@ -227,10 +227,30 @@ ul#members-list {
 #sidebar .widget.BFW form {
 	padding:10px;
 }
+#sidebar .widget.BFW #BFW_email {
+	padding-right:32px;
+	width:180px;
+	margin-bottom:5px;
+}
+#sidebar .widget.BFW #BFW_submit {
+	position:absolute;
+	right:10px;
+	background-color:transparent;
+	background-image: url(http://assets.okfn.org/web/images/rss.png);
+	text-indent:-500px;
+	overflow:hidden;
+	width:32px;
+	border:none;
+	padding:0px;
+	margin:0px;
+	height:28px;
+	background-position: center center;
+	box-shadow:none;
+}
 #sidebar .widget.BFW #BFW_stats {
 	position:absolute;
 	right:10px;
-	bottom:10px;
+	top:10px;
 }
 
 /* Twitter Widget */
