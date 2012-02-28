@@ -284,11 +284,12 @@ ul#members-list {
 	color:#212121;
 }
 #sidebar .widget.Top.Authors ul {
-	margin:0px 5px 10px 10px;
+	margin:0px 0px 10px 10px;
+	font-size:0px;
 }
 #sidebar .widget.Top.Authors ul li {
 	display:inline-block;
-	margin:6px 6px 0px 0px;
+	margin:9px 9px 0px 0px;
 	padding:0px;
 	border: 1px solid #dee0df;
 }
