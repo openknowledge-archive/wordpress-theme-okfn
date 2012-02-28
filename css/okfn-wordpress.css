@@ -1101,6 +1101,7 @@ body#bp-default #wp-admin-bar .padder {
   font-size: 18px;
 	line-height:28px;
 }
+.magazine .featured .text a,
 .magazine .featured .text h2 a {
   color: #FFF;
 }
