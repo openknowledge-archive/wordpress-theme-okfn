@@ -392,24 +392,12 @@ ul#members-list {
 /* Wordpress: #login-text connects to the #sidebar-login-form */
 /* ========================================================== */
 #sidebar p#login-text {
-  -webkit-border-top-left-radius: 8px;
-  -moz-border-radius-topleft: 8px;
-  border-top-left-radius: 8px;
-  -webkit-border-top-right-radius: 8px;
-  -moz-border-radius-topright: 8px;
-  border-top-right-radius: 8px;
-  background: #eee;
-  padding: 8px;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  background: #202020;
+  padding: 10px;
 }
-#sidebar form#sidebar-login-form {
-  -webkit-border-top-left-radius: 0px;
-  -moz-border-radius-topleft: 0px;
-  border-top-left-radius: 0px;
-  -webkit-border-top-right-radius: 0px;
-  -moz-border-radius-topright: 0px;
-  border-top-right-radius: 0px;
+#sidebar p#login-text a {
+	color:#FFF;
+	font-weight:bold;
 }
 
 /* Wordpress: End-of-article response form */
