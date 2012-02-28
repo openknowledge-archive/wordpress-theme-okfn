@@ -23,6 +23,7 @@
           <style type="text/css">
             #footer-widget-area > div {
               width: <?php echo $footer_width; ?>px !important;
+						}
           </style>
           <div class="row">
           <div id="footer-widgets">
@@ -39,8 +40,10 @@
     </footer>
 		
 		<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/bootstrap.js"></script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 
-    <script type="text/javascript">stLight.options({publisher: "ur-c524706a-c88f-82a8-ea44-7140256786d3"}); </script>
+    
+    <!--ShareThis -->
+		<!--<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 
+        <script type="text/javascript">stLight.options({publisher: "ur-c524706a-c88f-82a8-ea44-7140256786d3"}); </script> -->
 		
 	</body>
 
