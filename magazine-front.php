@@ -59,7 +59,9 @@ function print_post($post, $is_featured) {
     echo the_excerpt();
     echo '</div>';
     echo '<a href="#" class="btn btn-info">Full Post</a> </div>';
-    echo '<h3 class="ribbon">Featured</h3>';
+    echo '<h3 class="ribbon">';
+    the_category(' &bull; ');
+    echo '</h3>';
     echo '</div>';
 }
 ?>
