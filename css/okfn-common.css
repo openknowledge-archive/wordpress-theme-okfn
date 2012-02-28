@@ -128,12 +128,12 @@ input:focus, textarea:focus {
   float: right;
 	margin:0px;
 }
-
-.carousel-control {
+/*
+.carousel-control { /*compensate for opensans
     font-size: 44px;
     line-height: 27px;
 }
-
+*/
 
 /* Main CSS */
 /* ======== */
