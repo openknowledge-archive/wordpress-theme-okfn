@@ -143,7 +143,6 @@ html {
 body {
   /*font-family: OpenSansLight, serif;*/
   background: #fff;
-  color: #000;
 }
 a {
   color: #3e8f80;
@@ -159,8 +158,9 @@ h3,
 h4,
 h5,
 h6,
-.brand,
-.strapline {
+header,
+.strapline,
+.carousel-caption {
 	font-family:OpenSansLight, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h2 {
