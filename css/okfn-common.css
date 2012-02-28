@@ -160,7 +160,7 @@ h5,
 h6,
 header,
 .strapline,
-.carousel-caption {
+.carousel-caption, .carousel-caption p {
 	font-family:OpenSansLight, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h2 {
