@@ -394,6 +394,7 @@ ul#members-list {
 #sidebar p#login-text {
   background: #202020;
   padding: 10px;
+	color:#FFF;
 }
 #sidebar p#login-text a {
 	color:#FFF;
