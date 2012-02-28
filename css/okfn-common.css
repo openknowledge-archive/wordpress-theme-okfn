@@ -13,7 +13,7 @@
 /* ======================= */
 
 p {
-    font-family: "OpenSansLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-family: "OpenSansLight","Helvetica Neue",Helvetica,Arial,sans-serif;*/
 }
 
 .navbar-inner {
@@ -141,7 +141,7 @@ html {
   background: #222222;
 }
 body {
-  font-family: OpenSansLight, serif;
+  /*font-family: OpenSansLight, serif;*/
   background: #fff;
   color: #000;
 }
@@ -152,15 +152,16 @@ a:hover {
   color: #1f4840;
   text-decoration: underline;
 }
-h1 a:hover,
-h2 a:hover,
-h3 a:hover,
-h4 a:hover,
-h5 a:hover,
-h6 a:hover {
-  text-decoration: none;
-}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.strapline {
+	font-family:OpenSansLight, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 h2 {
 	line-height: 26px;
 	font-weight:700;
@@ -169,6 +170,15 @@ h3 {line-height: 23px;}
 h4 {line-height: 19px;}
 h5 {line-height: 16px;}
 h6 {line-height: 16px;}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+  text-decoration: none;
+}
 
 ul.xoxo {
   list-style-type: none;
