@@ -46,7 +46,7 @@ function print_post($post, $is_featured) {
     // Extract the first img src from the post body
     $regex = '/magazine.image\s*=\s*"?([^"\s->]*)/';
     preg_match($regex, get_the_content(), $matches);
-    $post_img = 'http://farm7.staticflickr.com/6081/6122893997_9e6c24fa36_z.jpg';
+    $post_img = get_bloginfo( 'stylesheet_directory' ) . '/img/default-image.png';
     if (count($matches)) $post_img = $matches[1];
     echo '<div class="box post '.$post_class.'">';
     echo '<div class="padder"> <a class="image" href="#" style="background-image:url('.$post_img.');"></a>';
