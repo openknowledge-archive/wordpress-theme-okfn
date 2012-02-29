@@ -288,6 +288,7 @@ ul#members-list {
 	margin:9px 9px 0px 0px;
 	padding:0px;
 	border: 1px solid #dee0df;
+	zoom:1; *display: inline; /* for ie */
 }
 #sidebar .widget.Top.Authors ul li a {
 	display:block;
@@ -309,6 +310,7 @@ ul#members-list {
 	margin:0px;
 	overflow:auto;
 	max-height:436px;
+	*background-color:#FFF; *overflow:visible; /* for ie */
 }
 #sidebar .widget.widget_categories ul li {
 	border:none;
@@ -354,7 +356,6 @@ ul#members-list {
 /* Wordpress: Sidebar login form */
 /* ============================= */
 #sidebar #sidebar-login-form {
-  background-color: #eee;
   padding: 5px 0px 0px 10px;
 }
 #sidebar #sidebar-login-form label {
@@ -1375,6 +1376,7 @@ body#bp-default #wp-admin-bar .padder {
 .single-post .container > .author-box p {
 	font-size:12px;
 	line-height:16px;
+	margin:0px;
 }
 
 
