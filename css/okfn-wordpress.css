@@ -1102,6 +1102,9 @@ body#bp-default #wp-admin-bar .padder {
   margin-bottom: 4px;
 	line-height:14px;
 }
+.magazine .post .entry-meta span {
+	display:none;
+}
 .magazine .featured .text h2 {
   color: #FFF;
   margin: 0px !important;
