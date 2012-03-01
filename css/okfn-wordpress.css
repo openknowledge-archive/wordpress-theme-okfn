@@ -336,7 +336,6 @@ ul#members-list {
 
 /* Login Widget */
 #sidebar .widget.widget_wp_sidebarlogin img {
-	width:48px;
 	border:none;
 	padding:0px;
 	-webkit-border-radius: 0px;
@@ -344,10 +343,11 @@ ul#members-list {
   border-radius: 0px;
 }
 #sidebar .widget.widget_wp_sidebarlogin .pagenav {
-	margin-left:68px;
+	margin-left:59px;
 }
 #sidebar .widget.widget_wp_sidebarlogin .pagenav li {
 	padding:3px 0px;
+	font-size:12px;
 }
 #sidebar .widget.widget_wp_sidebarlogin form {
 	padding:0px 10px;
