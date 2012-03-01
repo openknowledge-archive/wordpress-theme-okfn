@@ -52,11 +52,11 @@
 		</div><!-- .padder -->
 	</div><!-- #content -->
 
-  <div class="author-box">
+  <!--<div class="author-box">
     <?php echo get_avatar( get_the_author_meta( 'user_email' ), '218' ); ?>
     <h3><?php printf( _x( 'Written by %s', 'Post written by...', 'buddypress' ), str_replace( '<a href=', '<a rel="author" href=', bp_core_get_userlink( $post->post_author ) ) ); ?></h3>
     <p><?php //the_author_meta('description'); ?></p>
-  </div>	
+  </div>	 -->
 	
 	<?php get_sidebar() ?>
 
