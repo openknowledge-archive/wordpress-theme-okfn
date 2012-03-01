@@ -36,7 +36,14 @@
 			<?php comments_template(); ?>
 			
       <div class="related-posts">
-        <?php related_posts(); ?>
+        <?php //related_posts(); ?>
+        
+        <?php
+					if (function_exists('related-posts')) {
+						related_posts();
+					};
+				?>
+        
       </div>
       
 			<?php endwhile; else: ?>
