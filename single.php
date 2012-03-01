@@ -36,14 +36,11 @@
 			<?php comments_template(); ?>
 			
       <div class="related-posts">
-        <?php //related_posts(); ?>
-        
         <?php
 					if (function_exists('related_posts')) {
 						related_posts();
 					}
 				?>
-        
       </div>
       
 			<?php endwhile; else: ?>
@@ -62,7 +59,7 @@
   <div class="author-box">
     <?php echo get_avatar( get_the_author_meta( 'user_email' ), '218' ); ?>
     <h3><?php printf( _x( 'Written by %s', 'Post written by...', 'buddypress' ), str_replace( '<a href=', '<a rel="author" href=', bp_core_get_userlink( $post->post_author ) ) ); ?></h3>
-    <p><?php the_author_meta('description'); ?></p>
+    <p><!--Replace this with buddypress field --><?php the_author_meta('user_description'); ?></p>
   </div>
 	
 	<?php get_sidebar() ?>
