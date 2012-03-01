@@ -35,9 +35,9 @@
 
 			<?php comments_template(); ?>
 			
-      <div class="related-posts">
+      <!--<div class="related-posts">
         <?php related_posts(); ?>
-      </div>
+      </div> -->
       
 			<?php endwhile; else: ?>
 
