@@ -4,7 +4,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ) ?>; charset=<?php bloginfo( 'charset' ) ?>" />
 		<title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
-
+    <meta name="description" content="<?php echo bloginfo( 'description' ); ?>">
 		<?php do_action( 'bp_head' ) ?>
 
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ) ?>" />
