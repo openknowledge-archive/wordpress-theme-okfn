@@ -363,13 +363,16 @@ footer {
 footer > .inner {
   background: url('http://assets.okfn.org/web/images/footer-bevel.png') top repeat-x;
   padding: 10px 0 30px 0;
-  color: #fff;
+  color: #C0C0C0;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
   min-height: 190px;
+	font-size:11px;
 }
-footer > .inner a,
+footer > .inner a {
+	color: #C0C0C0;
+}
 footer > .inner a:hover {
-  color: #aeebdf;
+  color: #FFF;
 }
 footer > .inner a:hover {
   text-decoration: underline;
@@ -380,13 +383,13 @@ footer > .inner p {
 footer > .inner h1,
 footer > .inner h2,
 footer > .inner h3 {
-  color: #fff;
+  color: #C0C0C0;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
   font-weight: bold;
   padding-bottom: 4px;
 }
 footer li {
-  color: #fff;
+	line-height:14px;
 }
 footer .widget-area {
   display: inline;
