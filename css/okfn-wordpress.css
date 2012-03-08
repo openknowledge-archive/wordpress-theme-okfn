@@ -916,9 +916,6 @@ body {
 #content .post .entry {
   padding: 4px 0;
 }
-#content .post .entry p {
-  font-size: 15px;
-}
 #content .post .entry img {
   background: #f0f0f0;
   border: 1px dashed #e0e0e0;
