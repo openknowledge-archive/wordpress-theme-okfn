@@ -8,6 +8,7 @@ We override::
 
   header.php
   footer.php
+  single.php
   style.css
 
 And additionally provide function hooks in::
@@ -27,4 +28,7 @@ To modify the page style, open up the .less files and hack around. Run::
 
 Note that we use a fork of Twitter Bootstrap as the basis for our CSS. It 99% matches the vanilla version, with occasional shims to make BuddyPress render nicely.
 
+Changes
+-------
 
+To alter the priority of categories on the magazine front page (eg. if you want "Open Economics" to be selected over "Our Work") change the order entries in ``category-priority.php``. 
