@@ -1017,9 +1017,6 @@ ul.scrollButtons li.right a:hover {
 /* ------------------ */
 /* Magazine Frontpage */
 /* ------------------ */
-.magazine .strapline {
-  display: none;  /* Magazine pages don't use a strapline. */
-}
 .magazine .post .image {
 	overflow: hidden;
 	display: block;

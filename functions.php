@@ -72,7 +72,7 @@ function register_form_blurb( $args ) {
  *
  * This will be displayed on a post tab.
  */
-function best_category( $categories) {
+function choose_best_category( $categories) {
   // Cannot fathom why my array comes inside an array...
   $categories = $categories[0];
   include('category-priority.php');
@@ -90,5 +90,29 @@ function best_category( $categories) {
   return '???';
 };
 
+function echo_magazine_post($post, $is_featured) {
+    $post_class = $is_featured ? 'featured' : 'preview';
+    $post_category = choose_best_category( array( get_the_category()) );
+    // Extract the first img src from the post body
+    $regex = '/magazine.image\s*=\s*"?([^"\s->]*)/';
+    preg_match($regex, get_the_content(), $matches);
+    $post_img = get_bloginfo( 'stylesheet_directory' ) . '/img/default-image.png';
+    if (count($matches)) $post_img = $matches[1];
+    echo '<div class="box post '.$post_class.'">';
+    echo '<div class="padder"> <a class="image" href="'.get_permalink().'" style="background-image:url('.$post_img.');"></a>';
+    echo '<div class="text">';
+    echo '<h2><a href="'.get_permalink().'"rel="bookmark">'; the_title(); echo '</a></h2>';
+    echo '<span class="entry-meta"> Posted on '; 
+    printf( __( '%1$s <span>in %2$s</span>', 'buddypress' ), get_the_date(), get_the_category_list( ', ' ) );
+    echo 'by ' . bp_core_get_userlink( $post->post_author );
+    echo '</span>';
+    echo the_excerpt();
+    echo '</div>';
+    echo '<a href="'.get_permalink().'" class="btn btn-info">Full Post</a> </div>';
+    echo '<h3 class="ribbon">';
+    echo $post_category;
+    echo '</h3>';
+    echo '</div>';
+}
 
 ?>

@@ -76,7 +76,8 @@
 		<?php do_action( 'bp_after_header' ) ?>
 
 				<h2 id="site-description"></h2>
-    <?php if (get_bloginfo( 'description' )): ?>
+    <?php global $hide_strapline; ?>
+    <?php if (!$hide_strapline && get_bloginfo( 'description' )): ?>
       <div class="container">
         <div class="strapline">
         <div class="inner">
