@@ -1014,74 +1014,9 @@ ul.scrollButtons li.right a:hover {
 }
 
 
-/* Layout */
-/* ====== */
-.magazine #content {
-	width:692px;
-}
-.magazine #sidebar {
-	margin-left:4px; 
-}
-
-/* -------------------------------- */
-/* Magazine styles: To integrate... */
-/* -------------------------------- */
-/*
-body {
-	background-color:#f1f3f2;
-}
-header {
-    margin-bottom: 10px;
-}
-header .topbar,
-header .topbar .fill {
-    height: 55px;
-}
-body#bp-default #wp-admin-bar .padder {
-	width:950px;
-	min-width:950px;
-}
-
-.topbar .brand {
-	padding-top:16px;
-}
-
-.topbar .subBrand {
-	display:block;
-	float:left;
-	color:#FFF;
-	line-height:55px;
-	font-family: 'Nothing You Could Do', cursive;
-	font-size:36px;
-	text-decoration:none;
-	margin-left:-5px;
-}
-
-.container {
-	width:960px;
-}
-
-#content {
-	width:720px;
-}
-
-#sidebar {
-	margin:0px;
-	width:240px;
-	margin-left:-4px; // compensate for inline-block white space 
-}
-
-#sidebar h4 {
-	font-size:14px;
-	padding:5px 0px 7px 0px;
-}
-*/
-
-.magazine #sidebar #sidebar-me,
-.magazine #sidebar #sidebar-login-form {
-	display:none;
-}
-
+/* ------------------ */
+/* Magazine Frontpage */
+/* ------------------ */
 .magazine .strapline {
   display: none;  /* Magazine pages don't use a strapline. */
 }
@@ -1118,7 +1053,7 @@ body#bp-default #wp-admin-bar .padder {
   background: -ms-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* IE10+ */
   background: linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* W3C */
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#1d1d1d', GradientType=0);  /* IE6-9 */
-  width: 632px;
+  width: 620px;
   color: #FFF;
   padding: 10px 15px 5px 15px;
   max-height: 66px;
@@ -1166,7 +1101,7 @@ body#bp-default #wp-admin-bar .padder {
 }
 .magazine .post.preview {
   float: left;
-  width: 336px;
+  width: 330px;
 }
 .magazine .featured .btn {
   display: none;
@@ -1209,8 +1144,8 @@ body#bp-default #wp-admin-bar .padder {
 		display:inline;
 		color:#3E8F80;
 }
-.magazine #content .post {
-  margin-bottom: 8px;
+.magazine .post {
+  margin-bottom: 8px !important;
 }
 .magazine .post h2 {
   margin-bottom: 5px;
@@ -1223,7 +1158,6 @@ body#bp-default #wp-admin-bar .padder {
 
 /* Blog Post Page */
 /* ============== */
-
 .single-post #content {
   margin: 0px 4px 8px 4px;
   position: relative;

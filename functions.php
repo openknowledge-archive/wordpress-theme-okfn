@@ -43,10 +43,6 @@ function filter_nav_menu( $header ) {
   return $header;
 }
 
-function test($a) {
-  echo "<br><br><hr><pre style=\"background: #fcf;\">".htmlspecialchars($a)."</pre><hr><br><br>";
-}
-
 /* Taken from buddypress:functions.php.bp_dtheme_main_nav. Used by header.php */
 function okfn_fallback_nav_menu( $args ) {
 	global $bp;
