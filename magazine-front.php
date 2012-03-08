@@ -45,14 +45,18 @@ function print_post($post, $is_featured) {
         /* =================== */
           $post_filter_main = array('category_name' => 'Featured', 'posts_per_page' => 1 );
 
+          $idsToSkip = array();
           // Print the main post
           query_posts( $post_filter_main );
-          the_post();
-          print_post($post, true);
+          if (have_posts()) {
+            the_post();
+            print_post($post, true);
+            // Skip that post's ID in the remining section
+            array_push($idsToSkip, $post->ID);
+          }
 
-          // Skip that post's ID in the remining section
-          $idToSkip = $post->ID;
-          $post_filter_etc = array('posts_per_page' => 4, 'post__not_in' => array($idToSkip));
+          // Query remaining posts
+          $post_filter_etc = array('posts_per_page' => 4, 'post__not_in' => $idsToSkip);
 
           // Print the remaining posts
           query_posts( $post_filter_etc );
