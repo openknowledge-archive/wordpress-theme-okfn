@@ -66,5 +66,29 @@ function register_form_blurb( $args ) {
     ."<p><a href=\"/governance/#community-membership\">Read more about Community Membership &raquo;</a></p>";
 }
 
+/* 
+ * Choose the "best" category (ie. most 
+ * important) category from multiple categories.
+ *
+ * This will be displayed on a post tab.
+ */
+function best_category( $categories) {
+  // Cannot fathom why my array comes inside an array...
+  $categories = $categories[0];
+  include('category-priority.php');
+
+  // Choose the first category I have in the priority list
+  $first = null;
+  foreach ($category_priority as $priority) {
+    foreach ($categories as $category) {
+      if ($priority == $category->name) 
+        return $category->name;
+    }
+  }
+  return $categories[0]->name;
+  // I have no special categories. Just choose the first one.
+  return '???';
+};
+
 
 ?>

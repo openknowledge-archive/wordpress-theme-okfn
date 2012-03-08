@@ -2,9 +2,9 @@
 /*
 Template Name: Magazine 
  */
-
 function print_post($post, $is_featured) {
     $post_class = $is_featured ? 'featured' : 'preview';
+    $post_category = best_category( array( get_the_category()) );
     // Extract the first img src from the post body
     $regex = '/magazine.image\s*=\s*"?([^"\s->]*)/';
     preg_match($regex, get_the_content(), $matches);
@@ -22,12 +22,11 @@ function print_post($post, $is_featured) {
     echo '</div>';
     echo '<a href="'.get_permalink().'" class="btn btn-info">Full Post</a> </div>';
     echo '<h3 class="ribbon">';
-    the_category(' &bull; ');
+    echo $post_category;
     echo '</h3>';
     echo '</div>';
 }
 ?>
-
 
 <?php get_header() ?>
 
@@ -39,26 +38,30 @@ function print_post($post, $is_featured) {
         <?php do_action( 'template_notices' ) ?>
 
         <div class="page" id="blog-latest" role="main">
-<?php 
 
-$post_filter_main = array('category_name' => 'Featured', 'posts_per_page' => 1 );
+        <?php 
+        /* =================== */
+        /* == Magazine Body == */
+        /* =================== */
+          $post_filter_main = array('category_name' => 'Featured', 'posts_per_page' => 1 );
 
-// Print the main post
-query_posts( $post_filter_main );
-the_post();
-print_post($post, true);
+          // Print the main post
+          query_posts( $post_filter_main );
+          the_post();
+          print_post($post, true);
 
-// Skip that post's ID in the remining section
-$idToSkip = $post->ID;
-$post_filter_etc = array('posts_per_page' => 4, 'post__not_in' => array($idToSkip));
+          // Skip that post's ID in the remining section
+          $idToSkip = $post->ID;
+          $post_filter_etc = array('posts_per_page' => 4, 'post__not_in' => array($idToSkip));
 
-// Print the remaining posts
-query_posts( $post_filter_etc );
-while (have_posts()) {
-  the_post();
-  print_post($post, false);
-}
-?>
+          // Print the remaining posts
+          query_posts( $post_filter_etc );
+          while (have_posts()) {
+            the_post();
+            print_post($post, false);
+          }
+        /* =================== */
+        ?>
         </div>
 
         <?php do_action( 'bp_after_blog_home' ) ?>
