@@ -12,10 +12,6 @@
 /* Bootstrap Customisation */
 /* ======================= */
 
-p {
-    /*font-family: "OpenSansLight","Helvetica Neue",Helvetica,Arial,sans-serif;*/
-}
-
 .navbar-inner {
     border-radius: 0px 0px 0px 0px;
     padding-left: 0px;
@@ -141,8 +137,8 @@ html {
   background: #222222;
 }
 body {
-  /*font-family: OpenSansLight, serif;*/
   background: #fff;
+
 }
 a {
   color: #3e8f80;
