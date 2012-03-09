@@ -127,12 +127,6 @@ ul#members-list {
   display: inline-block;
 }
 
-/* Wordpress: Blog Entry */
-/* ===================== */
-.entry p {
-  font-size: 15px;
-}
-
 /* Wordpress: Sidebar */
 /* ================== */
 #sidebar #sidebar-login-form,
@@ -880,9 +874,7 @@ body {
 #content .post {
   margin-bottom: 50px;
 }
-#content .post p {
-  font-size: 12px;
-}
+
 #content .post p.date {
   padding-left: 4px;
 }
