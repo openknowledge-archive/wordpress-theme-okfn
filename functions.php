@@ -94,7 +94,7 @@ function echo_magazine_post($post, $is_featured) {
     $post_class = $is_featured ? 'featured' : 'preview';
     $post_category = choose_best_category( array( get_the_category()) );
     // Extract the first img src from the post body
-    $regex = '/magazine.image\s*=\s*"?([^"\s->]*)/';
+    $regex = '/magazine.image\s*=\s*"?([^"\s]*)/';
     preg_match($regex, get_the_content(), $matches);
     $post_img = 'http://assets.okfn.org/web/images/blog-placeholder.png';
     if (count($matches)) $post_img = $matches[1];
