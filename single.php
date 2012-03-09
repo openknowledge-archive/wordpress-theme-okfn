@@ -43,14 +43,6 @@ function browser_body_class($classes = '') {
 
 			<?php comments_template(); ?>
 			
-      <div class="related-posts">
-        <?php
-					if (function_exists('related_posts')) {
-						related_posts();
-					}
-				?>
-      </div>
-      
 			<?php endwhile; else: ?>
 
 				<p><?php _e( 'Sorry, no posts matched your criteria.', 'buddypress' ) ?></p>
@@ -58,6 +50,14 @@ function browser_body_class($classes = '') {
 			<?php endif; ?>
 
 		</div>
+
+    <div class="related-posts">
+      <?php
+        if (function_exists('related_posts')) {
+          related_posts();
+        }
+      ?>
+    </div>
 
 		<?php do_action( 'bp_after_blog_single_post' ) ?>
 
