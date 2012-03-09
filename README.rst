@@ -17,18 +17,19 @@ And additionally provide function hooks in::
 
 ...and that's it! Wordpress' output is modified via callbacks in functions.php. We structure the page in header/footer but aim to use the parent theme's templates in all other cases. Wordpress always provides a more robust override mechanism.
 
-Usage
------
-To modify the page style, open up the .less files and hack around. Run::
+Magazine Mode
+-------------
 
-  cd css/
-  lessc okfn.less > okfn.css
+To create a magazine frontpage for your blog, create a page and choose 'Magazine' as its Template (on the right hand side).
 
-... to recompile the core CSS file and commit your changes to the page. See css/README.markdown for further details.
+Magazine mode will display:
+  * The latest blogpost with the category "Featured" at the top.
+  * The latest four blogposts which aren't that one beneath it.
 
-Note that we use a fork of Twitter Bootstrap as the basis for our CSS. It 99% matches the vanilla version, with occasional shims to make BuddyPress render nicely.
+There is a simple algorithm to choose which category is displayed on the ribbon. This file decides which category will be chosen first:
 
-Changes
--------
+  https://github.com/okfn/wordpress-theme-okfn/blob/master/category-priority.php
 
-To alter the priority of categories on the magazine front page (eg. if you want "Open Economics" to be selected over "Our Work") change the order entries in ``category-priority.php``. 
+To use YARPP to display Related Posts as magazine entries on the post view page, open up the YARPP widget settings. 
+  * Disable "Automatically display related posts"
+  * Select "Display using a custom template file" (yarpp-template-magazine.php)
