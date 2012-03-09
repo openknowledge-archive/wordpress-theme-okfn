@@ -1,3 +1,11 @@
+<?
+/* Activate Magazine-mode */
+add_filter('body_class','browser_body_class');
+function browser_body_class($classes = '') {
+  array_push($classes,"magazine");
+  return $classes;
+}
+?>
 <?php get_header() ?>
 
 	<div id="content">
