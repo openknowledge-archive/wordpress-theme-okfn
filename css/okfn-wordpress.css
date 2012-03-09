@@ -783,6 +783,12 @@ div.alignright {
 div.alignright {
   text-align: right;
 }
+img.alignleft {
+  float: left;
+  display: inline;
+  margin-right: 24px;
+  margin-top: 4px;
+}
 img.alignright {
   float: right;
   display: inline;
