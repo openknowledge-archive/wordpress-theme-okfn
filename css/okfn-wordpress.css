@@ -924,15 +924,11 @@ body {
   display: block;
   margin: 10px auto;
 }
-#content h2 {
+#content .post .entry h2 {
   font-size: 20px;
-  margin-top: 12px;
 }
-#content h2.posttitle {
-  font-size: 32px;
-  letter-spacing: -1px;
-  line-height: 34px;
-  margin-bottom: 6px;
+#content .post .entry h3 {
+  font-size: 16px;
 }
 #content h2.posttitle a {
   color: #000;
