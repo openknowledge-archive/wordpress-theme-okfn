@@ -37,9 +37,14 @@
 			
       <div class="related-posts">
         <?php
-					if (function_exists('related_posts')) {
-						related_posts();
-					}
+          /* If YARPP is installed... */
+          global $yarpp;
+          if ($yarpp) {
+            $posts = $yarpp->get_related();
+            echo '<pre>';
+            print_r($posts);
+            echo '</pre>';
+          }
 				?>
       </div>
       
