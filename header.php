@@ -75,17 +75,14 @@
     </header>
 		<?php do_action( 'bp_after_header' ) ?>
 
-				<h2 id="site-description"></h2>
-    <?php global $hide_strapline; ?>
-    <?php if (!$hide_strapline && get_bloginfo( 'description' )): ?>
-      <div class="container">
-        <div class="strapline">
-        <div class="inner">
-          <?php echo bloginfo( 'description' ); ?>
-        </div><!-- /inner     -->
-        </div><!-- /strapline -->
-      </div><!-- /container -->
-    <?php endif; ?>
+    <h2 id="site-description"></h2>
+    <div class="container">
+      <div class="strapline">
+      <div class="inner">
+        <?php echo bloginfo( 'description' ); ?>
+      </div><!-- /inner     -->
+      </div><!-- /strapline -->
+    </div><!-- /container -->
 
 		<?php do_action( 'bp_before_container' ) ?>
     <div class="container">
