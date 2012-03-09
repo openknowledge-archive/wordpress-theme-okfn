@@ -1164,17 +1164,6 @@ ul.scrollButtons li.right a:hover {
 
 /* Blog Post Page */
 /* ============== */
-.single-post #content {
-  margin: 0px 4px 8px 4px;
-  position: relative;
-	margin:0px;
-	width:690px;
-	float:left;
-}
-.single-post #sidebar {
-	margin-left:10px;
-}
-
 .single-post #blog-single .post {
 	margin:0px;
 	background-color: #FFF;
