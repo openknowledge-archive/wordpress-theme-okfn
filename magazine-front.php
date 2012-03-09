@@ -2,10 +2,18 @@
 /*
 Template Name: Magazine 
  */
+
+/* body class="magazine" */
+add_filter('body_class','browser_body_class');
+function browser_body_class($classes = '') {
+  array_push($classes,"magazine");
+  return $classes;
+}
 ?>
+
 <?php $hide_strapline = true; ?>
 <?php get_header() ?>
-<div id="content" class="magazine">
+<div id="content">
     <div class="padder">
 
     <?php do_action( 'bp_before_blog_home' ) ?>

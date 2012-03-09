@@ -1011,6 +1011,12 @@ ul.scrollButtons li.right a:hover {
 /* ------------------ */
 /* Magazine Frontpage */
 /* ------------------ */
+.magazine #content {
+  width: 692px;
+}
+.magazine #sidebar {
+  margin-left: 4px;
+}
 .magazine .post .image {
 	overflow: hidden;
 	display: block;
@@ -1044,7 +1050,7 @@ ul.scrollButtons li.right a:hover {
   background: -ms-linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* IE10+ */
   background: linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* W3C */
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#1d1d1d', GradientType=0);  /* IE6-9 */
-  width: 620px;
+  width: 632px;
   color: #FFF;
   padding: 10px 15px 5px 15px;
   max-height: 66px;
@@ -1092,7 +1098,7 @@ ul.scrollButtons li.right a:hover {
 }
 .magazine .post.preview {
   float: left;
-  width: 330px;
+  width: 336px;
 }
 .magazine .featured .btn {
   display: none;
