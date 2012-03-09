@@ -783,21 +783,6 @@ div.alignright {
 div.alignright {
   text-align: right;
 }
-img.alignleft {
-  float: left;
-  display: inline;
-  margin-right: 24px;
-  margin-top: 4px;
-}
-img.alignright {
-  float: right;
-  display: inline;
-  margin-left: 24px;
-  margin-top: 4px;
-}
-img.alignleft, img.alignright {
-  margin-bottom: 12px;
-}
 div#toc_container {
   width: 400px;
 }
@@ -947,6 +932,21 @@ body {
   margin-top: 8px;
 }
 
+img.alignleft {
+  float: left;
+  display: inline;
+  margin-right: 24px;
+  margin-top: 4px;
+}
+img.alignright {
+  float: right;
+  display: inline;
+  margin-left: 24px;
+  margin-top: 4px;
+}
+img.alignleft, img.alignright {
+  margin-bottom: 12px;
+}
 
 /* ==== */
 /* Blog */
