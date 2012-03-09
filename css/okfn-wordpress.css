@@ -1190,6 +1190,12 @@ ul.scrollButtons li.right a:hover {
   margin-top: 0;
 }
 
+.single-post #blog-single .comments-closed {
+	margin:10px 0px;
+	background-color: #FFF;
+  border: 1px solid #dee0df;
+  padding: 10px;
+}
 .single-post #blog-single #comments {
 	border-right-width: 1px;
 	border-left-width: 1px;
