@@ -57,3 +57,12 @@ function browser_body_class($classes = '') {
 <?php get_sidebar() ?>
 
 <?php get_footer() ?>
+
+
+<script>
+	$(document).ready(function() {
+				$(".magazine .post.preview .text").dotdotdot({
+						//  configuration goes here
+				});
+		});
+</script>

@@ -1115,7 +1115,7 @@ ul.scrollButtons li.right a:hover {
   height: 196px;
 }
 .magazine .post.preview .text {
-  overflow: hidden;
+  /*overflow: hidden;*/ /*for non js text clipping*/
   height: 164px;
   padding: 0px 10px;
 	line-height:14px;
@@ -1123,8 +1123,8 @@ ul.scrollButtons li.right a:hover {
 .magazine .post.preview .text h2 {
 	line-height:22px;
   min-height: 30px;
-	max-height:45px;
-	overflow:hidden;
+	/*max-height:45px;
+	overflow:hidden;*/ /*for non js text clipping*/
 }
 .magazine .post.preview .text p {
 	line-height:14px;
