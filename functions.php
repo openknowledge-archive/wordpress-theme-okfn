@@ -115,4 +115,10 @@ function echo_magazine_post($post, $is_featured) {
     echo '</div>';
 }
 
+
+ // The height and width of your custom header. You can hook into the theme's own filters to change these values.
+ // Add a filter to bp_dtheme_header_image_width and bp_dtheme_header_image_height to change these values.
+		define( 'HEADER_IMAGE_WIDTH',  apply_filters( 'bp_dtheme_header_image_width',  30 ) );
+		define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'bp_dtheme_header_image_height', 30  ) );
+
 ?>

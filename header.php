@@ -41,9 +41,22 @@
         <div class="navbar">
       		<div class="navbar-inner">
             <div class="container">
-              <a title="<?php _ex( 'Home', 'Home page banner link title', 'buddypress' ); ?>" 
+            <a title="<?php _ex( 'Home', 'Home page banner link title', 'buddypress' ); ?>" 
                 class="brand" 
-                href="<?php echo home_url(); ?>"><img alt="logo" src="http://assets.okfn.org/web/images/header-logo.png"/><?php bp_site_name(); ?></a>
+                href="<?php echo home_url(); ?>">
+                
+							<?php
+                // Check for header image
+                $header_image = get_header_image();
+                if ( ! empty( $header_image ) ) :
+              ?>
+                <img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="logo" />
+              <?php else: ?>
+                <img src="http://assets.okfn.org/web/images/header-logo.png" alt="logo"/>
+              <?php endif; ?>
+  
+              <?php bp_site_name(); ?>
+            </a>
               <nav>
                 <?php  
                   wp_nav_menu( array( 
