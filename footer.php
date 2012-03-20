@@ -40,7 +40,7 @@
     </footer>
 		
 		<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/bootstrap.js"></script>
-    <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/js/jquery.dotdotdot-1.4.0-packed.js"></script>
+    <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/jquery.dotdotdot-1.4.0-packed.js"></script>
     
     <!--ShareThis -->
 		<!--<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 
