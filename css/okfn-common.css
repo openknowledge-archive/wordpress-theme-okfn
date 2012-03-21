@@ -87,7 +87,7 @@ input:focus, textarea:focus {
   float: left;
   margin-right: 12px;
   margin-top: 4px;
-	max-height:30px;
+	height:30px;
 }
 
 .navbar .dropdown-menu {
