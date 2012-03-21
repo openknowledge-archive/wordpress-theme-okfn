@@ -129,8 +129,20 @@ function echo_magazine_post($post, $is_featured) {
 
 		array(    "type" => "open"),
 		
+		array("name" => "Carousel Style",
+        "id" => $shortname."_carosel",
+        "type" => "radio",
+        "desc" => "Choose layout style of Bootstrap carousel",
+        "options" => array("default" => "Default", "text-right" => "Text on Right"),
+        "std" => "default"),
+				
+		array(    "type" => "close"),
+		
+		
+		array(    "type" => "open"),
+		
 		array(  "name" => "Disable BuddyPress Bar?",
-        "desc" => "Check this box if you would like to DISABLE the BuddyPress bar at the top of this site.",
+        "desc" => "Check this box if you would like to HIDE the BuddyPress bar at the top of this site.",
         "id" => $shortname."_buddypress_disable",
         "type" => "checkbox",
         "std" => "false"),
@@ -192,7 +204,7 @@ function mytheme_admin() {
 	
 		case "open":
 		?>
-        <table width="100%" border="0" style="background-color:#eef5fb; padding:10px;">
+        <table width="100%" border="0" style="background-color:#ECECEC; padding:10px;">
 		
         
         
@@ -209,7 +221,7 @@ function mytheme_admin() {
 		case "title":
 		?>
 		<table width="100%" border="0" style="background-color:#dceefc; padding:5px 10px;"><tr>
-        	<td colspan="2"><h3><?php echo $value['name']; ?></h3></td>
+        	<td colspan="3"><h3><?php echo $value['name']; ?></h3></td>
         </tr>
                 
         
@@ -219,13 +231,11 @@ function mytheme_admin() {
 		?>
         
         <tr>
-            <td width="20%" rowspan="2" valign="middle"><strong><?php echo $value['name']; ?></strong></td>
-            <td width="80%"><input style="width:400px;" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" /></td>
+            <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
+            <td><input style="width:400px;" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" />
+            </td>
+            <td><em><?php echo $value['desc']; ?></em></td>
         </tr>
-
-        <tr>
-            <td><small><?php echo $value['desc']; ?></small></td>
-        </tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #000000;">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr>
 
 		<?php 
 		break;
@@ -234,64 +244,77 @@ function mytheme_admin() {
 		?>
         
         <tr>
-            <td width="20%" rowspan="2" valign="middle"><strong><?php echo $value['name']; ?></strong></td>
-            <td width="80%"><textarea name="<?php echo $value['id']; ?>" style="width:400px; height:200px;" type="<?php echo $value['type']; ?>" cols="" rows=""><?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?></textarea></td>
-            
+            <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
+            <td><textarea name="<?php echo $value['id']; ?>" style="width:400px; height:200px;" type="<?php echo $value['type']; ?>" cols="" rows=""><?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?></textarea>
+            </td>
+            <td><em><?php echo $value['desc']; ?></em></td>
         </tr>
-
-        <tr>
-            <td><small><?php echo $value['desc']; ?></small></td>
-        </tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #000000;">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr>
-
 		<?php 
 		break;
 		
 		case 'select':
 		?>
         <tr>
-            <td width="20%" rowspan="2" valign="middle"><strong><?php echo $value['name']; ?></strong></td>
-            <td width="80%"><select style="width:240px;" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select></td>
-       </tr>
-                
-       <tr>
-            <td><small><?php echo $value['desc']; ?></small></td>
-       </tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #000000;">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr>
+            <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
+            <td><select style="width:240px;" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select>
+            </td>
+            <td><em><?php echo $value['desc']; ?></em></td>
+        </tr>
 
 		<?php
         break;
             
 		case "checkbox":
 		?>
-            <tr>
-            <td width="20%" rowspan="2" valign="middle"><strong><?php echo $value['name']; ?></strong></td>
-                <td width="80%"><? if(get_settings($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = ""; } ?>
-                        <input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> />
-                        </td>
-            </tr>
-                        
-            <tr>
-                <td><small><?php echo $value['desc']; ?></small></td>
-           </tr><tr><td colspan="2" style="margin-bottom:5px;border-bottom:1px dotted #000000;">&nbsp;</td></tr><tr><td colspan="2">&nbsp;</td></tr>
+          <tr>
+            <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
+            <td><? if(get_settings($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = ""; } ?>
+                <input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> />
+            </td>
+            <td><em><?php echo $value['desc']; ?></em></td>
+         </tr>
             
         <?php 		break;
+				
+				case "radio":?>
+        <tr>
+          <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
+          <td>
+						<? foreach ($value['options'] as $option_value => $option_text) {
+							$checked = ' ';
+							if (get_option($value['id']) == $option_value) {
+									$checked = ' checked="checked" ';
+							}
+							else if (get_option($value['id']) === FALSE && $value['std'] == $option_value){
+									$checked = ' checked="checked" ';
+							}
+							else {
+									$checked = ' ';
+							}
+							echo '<div style="margin-bottom:5px;"><input type="radio" style="margin-right:10px;" name="'.$value['id'].'" value="'.
+									$option_value.'" '.$checked."/>".$option_text."</div>";
+					} ?>
+      	</td>
+          <td><em><?php echo $value['desc']; ?></em></td>
+        </tr>
+			  <?php break;
 	
- 
 } 
 }
 ?>
 
 <!--</table>-->
 
-<p class="submit">
-<input name="save" type="submit" value="Save changes" />    
+<span class="submit" style="float:left; margin-right:10px; padding:0px;">
+<input name="save" type="submit" value="Save changes" class="button-primary" />    
 <input type="hidden" name="action" value="save" />
-</p>
+</span>
 </form>
 <form method="post">
-<p class="submit">
+<span class="submit" style="float:left; padding:0px;">
 <input name="reset" type="submit" value="Reset" />
 <input type="hidden" name="action" value="reset" />
-</p>
+</span>
 </form>
 
 <?php
