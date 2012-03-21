@@ -29,6 +29,20 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 	</head>
+  
+  <!-- Theme Settings -->
+  <?
+		global $options;
+		foreach ($options as $value) {
+				if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+		}
+	 if ($okfn_buddypress_disable == "true") { ?>
+  <style type="text/css">
+	  #wp-admin-bar { display: none; }
+		header {margin-top:0px; }
+  </style>
+  <? } ?>
+  
 
 	<body <?php body_class() ?> id="bp-default">
 
