@@ -118,8 +118,8 @@ function echo_magazine_post($post, $is_featured) {
 
  // The height and width of your custom header. You can hook into the theme's own filters to change these values.
  // Add a filter to bp_dtheme_header_image_width and bp_dtheme_header_image_height to change these values.
-		define( 'HEADER_IMAGE_WIDTH',  apply_filters( 'bp_dtheme_header_image_width',  30 ) );
-		define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'bp_dtheme_header_image_height', 30  ) );
+		define( 'HEADER_IMAGE_WIDTH',  apply_filters( 'bp_dtheme_header_image_width',  60 ) );
+		define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'bp_dtheme_header_image_height', 60  ) );
 
 
  // Theme options
@@ -132,8 +132,20 @@ function echo_magazine_post($post, $is_featured) {
 		array("name" => "Carousel Style",
         "id" => $shortname."_carosel",
         "type" => "radio",
-        "desc" => "Choose layout style of Bootstrap carousel",
+        "desc" => "Change layout style of Bootstrap carousel",
         "options" => array("default" => "Default", "text-right" => "Text on Right"),
+        "std" => "default"),
+				
+		array(    "type" => "close"),
+		
+		
+		array(    "type" => "open"),
+		
+		array("name" => "Colour Scheme",
+        "id" => $shortname."_colours",
+        "type" => "radio",
+        "desc" => "Change the colours of the nav bar, buttons etc",
+        "options" => array("default" => "OKFN (Black and green)", "blue" => "CKAN (blue)"),
         "std" => "default"),
 				
 		array(    "type" => "close"),

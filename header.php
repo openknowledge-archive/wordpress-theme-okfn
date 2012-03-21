@@ -36,15 +36,15 @@
           if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
       }
      if ($okfn_buddypress_disable == "true") : ?>
-    <style type="text/css">
-      #wp-admin-bar { display: none; }
-      header {margin-top:0px; }
-    </style>
+      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/nobuddypress.css"/>
     <? endif; ?>
     <? if ($okfn_carosel == "text-right") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/theme-okfn/css/carousels/text-right.css"/>
     <? endif; ?>
-  
+    <? if ($okfn_colours == "blue") : ?>
+      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/blue.css"/>
+    <? endif; ?>
+    
   </head>
 	<body <?php body_class() ?> id="bp-default">
     <?php 
@@ -65,9 +65,9 @@
                 $header_image = get_header_image();
                 if ( ! empty( $header_image ) ) :
               ?>
-                <img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="logo" />
+                <img src="<?php header_image(); ?>" alt="logo" />
               <?php else: ?>
-                <img src="http://assets.okfn.org/web/images/header-logo.png" alt="logo"/>
+                <img src="http://assets.okfn.org/web/images/header-logox2.png" alt="logo"/>
               <?php endif; ?>
   
               <?php bp_site_name(); ?>

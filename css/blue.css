@@ -1,0 +1,27 @@
+body#bp-default #wp-admin-bar {
+  background-color: #4e7b96;
+}
+.navbar-inner {
+  background-color: #5090b7;
+  background-image:none;
+}
+.navbar .nav > li > a {
+  color: #dae7f0;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.navbar .dropdown-menu,
+.navbar .nav > li > a:hover {
+  background-color: #4e7b96;
+}
+.navbar .dropdown-menu a {
+  color: #dae7f0;
+}
+.navbar .dropdown-menu li > a:hover,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

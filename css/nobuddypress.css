@@ -1,0 +1,16 @@
+#wp-admin-bar {
+	display: none;
+}
+header {
+	margin-top:0px;
+}
+.navbar .brand {
+  line-height: 65px;
+}
+.navbar .brand img {
+	margin-top:16px;
+	height:35px;
+}
+.navbar .nav > li > a {
+  padding: 24px 10px 22px;
+}
