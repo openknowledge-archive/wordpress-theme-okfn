@@ -116,3 +116,10 @@ input:focus, textarea:focus {
   background-color: #b2cedf;  /* Match the background */
 	background-image: url(../images/banner-bg-blue.png);
 }
+
+
+/* Carousel */
+/* ======== */
+.carousel-control {
+  background: none repeat scroll 0 0 #5090B7;
+}
