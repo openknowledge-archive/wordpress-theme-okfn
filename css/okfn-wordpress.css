@@ -92,6 +92,14 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 /* Wordpress Layout */
 /* ================ */
 
+.navbar .sub-brand {
+	color:#FFF;
+	float:left;
+	line-height:40px;
+	font-style:italic;
+	padding:0px 0px 0px 5px;
+}
+
 /* Wordpress: Widget UL */
 /* ==================== */
 div.item-options {

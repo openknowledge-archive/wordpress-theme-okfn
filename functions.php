@@ -165,12 +165,34 @@ function echo_magazine_post($post, $is_featured) {
 		array(    "type" => "open"),
 		
 		array(  "name" => "Make my logo bigger!",
-        "desc" => "Check this box to increase font size of site title. Useful when you have a short title. Only works when BuddyPress bar is disabled",
+        "desc" => "Check this box to increase font size of site title. Useful when you have a short title. Only works when BuddyPress bar is disabled.",
         "id" => $shortname."_large_title",
         "type" => "checkbox",
         "std" => "false"),
 
-		array(    "type" => "close")
+		array(    "type" => "close"),
+		
+		
+		array(    "type" => "open"),
+		
+		array(  "name" => "Tagline in meta title?",
+        "desc" => "Check this box to append site title with tagline in the meta title tag.",
+        "id" => $shortname."_tagline_title",
+        "type" => "checkbox",
+        "std" => "false"),
+
+		array(    "type" => "close"),
+		
+		array(    "type" => "open"),
+		
+		array("name" => "Tagline Location",
+        "id" => $shortname."_tagline_location",
+        "type" => "radio",
+        "desc" => "Where would you like the tagline to appear on the page?",
+        "options" => array("default" => "Top of page", "header" => "In the header", "hide" => "Nowhere"),
+        "std" => "default"),
+				
+		array(    "type" => "close"),
 
 );
 

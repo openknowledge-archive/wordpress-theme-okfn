@@ -3,7 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 	<head>
 		<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ) ?>; charset=<?php bloginfo( 'charset' ) ?>" />
-		<title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
+		<title>
+		  <?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?>
+      <?
+      global $options;
+      foreach ($options as $value) {
+          if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+      }
+     if ($okfn_tagline_title == "true") : ?>
+      - <?php echo bloginfo( 'description' ); ?>
+     <? endif; ?>
+    </title>
     <meta name="description" content="<?php echo bloginfo( 'description' ); ?>">
 		<?php do_action( 'bp_head' ) ?>
 
@@ -75,6 +85,18 @@
   
               <?php bp_site_name(); ?>
             </a>
+            
+            <?
+							global $options;
+							foreach ($options as $value) {
+									if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+							}
+						 if ($okfn_tagline_location == "header" && get_bloginfo( 'description' )) : ?>
+						   <span class="sub-brand">
+								<?php echo bloginfo( 'description' ); ?>
+						   </span>
+						<?php endif; ?>
+            
               <nav>
                 <?php  
                   wp_nav_menu( array( 
@@ -105,7 +127,13 @@
     </header>
 		<?php do_action( 'bp_after_header' ) ?>
 
-    <?php if (get_bloginfo( 'description' )): ?>
+		 <?
+      global $options;
+      foreach ($options as $value) {
+          if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+      }
+     if ($okfn_tagline_location == "default" && get_bloginfo( 'description' )) : ?>
+
     <h2 id="site-description"></h2>
     <div class="container">
       <div class="strapline">
