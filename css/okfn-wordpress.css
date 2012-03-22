@@ -1131,6 +1131,9 @@ ul.scrollButtons li.right a:hover {
 	line-height:14px;
 	margin-bottom:14px;
 }
+.magazine .post.preview .text p:nth-child(n+2) {
+	display:none;
+}
 .magazine .post.preview .text strong {
 	font-weight:normal;
 }
