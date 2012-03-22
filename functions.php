@@ -159,6 +159,17 @@ function echo_magazine_post($post, $is_featured) {
         "type" => "checkbox",
         "std" => "false"),
 
+		array(    "type" => "close"),
+		
+		
+		array(    "type" => "open"),
+		
+		array(  "name" => "Make my logo bigger!",
+        "desc" => "Check this box to increase font size of site title. Useful when you have a short title. Only works when BuddyPress bar is disabled",
+        "id" => $shortname."_large_title",
+        "type" => "checkbox",
+        "std" => "false"),
+
 		array(    "type" => "close")
 
 );

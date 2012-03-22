@@ -44,6 +44,9 @@
     <? if ($okfn_colours == "blue") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/blue.css"/>
     <? endif; ?>
+    <? if ($okfn_large_title == "true" && $okfn_buddypress_disable == "true") : ?>
+      <style type="text/css">.navbar .brand {font-size: 30px;}</style>
+    <? endif; ?>
     
   </head>
 	<body <?php body_class() ?> id="bp-default">
