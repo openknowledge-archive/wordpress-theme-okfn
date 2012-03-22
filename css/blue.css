@@ -38,7 +38,11 @@ a:hover {
 
 /* Components */
 /* ========== */
-button, a.group-button, input[type=submit], input[type=reset] {
+button,
+a.group-button,
+input[type=submit],
+input[type=reset],
+.btn-info {
   color: #FFF;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #5090b7;
@@ -52,7 +56,11 @@ button, a.group-button, input[type=submit], input[type=reset] {
   border-color: #5090b7 #5090b7 #5090b7;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
-button:hover, a.group-button:hover, input[type=submit]:hover, input[type=reset]:hover {
+button:hover,
+a.group-button:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+.btn-info:hover {
   color: #FFF;
   background-color: #407ca0;
 }
@@ -122,4 +130,29 @@ input:focus, textarea:focus {
 /* ======== */
 .carousel-control {
   background: none repeat scroll 0 0 #5090B7;
+}
+
+
+/* Magazine */
+/* ======== */
+.ribbon,
+.magazine h3.ribbon {
+  background-color: #619BBE;
+}
+.magazine .featured .ribbon {
+  background-color: #E9473F;
+}
+.magazine .post.featured .text {
+  background: #FFFFFF;  /* Old browsers */
+	background-image:none;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF', GradientType=0);  /* IE6-9 */
+  color: #333333;
+  border-bottom-color: #FFFFFF;
+}
+.magazine .featured .text a,
+.magazine .featured .text h2 a {
+  color: #333333;
+}
+.single-post #blog-single #comments .commentlist li {
+  background-color: #e5eef4;
 }
