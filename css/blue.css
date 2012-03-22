@@ -4,6 +4,7 @@ body#bp-default #wp-admin-bar {
 .navbar-inner {
   background-color: #5090b7;
   background-image:none;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5090b7', endColorstr='#5090b7', GradientType=0);
 }
 .navbar .nav > li > a {
   color: #dae7f0;
@@ -86,6 +87,7 @@ input:focus, textarea:focus {
 	background-image:none;
   border: 1px solid #afccde;
   color: #333333;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#afccde', endColorstr='#afccde', GradientType=0);  /* IE6-9 */
 }
 #sidebar .widget h1,
 #sidebar .widget h2,
