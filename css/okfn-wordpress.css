@@ -1467,3 +1467,37 @@ table td.label {
   border-bottom-color: transparent;
   cursor: default;
 }
+
+
+/* Banner */
+/* ====== */
+html,
+body {
+  overflow-x: hidden;
+}
+.banner.full-width {
+	position: relative;
+	background-color: #c8c8c8;
+	background-image: url(../images/banner-bg.png);
+	background-repeat: repeat-x;
+}
+.banner.full-width:before,
+.banner.full-width:after {
+  content: "";
+  position: absolute;
+  background-color: #c8c8c8;  /* Match the background */
+	background-image: url(../images/banner-bg.png);
+  top: 0;
+  bottom: 0;
+  width: 9999px;   /* some huge width */
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+.banner.full-width:before {
+  right: 100%;
+}
+.banner.full-width:after {
+  left: 100%;
+}

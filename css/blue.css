@@ -101,3 +101,16 @@ input:focus, textarea:focus {
 #sidebar .tb_tweet-info {
   color: #333333;
 }
+
+
+/* Banner */
+/* ====== */
+.banner.full-width {
+	background-color: #b2cedf;
+	background-image: url(../images/banner-bg-blue.png);
+}
+.banner.full-width:before,
+.banner.full-width:after {
+  background-color: #b2cedf;  /* Match the background */
+	background-image: url(../images/banner-bg-blue.png);
+}
