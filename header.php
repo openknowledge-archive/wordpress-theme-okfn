@@ -10,11 +10,13 @@
       foreach ($options as $value) {
           if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
       }
-     if ($okfn_tagline_title == "true") : ?>
+     if ($okfn_tagline_title == "true" && get_bloginfo( 'description' )) : ?>
       - <?php echo bloginfo( 'description' ); ?>
      <? endif; ?>
     </title>
+    <? if (get_bloginfo( 'description' )) : ?>
     <meta name="description" content="<?php echo bloginfo( 'description' ); ?>">
+    <? endif; ?>
 		<?php do_action( 'bp_head' ) ?>
 
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ) ?>" />
