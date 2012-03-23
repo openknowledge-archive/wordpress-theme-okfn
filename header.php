@@ -67,9 +67,9 @@
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/blue.css"/>
     <? endif; ?>
     <? if ($okfn_large_title == "true" && $okfn_buddypress_disable == "true") : ?>
-      <style type="text/css">.navbar .brand {font-size: 36px; letter-spacing:-1px; text-indent:-5px;}</style>
+      <style type="text/css">.navbar .brand {font-size: 36px; letter-spacing:-1px; text-indent:-5px; line-height: 62px;}</style>
     <? endif; ?>
-     <? if ($okfn_logo_font == "ubuntu") : ?>
+    <? if ($okfn_logo_font == "ubuntu") : ?>
       <link href='http://fonts.googleapis.com/css?family=Ubuntu:400' rel='stylesheet' type='text/css'>
       <style type="text/css">.navbar .brand {font-family: 'Ubuntu', sans-serif; font-weight:400;}</style>
     <? endif; ?>
