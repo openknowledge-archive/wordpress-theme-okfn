@@ -104,6 +104,18 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 	padding:0px 0px 0px 5px;
 }
 
+ul.icons34 {
+	margin:0px;
+}
+ul.icons34 li {
+	display:block;
+	padding-left:50px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	min-height:34px;
+	margin-bottom:11px;
+}
+
 
 /* Wordpress: Widget UL */
 /* ==================== */
