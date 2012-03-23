@@ -87,6 +87,10 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
   border: 0;
 }
 
+.btn-large [class^="icon-"] {
+  margin: 3px 5px 0 0; /* Fix icon alignment for large buttons */
+}
+
 
 /* ================ */
 /* Wordpress Layout */
