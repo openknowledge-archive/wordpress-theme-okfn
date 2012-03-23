@@ -28,8 +28,18 @@
 			wp_head();
 		?>
     <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url'); ?>"/>
-    <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
-
+    
+    <?
+      global $options;
+      foreach ($options as $value) {
+          if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+      }
+      if ($okfn_colours == "blue") : ?>
+        <link rel="shortcut icon" href="http://assets.okfn.org/p/ckan/img/ckan.ico" />
+      <?php else: ?>
+        <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
+		  <? endif; ?>
+    
     <script type="text/javascript">
       var Okfn = Okfn || {};
       // Make this variable available to Javascript
