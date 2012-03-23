@@ -175,6 +175,18 @@ function echo_magazine_post($post, $is_featured) {
 		
 		array(    "type" => "open"),
 		
+		array("name" => "Logo Font",
+        "id" => $shortname."_logo_font",
+        "type" => "radio",
+        "desc" => "Font for header logo text",
+        "options" => array("default" => "Open Sans", "ubuntu" => "Ubuntu"),
+        "std" => "default"),
+				
+		array(    "type" => "close"),
+		
+		
+		array(    "type" => "open"),
+		
 		array(  "name" => "Tagline in meta title?",
         "desc" => "Check this box to append site title with tagline in the meta title tag.",
         "id" => $shortname."_tagline_title",
