@@ -88,7 +88,7 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 }
 
 .btn-large [class^="icon-"] {
-  margin: 3px 5px 0 0; /* Fix icon alignment for large buttons */
+  margin: 2px 5px 0 0; /* Fix icon alignment for large buttons */
 }
 
 
