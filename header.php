@@ -53,15 +53,14 @@
   
     <!-- Theme Settings -->
     <?
-      global $options;
-      foreach ($options as $value) {
-          if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
-      }
      if ($okfn_buddypress_disable == "true") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/nobuddypress.css"/>
     <? endif; ?>
     <? if ($okfn_carosel == "text-right") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/theme-okfn/css/carousels/text-right.css"/>
+    <? endif; ?>
+    <? if ($okfn_subheader == "true") : ?>
+      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/sub-header.css"/>
     <? endif; ?>
     <? if ($okfn_colours == "blue") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/blue.css"/>
@@ -103,10 +102,6 @@
             </a>
             
             <?
-							global $options;
-							foreach ($options as $value) {
-									if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
-							}
 						 if ($okfn_tagline_location == "header" && get_bloginfo( 'description' )) : ?>
 						   <span class="sub-brand">
 								<?php echo bloginfo( 'description' ); ?>
@@ -140,24 +135,36 @@
         <?php do_action( 'bp_search_login_bar' ) ?>
         <?php do_action( 'bp_header' ) ?>
       </div>
+      
+      <div class="sub-header">
+        <div class="container">
+          <?php
+            //function_exists() — Return TRUE if the given function has been defined.
+            //code by BOUTROS ABICHEDID. Adding breadcrumb trail to the WordPress theme.
+            if (function_exists('wp_bac_breadcrumb') && $okfn_subheader == "true") {wp_bac_breadcrumb();}
+          ?>
+        </div>
+      </div>
+      
     </header>
 		<?php do_action( 'bp_after_header' ) ?>
 
+		
+    
 		 <?
       global $options;
       foreach ($options as $value) {
           if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
       }
      if ($okfn_tagline_location == "default" && get_bloginfo( 'description' )) : ?>
-
-    <h2 id="site-description"></h2>
-    <div class="container">
-      <div class="strapline">
-      <div class="inner">
-        <?php echo bloginfo( 'description' ); ?>
-      </div><!-- /inner     -->
-      </div><!-- /strapline -->
-    </div><!-- /container -->
+      <h2 id="site-description"></h2>
+      <div class="container">
+        <div class="strapline">
+        <div class="inner">
+          <?php echo bloginfo( 'description' ); ?>
+        </div><!-- /inner     -->
+        </div><!-- /strapline -->
+      </div><!-- /container -->
     <?php endif; ?>
 
 		<?php do_action( 'bp_before_container' ) ?>

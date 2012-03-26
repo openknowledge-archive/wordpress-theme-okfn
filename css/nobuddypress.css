@@ -12,8 +12,7 @@ header {
 	height:35px;
 }
 .navbar .nav > li > a {
-  padding: 24px 10px 20px 10px;
-	margin-top:1px;
+  padding: 24px 10px 22px 10px;
 }
 .navbar .sub-brand {
 	line-height:60px;

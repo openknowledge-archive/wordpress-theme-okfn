@@ -1,16 +1,25 @@
+a {
+  color: #5090b7;
+}
+a:hover {
+  color: #4e7b96;
+}
+
 body#bp-default #wp-admin-bar {
   background-color: #4e7b96;
 }
 .navbar-inner {
   background-color: #5090b7;
   background-image:none;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5090b7', endColorstr='#5090b7', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 .navbar .nav > li > a {
   color: #dae7f0;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
-.navbar .nav .active > a,
+.navbar .nav .active > a {
+	background-color: transparent;
+}
 .navbar .nav .active > a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -27,12 +36,17 @@ body#bp-default #wp-admin-bar {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-
-a {
-  color: #5090b7;
+.nav > .current_page_item,
+.nav > .current-page-ancestor {
+	background-position: center -45px;
 }
-a:hover {
-  color: #4e7b96;
+
+.sub-header {
+	background-color:#b2cedf;
+}
+.sub-header .breadcrumb,
+.sub-header .breadcrumb a {
+	color:#366c8c;
 }
 
 
