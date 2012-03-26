@@ -215,6 +215,13 @@ function echo_magazine_post($post, $is_featured) {
         "type" => "checkbox",
         "std" => "false"),
 
+		
+		array(  "name" => "Search in Sub-header?",
+        "desc" => "Check this box to display a search box in the sub-header bar.",
+        "id" => $shortname."_subheader_search",
+        "type" => "checkbox",
+        "std" => "false"),
+
 		array(    "type" => "close"),
 
 );

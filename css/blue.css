@@ -49,6 +49,17 @@ body#bp-default #wp-admin-bar {
 	color:#366c8c;
 }
 
+.sub-header .search-bar form input[type=text] {
+	border-color: #889fad;
+}
+.sub-header .search-bar form input[type=text]:focus {
+	border-color: #5090B7;
+}
+.sub-header .search-bar form input[type=submit],
+.sub-header .search-bar form input[type=submit]:hover {
+	background-position: left -100px;
+}
+
 
 /* Components */
 /* ========== */

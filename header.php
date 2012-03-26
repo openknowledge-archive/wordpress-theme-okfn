@@ -138,6 +138,19 @@
       
       <div class="sub-header">
         <div class="container">
+        
+        	<? if ($okfn_subheader == "true" && $okfn_subheader_search == "true") : ?>
+            <div class="search-bar">
+              <?php do_action( 'bp_before_blog_search_form' ) ?>
+              <form role="search" method="get" id="searchform" action="<?php echo home_url() ?>/">
+                <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" placeholder="Search" />
+                <input type="submit" id="searchsubmit" value="<?php _e( 'Search', 'buddypress' ) ?>" />
+                <?php do_action( 'bp_blog_search_form' ) ?>
+              </form>
+              <?php do_action( 'bp_after_blog_search_form' ) ?>
+            </div>
+					<? endif; ?>
+          
           <?php
             //function_exists() — Return TRUE if the given function has been defined.
             //code by BOUTROS ABICHEDID. Adding breadcrumb trail to the WordPress theme.
