@@ -139,7 +139,7 @@
       <div class="sub-header">
         <div class="container">
         
-        	<? if ($okfn_subheader == "true" && $okfn_subheader_search == "true") : ?>
+        	<? if ($okfn_subheader == "true" && $okfn_subheader_search == "true" && !is_front_page()) : ?>
             <div class="search-bar">
               <?php do_action( 'bp_before_blog_search_form' ) ?>
               <form role="search" method="get" id="searchform" action="<?php echo home_url() ?>/">
