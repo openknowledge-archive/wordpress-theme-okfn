@@ -188,3 +188,8 @@ input:focus, textarea:focus {
 .single-post #blog-single #comments .commentlist li {
   background-color: #e5eef4;
 }
+#sidebar .widget.widget_categories ul li a:hover {
+	background-color:#AFCCDE;
+	border-color:#5090B7;
+	color:#333333;
+}

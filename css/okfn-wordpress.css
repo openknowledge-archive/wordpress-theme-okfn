@@ -350,12 +350,14 @@ ul#members-list {
 #sidebar .widget.widget_categories h3 {
 	display:none;
 }
-#sidebar .widget.widget_categories ul {
-	margin:0px;
+#sidebar .widget.widget_categories {
 	overflow:auto;
 	max-height:436px;
 	background-color:#FFF;
-	*overflow:visible; /* for ie */
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+#sidebar .widget.widget_categories ul {
+	margin:0px;
 }
 #sidebar .widget.widget_categories ul li {
 	border:none;
