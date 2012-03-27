@@ -119,6 +119,28 @@ ul.icons34 li {
 	margin-bottom:11px;
 }
 
+ul.feature-list {
+	margin:0px 0px 9px 0px;
+}
+ul.feature-list li {
+	list-style:none;
+	background-image: url(http://assets.okfn.org/p/ckan/img/icons/16/tick.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding:0px 0px 6px 20px;
+	line-height:16px;
+}
+ul.feature-list li.minus {
+	color:#d7d7d7;
+	background-image: url(http://assets.okfn.org/p/ckan/img/icons/16/minus.png);
+}
+ul.feature-list li.minus del {
+	text-decoration:none;
+}
+ul.feature-list.white li {
+	background-image: url(http://assets.okfn.org/p/ckan/img/icons/16/tick-white.png);
+}
+
 
 /* Wordpress: Widget UL */
 /* ==================== */
