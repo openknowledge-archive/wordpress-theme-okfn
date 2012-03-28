@@ -143,21 +143,26 @@ ul.feature-list.white li {
 
 .wp-caption {
 	background-color: #F0F0F0;
-	padding:5px;
+	padding:5px 0px;
 	-webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-	margin-bottom:9px;
+	margin: 0px auto 9px auto;
+	text-align:center;
+	max-width: 96%; /* Image does not overflow the content area */
 }
 
-.wp-caption img {
-	width:100%;
+.wp-caption.alignleft {
+  margin: 0px 10px 9px 0px;
+	display:inline-block;
 }
 
 .wp-caption-text {
 	margin:0px;
-	padding:2px 5px 0px 5px;
+	padding:5px 10px 0px 10px;
 	font-size:11px;
+	line-height: normal;
+	text-align:left;
 }
 
 
