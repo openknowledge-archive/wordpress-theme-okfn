@@ -120,9 +120,9 @@ input:focus, textarea:focus {
 #sidebar #sidebar-login-form,
 #sidebar #sidebar-me,
 #sidebar .widget {
-	background: #afccde;
+	background: #F3F3F3;
 	background-image:none;
-  border: 1px solid #afccde;
+  border: 1px solid #F3F3F3;
   color: #333333;
 	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#afccde', endColorstr='#afccde', GradientType=0);  /* IE6-9 */
 }
@@ -189,7 +189,6 @@ input:focus, textarea:focus {
   background-color: #e5eef4;
 }
 #sidebar .widget.widget_categories ul li a:hover {
-	background-color:#AFCCDE;
+	background-color:#5090B7;
 	border-color:#5090B7;
-	color:#333333;
 }
