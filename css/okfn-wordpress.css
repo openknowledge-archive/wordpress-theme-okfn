@@ -1564,3 +1564,16 @@ body {
 .banner.full-width:after {
   left: 100%;
 }
+
+
+/* Search */
+/* ====== */
+#content.search-page .post {
+  margin-bottom: 0px;
+}
+#content.search-page .post .entry {
+  padding: 0px;
+}
+#content.search-page .entry p:nth-child(n+2) {
+	display:none; /* Hide ShareThis */
+}

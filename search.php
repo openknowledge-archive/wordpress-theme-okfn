@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-	<div id="content">
+	<div id="content" class="search-page">
 		<div class="padder">
 
 		<?php do_action( 'bp_before_blog_search' ) ?>
@@ -21,7 +21,7 @@
 
 					<?php do_action( 'bp_before_blog_post' ) ?>
 
-					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="margin-bottom: 0px">
+					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 						<!--<div class="author-box">
 							<?php echo get_avatar( get_the_author_meta( 'email' ), '50' ); ?>
