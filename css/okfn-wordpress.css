@@ -141,6 +141,25 @@ ul.feature-list.white li {
 	background-image: url(http://assets.okfn.org/p/ckan/img/icons/16/tick-white.png);
 }
 
+.wp-caption {
+	background-color: #F0F0F0;
+	padding:5px;
+	-webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+	margin-bottom:9px;
+}
+
+.wp-caption img {
+	width:100%;
+}
+
+.wp-caption-text {
+	margin:0px;
+	padding:2px 5px 0px 5px;
+	font-size:11px;
+}
+
 
 /* Wordpress: Widget UL */
 /* ==================== */
