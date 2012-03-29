@@ -9,7 +9,7 @@ These styles overwrite the default Bootstrap ones, in order to move the caption 
 	left:50%;
 	margin-left:20px;
 	top:auto;
-	bottom:33%;
+	bottom:25%;
 	height:20px;
 	width:20px;
 	border: none;
@@ -24,7 +24,7 @@ These styles overwrite the default Bootstrap ones, in order to move the caption 
 .carousel-caption {
   left: 50%;
   right: 0;
-  bottom: 33%;
+  bottom: 25%;
   padding: 20px;
 	background-color:transparent;
 }
