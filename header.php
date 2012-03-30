@@ -86,7 +86,7 @@
             <div class="container">
             
 						<? if ($okfn_header_textarea && $okfn_header_text == "true") : ?>
-              <div class="header-text"<? if ($okfn_header_text_align == "left") : ?> style="float:left;"<? endif; ?>>
+              <div class="header-text"<? if ($okfn_header_text_align == "left") : ?> style="float:left; padding-left:0px; padding-right:5px;"<? endif; ?>>
 						    <? echo stripslashes($okfn_header_textarea); ?>
               </div>
 					  <? endif; ?>
