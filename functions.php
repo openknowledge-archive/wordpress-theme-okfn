@@ -223,6 +223,29 @@ function echo_magazine_post($post, $is_featured) {
         "std" => "false"),
 
 		array(    "type" => "close"),
+		
+		
+		array(    "type" => "open"),
+		
+		array(  "name" => "Custom Header Text",
+        "desc" => "Check this box to enable custom header text.",
+        "id" => $shortname."_header_text",
+        "type" => "checkbox",
+        "std" => "false"),
+		
+		array(  "name" => "Header Text",
+        "desc" => "Text or html to display in header.",
+        "id" => $shortname."_header_textarea",
+        "type" => "textarea"),
+				
+		array("name" => "Align",
+        "id" => $shortname."_header_text_align",
+        "type" => "radio",
+        "desc" => "Which side of the header would you like this to appear?",
+        "options" => array("left" => "Left", "right" => "Right"),
+        "std" => "right"),
+				
+		array(  "type" => "close"),
 
 );
 
@@ -316,14 +339,15 @@ function mytheme_admin() {
 		break;
 		
 		case 'textarea':
-		?>
+		?>        
         
-        <tr>
-            <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
-            <td><textarea name="<?php echo $value['id']; ?>" style="width:400px; height:200px;" type="<?php echo $value['type']; ?>" cols="" rows=""><?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?></textarea>
-            </td>
-            <td><em><?php echo $value['desc']; ?></em></td>
+        <?php $input = get_settings( $value['id'] ); $output = stripslashes ($input); ?>
+				<tr>
+          <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
+          <td><textarea name="<?php echo $value['id']; ?>" cols="60" rows="15"><?php if ( get_settings( $value['id'] ) != "") { echo $output; } else { echo $value['std']; } ?></textarea></td>
+          <td><em><?php echo $value['desc']; ?></em></td>
         </tr>
+        
 		<?php 
 		break;
 		

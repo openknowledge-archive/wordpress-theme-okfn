@@ -84,6 +84,13 @@
         <div class="navbar">
       		<div class="navbar-inner">
             <div class="container">
+            
+						<? if ($okfn_header_textarea && $okfn_header_text == "true") : ?>
+              <div class="header-text"<? if ($okfn_header_text_align == "left") : ?> style="float:left;"<? endif; ?>>
+						    <? echo stripslashes($okfn_header_textarea); ?>
+              </div>
+					  <? endif; ?>
+          
             <a title="<?php _ex( 'Home', 'Home page banner link title', 'buddypress' ); ?>" 
                 class="brand" 
                 href="<?php echo home_url(); ?>">
@@ -121,6 +128,7 @@
               <!-- Disabled until I've got separate images and confirmed link addresses -->
             </div>
           </div>
+          
         </div>
 
         <form action="<?php echo bp_search_form_action() ?>" method="post" class="search-form" role="search">

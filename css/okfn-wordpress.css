@@ -107,6 +107,16 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 	padding:0px 0px 0px 5px;
 }
 
+.header-text {
+	float:right;
+	height:40px;
+	display:table;
+}
+.header-text > * {
+	vertical-align:middle;
+	display: table-cell;
+}
+
 ul.icons34 {
 	margin:0px;
 }
