@@ -224,6 +224,7 @@ ul.xoxo ul li {
 header {
   margin-bottom: 15px; /* CSS Dropdown menu */
 	margin-top:25px; /* for topbar */
+	color:#FFF;
 }
 .topbar {
 	font-size: 11px;
