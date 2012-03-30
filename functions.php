@@ -209,6 +209,17 @@ function echo_magazine_post($post, $is_featured) {
 		
 		array(    "type" => "open"),
 		
+		array(  "name" => "Hide Logo Icon?",
+        "desc" => "Check this box if you would like to HIDE the logo image.",
+        "id" => $shortname."_logo_icon",
+        "type" => "checkbox",
+        "std" => "false"),
+
+		array(    "type" => "close"),
+		
+		
+		array(    "type" => "open"),
+		
 		array(  "name" => "Sub-header Bar?",
         "desc" => "Check this box to display a bar below the header, inclusing breadcrumbs.",
         "id" => $shortname."_subheader",
@@ -344,7 +355,7 @@ function mytheme_admin() {
         <?php $input = get_settings( $value['id'] ); $output = stripslashes ($input); ?>
 				<tr>
           <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
-          <td><textarea name="<?php echo $value['id']; ?>" cols="60" rows="15"><?php if ( get_settings( $value['id'] ) != "") { echo $output; } else { echo $value['std']; } ?></textarea></td>
+          <td><textarea name="<?php echo $value['id']; ?>" cols="70" rows="5"><?php if ( get_settings( $value['id'] ) != "") { echo $output; } else { echo $value['std']; } ?></textarea></td>
           <td><em><?php echo $value['desc']; ?></em></td>
         </tr>
         

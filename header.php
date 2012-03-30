@@ -98,10 +98,10 @@
 							<?php
                 // Check for header image
                 $header_image = get_header_image();
-                if ( ! empty( $header_image ) ) :
+                if ( ! empty( $header_image ) && $okfn_logo_icon == "false" ) :
               ?>
                 <img src="<?php header_image(); ?>" alt="logo" />
-              <?php else: ?>
+              <?php elseif ($okfn_logo_icon == "false") : ?>
                 <img src="http://assets.okfn.org/web/images/header-logox2.png" alt="logo"/>
               <?php endif; ?>
   
