@@ -1,12 +1,30 @@
     </div> <!-- /container -->
+		
 		<?php do_action( 'bp_after_container' ) ?>
-
+    
 		<?php do_action( 'bp_before_footer' ) ?>
 
-
 		<?php do_action( 'bp_after_footer' ) ?>
-
-		<?php wp_footer(); ?>
+    
+    <div class="topbar">
+      <div class="padder">
+       <?
+				global $options;
+				foreach ($options as $value) {
+						if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+				}
+				 if ($okfn_sharethis == "true" && $okfn_buddypress_disable == "false") : ?>
+					<div class="social">
+            <span class='st_facebook' displayText='Facebook'></span>
+            <span class='st_twitter' displayText='Twitter'></span>
+          </div>
+				<? endif; ?>
+        
+        <a href="http://flattr.com/thing/605365/Open-Knowledge-Foundation" class="donate">Donate</a>
+		    
+				<?php wp_footer(); ?>
+      </div>     
+    </div>
 
     <footer>
     <div class="inner">
@@ -42,10 +60,10 @@
 		<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/bootstrap.js"></script>
     <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/jquery.dotdotdot-1.4.0-packed.js"></script>
     
-    <!--ShareThis -->
-		<!--<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 
-        <script type="text/javascript">stLight.options({publisher: "ur-c524706a-c88f-82a8-ea44-7140256786d3"}); </script> -->
-		
+    <? if ($okfn_sharethis == "true" && $okfn_buddypress_disable == "false") : ?>
+		  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 
+      <script type="text/javascript">stLight.options({publisher: "<? if ($okfn_sharethis_id) : echo $okfn_sharethis_id; else: ?>ur-c524706a-c88f-82a8-ea44-7140256786d3<? endif; ?>"}); </script>
+		<? endif; ?>
 	</body>
 
 </html>

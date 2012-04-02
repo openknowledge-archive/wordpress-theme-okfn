@@ -96,6 +96,16 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 /* Wordpress Layout */
 /* ================ */
 
+.topbar .donate {
+	float:right;
+	display:block;
+	background-image:url(https://flattr.com/_img/icons/flattr_logo_16.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding: 3px 5px 3px 20px;
+	margin-left:10px;
+}
+
 .navbar {
 	margin-bottom:0px;
 }
@@ -553,18 +563,17 @@ ul#members-list {
 /* Buddypress: Top links (customised) */
 /* ================================== */
 body#bp-default #wp-admin-bar {
-  background-color: #060606;
+  background-color: transparent;
+	position:relative;
+	width:auto;
+	float:right;
 }
 body#bp-default #wp-admin-bar .padder {
   background: none;
-  width: 940px;
+  min-width: 400px;
 }
 body#bp-default #wp-admin-bar .padder > a:first-child {
   display: none;
-}
-body#bp-default #wp-admin-bar .padder > ul {
-  position: absolute;
-  right: 10px;
 }
 body#bp-default #wp-admin-bar .padder > ul > li {
   position: static;

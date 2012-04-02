@@ -127,18 +127,10 @@ function echo_magazine_post($post, $is_featured) {
     $shortname = "okfn";
     $options = array (
 
-		array(    "type" => "open"),
-		
-		array("name" => "Carousel Style",
-        "id" => $shortname."_carosel",
-        "type" => "radio",
-        "desc" => "Change layout style of Bootstrap carousel",
-        "options" => array("default" => "Default", "text-right" => "Text on Right"),
-        "std" => "default"),
+
+		array(    "name" => "General Styling",
+        "type" => "title"),
 				
-		array(    "type" => "close"),
-		
-		
 		array(    "type" => "open"),
 		
 		array("name" => "Colour Scheme",
@@ -151,49 +143,7 @@ function echo_magazine_post($post, $is_featured) {
 		array(    "type" => "close"),
 		
 		
-		array(    "type" => "open"),
 		
-		array(  "name" => "Disable BuddyPress Bar?",
-        "desc" => "Check this box if you would like to HIDE the BuddyPress bar at the top of this site.",
-        "id" => $shortname."_buddypress_disable",
-        "type" => "checkbox",
-        "std" => "false"),
-
-		array(    "type" => "close"),
-		
-		
-		array(    "type" => "open"),
-		
-		array(  "name" => "Make my logo bigger!",
-        "desc" => "Check this box to increase font size of site title. Useful when you have a short title. Only works when BuddyPress bar is disabled.",
-        "id" => $shortname."_large_title",
-        "type" => "checkbox",
-        "std" => "false"),
-
-		array(    "type" => "close"),
-		
-		
-		array(    "type" => "open"),
-		
-		array("name" => "Logo Font",
-        "id" => $shortname."_logo_font",
-        "type" => "radio",
-        "desc" => "Font for header logo text",
-        "options" => array("default" => "Open Sans", "ubuntu" => "Ubuntu"),
-        "std" => "default"),
-				
-		array(    "type" => "close"),
-		
-		
-		array(    "type" => "open"),
-		
-		array(  "name" => "Tagline in meta title?",
-        "desc" => "Check this box to append site title with tagline in the meta title tag.",
-        "id" => $shortname."_tagline_title",
-        "type" => "checkbox",
-        "std" => "false"),
-
-		array(    "type" => "close"),
 		
 		array(    "type" => "open"),
 		
@@ -207,6 +157,62 @@ function echo_magazine_post($post, $is_featured) {
 		array(    "type" => "close"),
 		
 		
+		array(    "name" => "TopBar",
+        "type" => "title"),
+		
+		array(    "type" => "open"),
+		
+		array(  "name" => "ShareThis",
+        "desc" => "Check this box to enable ShareThis in the TopBar.",
+        "id" => $shortname."_sharethis",
+        "type" => "checkbox",
+        "std" => "false"),
+		
+		array(    "name" => "Publisher ID",
+        "desc" => "If you have a ShareThis account, enter your publisher ID here.",
+        "id" => $shortname."_sharethis_id",
+        "std" => "",
+        "type" => "text"),
+				
+		array(  "type" => "close"),
+		
+		array(    "type" => "open"),
+		
+		array(  "name" => "Disable TopBar?",
+        "desc" => "Check this box if you would like to HIDE the BuddyPress bar at the top of this site.",
+        "id" => $shortname."_buddypress_disable",
+        "type" => "checkbox",
+        "std" => "false"),
+
+		array(    "type" => "close"),
+
+		array(    "name" => "Header",
+        "type" => "title"),
+				
+		array(    "type" => "open"),
+		
+		array(  "name" => "Make my logo bigger!",
+        "desc" => "Check this box to increase font size of site title. Useful when you have a short title. Only works when BuddyPress bar is disabled.",
+        "id" => $shortname."_large_title",
+        "type" => "checkbox",
+        "std" => "false"),
+
+		array(    "type" => "close"),
+		
+		
+		
+		
+		array(    "type" => "open"),
+		
+		array("name" => "Logo Font",
+        "id" => $shortname."_logo_font",
+        "type" => "radio",
+        "desc" => "Font for header logo text",
+        "options" => array("default" => "Open Sans", "ubuntu" => "Ubuntu"),
+        "std" => "default"),
+				
+		array(    "type" => "close"),
+		
 		array(    "type" => "open"),
 		
 		array(  "name" => "Hide Logo Icon?",
@@ -216,25 +222,6 @@ function echo_magazine_post($post, $is_featured) {
         "std" => "false"),
 
 		array(    "type" => "close"),
-		
-		
-		array(    "type" => "open"),
-		
-		array(  "name" => "Sub-header Bar?",
-        "desc" => "Check this box to display a bar below the header, inclusing breadcrumbs.",
-        "id" => $shortname."_subheader",
-        "type" => "checkbox",
-        "std" => "false"),
-
-		
-		array(  "name" => "Search in Sub-header?",
-        "desc" => "Check this box to display add a search field to the sub-header bar.",
-        "id" => $shortname."_subheader_search",
-        "type" => "checkbox",
-        "std" => "false"),
-
-		array(    "type" => "close"),
-		
 		
 		array(    "type" => "open"),
 		
@@ -257,7 +244,55 @@ function echo_magazine_post($post, $is_featured) {
         "std" => "right"),
 				
 		array(  "type" => "close"),
+		
+		
+		array(    "name" => "Sub-Header",
+        "type" => "title"),
+		
+		array(    "type" => "open"),
+		
+		array(  "name" => "Sub-header Bar?",
+        "desc" => "Check this box to display a bar below the header, inclusing breadcrumbs.",
+        "id" => $shortname."_subheader",
+        "type" => "checkbox",
+        "std" => "false"),
 
+		
+		array(  "name" => "Search in Sub-header?",
+        "desc" => "Check this box to display add a search field to the sub-header bar.",
+        "id" => $shortname."_subheader_search",
+        "type" => "checkbox",
+        "std" => "false"),
+
+		array(    "type" => "close"),
+		
+		
+		
+		array(    "name" => "Misc",
+        "type" => "title"),
+				
+		array(    "type" => "open"),
+		
+		array("name" => "Carousel Style",
+        "id" => $shortname."_carosel",
+        "type" => "radio",
+        "desc" => "Change layout style of Bootstrap carousel",
+        "options" => array("default" => "Default", "text-right" => "Text on Right"),
+        "std" => "default"),
+				
+		array(    "type" => "close"),
+		
+		array(    "type" => "open"),
+		
+		array(  "name" => "Tagline in meta title?",
+        "desc" => "Check this box to append site title with tagline in the meta title tag.",
+        "id" => $shortname."_tagline_title",
+        "type" => "checkbox",
+        "std" => "false"),
+
+		array(    "type" => "close"),
+		
+		
 );
 
 function mytheme_add_admin() {
@@ -313,7 +348,7 @@ function mytheme_admin() {
 	
 		case "open":
 		?>
-        <table width="100%" border="0" style="background-color:#ECECEC; padding:10px;">
+        <table width="100%" border="0" style="background-color:#FFFFFF; padding:10px; border-bottom:solid 1px #ECECEC;">
 		
         
         
@@ -322,14 +357,14 @@ function mytheme_admin() {
 		case "close":
 		?>
 		
-        </table><br />
+        </table>
         
         
 		<?php break;
 		
 		case "title":
 		?>
-		<table width="100%" border="0" style="background-color:#dceefc; padding:5px 10px;"><tr>
+		<table width="100%" border="0" style="background-color:#ECECEC; padding:0px 10px;"><tr>
         	<td colspan="3"><h3><?php echo $value['name']; ?></h3></td>
         </tr>
                 

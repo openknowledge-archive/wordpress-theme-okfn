@@ -5,9 +5,13 @@ a:hover {
   color: #4e7b96;
 }
 
-body#bp-default #wp-admin-bar {
+.topbar {
   background-color: #4e7b96;
 }
+.topbar a:hover {
+	color:#FFF;
+}
+
 .navbar-inner {
   background-color: #5090b7;
   background-image:none;
@@ -58,6 +62,18 @@ body#bp-default #wp-admin-bar {
 .sub-header .search-bar form input[type=submit],
 .sub-header .search-bar form input[type=submit]:hover {
 	background-position: left -100px;
+}
+
+#wp-admin-bar ul li ul {
+  background: none repeat scroll 0 0 #5090B7;
+  border: 1px solid #5090B7;
+}
+#wp-admin-bar ul.main-nav li:hover,
+#wp-admin-bar ul.main-nav li.sfhover {
+  background-color: #5090B7;
+}
+#wp-admin-bar ul.main-nav li ul li.sfhover {
+  background-color: #619BBE;
 }
 
 
