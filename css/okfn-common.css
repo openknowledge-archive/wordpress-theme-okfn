@@ -255,13 +255,13 @@ header {
   margin: 0;
   padding: 0;
 }
-.topbar ul li a {
-    display: block;
-}
-.topbar li a {
+.topbar a {
     color: #EEEEEE;
     padding: 3px 15px;
     text-decoration: none;
+}
+.topbar ul li a {
+    display: block;
 }
 .topbar .social {
 	float:right;
