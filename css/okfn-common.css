@@ -239,7 +239,7 @@ header {
 	background-repeat: repeat;
 	background-position: 0 0;
 }
-.topbar .padder {
+.topbar > .padder {
 	width:940px;
 	height: 25px;
   margin: 0 auto;
