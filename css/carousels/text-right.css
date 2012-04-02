@@ -35,4 +35,6 @@ These styles overwrite the default Bootstrap ones, in order to move the caption 
 }
 .carousel-caption p {
   color: #454545;
+	font-size:14px;
+	line-height:20px;
 }
