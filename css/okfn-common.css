@@ -269,7 +269,8 @@ header {
 }
 .topbar .social > span {
 	display:inline-block;
-	width:20px;
+	width:20px; /* Hide text */
+	overflow:hidden;
 }
 header .search-form {
   display: none;
