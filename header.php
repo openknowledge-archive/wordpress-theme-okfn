@@ -105,7 +105,9 @@
                 <img src="http://assets.okfn.org/web/images/header-logox2.png" alt="logo"/>
               <?php endif; ?>
   
-              <?php bp_site_name(); ?>
+  						<?php if ( $okfn_logo_text == "false" ) : ?>
+                <?php bp_site_name(); ?>
+              <?php endif; ?>
             </a>
             
             <?

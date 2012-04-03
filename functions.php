@@ -143,8 +143,6 @@ function echo_magazine_post($post, $is_featured) {
 		array(    "type" => "close"),
 		
 		
-		
-		
 		array(    "type" => "open"),
 		
 		array("name" => "Tagline Location",
@@ -186,6 +184,7 @@ function echo_magazine_post($post, $is_featured) {
 
 		array(    "type" => "close"),
 
+
 		array(    "name" => "Header",
         "type" => "title"),
 				
@@ -198,9 +197,6 @@ function echo_magazine_post($post, $is_featured) {
         "std" => "false"),
 
 		array(    "type" => "close"),
-		
-		
-		
 		
 		array(    "type" => "open"),
 		
@@ -218,6 +214,16 @@ function echo_magazine_post($post, $is_featured) {
 		array(  "name" => "Hide Logo Icon?",
         "desc" => "Check this box if you would like to HIDE the logo image.",
         "id" => $shortname."_logo_icon",
+        "type" => "checkbox",
+        "std" => "false"),
+
+		array(    "type" => "close"),
+		
+		array(    "type" => "open"),
+		
+		array(  "name" => "Hide Logo Text?",
+        "desc" => "Check this box if you would like to HIDE the logo text.",
+        "id" => $shortname."_logo_text",
         "type" => "checkbox",
         "std" => "false"),
 
@@ -265,7 +271,6 @@ function echo_magazine_post($post, $is_featured) {
         "std" => "false"),
 
 		array(    "type" => "close"),
-		
 		
 		
 		array(    "name" => "Misc",
