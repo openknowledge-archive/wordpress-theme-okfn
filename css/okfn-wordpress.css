@@ -170,7 +170,6 @@ ul.feature-list.white li {
   border-radius: 3px;
 	margin: 0px auto 9px auto;
 	text-align:center;
-	max-width: 96%; /* Image does not overflow the content area */
 }
 
 .wp-caption.alignleft {
