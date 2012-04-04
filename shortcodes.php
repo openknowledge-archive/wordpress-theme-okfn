@@ -45,10 +45,10 @@ function carousel_slide_shortcode( $atts ) {
 		
 		if(!empty($caption)){
 			return '<div class="item ' .$class. '"><img src="' .$img. '">
-				<div class="carousel-caption">
-					<p>' .$caption. '</p>
-				  </div>
-				</div>'; 
+								<div class="carousel-caption">
+									' .$caption. '
+								</div>
+							</div>'; 
 		}
 		else {
 			return '<div class="item"><img src="' .$img. '">
