@@ -124,6 +124,14 @@ input:focus, textarea:focus {
   float: right;
 	margin:0px;
 }
+
+.carousel-caption {
+	color:#FFF;
+	padding: 10px 15px 12px 15px;
+}
+.carousel-caption p {
+	margin:0px;
+}
 /*
 .carousel-control { /*compensate for opensans
     font-size: 44px;

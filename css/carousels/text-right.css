@@ -37,4 +37,5 @@ These styles overwrite the default Bootstrap ones, in order to move the caption 
   color: #454545;
 	font-size:14px;
 	line-height:20px;
+	margin: 0 0 9px;
 }
