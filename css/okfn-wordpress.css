@@ -162,29 +162,6 @@ ul.feature-list.white li {
 	background-image: url(http://assets.okfn.org/p/ckan/img/icons/16/tick-white.png);
 }
 
-.wp-caption {
-	background-color: #F0F0F0;
-	padding:5px 0px;
-	-webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-	margin: 0px auto 9px auto;
-	text-align:center;
-}
-
-.wp-caption.alignleft {
-  margin: 0px 10px 9px 0px;
-	display:inline-block;
-}
-
-.wp-caption-text {
-	margin:0px;
-	padding:5px 10px 0px 10px;
-	font-size:11px;
-	line-height: normal;
-	text-align:left;
-}
-
 
 /* Wordpress: Widget UL */
 /* ==================== */
@@ -1015,10 +992,12 @@ body {
 }
 #content .post .entry img {
   background: #f0f0f0;
-  border: 1px dashed #e0e0e0;
-  padding: 10px;
+  padding: 5px;
   display: block;
   margin: 10px auto;
+	-webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 #content .post .entry h2 {
   font-size: 20px;
@@ -1623,4 +1602,48 @@ body {
 }
 #content.search-page .entry p:nth-child(n+2) {
 	display:none; /* Hide ShareThis */
+}
+
+
+/* Captions */
+/* ======== */
+
+.wp-caption {
+	background-color: #F0F0F0;
+	padding:5px 0px;
+	-webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+	margin: 10px auto;
+	text-align:center;
+}
+
+.wp-caption.alignleft {
+  margin: 0px 10px 9px 0px;
+	float:left;
+	text-align:center;
+}
+
+.wp-caption.alignright {
+	margin: 0px 10px 9px 10px;
+	float:right;
+	text-align:center;
+}
+
+#content .post .entry .wp-caption img {
+	border:none;
+	margin: 0px;
+	padding: 0px;
+	display:inline;
+	-webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.wp-caption-text {
+	margin:0px;
+	padding:5px 10px 0px 10px;
+	font-size:11px;
+	line-height: normal;
+	text-align:left;
 }
