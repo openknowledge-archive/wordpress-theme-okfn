@@ -640,4 +640,7 @@ function wp_bac_breadcrumb() {
        echo '</ul>';
     }
 }
+
+include('shortcodes.php');
+
 ?>
