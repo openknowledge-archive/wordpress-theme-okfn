@@ -25,42 +25,40 @@ Supported Shortcode
 ### Carousel
 To add a carousel to your page can be as simple as
 
-``
+<code>
 [carousel]
 [slide img="http://slide1.jpg" class="active"]
 [slide img="http://slide2.jpg"]
 [/carousel]
-``
+</code>
 
 Please note that one of the slides must have `class="active"` applied to it, this will be the first slide that is displayed.
 
 Other supported attributes are `heading` and `caption`. For example, to add a caption to a slide you would enter it as follows:
 
-``
-
+<code>
 [carousel]
 [slide img="http://slide1.jpg" class="active"]
 [slide img="http://slide2.jpg" caption="My caption for slide two"]
 [/carousel]
-
-``
+</code>
 
 ### Pseudo Sidebar
 If you are using the 'One column, no sidebar' template to hide the default sidebar, you can mimic the default layout like so:
 
-``
+<code>
 [pseudocontent] My main content [/pseudocontent]
 [pseudosidebar] My sidebar content [/pseudosidebar]
-``
+</code>
 
 ### Image Caption
 Wrap an image and its caption in a border
 
-``
+<code>
 [caption width="450" caption="My caption"]
 <img src="http://image.jpg" alt="" width="450" />
 [/caption]
-``
+</code>
 
 
 Magazine Mode
