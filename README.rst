@@ -14,8 +14,46 @@ We override::
 And additionally provide function hooks in::
 
   functions.php
+  shortcodes.php
 
 ...and that's it! Wordpress' output is modified via callbacks in functions.php. We structure the page in header/footer but aim to use the parent theme's templates in all other cases. Wordpress always provides a more robust override mechanism.
+
+
+Supported Shortcode
+-------------------
+### Carousel
+To add a carousel to your page can be as simple as
+`
+[carousel]
+[slide img="http://slide1.jpg" class="active"]
+[slide img="http://slide2.jpg"]
+[/carousel]
+`
+Please note that one of the slides must have `class="active"` applied to it, this will be the first slide that is displayed.
+
+Other supported attributes are `heading` and `caption`. For example, to add a caption to a slide you would enter it as follows:
+`
+[carousel]
+[slide img="http://slide1.jpg" class="active"]
+[slide img="http://slide2.jpg" caption="My caption for slide two"]
+[/carousel]
+`
+
+### Pseudo Sidebar
+If you are using the 'One column, no sidebar' template to hide the default sidebar, you can mimic the default layout like so:
+`
+[pseudocontent] My main content [/pseudocontent]
+[pseudosidebar] My sidebar content [/pseudosidebar]
+`
+
+### Image Caption
+Wrap an image and its caption in a border
+`
+[caption width="450" caption="My caption"]
+<img src="http://image.jpg" alt="" width="450" />
+[/caption]
+`
+
 
 Magazine Mode
 -------------
