@@ -22,7 +22,8 @@ And additionally provide function hooks in::
 Supported Shortcode
 -------------------
 
-### Carousel
+Carousel
+-------- 
 To add a carousel to your page can be as simple as
 
 :: 
@@ -43,7 +44,8 @@ Other supported attributes are `heading` and `caption`. For example, to add a ca
   [slide img="http://slide2.jpg" caption="My caption for slide two"]  
   [/carousel]  
 
-### Pseudo Sidebar
+Pseudo Sidebar
+-------------- 
 If you are using the 'One column, no sidebar' template to hide the default sidebar, you can mimic the default layout like so:
 
 ::
@@ -51,7 +53,8 @@ If you are using the 'One column, no sidebar' template to hide the default sideb
   [pseudocontent] My main content [/pseudocontent]  
   [pseudosidebar] My sidebar content [/pseudosidebar]  
 
-### Image Caption
+Image Caption
+-------------
 Wrap an image and its caption in a border
 
 ::
