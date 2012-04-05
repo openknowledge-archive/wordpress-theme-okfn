@@ -23,6 +23,7 @@ Supported Shortcode
 -------------------
 
 **Carousel**
+
 To add a carousel to your page can be as simple as
 
 :: 
@@ -33,7 +34,6 @@ To add a carousel to your page can be as simple as
   [/carousel]  
 
 Please note that one of the slides must have `class="active"` applied to it, this will be the first slide that is displayed.
-
 Other supported attributes are `heading` and `caption`. For example, to add a caption to a slide you would enter it as follows:
 
 ::
@@ -44,6 +44,7 @@ Other supported attributes are `heading` and `caption`. For example, to add a ca
   [/carousel]  
 
 **Pseudo Sidebar**
+
 If you are using the 'One column, no sidebar' template to hide the default sidebar, you can mimic the default layout like so:
 
 ::
@@ -52,6 +53,7 @@ If you are using the 'One column, no sidebar' template to hide the default sideb
   [pseudosidebar] My sidebar content [/pseudosidebar]  
 
 **Image Caption**
+
 Wrap an image and its caption in a border
 
 ::
