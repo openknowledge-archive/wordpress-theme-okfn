@@ -20,15 +20,16 @@ add_shortcode( 'pseudosidebar', 'pseudosidebar_shortcode' );
 
 
 
-/**********************************************************************************
+/*********************************************************************************************
 * Name:        Carousel
 * Author:      Sam Smith
 * Description: Use to insert a Bootstrap carousel
 * Example:     [carousel]
-               [slide img="http://slide1.jpg" caption="Caption One" class="active"]
+               [slide img="http://slide1.jpg" class="active"]
 							 [slide img="http://slide2.jpg" caption="Caption Two"]
+							 [slide img="http://slide3.jpg" heading="Heading Three" caption="Caption Three"]
 							 [/carousel]
-***********************************************************************************/
+**********************************************************************************************/
 
 function carousel_shortcode( $atts, $content = null ) {
 	
@@ -41,9 +42,18 @@ function carousel_slide_shortcode( $atts ) {
 			'img' => 'http://farm8.staticflickr.com/7174/6554801385_83acdc501d_o_d.png',
 			'caption' => '',
 			'class' => '',
+			'heading' => '',
 		), $atts ) );
 		
-		if(!empty($caption)){
+		if(!empty($caption) && !empty($heading) ){
+			return '<div class="item ' .$class. '"><img src="' .$img. '">
+								<div class="carousel-caption">
+									<h2>' .$heading. '</h2>
+									' .$caption. '
+								</div>
+							</div>'; 
+		}
+		else if (!empty($caption)) {
 			return '<div class="item ' .$class. '"><img src="' .$img. '">
 								<div class="carousel-caption">
 									' .$caption. '
