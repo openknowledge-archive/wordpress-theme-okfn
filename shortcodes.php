@@ -51,8 +51,8 @@ function carousel_slide_shortcode( $atts ) {
 							</div>'; 
 		}
 		else {
-			return '<div class="item"><img src="' .$img. '">
-			  </div>'; 
+			return '<div class="item ' .$class. '"><img src="' .$img. '">
+			        </div>'; 
 		}
 }  
 add_shortcode('slide', 'carousel_slide_shortcode');  
