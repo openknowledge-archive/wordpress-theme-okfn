@@ -314,18 +314,24 @@ ul#members-list {
 	top:10px;
 }
 
-/* Twitter Widget */
-#sidebar .widget .tb_tweet {
+/* Tweet Blender Widget */
+#sidebar .widget.widget_tweetblender {
+	padding-top:10px;
+}
+#sidebar .widget.widget_tweetblender .widgettitle {
+	padding-top:0px;
+}
+#sidebar .widget.widget_tweetblender .tb_tweet {
   padding: 10px 0;
 }
-#sidebar .widget .tb_footer {
+#sidebar .widget.widget_tweetblender .tb_footer {
   margin: 6px auto;
   display: block;
 }
-#sidebar .widget .tb_footer * {
+#sidebar .widget.widget_tweetblender .tb_footer * {
   float: none;
 }
-#sidebar .widget .tb-widget-configuration {
+#sidebar .widget.widget_tweetblender .tb-widget-configuration {
   margin: 0;
 }
 
@@ -436,13 +442,14 @@ ul#members-list {
 
 /* Flickr RSS Widget */
 #sidebar .widget.widget_flickrRSS {
-	padding:3px;
+	padding:8px;
 }
 #sidebar .widget.widget_flickrRSS .widgettitle {
 	display:none;
 }
 #sidebar .widget.widget_flickrRSS a img {
-	padding:1px;
+	padding:2px;
+	width:70px;
 }
 #sidebar .widget.widget_flickrRSS a:hover img {
 	background-color:#FFF;
