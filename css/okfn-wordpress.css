@@ -434,6 +434,20 @@ ul#members-list {
 	margin:0px 0px 10px 0px;
 }
 
+/* Flickr RSS Widget */
+#sidebar .widget.widget_flickrRSS {
+	padding:3px;
+}
+#sidebar .widget.widget_flickrRSS .widgettitle {
+	display:none;
+}
+#sidebar .widget.widget_flickrRSS a img {
+	padding:1px;
+}
+#sidebar .widget.widget_flickrRSS a:hover img {
+	background-color:#FFF;
+}
+
 
 /* Wordpress: Sidebar you-are-logged-in box */
 /* ======================================== */
