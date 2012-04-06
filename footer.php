@@ -20,7 +20,7 @@
           </div>
 				<? endif; ?>
         
-        <a href="http://flattr.com/thing/605365/Open-Knowledge-Foundation" class="donate">Donate</a>
+        <a href="http://flattr.com/thing/605365/Open-Knowledge-Foundation" class="donate"><?php _e('Donate', "okfn"); ?></a>
 		    
 				<?php wp_footer(); ?>
       </div>     

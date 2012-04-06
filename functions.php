@@ -1,4 +1,11 @@
 <?php
+
+/* Make OKFN theme available for translation.
+ * Translations can be added to the /languages/ directory.
+ */
+	//load_theme_textdomain( 'okfn', TEMPLATEPATH.'/languages' );
+	load_child_theme_textdomain( 'okfn', get_stylesheet_directory() . '/languages' );
+
 /* 
  * Register a series of DOM-manipulating filters.
  */
@@ -108,7 +115,7 @@ function echo_magazine_post($post, $is_featured) {
     echo '</span>';
     echo the_excerpt();
     echo '</div>';
-    echo '<a href="'.get_permalink().'" class="btn btn-info">'.__("Full Post").'</a> </div>';
+    echo '<a href="'.get_permalink().'" class="btn btn-info">'.__("Full Post", "okfn").'</a> </div>';
     echo '<h3 class="ribbon">';
     echo $post_category;
     echo '</h3>';
