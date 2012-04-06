@@ -108,7 +108,7 @@ function echo_magazine_post($post, $is_featured) {
     echo '</span>';
     echo the_excerpt();
     echo '</div>';
-    echo '<a href="'.get_permalink().'" class="btn btn-info">Full Post</a> </div>';
+    echo '<a href="'.get_permalink().'" class="btn btn-info">'.__("Full Post").'</a> </div>';
     echo '<h3 class="ribbon">';
     echo $post_category;
     echo '</h3>';
