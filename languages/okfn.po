@@ -15,5 +15,5 @@ msgstr ""
 
 #: functions.php:480
 msgid "Full Post"
-msgstr "Read All"
+msgstr ""
 
