@@ -5,7 +5,8 @@
  */
 	//load_theme_textdomain( 'okfn', TEMPLATEPATH.'/languages' );
 	load_child_theme_textdomain( 'okfn', get_stylesheet_directory() . '/languages' );
-
+  load_child_theme_textdomain('buddypress', get_stylesheet_directory() .'/languages/bp-languages' );
+	
 /* 
  * Register a series of DOM-manipulating filters.
  */
