@@ -1,11 +1,11 @@
 <?php
-/*****************************************************************
+/*********************************************************************************************
 * Name:        Pseudo Sidebar
 * Author:      Sam Smith
 * Description: Use to insert a sidebar into a single column page
 * Example:     [pseudocontent] ...Left Content... [/pseudocontent]
-*              [pseudosidebar] ...Right Content... [/pseudosidebar]
-*******************************************************************/
+               [pseudosidebar] ...Right Content... [/pseudosidebar]
+**********************************************************************************************/
 
 function pseudocontent_shortcode( $atts, $content = null ) {
    return '<style type="text/css">#content {width: 100%;} #content #sidebar h5 {margin-top:0px;}</style>
@@ -66,5 +66,30 @@ function carousel_slide_shortcode( $atts ) {
 		}
 }  
 add_shortcode('slide', 'carousel_slide_shortcode');  
+
+
+/*********************************************************************************************
+* Name:        Hide Page Title
+* Author:      Sam Smith
+* Description: Use to hide the page title
+**********************************************************************************************/
+
+function notitle_shortcode( $atts ){
+ return '<style type="text/css"> .pagetitle { display: none; } </style>';
+}
+add_shortcode( 'notitle', 'notitle_shortcode' );
+
+
+/*********************************************************************************************
+* Name:        Full Width
+* Author:      Sam Smith
+* Description: Force content div to be 100% wide
+**********************************************************************************************/
+
+function fullwidth_shortcode( $atts ){
+ return '<style type="text/css"> #content { width: 100%; } </style>';
+}
+add_shortcode( 'fullwidth', 'notitle_fullwidth' );
+
 
 ?>
