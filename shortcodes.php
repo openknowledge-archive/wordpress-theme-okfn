@@ -89,7 +89,7 @@ add_shortcode( 'notitle', 'notitle_shortcode' );
 function fullwidth_shortcode( $atts ){
  return '<style type="text/css"> #content { width: 100%; } </style>';
 }
-add_shortcode( 'fullwidth', 'notitle_fullwidth' );
+add_shortcode( 'fullwidth', 'fullwidth_shortcode' );
 
 
 ?>
