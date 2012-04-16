@@ -1646,7 +1646,7 @@ body {
 }
 
 .wp-caption.alignright {
-	margin: 0px 10px 9px 10px;
+	margin: 0px 0px 9px 10px;
 	float:right;
 	text-align:center;
 }
