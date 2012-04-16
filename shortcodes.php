@@ -92,4 +92,15 @@ function fullwidth_shortcode( $atts ){
 add_shortcode( 'fullwidth', 'fullwidth_shortcode' );
 
 
+/*********************************************************************************************
+* Name:        Clear
+* Author:      Sam Smith
+* Description: Clear floats
+**********************************************************************************************/
+
+function clear_shortcode( $atts ){
+ return '<br style="clear:both;" />';
+}
+add_shortcode( 'clear', 'clear_shortcode' );
+
 ?>
