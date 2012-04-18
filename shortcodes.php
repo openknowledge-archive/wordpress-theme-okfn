@@ -95,12 +95,12 @@ add_shortcode( 'fullwidth', 'fullwidth_shortcode' );
 /*********************************************************************************************
 * Name:        BS Columns
 * Author:      Sam Smith
-* Description: Divide single column. Span is the number of the 12 Bootstrap columns.
+* Description: Divide single column. Span is a number of the 12 Bootstrap columns.
 * Example:     [row]
-                 [column span="4"]
+                 [column span="6"]
 							     Left Column
 							   [/column]
-							   [column span="4"]
+							   [column span="6"]
 							     Right Column
 							   [/column]
 							 [/row]
@@ -116,7 +116,7 @@ function column_shortcode( $atts, $content = null ) {
 			'span' => '12',
 		), $atts ) );
 		
-		return '<div class="span'.$span.'">' . $content . '</div>'; 
+		return '<div class="span'.$span.'">' .do_shortcode($content). '</div>'; 
 		}
 
 add_shortcode('column', 'column_shortcode'); 
