@@ -1668,3 +1668,11 @@ body {
 	line-height: normal;
 	text-align:left;
 }
+
+
+/* WP Fixes */
+/* ======== */
+
+p:empty {
+	display: none;
+}
