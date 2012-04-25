@@ -58,6 +58,50 @@ Wrap an image and its caption in a border
   [/caption]  
 
 
+**Hide Page Title**
+
+Use to hide the page title
+
+::
+
+  [notitle] 
+	
+
+**Full Width**
+
+Force content div to be 100% wide
+
+::
+
+  [fullwidth] 
+	
+	
+**BS Columns**
+
+Divide single column. Span is a number of the 12 Bootstrap columns
+
+::
+
+  [row]
+  [column span="6"]
+  Left Column Content
+  [/column]
+  [column span="6"]
+  Right Column Content
+  [/column]
+  [/row] 
+	
+	
+**Clear**
+
+Clear floats
+
+::
+
+  [clear] 
+
+
+
 Magazine Mode
 -------------
 
