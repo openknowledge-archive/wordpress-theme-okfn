@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 	<head>
 		<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ) ?>; charset=<?php bloginfo( 'charset' ) ?>" />
-		<title>
+		
+    <title>
 		  <?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?>
       <?
       global $options;
@@ -14,14 +15,18 @@
       - <?php echo bloginfo( 'description' ); ?>
      <? endif; ?>
     </title>
-    <? if (get_bloginfo( 'description' )) : ?>
+		 
+		<? if (get_bloginfo( 'description' )) : ?>
     <meta name="description" content="<?php echo bloginfo( 'description' ); ?>" />
     <? endif; ?>
     <meta name="author" content="Sam Smith" />
 		<?php do_action( 'bp_head' ) ?>
-
-		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ) ?>" />
-
+    
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ) ?>" />
+    
+    <!-- jquery -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		
 		<?php
 			if ( is_singular() && bp_is_blog_page() && get_option( 'thread_comments' ) )
 				wp_enqueue_script( 'comment-reply' );
@@ -46,8 +51,7 @@
       // Make this variable available to Javascript
       Okfn.theme_directory = '<?php echo bloginfo('stylesheet_directory'); ?>';
     </script>
-
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -75,6 +79,7 @@
     <? endif; ?>
     
   </head>
+  
 	<body <?php body_class() ?> id="bp-default">
     <?php 
       /* Javascript includes */
