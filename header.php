@@ -26,7 +26,7 @@
     
     <!-- jquery -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		
+		<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/jquery.dotdotdot-1.4.0-packed.js"></script>
 		<?php
 			if ( is_singular() && bp_is_blog_page() && get_option( 'thread_comments' ) )
 				wp_enqueue_script( 'comment-reply' );

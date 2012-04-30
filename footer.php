@@ -58,7 +58,7 @@
     </footer>
 		
 		<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/bootstrap.js"></script>
-    <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/jquery.dotdotdot-1.4.0-packed.js"></script>
+    
     
     <? if ($okfn_sharethis == "true" && $okfn_buddypress_disable == "false") : ?>
 		  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 
