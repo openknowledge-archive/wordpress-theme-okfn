@@ -60,8 +60,8 @@ function browser_body_class($classes = '') {
 
 
 <script>
-	$(document).ready(function() {
-				$(".magazine .post.preview .text").dotdotdot({
+	jQuery(document).ready(function() {
+				jQuery(".magazine .post.preview .text").dotdotdot({
 						//  configuration goes here
 				});
 		});
