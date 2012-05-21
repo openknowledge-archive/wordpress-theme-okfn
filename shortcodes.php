@@ -54,7 +54,7 @@ function carousel_slide_shortcode( $atts ) {
 							</div>'; 
 		}
 		else if (!empty($caption)) {
-			return '<div class="item ' .$class. '"><img src="' .$img. '">
+			return '<div class="item ' .$class. '" style="background-image:url('.$img.')"><img src="' .$img. '">
 								<div class="carousel-caption">
 									' .$caption. '
 								</div>

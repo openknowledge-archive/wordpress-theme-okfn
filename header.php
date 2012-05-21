@@ -66,6 +66,8 @@
     <? endif; ?>
     <? if ($okfn_colours == "blue") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/blue.css"/>
+    <?php elseif ($okfn_colours == "grey") : ?>
+      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/grey.css"/>
     <? endif; ?>
     <? if ($okfn_large_title == "true" && $okfn_buddypress_disable == "true") : ?>
       <style type="text/css">.navbar .brand {font-size: 36px; letter-spacing:-1px; text-indent:-5px; line-height: 62px;}</style>
