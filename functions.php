@@ -336,7 +336,7 @@ function mytheme_add_admin() {
         }
     }
 
-    add_theme_page($themename." Options", "".$themename." Options", 'edit_themes', basename(__FILE__), 'mytheme_admin');
+    add_theme_page($themename." Options", "".$themename." Options", 'switch_themes', basename(__FILE__), 'mytheme_admin');
 
 }
 

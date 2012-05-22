@@ -1,0 +1,67 @@
+@import url("bootstrap.min.css");
+@import url("okfn-common.css");
+
+/*
+   =================================================
+ * Stylesheet to create OKFN branded handbooks
+ * Built upon Bootstrap V2 (default) and okfn-common
+ * Written by Sam Smith
+ * =================================================
+ */
+
+
+body,
+p {
+	font-size:14px;
+	line-height:21px;
+}
+
+a.headerlink {
+    visibility: hidden;
+}
+
+h1 {
+	margin-bottom:10px;
+}
+h2 {
+	margin:10px 0px 5px 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+}
+h3 {
+	margin:10px 0px 3px 0px;
+}
+
+.strapline {
+	display:none;
+}
+
+.content-list,
+.content-list ul {
+	margin:0px;
+}
+
+.content-list {
+	font-weight:bold;
+}
+
+.content-list ul {
+	font-weight:normal;
+}
+
+.content-list li {
+	display:block;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #cccccc;
+	margin-bottom:-1px;
+}
+
+.content-list a {
+	display:block;
+	padding:3px 0px;
+}
+.content-list ul a {
+	color:#000;
+}
