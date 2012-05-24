@@ -1597,8 +1597,8 @@ table td.label {
 }
 
 
-/* Banner */
-/* ====== */
+/* Banners */
+/* ======= */
 html,
 body {
   overflow-x: hidden;
@@ -1640,6 +1640,36 @@ body {
 }
 .banner.full-width:after {
   left: 100%;
+}
+
+.banner.full-width img {
+	max-width:inherit;
+}
+
+.banner.wallpaper {
+	background-color: #173832;
+	background-image: url(../images/wallpaper.png);
+	background-repeat: repeat;
+	background-position: center top;
+	-webkit-background-size:auto;
+	-moz-background-size: auto;
+	-o-background-size: auto;
+	background-size: auto;
+	color:#FFFFFF;
+}
+.banner.wallpaper.full-width:before,
+.banner.wallpaper.full-width:after {
+  background-image: url(../images/wallpaper.png);
+	-webkit-background-size:auto;
+	-moz-background-size: auto;
+	-o-background-size: auto;
+	background-size: auto;
+}
+.banner.wallpaper.full-width:before {
+	background-position: 56px top;
+}
+.banner.wallpaper.full-width:after {
+	background-position: -45px top;
 }
 
 
