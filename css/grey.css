@@ -82,6 +82,17 @@
 }
 
 
+/* Menu Pod */
+/* ======== */
+.okfn-dropdown a {
+  background-color: #333333;
+  color: #fff;
+}
+.okfn-dropdown a:hover {
+  background-color: #3e8f80;
+}
+
+
 /* Wordpress: Sidebar */
 /* ================== */
 #sidebar #sidebar-login-form,
