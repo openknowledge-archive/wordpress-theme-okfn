@@ -135,4 +135,41 @@ function clear_shortcode( $atts ){
 }
 add_shortcode( 'clear', 'clear_shortcode' );
 
+
+/*********************************************************************************************
+* Name:        Grid List
+* Author:      Sam Smith
+* Description: Use to present a list in a grid format
+* Example:     [gl]
+               [gli title="Title One" description="Description One"]
+               [gli title="Title Two" description="Description Two"]
+               [gli title="Title Three" description="Description Three" link="http://link.com"]
+               [/gl]
+**********************************************************************************************/
+
+function gridlist_shortcode( $atts, $content = null ) {
+	
+   return '<dl class="grid-list">' .do_shortcode($content). '<br style="clear:both;" /></dl>';
+} 
+add_shortcode( 'gl', 'gridlist_shortcode' );
+
+function gridlist_item_shortcode( $atts ) {  
+	extract( shortcode_atts( array(
+			'title' => '',
+			'description' => '',
+			'link' => '',
+		), $atts ) );
+		
+		if (!empty($link)) {
+			return '<span class="well"><dt><a href="'.$link.'">'.$title.'</a></dt>
+							<dd>' .$description. '</dd></span>'; 
+		}
+		else {
+			return '<span class="well"><dt>'.$title.'</dt>
+							<dd>' .$description. '</dd></span>'; 
+		}
+}  
+add_shortcode('gli', 'gridlist_item_shortcode');  
+
+
 ?>

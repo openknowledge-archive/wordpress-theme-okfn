@@ -908,6 +908,23 @@ body.home-page .st_plusone_buttons {
 }
 
 
+/* Grid List */
+/* ========= */
+
+dl.grid-list {
+	margin-left:-16px;
+}
+dl.grid-list span {
+	width:176px;
+	float:left;
+	margin:0px 0px 16px 16px;
+}
+dl.grid-list dt,
+dl.grid-list dd {
+	margin:0px;
+}
+
+
 /* Post Content */
 /* ============ */
 div.alignleft,
