@@ -788,10 +788,9 @@ body.home-page .st_plusone_buttons {
   -webkit-box-shadow: 2px -3px 5px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 2px -3px 5px rgba(0, 0, 0, 0.5);
   box-shadow: 2px -3px 5px rgba(0, 0, 0, 0.5);
-  -webkit-border-radius: 6px;
+  /*-webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  border-radius: 6px;
-  /* Transforms when hovered */
+  border-radius: 6px;*/
 
 }
 .okfn-dropdown:hover > a:first-child {
@@ -819,8 +818,8 @@ body.home-page .st_plusone_buttons {
   color: #fff;
 }
 .okfn-dropdown > a.background-heart, .okfn-dropdown > a.background-bubble, .okfn-dropdown > a.background-cog {
-  background-position: 98% 20%;
-  background-repeat: no-repeat;
+	background-position: 95% center;
+	background-repeat: no-repeat;
 }
 .okfn-dropdown > a.background-cog {
   background-image: url('http://assets.okfn.org/web/images/menu-icon-1.png');
@@ -832,17 +831,16 @@ body.home-page .st_plusone_buttons {
   background-image: url('http://assets.okfn.org/web/images/menu-icon-3.png');
 }
 .okfn-dropdown > a:first-child {
-  -webkit-border-radius: 6px;
+  /*-webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  border-radius: 6px;
+  border-radius: 6px;*/
 }
 .okfn-dropdown-items {
   display: none;
   position: absolute;
   width: 100%;
-  bottom: 0px;
+  bottom: 100%;
   left: 0;
-  margin-bottom: 40px;
   z-index: 1;
   -webkit-box-shadow: 2px -3px 5px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 2px -3px 5px rgba(0, 0, 0, 0.5);
@@ -858,12 +856,20 @@ body.home-page .st_plusone_buttons {
   border-bottom: 2px dotted rgba(255, 255, 255, 0.4);
 }
 .okfn-dropdown-items > a:first-child {
-  -webkit-border-top-left-radius: 6px;
-  -moz-border-radius-topleft: 6px;
-  border-top-left-radius: 6px;
-  -webkit-border-top-right-radius: 6px;
-  -moz-border-radius-topright: 6px;
-  border-top-right-radius: 6px;
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-right-radius: 3px;
+}
+
+#content .okfn-dropdown h3 {
+	color:#FFF;
+	margin:0px;
+}
+#content .okfn-dropdown p {
+	margin:0px;
 }
 
 
