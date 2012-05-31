@@ -164,6 +164,7 @@
               </form>
               <?php do_action( 'bp_after_blog_search_form' ) ?>
             </div>
+            <style type="text/css">.navbar-inner {border-bottom:none;}</style>
 					<? endif; ?>
           
           <?php

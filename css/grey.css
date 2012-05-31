@@ -54,23 +54,17 @@
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
+.nav > .current_page_item,
+.nav > .current-page-ancestor {
+	background-position: center -145px;
+}
+
 .sub-header {
-	background-color:#b2cedf;
+	background-color:#333333;
 }
 .sub-header .breadcrumb,
 .sub-header .breadcrumb a {
-	color:#366c8c;
-}
-
-.sub-header .search-bar form input[type=text] {
-	border-color: #889fad;
-}
-.sub-header .search-bar form input[type=text]:focus {
-	border-color: #5090B7;
-}
-.sub-header .search-bar form input[type=submit],
-.sub-header .search-bar form input[type=submit]:hover {
-	background-position: left -100px;
+	color:#FFF;
 }
 
 

@@ -108,6 +108,13 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 
 .navbar {
 	margin-bottom:0px;
+	height:40px;
+	overflow:hidden;
+}
+.navbar .navbar-inner {
+	position:absolute;
+	width:100%;
+	z-index:2;
 }
 .navbar .sub-brand {
 	color:#FFF;

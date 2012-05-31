@@ -29,6 +29,7 @@
 	font-weight:bold;
 	font-size:12px;
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	color:#333333;
 }
 .breadcrumb li {
   text-shadow: none;

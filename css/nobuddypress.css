@@ -4,6 +4,9 @@
 header {
 	margin-top:0px;
 }
+.navbar {
+	height:65px;
+}
 .navbar .brand {
   line-height: 65px;
 }

@@ -184,6 +184,17 @@ input:focus, textarea:focus {
 }
 
 
+/* Menu Pod */
+/* ======== */
+
+.okfn-dropdown a {
+  background-color: #5090B7;
+}
+.okfn-dropdown a:hover {
+  background-color: #B8D2E2;
+}
+
+
 /* Magazine */
 /* ======== */
 .ribbon,
