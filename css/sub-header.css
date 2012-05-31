@@ -1,3 +1,7 @@
+.sub-header {
+	display:block;
+}
+
 .navbar-inner {
 	box-shadow: none; /* for ie9 */
 }

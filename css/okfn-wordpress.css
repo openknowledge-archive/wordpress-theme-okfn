@@ -135,6 +135,10 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 	display: table-cell;
 }
 
+
+.sub-header {display:none;}
+
+
 ul.icons34 {
 	margin:0px;
 }

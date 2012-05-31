@@ -129,7 +129,8 @@
 /* ======== */
 
 .carousel-caption {
-	background-color: rgba(255, 255, 255, 0.80);
+	background: rgb(255, 255, 255); /* The Fallback */
+	background: rgba(255, 255, 255, 0.80);
 	color:#333333;
 }
 .carousel-caption h2,
