@@ -76,7 +76,9 @@
       <link href='http://fonts.googleapis.com/css?family=Ubuntu:400' rel='stylesheet' type='text/css'>
       <style type="text/css">.navbar .brand {font-family: 'Ubuntu', sans-serif; font-weight:400;}</style>
     <? endif; ?>
-    
+    <? if ($okfn_subheader == "true" && !is_front_page()) : ?>
+      <style type="text/css">.navbar-inner {border-bottom:none;}</style>
+    <? endif; ?>
   </head>
   
 	<body <?php body_class() ?> id="bp-default">
@@ -164,7 +166,6 @@
               </form>
               <?php do_action( 'bp_after_blog_search_form' ) ?>
             </div>
-            <style type="text/css">.navbar-inner {border-bottom:none;}</style>
 					<? endif; ?>
           
           <?php
