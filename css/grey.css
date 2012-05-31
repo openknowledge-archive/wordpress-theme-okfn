@@ -124,49 +124,14 @@
 
 
 
-/* Magazine */
-/* ======== */
-.ribbon,
-.magazine h3.ribbon {
-  background-color: #619BBE;
-}
-.magazine .featured .ribbon {
-  background-color: #E9473F;
-}
-.magazine .post.featured .text {
-  background: #FFFFFF;  /* Old browsers */
-	background-image:none;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF', GradientType=0);  /* IE6-9 */
-  color: #333333;
-  border-bottom-color: #FFFFFF;
-}
-.magazine .featured .text a,
-.magazine .featured .text h2 a {
-  color: #333333;
-}
-.single-post #blog-single #comments .commentlist li {
-  background-color: #e5eef4;
-}
-#sidebar .widget.widget_categories ul li a:hover {
-	background-color:#5090B7;
-	border-color:#5090B7;
-}
-
-
-#content .post .entry img,
-.wp-caption {
-	background-color: #b2cedf;
-}
-
-
-
 /* Carousel */
 /* ======== */
 
 .carousel-caption {
-	background-color:#FFF;
+	background-color: rgba(255, 255, 255, 0.80);
 	color:#333333;
 }
-.carousel-caption {
+.carousel-caption,
+.carousel-caption p {
 	color:#333333;
 }
