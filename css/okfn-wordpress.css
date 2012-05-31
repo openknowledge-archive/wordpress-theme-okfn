@@ -1673,6 +1673,9 @@ html,
 body {
   overflow-x: hidden;
 }
+.banner {
+	margin-top:-15px;
+}
 .banner.full-width {
 	position: relative;
 	background-color: #c8c8c8;
@@ -1681,7 +1684,6 @@ body {
 	-webkit-box-shadow: 0px 1px 0px 0px #efefef;
   -moz-box-shadow: 0px 1px 0px 0px #efefef;
   box-shadow: 0px 1px 0px 0px #efefef;
-	margin-top:-15px;
 	*margin-top:0px !important;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
