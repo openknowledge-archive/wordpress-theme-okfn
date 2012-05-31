@@ -809,7 +809,7 @@ body.home-page .st_plusone_buttons {
   background-color: #3e8f80;
   color: #fff;
   padding: 11px 18px;
-  font-size: 18px;
+  font-size: 14px;
   position: relative;
 }
 .okfn-dropdown a:hover {
@@ -864,9 +864,13 @@ body.home-page .st_plusone_buttons {
   border-top-right-radius: 3px;
 }
 
-#content .okfn-dropdown h3 {
+#content .okfn-dropdown h3,
+#content .okfn-dropdown h4,
+#content .okfn-dropdown h5 {
 	color:#FFF;
 	margin:0px;
+	font-size:18px;
+	line-height:22px;
 }
 #content .okfn-dropdown p {
 	margin:0px;
