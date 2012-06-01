@@ -288,6 +288,16 @@ ul#members-list {
 	margin-bottom:10px;
 }
 
+/* Search Widget */
+#sidebar .widget.widget_search {
+	padding:10px 0px 6px 10px;
+}
+#sidebar .widget.widget_search input[type="text"] {
+  margin-bottom: 4px;
+  width: 140px;
+	margin-right:2px;
+}
+
 /* RSS Widget */
 #sidebar .widget.widget_rss .widgettitle a:first-child {
 	position:absolute;
