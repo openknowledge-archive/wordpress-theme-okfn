@@ -64,11 +64,24 @@ function browser_body_class($classes = '') {
 		</div><!-- .padder -->
 	</div><!-- #content -->
 
+  <?
+		global $options;
+		foreach ($options as $value) {
+				if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+		}
+	 if ($okfn_large_avatars == "true") : ?>
   <div class="author-box">
     <?php echo get_avatar( get_the_author_meta( 'user_email' ), '218' ); ?>
     <h3><?php printf( _x( 'Written by %s', 'Post written by...', 'buddypress' ), str_replace( '<a href=', '<a rel="author" href=', bp_core_get_userlink( $post->post_author ) ) ); ?></h3>
     <p><!--Replace this with buddypress field --><?php the_author_meta('user_description'); ?></p>
   </div>
+  <?php else: ?>
+  <div class="author-box small">
+    <div class="avatar"><?php echo get_avatar( get_the_author_meta( 'user_email' ), '50' ); ?></div>
+    <h3><?php printf( _x( 'Written by <br /> %s', 'Post written by...', 'buddypress' ), str_replace( '<a href=', '<a rel="author" href=', bp_core_get_userlink( $post->post_author ) ) ); ?></h3>
+    <p><!--Replace this with buddypress field --><?php the_author_meta('user_description'); ?></p>
+  </div>
+ <? endif; ?>
 	
 	<?php get_sidebar() ?>
 

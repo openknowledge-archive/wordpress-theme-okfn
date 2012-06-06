@@ -305,6 +305,16 @@ function echo_magazine_post($post, $is_featured) {
 
 		array(    "type" => "close"),
 		
+		array(    "type" => "open"),
+		
+		array(  "name" => "Large Blog Avatars",
+        "desc" => "Check this box to use large avatars on blog post page (requires Gravatar).",
+        "id" => $shortname."_large_avatars",
+        "type" => "checkbox",
+        "std" => "false"),
+
+		array(    "type" => "close"),
+		
 		
 );
 

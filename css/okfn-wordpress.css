@@ -1571,11 +1571,29 @@ ul.scrollButtons li.right a:hover {
 }
 .single-post .container > .author-box h3 {
 	font-size:14px;
+	line-height:16px;
+	margin-bottom:4px;
+	margin-top:5px;
 }
 .single-post .container > .author-box p {
 	font-size:12px;
 	line-height:16px;
 	margin:0px;
+	clear:left;
+}
+
+.single-post .container > .author-box.small div.avatar {
+	float:left;
+	margin:0px 10px 0px 0px;
+}
+.single-post .container > .author-box.small div.avatar img {
+	margin-bottom:0px;
+}
+.single-post .container > .author-box.small h3 {
+	margin-top:11px;
+}
+.single-post .container > .author-box.small p {
+	margin-top:15px;
 }
 
 
