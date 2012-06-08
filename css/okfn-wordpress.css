@@ -477,6 +477,20 @@ ul#members-list {
 }
 
 
+/* OKFN Widget */
+.textwidget .okfn-widget {
+	background-image: url(http://assets.okfn.org/web/images/header-logox2.png);
+	background-image:none\9;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size:auto 27px;
+	padding-left:20px;
+}
+.textwidget .okfn-widget h3 {
+	padding-left:10px;
+}
+
+
 /* Wordpress: Sidebar you-are-logged-in box */
 /* ======================================== */
 #sidebar #sidebar-me {
