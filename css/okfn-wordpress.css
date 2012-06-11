@@ -193,6 +193,15 @@ ul.feature-list.white li {
 .pagination-links .page-numbers.current {
 	background-color: #F5F5F5;
 }
+.pagination-links:first-child .page-numbers {
+	border-left-width: 1px;
+	border-radius: 3px 0 0 3px;
+	border-left-style: solid;
+	border-left-color: #DDDDDD;
+}
+.pagination-links:last-child .page-numbers {
+  border-radius: 0 3px 3px 0;
+}
 
 
 /* Wordpress: Widget UL */
