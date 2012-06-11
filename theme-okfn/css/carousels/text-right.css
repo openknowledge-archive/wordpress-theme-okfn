@@ -2,7 +2,7 @@
 Text Right
 Bootstrap carousel extension
 By Sam Smith
-These styles overwrite the default Bootstrap ones, in order to move the caption and controls to the right hald of the slide.
+These styles overwrite the default Bootstrap ones, in order to move the caption and controls to the right of the slide.
 */
 
 .carousel-control {
@@ -26,7 +26,7 @@ These styles overwrite the default Bootstrap ones, in order to move the caption 
   right: 0;
   bottom: 25%;
   padding: 20px;
-	background-color:transparent;
+  background-color:transparent !important;
 }
 .carousel-caption h2,
 .carousel-caption h3,

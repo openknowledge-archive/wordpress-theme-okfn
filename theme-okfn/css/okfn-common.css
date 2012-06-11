@@ -129,10 +129,11 @@ input:focus, textarea:focus {
 	color:#FFF;
 	padding: 10px 15px 12px 15px;
 }
-.carousel-caption h2,
-.carousel-caption h3,
-.carousel-caption h4 {
+#content .carousel-caption h2,
+#content .carousel-caption h3,
+#content .carousel-caption h4 {
   color: #FFF;
+	margin:0px 0px 2px 0px;
 }
 .carousel-caption p {
 	margin:0px;
