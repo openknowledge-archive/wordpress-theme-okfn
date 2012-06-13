@@ -116,6 +116,11 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 	width:100%;
 	z-index:2;
 }
+
+.navbar .navbar-inner a {
+	text-decoration:none;
+}
+
 .navbar .sub-brand {
 	color:#FFF;
 	float:left;
