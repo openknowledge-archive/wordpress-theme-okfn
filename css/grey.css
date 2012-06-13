@@ -161,3 +161,23 @@
 #content .carousel-caption p {
 	color:#333333;
 }
+
+
+/* Blog */
+/* ==== */
+.magazine .post.featured .text {
+  background: #FFFFFF;  /* Old browsers */
+  background: -moz-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(100%, #FFFFFF));  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);  /* IE10+ */
+  background: linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);  /* W3C */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF', GradientType=0);  /* IE6-9 */
+  color: #333;
+  border-bottom-color: #FFFFFF;
+}
+.magazine .featured .text a,
+.magazine .featured .text h2 a {
+  color: #333333;
+}
