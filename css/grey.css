@@ -128,17 +128,17 @@
 /* Carousel */
 /* ======== */
 
-.carousel-caption {
+#content .carousel-caption {
 	background: rgb(255, 255, 255); /* The Fallback */
 	background: rgba(255, 255, 255, 0.80);
 	color:#333333;
 }
-.carousel-caption h2,
-.carousel-caption h3,
-.carousel-caption h4 {
+#content .carousel-caption h2,
+#content .carousel-caption h3,
+#content .carousel-caption h4 {
   color: #333333;
 }
-.carousel-caption,
-.carousel-caption p {
+#content .carousel-caption,
+#content .carousel-caption p {
 	color:#333333;
 }
