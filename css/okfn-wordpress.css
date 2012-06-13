@@ -135,6 +135,34 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 	display: table-cell;
 }
 
+.navbar .navbar-inner .social-links {
+	float:right;
+	margin-top:7px;
+	margin-left:5px;
+}
+.navbar .navbar-inner .social-links a {
+	display: inline-block;
+	width: 34px;
+	height: 24px;
+	overflow: hidden;
+	text-indent: -500px;
+	background-image: url(../images/social-icons.png);
+	background-repeat: no-repeat;
+	*text-indent: 0px;
+	*line-height:0px; /* old IE having problems with text-indent */
+}
+.navbar .navbar-inner .social-links a.facebook {
+	background-position: center -50px;
+}
+.navbar .navbar-inner .social-links a.facebook:hover {
+	background-position: center -100px;
+}
+.navbar .navbar-inner .social-links a.twitter {
+	background-position: center -200px;
+}
+.navbar .navbar-inner .social-links a.twitter:hover {
+	background-position: center -250px;
+}
 
 .sub-header {display:none;}
 

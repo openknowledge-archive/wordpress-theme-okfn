@@ -38,6 +38,7 @@
 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.0);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.0);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.0);
+	color:#333333;
 }
 
 .navbar .brand {
@@ -57,6 +58,13 @@
 .nav > .current_page_item,
 .nav > .current-page-ancestor {
 	background-position: center -145px;
+}
+
+.navbar .navbar-inner .social-links a.facebook {
+	background-position: center 0px;
+}
+.navbar .navbar-inner .social-links a.twitter {
+	background-position: center -150px;
 }
 
 .sub-header {

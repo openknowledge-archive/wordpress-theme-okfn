@@ -45,6 +45,13 @@ a:hover {
 	background-position: center -45px;
 }
 
+.navbar .navbar-inner .social-links a.facebook:hover {
+	background-position: center -50px;
+}
+.navbar .navbar-inner .social-links a.twitter:hover {
+	background-position: center -200px;
+}
+
 .sub-header {
 	background-color:#b2cedf;
 }

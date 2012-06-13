@@ -250,12 +250,43 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_header_textarea",
         "type" => "textarea"),
 				
-		array("name" => "Align",
+		array("name" => "Align Header Text",
         "id" => $shortname."_header_text_align",
         "type" => "radio",
         "desc" => "Which side of the header would you like this to appear?",
         "options" => array("left" => "Left", "right" => "Right"),
         "std" => "right"),
+				
+		array(  "type" => "close"),
+		
+		
+		array(    "type" => "open"),
+		
+		array(  "name" => "Twitter Link",
+        "desc" => "Add link to Twitter profile.",
+        "id" => $shortname."_twitter_link",
+        "type" => "checkbox",
+        "std" => "false"),
+		
+		array(  "name" => "Twitter Username",
+        "desc" => "twitter.com/...",
+        "id" => $shortname."_twitter_username",
+        "type" => "text"),
+				
+		array(  "type" => "close"),
+		
+		array(    "type" => "open"),
+		
+		array(  "name" => "Facebook Link",
+        "desc" => "Add link to Facebook profile.",
+        "id" => $shortname."_facebook_link",
+        "type" => "checkbox",
+        "std" => "false"),
+		
+		array(  "name" => "Facebook Username",
+        "desc" => "facebook.com/...",
+        "id" => $shortname."_facebook_username",
+        "type" => "text"),
 				
 		array(  "type" => "close"),
 		
