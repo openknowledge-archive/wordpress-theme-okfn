@@ -64,6 +64,13 @@
 	background-position: center -145px;
 }
 
+.navbar .nav > li > .dropdown-toggle:after {
+  border-top: 4px solid #333333;
+}
+.navbar .nav > li > a.dropdown-toggle:hover:after {
+	border-top: 4px solid #FFFFFF;
+}
+
 .navbar .navbar-inner .social-links a.facebook {
 	background-position: center 0px;
 }
