@@ -172,4 +172,25 @@ function gridlist_item_shortcode( $atts ) {
 add_shortcode('gli', 'gridlist_item_shortcode');  
 
 
+/*********************************************************************************************
+* Name:        RSS
+* Author:      http://www.kevinleary.net/display-rss-feeds-wordpress-shortcodes-simplepie-fetch_feed/
+* Description: Re-usable RSS feed reader
+* Example:     [rss size="10" feed="http://wordpress.org/news/feed/" date="true"]
+**********************************************************************************************/
+
+if( function_exists('base_rss_feed') && !function_exists('base_rss_shortcode') ) {
+	function base_rss_shortcode($atts) {
+		extract(shortcode_atts(array(
+			'size' => '10',
+			'feed' => 'http://wordpress.org/news/feed/',
+			'date' => false,
+		), $atts));
+ 
+		$content = base_rss_feed($size, $feed, $date);
+		return $content;
+	}
+	add_shortcode("rss", "base_rss_shortcode");
+}
+
 ?>
