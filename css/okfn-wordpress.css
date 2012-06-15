@@ -494,7 +494,7 @@ ul#members-list {
 
 /* Login Widget */
 #sidebar .widget.widget_wp_sidebarlogin div.avatar_container {
-	padding:0px 0px 0px 10px;
+	padding:0px 0px 10px 10px;
 }
 #sidebar .widget.widget_wp_sidebarlogin img {
 	border:none;
