@@ -48,6 +48,8 @@
       // Make this variable available to Javascript
       Okfn.theme_directory = '<?php echo bloginfo('stylesheet_directory'); ?>';
     </script>
+    <!-- Google hosted jQuery core -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -78,6 +80,11 @@
     <? endif; ?>
     <? if ($okfn_subheader == "true" && !is_front_page()) : ?>
       <style type="text/css">.navbar-inner {border-bottom:none;}</style>
+    <? endif; ?>
+    <? if (is_front_page()) : ?>
+      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.css"/>
+      <script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/spin.min.js"></script>
+      <script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.min.js"></script>
     <? endif; ?>
   </head>
   

@@ -70,6 +70,31 @@ add_shortcode('slide', 'carousel_slide_shortcode');
 
 
 /*********************************************************************************************
+* Name:        ZCarousel
+* Author:      Tom Rees
+* Description: Use to insert a zcarousel (http://zephod.github.com/jquery.zcarousel)
+* Example:     [zcarousel]
+               [zslide img="http://slide1.jpg" ] Caption here [/zslide]
+							 [zslide img="http://slide2.jpg" ] Another caption here [/zslide]
+							 [zslide img="http://slide3.jpg" ] Also here [/zslide]
+							 [/zcarousel]
+**********************************************************************************************/
+
+function zcarousel_shortcode( $atts, $content = null ) {
+   return '<div id="zcarousel" style="width: 940px; height: 250px; "></div><script>var data=[];' .do_shortcode($content). '$("#zcarousel").zcarousel(data);</script>';
+} 
+add_shortcode( 'zcarousel', 'zcarousel_shortcode' );
+
+function zcarousel_slide_shortcode( $atts, $content = null ) {  
+	extract( shortcode_atts( array(
+			'img' => 'http://farm8.staticflickr.com/7174/6554801385_83acdc501d_o_d.png',
+		), $atts ) );
+  return 'data.push({"url":"' .$img. '","caption":"' .$content. '"});';
+}  
+add_shortcode('zslide', 'zcarousel_slide_shortcode');  
+
+
+/*********************************************************************************************
 * Name:        Hide Page Title
 * Author:      Sam Smith
 * Description: Use to hide the page title
