@@ -87,6 +87,11 @@
 }
 
 
+.banner {
+	margin-top:-14px;
+}
+
+
 .button-bar ul,
 .button-bar ul:before,
 .button-bar ul:after {

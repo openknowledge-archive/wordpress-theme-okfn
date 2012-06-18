@@ -390,7 +390,7 @@ function mytheme_admin() {
     
 ?>
 <div class="wrap">
-<h2><?php echo $themename; ?> settings</h2>
+<h2><?php echo $themename; ?> Options</h2>
 
 <form method="post">
 
