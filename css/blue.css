@@ -186,7 +186,7 @@ input:focus, textarea:focus {
 .carousel-control {
   background: none repeat scroll 0 0 #5090B7;
 }
-.carousel-caption h2 {
+#content .carousel-caption h2 {
   color: #5090B7;
 }
 
