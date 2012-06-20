@@ -38,7 +38,7 @@
         if ( $active_footers > 0) :
           $footer_width = (940 - 20 * ($active_footers - 1)) / $active_footers;
         ?>
-          <style type="text/css">
+          <style scoped>
             #footer-widget-area > div {
               width: <?php echo $footer_width; ?>px !important;
 						}
@@ -52,7 +52,7 @@
 
         <div id="row">
           <?php do_action( 'bp_footer' ) ?>
-        <div id="row">
+        </div>
       </div><!-- /container -->
     </div><!-- /inner -->
     </footer>

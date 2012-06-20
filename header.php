@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML>
 
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 	<head>
@@ -95,80 +95,79 @@
     ?>
 
     <header>
-        <div class="navbar">
-      		<div class="navbar-inner">
-            <div class="container">
-            <? if (($okfn_twitter_link == "true") or ($okfn_facebook_link == "true")) : ?>
-              <div class="social-links">
-                <?php if ( !empty( $okfn_twitter_username ) && $okfn_twitter_link == "true" ) : ?>
-                  <a class="twitter" href="https://twitter.com/<?php echo $okfn_twitter_username ?>">twitter</a>
-                <? endif; ?>
-                <?php if ( !empty( $okfn_facebook_username ) && $okfn_facebook_link == "true" ) : ?>
-                  <a class="facebook" href="http://www.facebook.com/<?php echo $okfn_facebook_username ?>">facebook</a>
-                <? endif; ?>
-              </div>
-						<? endif; ?>
-            
-						<? if ($okfn_header_textarea && $okfn_header_text == "true") : ?>
-              <div class="header-text"<? if ($okfn_header_text_align == "left") : ?> style="float:left; padding-left:0px; padding-right:5px;"<? endif; ?>>
-						    <? echo stripslashes($okfn_header_textarea); ?>
-              </div>
-					  <? endif; ?>
-          
-            <a title="<?php _ex( 'Home', 'Home page banner link title', 'buddypress' ); ?>" 
-                class="brand" 
-                href="<?php echo home_url(); ?>">
-                
-							<?php
-                // Check for header image
-                $header_image = get_header_image();
-                if ( ! empty( $header_image ) && $okfn_logo_icon == "false" ) :
-              ?>
-                <img src="<?php header_image(); ?>" alt="logo" />
-              <?php elseif ($okfn_logo_icon == "false") : ?>
-                <img src="http://assets.okfn.org/web/images/header-logox2.png" alt="logo"/>
-              <?php endif; ?>
-  
-  						<?php if ( $okfn_logo_text == "false" ) : ?>
-                <?php bp_site_name(); ?>
-              <?php endif; ?>
-            </a>
-            
-            <?
-						 if ($okfn_tagline_location == "header" && get_bloginfo( 'description' )) : ?>
-						   <span class="sub-brand">
-								<?php echo bloginfo( 'description' ); ?>
-						   </span>
-						<?php endif; ?>
-            
-              <nav>
-                <?php  
-                  wp_nav_menu( array( 
-                    'container' => false, 
-                    'menu_class' => 'nav', 
-                    'menu_id' => 'nav', 
-                    'theme_location' => 'primary', 
-                    'fallback_cb' => 'okfn_fallback_nav_menu' ) ) 
-                  ; ?>
-              </nav>
-              <!-- Disabled until I've got separate images and confirmed link addresses -->
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+          <? if (($okfn_twitter_link == "true") or ($okfn_facebook_link == "true")) : ?>
+            <div class="social-links">
+              <?php if ( !empty( $okfn_twitter_username ) && $okfn_twitter_link == "true" ) : ?>
+                <a class="twitter" href="https://twitter.com/<?php echo $okfn_twitter_username ?>">twitter</a>
+              <? endif; ?>
+              <?php if ( !empty( $okfn_facebook_username ) && $okfn_facebook_link == "true" ) : ?>
+                <a class="facebook" href="http://www.facebook.com/<?php echo $okfn_facebook_username ?>">facebook</a>
+              <? endif; ?>
             </div>
-          </div>
+          <? endif; ?>
           
+          <? if ($okfn_header_textarea && $okfn_header_text == "true") : ?>
+            <div class="header-text"<? if ($okfn_header_text_align == "left") : ?> style="float:left; padding-left:0px; padding-right:5px;"<? endif; ?>>
+              <? echo stripslashes($okfn_header_textarea); ?>
+            </div>
+          <? endif; ?>
+        
+          <a title="<?php _ex( 'Home', 'Home page banner link title', 'buddypress' ); ?>" 
+              class="brand" 
+              href="<?php echo home_url(); ?>">
+              
+            <?php
+              // Check for header image
+              $header_image = get_header_image();
+              if ( ! empty( $header_image ) && $okfn_logo_icon == "false" ) :
+            ?>
+              <img src="<?php header_image(); ?>" alt="logo" />
+            <?php elseif ($okfn_logo_icon == "false") : ?>
+              <img src="http://assets.okfn.org/web/images/header-logox2.png" alt="logo"/>
+            <?php endif; ?>
+
+            <?php if ( $okfn_logo_text == "false" ) : ?>
+              <?php bp_site_name(); ?>
+            <?php endif; ?>
+          </a>
+          
+          <?
+           if ($okfn_tagline_location == "header" && get_bloginfo( 'description' )) : ?>
+             <span class="sub-brand">
+              <?php echo bloginfo( 'description' ); ?>
+             </span>
+          <?php endif; ?>
+          
+            <nav>
+              <?php  
+                wp_nav_menu( array( 
+                  'container' => false, 
+                  'menu_class' => 'nav', 
+                  'menu_id' => 'nav', 
+                  'theme_location' => 'primary', 
+                  'fallback_cb' => 'okfn_fallback_nav_menu' ) ) 
+                ; ?>
+            </nav>
+            <!-- Disabled until I've got separate images and confirmed link addresses -->
+          </div>
         </div>
-
-        <form action="<?php echo bp_search_form_action() ?>" method="post" class="search-form" role="search">
-          <label for="search-terms" class="accessibly-hidden"><?php _e( 'Search for:', 'buddypress' ); ?></label>
-          <input type="text" id="search-terms" name="search-terms" value="<?php echo isset( $_REQUEST['s'] ) ? esc_attr( $_REQUEST['s'] ) : ''; ?>" />
-
-          <?php echo bp_search_form_type_select() ?>
-
-          <input type="submit" name="search-submit" id="search-submit" value="<?php _e( 'Search', 'buddypress' ) ?>" />
-          <?php wp_nonce_field( 'bp_search_form' ) ?>
-        </form><!-- #search-form -->
-        <?php do_action( 'bp_search_login_bar' ) ?>
-        <?php do_action( 'bp_header' ) ?>
+        
       </div>
+
+      <form action="<?php echo bp_search_form_action() ?>" method="post" class="search-form" role="search">
+        <label for="search-terms" class="accessibly-hidden"><?php _e( 'Search for:', 'buddypress' ); ?></label>
+        <input type="text" id="search-terms" name="search-terms" value="<?php echo isset( $_REQUEST['s'] ) ? esc_attr( $_REQUEST['s'] ) : ''; ?>" />
+
+        <?php echo bp_search_form_type_select() ?>
+
+        <input type="submit" name="search-submit" id="search-submit" value="<?php _e( 'Search', 'buddypress' ) ?>" />
+        <?php wp_nonce_field( 'bp_search_form' ) ?>
+      </form><!-- #search-form -->
+      <?php do_action( 'bp_search_login_bar' ) ?>
+      <?php do_action( 'bp_header' ) ?>
       
       <div class="sub-header">
         <div class="container">
