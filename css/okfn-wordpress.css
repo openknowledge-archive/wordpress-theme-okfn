@@ -980,12 +980,13 @@ body.home-page .st_plusone_buttons {
 .image-pod .caption {
 	position:absolute;
 	left:0px;
+	right:0px;
 	top:100%;
 	bottom:0px;
 	background-color: rgba(0, 0, 0, 0.8);
 	color:#FFF;
 	margin-top:-44px;
-	padding:10px 20px;
+	padding:10px 10px;
 	-webkit-transition: top 0.2s, margin-top 0.2s ease;
   -moz-transition: top 0.2s, margin-top 0.2s ease;
   -ms-transition: top 0.2s, margin-top 0.2s ease;
@@ -995,18 +996,23 @@ body.home-page .st_plusone_buttons {
 #content .image-pod .caption h2 {
 	color:#FFF;
 	margin:0px 0px 7px 0px;
-	font-size:18px;
+	font-size:16px;
 	height:24px;
 	line-height:24px;
 }
 .image-pod:hover .caption {
-	top:40%;
+	top:25%;
 	margin-top:0px;
 	-webkit-transition: top 0.5s, margin-top 0.5s ease-in;
   -moz-transition: top 0.5s, margin-top 0.5s ease-in;
   -ms-transition: top 0.5s, margin-top 0.5s ease-in;
   -o-transition: top 0.5s, margin-top 0.5s ease-in;
   transition: top 0.5s, margin-top 0.5s ease-in;
+}
+
+.body-text {
+    margin-top: 20px;
+
 }
 
 
