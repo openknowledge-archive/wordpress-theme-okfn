@@ -107,6 +107,11 @@ input:focus, textarea:focus {
 .navbar .dropdown-menu a {
   color: #999999;
 }
+
+/* set z-index for old ie */
+.navbar .nav {z-index:999;}
+.navbar .nav li {z-index:1000;}
+
 .navbar .nav > li > a:hover {
   background-color: #333333;
 }
