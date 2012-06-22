@@ -173,8 +173,10 @@ add_shortcode( 'clear', 'clear_shortcode' );
 **********************************************************************************************/
 
 function gridlist_shortcode( $atts, $content = null ) {
-	
-   return '<dl class="grid-list">' .do_shortcode($content). '<br style="clear:both;" /></dl>';
+	 extract( shortcode_atts( array(
+			'columns' => '3',
+		), $atts ) );
+   return '<dl class="grid-list columns'.$columns.'">' .do_shortcode($content). '<br style="clear:both;" /></dl>';
 } 
 add_shortcode( 'gl', 'gridlist_shortcode' );
 
@@ -187,7 +189,7 @@ function gridlist_item_shortcode( $atts ) {
 		), $atts ) );
 		
 		if (!empty($icon)) {
-			return '<span class="well"><dt><a href="'.$link.'" style="display:block; margin-bottom:5px;"><img src="'.$icon.'" alt="'.$title.'" style="height:36px; float:left;"><div style="margin-left:46px;">'.$title.'</div></a></dt>
+			return '<span class="well"><dt><a href="'.$link.'" style="display:block; margin-bottom:5px;"><img src="'.$icon.'" alt="'.$title.'" class="icon"><div class="title">'.$title.'</div></a></dt>
 							<dd style="clear:left;">' .$description. '</dd></span>'; 
 		}
 		else {

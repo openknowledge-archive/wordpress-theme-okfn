@@ -1023,13 +1023,32 @@ dl.grid-list {
 	margin-left:-16px;
 }
 dl.grid-list span {
-	width:176px;
 	float:left;
 	margin:0px 0px 16px 16px;
 }
 dl.grid-list dt,
 dl.grid-list dd {
 	margin:0px;
+}
+dl.grid-list.columns3 span {
+	width:176px;
+}
+dl.grid-list.columns2 span {
+	width:292px;
+}
+dl.grid-list span img.icon {
+  width:36px;
+	float:left;
+}
+dl.grid-list.columns2 span img.icon {
+	width:64px;
+	margin-bottom:5px;
+}
+dl.grid-list span .title {
+  margin-left:46px;
+}
+dl.grid-list.columns2 span .title {
+  margin-left:74px;
 }
 
 
