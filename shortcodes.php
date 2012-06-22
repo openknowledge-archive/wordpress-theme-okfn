@@ -182,15 +182,16 @@ function gridlist_item_shortcode( $atts ) {
 	extract( shortcode_atts( array(
 			'title' => '',
 			'description' => '',
-			'link' => '',
+			'link' => '#',
+			'icon' => '',
 		), $atts ) );
 		
-		if (!empty($link)) {
-			return '<span class="well"><dt><a href="'.$link.'">'.$title.'</a></dt>
-							<dd>' .$description. '</dd></span>'; 
+		if (!empty($icon)) {
+			return '<span class="well"><dt><a href="'.$link.'" style="display:block; margin-bottom:5px;"><img src="'.$icon.'" alt="'.$title.'" style="height:36px; float:left;"><div style="margin-left:46px;">'.$title.'</div></a></dt>
+							<dd style="clear:left;">' .$description. '</dd></span>'; 
 		}
 		else {
-			return '<span class="well"><dt>'.$title.'</dt>
+			return '<span class="well"><dt><a href="'.$link.'" style="display:block; margin-bottom:5px;">'.$title.'</a></dt>
 							<dd>' .$description. '</dd></span>'; 
 		}
 }  
