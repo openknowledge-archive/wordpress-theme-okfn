@@ -30,7 +30,7 @@
 
 			wp_head();
 		?>
-    <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url'); ?>"/>
+    <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url') . '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>"/>
     
     <?
       global $options;
