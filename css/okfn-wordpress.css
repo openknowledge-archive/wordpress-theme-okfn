@@ -162,6 +162,12 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 	background-position: center -250px;
 }
 
+.navbar .dropdown-menu,
+.navbar .nav > li > a:hover,
+.navbar .nav .sfhover {
+  background-color: #333333;
+}
+
 .sub-header {display:none;}
 
 

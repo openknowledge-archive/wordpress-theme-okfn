@@ -94,7 +94,7 @@
       do_action( 'bp_before_header' ) 
     ?>
 
-    <header>
+    <header<? if ($okfn_subheader == "true"):?> class="has-subheader"<? endif; ?>>
       <div class="navbar">
         <div class="navbar-inner">
           <div class="container">

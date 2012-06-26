@@ -61,7 +61,15 @@
 
 .nav > .current_page_item,
 .nav > .current-page-ancestor {
+	background-color:#ededed;
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.has-subheader .nav > .current_page_item,
+.has-subheader .nav > .current-page-ancestor {
 	background-position: center -145px;
+	background-color:transparent;
 }
 
 .navbar .nav > li > .dropdown-toggle:after {
@@ -76,6 +84,33 @@
 }
 .navbar .navbar-inner .social-links a.twitter {
 	background-position: center -150px;
+}
+
+.navbar .nav > li > a:hover,
+.navbar .nav .sfhover {
+  background-color: #fefefe;
+	color:#333333;
+	-webkit-box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.navbar .nav > li > .dropdown-toggle:hover,
+.navbar .nav .sfhover {
+	background-color: #fefefe;
+	-webkit-box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.navbar .dropdown-menu {
+	background-color: #fefefe;
+	-webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.navbar .nav .active > .dropdown-toggle:hover {
+  color: #333333;
+}
+.navbar .dropdown-menu li > a:hover,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover {
+  background-color: #328d81;
 }
 
 .sub-header {
@@ -115,6 +150,11 @@
 }
 .okfn-dropdown a:hover {
   background-color: #3e8f80;
+}
+
+
+.well {
+  background-color: #FCFCFC;
 }
 
 

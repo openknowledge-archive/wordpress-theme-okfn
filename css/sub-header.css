@@ -13,6 +13,11 @@
 	background-position: center 55px;
 }
 
+.nav > .current_page_item.sfhover,
+.nav > .current-page-ancestor.sfhover {
+	background-image:none;
+}
+
 .navbar .nav > .active > a {
   background-color: transparent;
 }
