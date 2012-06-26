@@ -190,6 +190,13 @@ function echo_magazine_post($post, $is_featured) {
         "type" => "checkbox",
         "std" => "false"),
 
+		
+		array(  "name" => "Keep Slim Header?",
+        "desc" => "Check this box if you would like to maintain the slim header.",
+        "id" => $shortname."_buddypress_slim",
+        "type" => "checkbox",
+        "std" => "false"),
+
 		array(    "type" => "close"),
 
 
