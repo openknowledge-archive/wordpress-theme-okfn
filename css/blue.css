@@ -212,8 +212,53 @@ table.pricing tr.highlight td {
 	background-color:#5090B7;
 }
 table.pricing tr.highlight td.yellow {
-	background-color:#efe51d;
-	color:#333333;
+	background: #f1e726; /* Old browsers */
+	background: -moz-linear-gradient(top, #f1e726 0%, #ece118 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1e726), color-stop(100%,#ece118)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f1e726 0%,#ece118 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f1e726 0%,#ece118 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f1e726 0%,#ece118 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #f1e726 0%,#ece118 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e726', endColorstr='#ece118',GradientType=0 ); /* IE6-9 */
+	color: #333333;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #f4ed56;
+	border-bottom-color: #c1b814;
+}
+table.pricing tr.highlight td.orange {
+	background: #efa13b; /* Old browsers */
+	background: -moz-linear-gradient(top, #efa13b 0%, #ea8e29 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efa13b), color-stop(100%,#ea8e29)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #efa13b 0%,#ea8e29 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #efa13b 0%,#ea8e29 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #efa13b 0%,#ea8e29 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #efa13b 0%,#ea8e29 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efa13b', endColorstr='#ea8e29',GradientType=0 ); /* IE6-9 */
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #f2b666;
+	border-bottom-color: #bf7321;
+}
+table.pricing tr.highlight td.red {
+	background: #eb524a; /* Old browsers */
+	background: -moz-linear-gradient(top, #eb524a 0%, #e53e37 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb524a), color-stop(100%,#e53e37)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #eb524a 0%,#e53e37 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #eb524a 0%,#e53e37 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #eb524a 0%,#e53e37 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #eb524a 0%,#e53e37 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb524a', endColorstr='#e53e37',GradientType=0 ); /* IE6-9 */
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #ef7872;
+	border-left-color: #bb322c;
 }
 
 

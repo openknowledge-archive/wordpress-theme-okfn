@@ -1760,18 +1760,17 @@ table.pricing {
 	border:none;
 	border-spacing:10px 0px;
 	border-collapse:separate;
+	background-color:#F3F3F3;
+	padding:10px 0px;
+	-webkit-border-radius: 5px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius: 5px;
+	-moz-border-radius-topright: 3px;
+	border-radius: 5px;
+	border-top-right-radius: 3px;
 }
 table.pricing th {
-	border-top-width: 1px;
-	border-right-width: 1px;
-	border-left-width: 1px;
-	border-top-style: solid;
-	border-right-style: solid;
-	border-bottom-style: none;
-	border-left-style: solid;
-	border-top-color: #d9d9d9;
-	border-right-color: #d9d9d9;
-	border-left-color: #d9d9d9;
+	border: none;
 	-webkit-border-top-left-radius: 3px;
   -webkit-border-top-right-radius: 3px;
   -moz-border-radius-topleft: 3px;
@@ -1781,21 +1780,13 @@ table.pricing th {
 	font-size:24px;
 	font-family: OpenSansLight,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	padding:15px 10px 5px 10px;
+	background-color:#FFF;
 }
 table.pricing td {
-	border-right-width: 1px;
-	border-left-width: 1px;
-	border-right-style: solid;
-	border-left-style: solid;
-	border-right-color: #d9d9d9;
-	border-left-color: #d9d9d9;
-	border-top-style: none;
-	border-bottom-style: none;
+	border: none;
+	background-color:#FFF;
 }
 table.pricing tr:last-of-type td {
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #d9d9d9;
 	-webkit-border-bottom-right-radius: 3px;
   -webkit-border-bottom-left-radius: 3px;
   -moz-border-radius-bottomright: 3px;
@@ -1807,8 +1798,6 @@ table.pricing tr.highlight td {
 	border:none;
 	background-color:#328D81;
 	color:#FFFFFF;
-	-webkit-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 table.pricing td ul.feature-list li {
 	background-image:url(https://bitbucket.org/okfn/assets.okfn.org/raw/ee72bb2cbf21/p/ckan/img/icons/16/tick-black.png)
