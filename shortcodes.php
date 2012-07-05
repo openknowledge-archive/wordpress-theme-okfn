@@ -9,7 +9,7 @@
 
 function pseudocontent_shortcode( $atts, $content = null ) {
    return '<style type="text/css">#content {width: 100%;} #content #sidebar h5 {margin-top:0px;}</style>
-<article style="display: inline-block; width: 680px;">' . $content . '</article>';
+<article style="display: inline-block; width: 680px;">' .do_shortcode($content).  '</article>';
 } 
 add_shortcode( 'pseudocontent', 'pseudocontent_shortcode' );
 

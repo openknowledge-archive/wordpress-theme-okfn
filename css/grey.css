@@ -150,8 +150,14 @@
 }
 
 
+/* Well */
+/* ==== */
+
 .well {
-  background-color: #FCFCFC;
+	background-color: #FCFCFC;
+}
+.well:hover {
+  background-color: #F5F5F5;
 }
 
 
