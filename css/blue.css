@@ -202,6 +202,20 @@ input:focus, textarea:focus {
   background-color: #E9473F;
 }
 
+/* ============= */
+/* HTML Elements */
+/* ============= */
+
+/* Tables */
+/* ======= */
+table.pricing tr.highlight td {
+	background-color:#5090B7;
+}
+table.pricing tr.highlight td.yellow {
+	background-color:#efe51d;
+	color:#333333;
+}
+
 
 /* Well */
 /* ==== */
