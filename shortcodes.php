@@ -186,15 +186,20 @@ function gridlist_item_shortcode( $atts ) {
 			'description' => '',
 			'link' => '#',
 			'icon' => '',
+			'image' => '',
 		), $atts ) );
 		
 		if (!empty($icon)) {
-			return '<span class="well"><dt><a href="'.$link.'" style="display:block; margin-bottom:5px;"><img src="'.$icon.'" alt="'.$title.'" class="icon"><div class="title">'.$title.'</div></a></dt>
-							<dd style="clear:left;">' .$description. '</dd></span>'; 
+			return '<a href="'.$link.'" class="well"><dt><img src="'.$icon.'" alt="'.$title.'" class="icon"><div class="title">'.$title.'</div></dt>
+							<dd style="clear:left;">' .$description. '</dd></a>'; 
+		}
+		else if (!empty($image)) {
+			return '<a href="'.$link.'" class="well"><dt><span class="image"><img src="'.$image.'" alt="'.$title.'"></span><h3>'.$title.'</h3></dt>
+							<dd style="clear:left;">' .$description. '</dd></a>'; 
 		}
 		else {
-			return '<span class="well"><dt><a href="'.$link.'" style="display:block; margin-bottom:5px;">'.$title.'</a></dt>
-							<dd>' .$description. '</dd></span>'; 
+			return '<a href="'.$link.'" class="well"><dt>'.$title.'</dt>
+							<dd>' .$description. '</dd></a>'; 
 		}
 }  
 add_shortcode('gli', 'gridlist_item_shortcode');  

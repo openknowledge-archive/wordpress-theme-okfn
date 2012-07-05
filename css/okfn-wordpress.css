@@ -1028,33 +1028,46 @@ body.home-page .st_plusone_buttons {
 dl.grid-list {
 	margin-left:-16px;
 }
-dl.grid-list span {
+dl.grid-list a.well {
 	float:left;
 	margin:0px 0px 16px 16px;
+	text-decoration:none;
 }
-dl.grid-list dt,
+dl.grid-list dt {
+	margin:0px 0px 5px 0px;
+}
 dl.grid-list dd {
+	color:#333333;
 	margin:0px;
 }
-dl.grid-list.columns3 span {
+dl.grid-list.columns3 a.well {
 	width:176px;
 }
-dl.grid-list.columns2 span {
+dl.grid-list.columns2 .well {
 	width:292px;
 }
-dl.grid-list span img.icon {
+dl.grid-list .well img.icon {
   width:36px;
 	float:left;
 }
-dl.grid-list.columns2 span img.icon {
+dl.grid-list .well .image {
+	display:block;
+	text-align:center;
+	margin:0px;
+}
+#content dl.grid-list h3 {
+	margin:0px;
+}
+dl.grid-list.columns2 .well img.icon {
 	width:64px;
 	margin-bottom:5px;
+	float:none;
 }
-dl.grid-list span .title {
+dl.grid-list .well .title {
   margin-left:46px;
 }
-dl.grid-list.columns2 span .title {
-  margin-left:74px;
+dl.grid-list.columns2 .well .title {
+  margin-left:0px;
 }
 
 
