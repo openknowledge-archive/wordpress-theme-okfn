@@ -208,10 +208,10 @@ input:focus, textarea:focus {
 
 /* Tables */
 /* ======= */
-table.pricing tr.highlight td {
+table.table-box tr.highlight td {
 	background-color:#5090B7;
 }
-table.pricing tr.highlight td.yellow {
+table.table-box tr.highlight td.yellow {
 	background: #f1e726; /* Old browsers */
 	background: -moz-linear-gradient(top, #f1e726 0%, #ece118 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1e726), color-stop(100%,#ece118)); /* Chrome,Safari4+ */
@@ -228,7 +228,7 @@ table.pricing tr.highlight td.yellow {
 	border-top-color: #f4ed56;
 	border-bottom-color: #c1b814;
 }
-table.pricing tr.highlight td.orange {
+table.table-box tr.highlight td.orange {
 	background: #efa13b; /* Old browsers */
 	background: -moz-linear-gradient(top, #efa13b 0%, #ea8e29 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efa13b), color-stop(100%,#ea8e29)); /* Chrome,Safari4+ */
@@ -244,7 +244,7 @@ table.pricing tr.highlight td.orange {
 	border-top-color: #f2b666;
 	border-bottom-color: #bf7321;
 }
-table.pricing tr.highlight td.red {
+table.table-box tr.highlight td.red {
 	background: #eb524a; /* Old browsers */
 	background: -moz-linear-gradient(top, #eb524a 0%, #e53e37 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb524a), color-stop(100%,#e53e37)); /* Chrome,Safari4+ */

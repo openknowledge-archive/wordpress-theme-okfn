@@ -1756,7 +1756,7 @@ table td.label {
 }
 
 
-table.pricing {
+table.table-box {
 	border:none;
 	border-spacing:10px 0px;
 	border-collapse:separate;
@@ -1769,7 +1769,7 @@ table.pricing {
 	border-radius: 5px;
 	border-top-right-radius: 3px;
 }
-table.pricing th {
+table.table-box th {
 	border: none;
 	-webkit-border-top-left-radius: 3px;
   -webkit-border-top-right-radius: 3px;
@@ -1782,11 +1782,11 @@ table.pricing th {
 	padding:15px 10px 5px 10px;
 	background-color:#FFF;
 }
-table.pricing td {
+table.table-box td {
 	border: none;
 	background-color:#FFF;
 }
-table.pricing tr:last-of-type td {
+table.table-box tr:last-of-type td {
 	-webkit-border-bottom-right-radius: 3px;
   -webkit-border-bottom-left-radius: 3px;
   -moz-border-radius-bottomright: 3px;
@@ -1794,16 +1794,17 @@ table.pricing tr:last-of-type td {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-table.pricing tr.highlight td {
+table.table-box tr.highlight td {
 	border:none;
 	background-color:#328D81;
 	color:#FFFFFF;
 }
-table.pricing td ul.feature-list li {
+table.table-box td ul.feature-list li {
 	background-image:url(https://bitbucket.org/okfn/assets.okfn.org/raw/ee72bb2cbf21/p/ckan/img/icons/16/tick-black.png)
 }
 
-#content table.pricing td h4 {
+#content table.table-box th h4,
+#content table.table-box td h4 {
 	margin-top:0px;
 }
 
