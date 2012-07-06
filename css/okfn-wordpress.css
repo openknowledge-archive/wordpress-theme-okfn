@@ -1070,6 +1070,13 @@ dl.grid-list.columns2 .well .title {
   margin-left:0px;
 }
 
+#content.fullwidth dl.grid-list.columns3 a.well {
+	width:262px;
+}
+#content.fullwidth dl.grid-list.columns2 a.well {
+	width:422px;
+}
+
 
 /* Post Content */
 /* ============ */
@@ -1272,6 +1279,10 @@ body {
 
 .posttitle {
   margin-top: 8px;
+}
+
+#content.fullwidth {
+	width:100%;
 }
 
 

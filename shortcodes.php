@@ -113,7 +113,7 @@ add_shortcode( 'notitle', 'notitle_shortcode' );
 **********************************************************************************************/
 
 function fullwidth_shortcode( $atts ){
- return '<style type="text/css"> #content { width: 100%; } </style>';
+ return '<script>$("#content").addClass("fullwidth");</script>';
 }
 add_shortcode( 'fullwidth', 'fullwidth_shortcode' );
 
