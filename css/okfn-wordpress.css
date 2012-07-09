@@ -2088,6 +2088,9 @@ body {
 	text-align:left;
 }
 
+.comments-closed {
+	display:none;
+}
 
 /* WP Fixes */
 /* ======== */
