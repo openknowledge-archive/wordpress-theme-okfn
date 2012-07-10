@@ -208,9 +208,6 @@ input:focus, textarea:focus {
 
 /* Tables */
 /* ======= */
-table.table-box tr.highlight td {
-	background-color:#5090B7;
-}
 table.table-box tr.highlight td.yellow {
 	background: #f1e726; /* Old browsers */
 	background: -moz-linear-gradient(top, #f1e726 0%, #ece118 100%); /* FF3.6+ */

@@ -216,6 +216,9 @@ ul.feature-list li.minus del {
 ul.feature-list.white li {
 	background-image: url(http://assets.okfn.org/p/ckan/img/icons/16/tick-white.png);
 }
+ul.feature-list.black li {
+	background-image:url(https://bitbucket.org/okfn/assets.okfn.org/raw/ee72bb2cbf21/p/ckan/img/icons/16/tick-black.png)
+}
 
 
 /* Wordpress: Pagination */
@@ -1815,12 +1818,7 @@ table.table-box tr:last-of-type td {
   border-bottom-left-radius: 3px;
 }
 table.table-box tr.highlight td {
-	border:none;
-	background-color:#328D81;
-	color:#FFFFFF;
-}
-table.table-box td ul.feature-list li {
-	background-image:url(https://bitbucket.org/okfn/assets.okfn.org/raw/ee72bb2cbf21/p/ckan/img/icons/16/tick-black.png)
+	background-color:#F9F9F9;
 }
 
 #content table.table-box th h4,
