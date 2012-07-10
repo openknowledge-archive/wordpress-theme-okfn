@@ -171,6 +171,18 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 .sub-header {display:none;}
 
 
+ul.icons24 {
+	margin:0px;
+}
+ul.icons24 li {
+	display:block;
+	padding-left:30px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	min-height:24px;
+	margin-bottom:11px;
+}
+
 ul.icons34 {
 	margin:0px;
 }
