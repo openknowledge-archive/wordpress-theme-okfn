@@ -226,4 +226,47 @@ if( function_exists('base_rss_feed') && !function_exists('base_rss_shortcode') )
 	add_shortcode("rss", "base_rss_shortcode");
 }
 
+
+/*********************************************************************************************
+* Name:        Accordion
+* Author:      Sam Smith
+* Description: Uses bootstrap-collapse.js
+* Example:     [accordions]
+               [accordion heading="Heading One" class="in"] tab content [/accordion]
+               [accordion heading="Heading Two"] another content tab [/accordion]
+               [/accordions]
+**********************************************************************************************/
+
+function accordions_shortcode( $atts, $content = null ) {
+	extract( shortcode_atts( array(
+			'class' => 'accordion',
+		), $atts ) );
+	 STATIC $id = 0;
+	 $id++;
+   return '<div id="accordion'. $id .'" class="'. $class .'">' .do_shortcode($content). '</div>';
+} 
+add_shortcode( 'accordions', 'accordions_shortcode' );
+
+function accordion_shortcode( $atts, $content = null ) {  
+	extract( shortcode_atts( array(
+			'heading' => 'Please enter a heading attribute like [accordion heading="My Heading"]',
+			'class' => '',
+		), $atts ) );
+		STATIC $collapse = 0;
+	  $collapse++;
+		return '<div class="accordion-group">
+		         <div class="accordion-heading">
+						   <a class="accordion-toggle" href="#collapse'.$collapse.'" data-toggle="collapse">
+							   '. $heading .'
+							</a>
+						 </div>
+						 <div id="collapse'.$collapse.'" class="accordion-body collapse '.$class.'">
+						  <div class="accordion-inner">
+							'.do_shortcode($content).'
+							</div>
+					  </div>
+					</div>'; 
+}  
+add_shortcode('accordion', 'accordion_shortcode');  
+
 ?>
