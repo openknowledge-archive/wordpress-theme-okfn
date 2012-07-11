@@ -162,11 +162,34 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 	background-position: center -250px;
 }
 
+
+/* Dropdown Menu */
+
 .navbar .dropdown-menu,
 .navbar .nav > li > a:hover,
 .navbar .nav .sfhover {
   background-color: #333333;
 }
+
+.navbar .dropdown-menu .dropdown-menu {
+	display:none !important;
+}
+.navbar .dropdown-menu .sfhover .dropdown-menu {
+	display:block !important;
+	position:absolute;
+	top:0px;
+	left:90%;
+	-webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.navbar .dropdown-menu .dropdown-toggle:after {
+  border-left: 4px solid #FFFFFF;
+  border-right: 4px solid transparent;
+  border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+}
+
 
 .sub-header {display:none;}
 

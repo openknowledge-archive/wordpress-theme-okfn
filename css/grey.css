@@ -76,6 +76,10 @@
   border-top: 4px solid #333333;
 }
 
+.navbar .dropdown-menu .dropdown-toggle:after {
+  border-left: 4px solid #333333;
+}
+
 .navbar .navbar-inner .social-links a.facebook {
 	background-position: center 0px;
 }
