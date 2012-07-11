@@ -99,6 +99,15 @@ Clear floats
 ::
 
   [clear] 
+	
+
+**Accordions**
+
+Use ``class="in"`` to have the accordion open by default
+
+::	
+	[accordion heading="Heading One" class="in"] content [/accordion]
+  [accordion heading="Heading Two"] content [/accordion]
 
 
 
