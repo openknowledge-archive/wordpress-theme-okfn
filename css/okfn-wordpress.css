@@ -1324,6 +1324,33 @@ body {
 }
 
 
+#content .thumb-text {
+	clear:left;
+	display:block;
+	margin-bottom:20px;
+}
+#content .thumb-text img {
+	width:80px;
+	float:left;
+}
+#content .thumb-text h2,
+#content .thumb-text h3,
+#content .thumb-text h4,
+#content .thumb-text h5,
+#content .thumb-text h6 {
+	margin:0px;
+}
+#content .thumb-text h2,
+#content .thumb-text h3,
+#content .thumb-text h4,
+#content .thumb-text h5,
+#content .thumb-text h6,
+#content .thumb-text p {
+	margin-left:95px;
+}
+
+
+
 /* ==== */
 /* Blog */
 /* ==== */
