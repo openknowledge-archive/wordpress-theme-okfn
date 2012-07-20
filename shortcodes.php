@@ -81,7 +81,7 @@ add_shortcode('slide', 'carousel_slide_shortcode');
 **********************************************************************************************/
 
 function zcarousel_shortcode( $atts, $content = null ) {
-   return '<div id="zcarousel" style="width: 940px; height: 250px; "></div><script>var data=[];' .do_shortcode($content). '$("#zcarousel").zcarousel(data);</script>';
+   return '<div id="zcarousel" style="width: 940px; height: 250px; "></div><script>var data=[];' .do_shortcode($content). 'jQuery("#zcarousel").zcarousel(data);</script>';
 } 
 add_shortcode( 'zcarousel', 'zcarousel_shortcode' );
 
