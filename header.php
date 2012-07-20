@@ -5,6 +5,11 @@
 		<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ) ?>; charset=<?php bloginfo( 'charset' ) ?>" />
 		
     <title>
+      <?php
+        /* Force our chosen version of jquery */
+        wp_deregister_script( 'jquery' );
+        wp_register_script( 'jquery', 'http://code.jquery.com/jquery-1.7.2.min.js');
+      ?>
 		  <?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?>
       <?
       global $options;
