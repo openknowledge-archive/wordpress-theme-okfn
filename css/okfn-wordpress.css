@@ -1144,14 +1144,23 @@ img.alignleft, img.alignright {
 }
 
 
-/* toc plugin */
-/* ========== */
+/* Hackadelic SEO Table Of Contents Plugin */
+/* ======================================= */
+div.toc {
+	border: 1px solid #E5E5E5;
+}
 div.toc ul {
-	margin: 0 0 9px 20px;
+	margin: 10px 10px 10px 30px;
 }
 .toc-header {
 	position:relative;
 	color:#333333;
+	display:block;
+	background-color:#E5E5E5;
+	padding:3px 10px;
+}
+.toc-header:hover {
+	text-decoration:none;
 }
 .toc-header:after {
 	content:"";
@@ -1161,22 +1170,22 @@ div.toc ul {
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	border-top: 5px solid #333333;
-	right:-13px;
-	top:6px;
+	right:9px;
+	top:9px;
 }
 .toc-collapsed .toc-header:after {
 	border-top:5px solid transparent;
   border-bottom:5px solid transparent;
   border-left:5px solid #333333;
-	top:4px;
-	right:-10px;
+	top:8px;
+	right:5px;
 }
-li.toc-level-2 {
+li.toc-level-1 {
   font-weight: bold;
   list-style: none;
   margin: 10px 0px 0px -20px;
 }
-li.toc-level-2 a {
+div.toc li a {
   color: #222222;
 }
 div.toc div {
