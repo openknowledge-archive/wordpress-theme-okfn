@@ -1148,10 +1148,9 @@ img.alignleft, img.alignright {
 /* ======================================= */
 div.toc {
 	border: 1px solid #E5E5E5;
-	padding-bottom:5px;
 }
 div.toc ul {
-	margin: 10px 10px 10px 30px;
+	margin: 15px 10px 15px 30px;
 }
 .toc-header {
 	position:relative;
