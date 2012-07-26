@@ -10,4 +10,5 @@ Version:        1.1
 
 @import url('theme-okfn/fonts/fonts.min.css');
 @import url('theme-okfn/css/okfn-common.css');
+@import url('fonts/stylesheet.css');
 @import url('css/okfn-wordpress.css');
