@@ -270,4 +270,29 @@ function accordion_shortcode( $atts, $content = null ) {
 add_shortcode('accordion', 'accordion_shortcode');  
 
 
+
+/*********************************************************************************************
+* Name:        Sticky Element
+* Author:      Sam Smith
+* Description: Switch element to fixed position, based on scrolling
+**********************************************************************************************/
+
+function sticky_shortcode( $atts ){
+	extract( shortcode_atts( array(
+			'scroll' => '65',
+			'class' => 'subnav',
+			'id' => '$el'
+		), $atts ) );
+ return "<script>$(window).scroll(function(e){ 
+  ".$id." = $('.".$class."'); 
+  if ($(this).scrollTop() > ".$scroll." && ".$id.".css('position') != 'fixed'){ 
+    $('.".$class."').css({'position': 'fixed', 'top': '0px'}); 
+  } 
+	if ($(this).scrollTop() < ".$scroll." && ".$id.".css('position') == 'fixed') {
+	  $('.".$class."').css({'position': 'absolute', 'top': '0px'});
+	}
+});</script>";
+}
+add_shortcode( 'sticky', 'sticky_shortcode' );
+
 ?>
