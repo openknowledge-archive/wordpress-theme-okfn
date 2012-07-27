@@ -2190,7 +2190,8 @@ section.black-banner {
 	color: #FFFFFF;
 }
 .banner.black-banner h1,
-section.black-banner h1 {
+section.black-banner h1,
+section.black-banner label {
 	color: #FFFFFF;
 }
 .banner.black-banner.full-width:before,
