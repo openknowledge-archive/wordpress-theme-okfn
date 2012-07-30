@@ -63,7 +63,7 @@ input[type=reset]:hover,
 	color: #333333;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: #F6F6F6;
+	border-bottom-color: #EEEEEE;
 }
 
 .navbar a {
@@ -86,7 +86,7 @@ input[type=reset]:hover,
 
 .nav > .current_page_item,
 .nav > .current-page-ancestor {
-	background-color:#A9B2C1;
+	background-color:#F6F6F6;
 	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
 	box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
