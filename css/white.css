@@ -56,11 +56,14 @@ input[type=reset]:hover,
 
 
 .navbar-inner {
-  background: #ffffff; /* Old browsers */
+	background: #ffffff; /* Old browsers */
 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.0);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.0);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0), inset 0 -1px 0 rgba(0, 0, 0, 0.0);
-	color:#333333;
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.0);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0), inset 0 -1px 0 rgba(0, 0, 0, 0.0);
+	color: #333333;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #F6F6F6;
 }
 
 .navbar a {
@@ -148,7 +151,9 @@ input[type=reset]:hover,
 .banner {
 	margin-top:-14px;
 }
-.banner.full-width:before, .banner.full-width:after {
+.banner.full-width,
+.banner.full-width:before,
+.banner.full-width:after {
   background-color: #FFFFFF;
   background-image: none;
 }
