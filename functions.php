@@ -145,7 +145,7 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_colours",
         "type" => "radio",
         "desc" => "Change the colours of the nav bar, buttons etc",
-        "options" => array("default" => "Black (Default)", "grey" => "Grey (OKFN)", "blue" => "Blue (CKAN)"),
+        "options" => array("default" => "Black & Green (Default)", "grey" => "Grey & Black (OKFN)", "blue" => "Blue (CKAN)", "white" => "White & Blue (School of Data)"),
         "std" => "default"),
 				
 		array(    "type" => "close"),

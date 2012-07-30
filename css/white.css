@@ -1,0 +1,264 @@
+body {
+	background-color:#F6F6F6;
+	color: #777777;
+}
+
+a {
+	color:#2084CA;
+}
+
+button, a.group-button, input[type=submit], input[type=reset] {
+  background-color: #0088CC;
+  background-image: -moz-linear-gradient(top, #0088CC, #0088CC);
+  background-image: -ms-linear-gradient(top, #0088CC, #0088CC);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088CC), to(#0088CC));
+  background-image: -webkit-linear-gradient(top, #0088CC, #0088CC);
+  background-image: -o-linear-gradient(top, #0088CC, #0088CC);
+  background-image: linear-gradient(top, #0088CC, #0088CC);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0088CC', GradientType=0);
+  border-color: #0088CC #0088CC #0088CC;
+}
+button:hover, a.group-button:hover, input[type=submit]:hover, input[type=reset]:hover {
+  background-color: #0088CC;
+}
+
+.topbar {
+  background-color: #FFFFFF;
+}
+
+#wp-admin-bar li a,
+.topbar a {
+  color: #5d5d5d;
+}
+#wp-admin-bar li a:hover {
+  color: #FFFFFF;
+}
+
+#wp-admin-bar ul li ul {
+  background: none repeat scroll 0 0 #a2a2a2;
+  border: 1px solid #a2a2a2;
+}
+#wp-admin-bar ul.main-nav li:hover,
+#wp-admin-bar ul.main-nav li.sfhover {
+  background-color: #a2a2a2;
+}
+#wp-admin-bar ul.main-nav li ul li.sfhover {
+  background-color: #a2a2a2;
+}
+
+
+.navbar-inner {
+  background: #ffffff; /* Old browsers */
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.0);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0), inset 0 -1px 0 rgba(0, 0, 0, 0.0);
+	color:#333333;
+}
+
+.navbar a {
+	color:#333333;
+}
+
+.navbar .brand {
+	color:#333333;
+}
+
+.navbar .nav > li > a {
+  color: #5d5d5d;
+  text-shadow: none;
+}
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover {
+	color: #333333;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav > .current_page_item,
+.nav > .current-page-ancestor {
+	background-color:#A9B2C1;
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.has-subheader .nav > .current_page_item,
+.has-subheader .nav > .current-page-ancestor {
+	background-position: center -145px;
+	background-color:transparent;
+}
+
+.navbar .nav > li > .dropdown-toggle:after {
+  border-top: 4px solid #333333;
+}
+
+.navbar .dropdown-menu .dropdown-toggle:after {
+  border-left: 4px solid #333333;
+}
+
+.navbar .navbar-inner .social-links a.facebook {
+	background-position: center 0px;
+}
+.navbar .navbar-inner .social-links a.twitter {
+	background-position: center -150px;
+}
+
+.navbar .nav > li > a:hover,
+.navbar .nav .sfhover {
+  background-color: #fefefe;
+	color:#333333;
+	-webkit-box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.navbar .nav > li > .dropdown-toggle:hover,
+.navbar .nav .sfhover {
+	background-color: #fefefe;
+	-webkit-box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.navbar .dropdown-menu {
+	background-color: #fefefe;
+	-webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.navbar .nav .active > .dropdown-toggle:hover {
+  color: #333333;
+}
+.navbar .dropdown-menu li > a:hover,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover {
+  background-color: #0088CC;
+}
+
+.sub-header {
+	background-color:#FFFFFF;
+}
+.sub-header .breadcrumb,
+.sub-header .breadcrumb a {
+	color:#333333;
+}
+
+
+.banner {
+	margin-top:-14px;
+}
+
+
+.box {
+	border-color:#EEEEEE;
+}
+
+
+/* Menu Pod */
+/* ======== */
+.okfn-dropdown a {
+  background-color: #A9B2C1;
+  color: #fff;
+}
+.okfn-dropdown a:hover {
+  background-color: #0088CC;
+}
+
+
+/* Well */
+/* ==== */
+
+.well {
+	background-color: #FFFFFF;
+	border: 1px solid ##C6C6C6;
+}
+
+
+/* Wordpress: Sidebar */
+/* ================== */
+#sidebar #sidebar-login-form,
+#sidebar #sidebar-me,
+#sidebar .widget {
+	background: #FFFFFF;
+	background-image:none;
+  border: 1px solid #EEEEEE;
+  color: #333333;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); /* IE6-9 */
+}
+#sidebar .widget h1,
+#sidebar .widget h2,
+#sidebar .widget h3,
+#sidebar .widget h4,
+#sidebar .widget h5,
+#sidebar .widget h6 {
+	color:#333333;
+}
+#sidebar .widget a {
+	color:#333333;
+}
+#sidebar .widget label {
+  color: #333333;
+}
+#sidebar .tb_tweet-info {
+  color: #333333;
+}
+.single-post .container > .author-box {
+	border: 1px solid #EEEEEE;
+}
+
+
+
+/* Carousel */
+/* ======== */
+
+#content .carousel-caption {
+	background: rgb(255, 255, 255); /* The Fallback */
+	background: rgba(255, 255, 255, 0.80);
+	color:#333333;
+}
+#content .carousel-caption h2,
+#content .carousel-caption h3,
+#content .carousel-caption h4 {
+  color: #333333;
+}
+#content .carousel-caption,
+#content .carousel-caption p {
+	color:#333333;
+}
+
+
+/* Blog */
+/* ==== */
+.magazine .post.featured .text {
+  background: #FFFFFF;  /* Old browsers */
+  background: -moz-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(100%, #FFFFFF));  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);  /* IE10+ */
+  background: linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);  /* W3C */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF', GradientType=0);  /* IE6-9 */
+  color: #333;
+  border-bottom-color: #FFFFFF;
+}
+.magazine .featured .text a,
+.magazine .featured .text h2 a {
+  color: #333333;
+}
+
+.single-post #blog-single #comments {
+	background-color:#FFFFFF;
+}
+
+
+/* Ribbon */
+/* ====== */
+
+.ribbon,
+.magazine h3.ribbon {
+    background-color: #A9B2C1;
+}
+.magazine .featured .ribbon {
+  background-color: #0088CC;
+}
+
+
+/* Plugins */
+/* ======= */
+
+div.toc {
+	background-color:#FFFFFF;
+}
