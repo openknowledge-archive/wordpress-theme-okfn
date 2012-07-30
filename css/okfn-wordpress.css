@@ -2363,6 +2363,7 @@ body > .corner.ribbon {
 	display:block;
 	height:40px;
 	line-height:40px;
+	z-index: 99999;
 }
 body > .corner.ribbon:hover {
 	text-decoration:none;
