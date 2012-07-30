@@ -292,6 +292,27 @@ function echo_magazine_post($post, $is_featured) {
 		
 		array(    "type" => "open"),
 		
+		array(  "name" => "Corner Ribbon Toggle",
+        "desc" => "Check this box to enable text in the top right of the page.",
+        "id" => $shortname."_corner_ribbon",
+        "type" => "checkbox",
+        "std" => "false"),
+		
+		array(  "name" => "Corner Ribbon Text",
+        "desc" => "Text or html to display in the ribbon.",
+        "id" => $shortname."_corner_ribbon_text",
+        "type" => "textarea"),
+				
+		array(  "name" => "Corner Ribbon Link",
+        "desc" => "url to link to",
+        "id" => $shortname."_corner_ribbon_link",
+        "type" => "text"),
+				
+		array(  "type" => "close"),
+		
+		
+		array(    "type" => "open"),
+		
 		array(  "name" => "Twitter Link",
         "desc" => "Add link to Twitter profile.",
         "id" => $shortname."_twitter_link",

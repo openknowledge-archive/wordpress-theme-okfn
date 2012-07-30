@@ -56,7 +56,7 @@
       </div><!-- /container -->
     </div><!-- /inner -->
     </footer>
-		
+    
 		<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/bootstrap.js"></script>
     <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/jquery.dotdotdot-1.4.0-packed.js"></script>
     

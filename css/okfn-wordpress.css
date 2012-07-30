@@ -2342,6 +2342,52 @@ section.black-banner.full-width:after {
 	display:none;
 }
 
+
+/* Ribbon */
+/* ====== */
+
+.corner.ribbon {
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg); /* IE 9 */
+	-moz-transform:rotate(45deg); /* Firefox */
+	-webkit-transform:rotate(45deg); /* Safari and Chrome */
+	-o-transform:rotate(45deg); /* Opera */
+	text-align:center;
+}
+body > .corner.ribbon {
+	top:26px;
+	right:-40px;
+	left:auto;
+	width:170px;
+	padding:0px;
+	display:block;
+	height:40px;
+	line-height:40px;
+}
+body > .corner.ribbon:hover {
+	text-decoration:none;
+}
+body > .corner.ribbon img {
+	max-height:36px;
+	max-width:115px;
+	padding:2px;
+}
+@media (max-width: 1110px) { 
+  body > .corner.ribbon {
+		position:relative;
+		transform:rotate(0deg);
+	  -ms-transform:rotate(0deg); /* IE 9 */
+	  -moz-transform:rotate(0deg); /* Firefox */
+	  -webkit-transform:rotate(0deg); /* Safari and Chrome */
+	  -o-transform:rotate(0deg); /* Opera */
+		top:0;
+		left:0;
+		max-width:none;
+		width:100%;
+	}
+}
+
+
 /* WP Fixes */
 /* ======== */
 

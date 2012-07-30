@@ -100,7 +100,12 @@
       /* Javascript includes */
       do_action( 'bp_before_header' ) 
     ?>
-
+    <? if (!empty($okfn_corner_ribbon_text) && $okfn_corner_ribbon == "true") {
+			echo '
+      <a class="corner ribbon" href="'.stripslashes($okfn_corner_ribbon_link). '" >
+        ' . stripslashes($okfn_corner_ribbon_text).'
+      </a>';
+		} ?>
     <header<? if ($okfn_subheader == "true"):?> class="has-subheader"<? endif; ?>>
       <div class="navbar">
         <div class="navbar-inner">
@@ -116,12 +121,12 @@
             </div>
           <? endif; ?>
           
-          <? if ($okfn_header_textarea && $okfn_header_text == "true") : ?>
+          <? if (!empty($okfn_header_textarea) && $okfn_header_text == "true") : ?>
             <div class="header-text"<? if ($okfn_header_text_align == "left") : ?> style="float:left; padding-left:0px; padding-right:5px;"<? endif; ?>>
               <? echo stripslashes($okfn_header_textarea); ?>
             </div>
           <? endif; ?>
-          <? if ($okfn_header_textarea2 && $okfn_header_text2 == "true") : ?>
+          <? if (!empty($okfn_header_textarea2) && $okfn_header_text2 == "true") : ?>
             <div class="header-text"<? if ($okfn_header_text_align2 == "left") : ?> style="float:left; padding-left:0px; padding-right:5px;"<? endif; ?>>
               <? echo stripslashes($okfn_header_textarea2); ?>
             </div>

@@ -314,3 +314,12 @@ table.table-box tr.highlight td.red {
 .wp-caption {
 	background-color: #b2cedf;
 }
+
+
+/* Ribbon */
+/* ====== */
+
+body > .corner.ribbon {
+	background-color:#FFF;
+	color:#5090B7;
+}
