@@ -121,6 +121,11 @@
               <? echo stripslashes($okfn_header_textarea); ?>
             </div>
           <? endif; ?>
+          <? if ($okfn_header_textarea2 && $okfn_header_text2 == "true") : ?>
+            <div class="header-text"<? if ($okfn_header_text_align2 == "left") : ?> style="float:left; padding-left:0px; padding-right:5px;"<? endif; ?>>
+              <? echo stripslashes($okfn_header_textarea2); ?>
+            </div>
+          <? endif; ?>
         
           <a title="<?php _ex( 'Home', 'Home page banner link title', 'buddypress' ); ?>" 
               class="brand" 

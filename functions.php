@@ -269,6 +269,29 @@ function echo_magazine_post($post, $is_featured) {
 		
 		array(    "type" => "open"),
 		
+		array(  "name" => "Custom Header Text Two",
+        "desc" => "Check this box to enable custom header text.",
+        "id" => $shortname."_header_text2",
+        "type" => "checkbox",
+        "std" => "false"),
+		
+		array(  "name" => "Header Text",
+        "desc" => "Text or html to display in header.",
+        "id" => $shortname."_header_textarea2",
+        "type" => "textarea"),
+				
+		array("name" => "Align Header Text",
+        "id" => $shortname."_header_text_align2",
+        "type" => "radio",
+        "desc" => "Which side of the header would you like this to appear?",
+        "options" => array("left" => "Left", "right" => "Right"),
+        "std" => "right"),
+				
+		array(  "type" => "close"),
+		
+		
+		array(    "type" => "open"),
+		
 		array(  "name" => "Twitter Link",
         "desc" => "Add link to Twitter profile.",
         "id" => $shortname."_twitter_link",
