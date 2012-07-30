@@ -163,6 +163,16 @@ input[type=reset]:hover,
 	border-color:#EEEEEE;
 }
 
+#content {
+  width: 638px;
+  background-color: #FFF;
+  padding: 10px 20px;
+	border:1px solid #EEEEEE;
+}
+.magazine #content {
+  width: 690px;
+	padding:0px;
+}
 
 /* Menu Pod */
 /* ======== */
