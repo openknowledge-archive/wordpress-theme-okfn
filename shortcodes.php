@@ -133,7 +133,10 @@ add_shortcode( 'fullwidth', 'fullwidth_shortcode' );
 **********************************************************************************************/
 
 function row_shortcode( $atts, $content = null ) {
-   return '<div class="row" style="width:960px;">' .do_shortcode($content). '</div>';
+	extract( shortcode_atts( array(
+			'style' => '',
+		), $atts ) );
+   return '<div class="row" style="width:960px; '.$style.'">' .do_shortcode($content). '</div>';
 } 
 add_shortcode( 'row', 'row_shortcode' );
 

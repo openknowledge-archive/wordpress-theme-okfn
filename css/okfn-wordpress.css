@@ -2320,6 +2320,7 @@ section.black-banner.full-width:after {
   border-radius: 3px;
 	margin: 10px auto;
 	text-align:center;
+	display:block;
 }
 
 .wp-caption.alignleft {
