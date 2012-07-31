@@ -78,7 +78,7 @@ input[type=reset]:hover,
 }
 
 .navbar .nav > li > a {
-  color: #5d5d5d;
+  color: #333333;
   text-shadow: none;
 }
 .navbar .nav .active > a,
