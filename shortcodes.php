@@ -270,7 +270,6 @@ function accordion_shortcode( $atts, $content = null ) {
 add_shortcode('accordion', 'accordion_shortcode');  
 
 
-
 /*********************************************************************************************
 * Name:        Sticky Element
 * Author:      Sam Smith
@@ -294,5 +293,31 @@ function sticky_shortcode( $atts ){
 });</script>";
 }
 add_shortcode( 'sticky', 'sticky_shortcode' );
+
+
+/*********************************************************************************************
+* Name:        Login Form
+* Author:      http://pippinsplugins.com/wordpress-login-form-short-code/
+* Description: Display the WordPress login form within the content of one of the site’s pages
+**********************************************************************************************/
+
+function pippin_login_form_shortcode( $atts, $content = null ) {
+ 
+	extract( shortcode_atts( array(
+      'redirect' => ''
+      ), $atts ) );
+ 
+	if (!is_user_logged_in()) {
+		if($redirect) {
+			$redirect_url = $redirect;
+		} else {
+			$redirect_url = get_permalink();
+		}
+		$form = wp_login_form(array('echo' => false, 'redirect' => $redirect_url ));
+	} 
+	return $form;
+}
+add_shortcode('loginform', 'pippin_login_form_shortcode');
+
 
 ?>

@@ -165,6 +165,14 @@
 }
 
 
+/* Login Form */
+/* ========== */
+
+.entry > #loginform {
+	background-color: #FCFCFC;
+}
+
+
 /* Wordpress: Sidebar */
 /* ================== */
 #sidebar #sidebar-login-form,
