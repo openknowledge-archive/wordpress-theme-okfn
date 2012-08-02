@@ -243,6 +243,27 @@ input:focus, textarea:focus {
 	border-color:#0088CC;
 }
 
+/* Footer */
+/* ====== */
+
+body > footer {
+	background-color:#e9e9e9;
+	border-top: solid 1px #dbdbdb;
+}
+body > footer > .inner {
+	background-image:none;
+}
+body > footer,
+body > footer > .inner,
+body > footer > .inner a,
+body > footer > .inner a:hover,
+body > footer > .inner h1,
+body > footer > .inner h2,
+body > footer > .inner h3 {
+	color: #333333;
+	text-shadow: none;
+}
+
 
 /* Carousel */
 /* ======== */
@@ -284,6 +305,15 @@ input:focus, textarea:focus {
 
 .single-post #blog-single #comments {
 	background-color:#FFFFFF;
+}
+
+
+/* Mag Homepage */
+/* ============ */
+
+body.page-template-home-page-php.magazine #content {
+	background-color:transparent;
+	border:none;
 }
 
 

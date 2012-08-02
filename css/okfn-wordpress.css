@@ -2226,6 +2226,23 @@ section.black-banner.full-width:after {
 	background-size: auto;
 }
 
+.banner.lined,
+section.lined,
+.banner.lined.full-width,
+section.lined.full-width,
+.banner.lined.full-width:before,
+.banner.lined.full-width:after,
+section.lined.full-width:before,
+section.lined.full-width:after {
+	background-color: #FFF;
+  background-image: url(../images/lined-paper.png);
+	-webkit-background-size:auto;
+	-moz-background-size: auto;
+	-o-background-size: auto;
+	background-size: auto;
+	background-repeat:repeat;
+}
+
 
 .button-bar {
 	position:relative;
@@ -2401,6 +2418,14 @@ body > .corner.ribbon img {
 		max-width:none;
 		width:100%;
 	}
+}
+
+
+/* Mag Homepage */
+/* ============ */
+
+body.page-template-home-page-php.magazine #content {
+  width: 100%;
 }
 
 
