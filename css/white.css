@@ -231,6 +231,10 @@ input[type=reset]:hover,
 #sidebar .widget.widget_categories {
   background-color: transparent;
 }
+#sidebar .widget.widget_categories ul li a:hover {
+	background-color:#0088CC;
+	border-color:#0088CC;
+}
 
 
 /* Carousel */
