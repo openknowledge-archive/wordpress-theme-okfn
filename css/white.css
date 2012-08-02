@@ -228,7 +228,9 @@ input[type=reset]:hover,
 .single-post .container > .author-box {
 	border: 1px solid #EEEEEE;
 }
-
+#sidebar .widget.widget_categories {
+  background-color: transparent;
+}
 
 
 /* Carousel */
