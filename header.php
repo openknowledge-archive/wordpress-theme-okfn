@@ -44,6 +44,8 @@
       }
       if ($okfn_colours == "blue") : ?>
         <link rel="shortcut icon" href="http://assets.okfn.org/p/ckan/img/ckan.ico" />
+      <?php elseif ($okfn_colours == "white") : ?>
+        <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/grey-favicon.ico" />
       <?php else: ?>
         <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
 		  <? endif; ?>

@@ -84,7 +84,7 @@ input[type=reset]:hover,
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover {
 	color: #333333;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.0);
 }
 
 .nav > .current_page_item,
@@ -109,10 +109,10 @@ input[type=reset]:hover,
 }
 
 .navbar .navbar-inner .social-links a.facebook {
-	background-position: center 0px;
+	background-position: center -100px;
 }
 .navbar .navbar-inner .social-links a.twitter {
-	background-position: center -150px;
+	background-position: center -250px;
 }
 
 .navbar .nav > li > a:hover,
