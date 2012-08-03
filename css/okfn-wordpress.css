@@ -2427,6 +2427,19 @@ body > .corner.ribbon img {
 body.page-template-home-page-php.magazine #content {
   width: 100%;
 }
+body.page-template-home-page-php.magazine .post.preview {
+  width: 301px;
+	margin:15px 15px 0px 0px;
+}
+body.page-template-home-page-php.magazine .post.preview:nth-of-type(4) {
+	margin-right:0px;
+}
+body.page-template-home-page-php.magazine .post.preview .text {
+	height:110px;
+}
+body.page-template-home-page-php.magazine .post.preview .ribbon {
+	display:none;
+}
 
 
 /* WP Fixes */

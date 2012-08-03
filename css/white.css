@@ -14,7 +14,8 @@ button,
 a.group-button,
 input[type=submit],
 input[type=reset],
-.btn-primary {
+.btn-primary,
+.btn-info {
   background-color: #0088CC;
   background-image: -moz-linear-gradient(top, #0088CC, #0088CC);
   background-image: -ms-linear-gradient(top, #0088CC, #0088CC);
@@ -29,7 +30,8 @@ button:hover,
 a.group-button:hover,
 input[type=submit]:hover,
 input[type=reset]:hover,
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-info:hover {
   background-color: #0088CC;
 }
 
@@ -180,8 +182,10 @@ input:focus, textarea:focus {
 	border:1px solid #EEEEEE;
 }
 .magazine #content {
-  width: 690px;
+  width: 692px;
 	padding:0px;
+	border:none;
+	background-color:transparent;
 }
 
 /* Menu Pod */
@@ -324,10 +328,12 @@ body.page-template-home-page-php.magazine #content {
 
 .ribbon,
 .magazine h3.ribbon {
-    background-color: #A9B2C1;
+    background-color: #E9E9E9;
+		color:#333333;
 }
 .magazine .featured .ribbon {
   background-color: #0088CC;
+	color:#FFF;
 }
 
 
