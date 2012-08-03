@@ -245,9 +245,11 @@ input:focus, textarea:focus {
 
 /* Footer */
 /* ====== */
-
-body > footer {
+body > footer,
+html {
 	background-color:#e9e9e9;
+}
+body > footer {
 	border-top: solid 1px #dbdbdb;
 }
 body > footer > .inner {
