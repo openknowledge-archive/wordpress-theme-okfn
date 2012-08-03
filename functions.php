@@ -157,7 +157,7 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_tagline_location",
         "type" => "radio",
         "desc" => "Where would you like the tagline to appear on the page?",
-        "options" => array("default" => "Top of page", "header" => "In the header", "hide" => "Nowhere"),
+        "options" => array("home" => "Top of home page", "default" => "Top of every page", "header" => "In the header", "hide" => "Nowhere"),
         "std" => "default"),
 				
 		array(    "type" => "close"),
