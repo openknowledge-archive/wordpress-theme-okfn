@@ -234,12 +234,11 @@
         </div><!-- /strapline -->
       </div><!-- /container -->
     <?php elseif ($okfn_tagline_location == "home" && get_bloginfo( 'description' ) && is_front_page()) : ?>
-      <h2 id="site-description"></h2>
       <div class="container">
         <div class="strapline">
-        <div class="inner">
-          <?php echo bloginfo( 'description' ); ?>
-        </div><!-- /inner     -->
+          <div class="inner">
+            <?php echo bloginfo( 'description' ); ?>
+          </div><!-- /inner     -->
         </div><!-- /strapline -->
       </div><!-- /container -->
     <?php endif; ?>
