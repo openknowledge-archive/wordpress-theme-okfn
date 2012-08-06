@@ -97,7 +97,7 @@ add_shortcode('zslide', 'zcarousel_slide_shortcode');
 /*********************************************************************************************
 * Name:        Banner
 * Author:      Sam Smith
-* Description: Simple fixed height banner
+* Description: Simple banner with text on the right
 * Example:     [banner bg="http://domain.com/bg-image.jpg"]
                Banner text here.
                [/banner]
@@ -109,9 +109,10 @@ function banner_shortcode( $atts, $content = null ) {
 	extract( shortcode_atts( array(
 			'bg' => 'http://assets.okfn.org/web/images/banner.png',
 			'height' => '280',
+			'bgcolour' => 'd4d4d4',
 		), $atts ) );
 		
-		return '<div class="static-banner" style="background-image:url('.$bg.'); height:'.$height.'px;"><div class="inner">' .do_shortcode($content). '</div></div>'; 
+		return '<div class="static-banner" style="background-image:url('.$bg.'); height:'.$height.'px; background-color:#'.$bgcolour.';"><div class="inner">' .do_shortcode($content). '</div></div>'; 
 		}
 
 add_shortcode('banner', 'banner_shortcode'); 

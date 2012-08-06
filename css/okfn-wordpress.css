@@ -2244,8 +2244,10 @@ section.lined.full-width:after {
 }
 
 .static-banner {
-	padding:20px 165px 20px 400px;
+	padding: 20px 165px 20px 400px;
 	display: table;
+	background-repeat: no-repeat;
+	background-position: left center;
 }
 .static-banner .inner {
   display: table-cell;
