@@ -95,6 +95,29 @@ add_shortcode('zslide', 'zcarousel_slide_shortcode');
 
 
 /*********************************************************************************************
+* Name:        Banner
+* Author:      Sam Smith
+* Description: Simple fixed height banner
+* Example:     [banner bg="http://domain.com/bg-image.jpg"]
+               Banner text here.
+               [/banner]
+**********************************************************************************************/
+ 
+add_shortcode( 'banner', 'banner_shortcode' );
+
+function banner_shortcode( $atts, $content = null ) {  
+	extract( shortcode_atts( array(
+			'bg' => 'http://assets.okfn.org/web/images/banner.png',
+			'height' => '280',
+		), $atts ) );
+		
+		return '<div class="static-banner" style="background-image:url('.$bg.'); height:'.$height.'px;"><div class="inner">' .do_shortcode($content). '</div></div>'; 
+		}
+
+add_shortcode('banner', 'banner_shortcode'); 
+
+
+/*********************************************************************************************
 * Name:        Hide Page Title
 * Author:      Sam Smith
 * Description: Use to hide the page title

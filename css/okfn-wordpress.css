@@ -2243,6 +2243,18 @@ section.lined.full-width:after {
 	background-repeat:repeat;
 }
 
+.static-banner {
+	padding:20px 165px 20px 400px;
+	display: table;
+}
+.static-banner .inner {
+  display: table-cell;
+	vertical-align: middle;
+	font-size:22px;
+	line-height:26px;
+	font-family:OpenSansLight, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+	
 
 .button-bar {
 	position:relative;
