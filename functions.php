@@ -19,6 +19,14 @@ add_filter('bp_before_account_details_fields', 'register_form_blurb');
  */
 include('simple_html_dom.php');
 
+/* 
+ * Kill Buddypress' profile links. They are wrong and stupid!
+ */
+function remove_xprofile_links() {
+    remove_filter( 'bp_get_the_profile_field_value', 'xprofile_filter_link_profile_data', 9, 2 );
+}
+add_action( 'bp_init', 'remove_xprofile_links' );
+
 /*
  * Disable the parent theme's stylesheets. We work from scratch.
  */
