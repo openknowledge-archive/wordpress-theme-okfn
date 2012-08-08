@@ -101,6 +101,16 @@ button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
 	height:18px;
 }
 
+blockquote p {
+  font-size: 13px;
+  font-weight:normal;
+  line-height: 18px;
+  margin-bottom: 9px;
+}
+blockquote small {
+	margin-top:-9px;
+}
+
 
 /* ================ */
 /* Wordpress Layout */
