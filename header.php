@@ -69,7 +69,7 @@
      if ($okfn_buddypress_disable == "true" && $okfn_buddypress_slim == "false") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/tall-header.css"/>
     <? endif; ?>
-    <? if ($okfn_carosel == "text-right" || $okfn_carosel == "stack") : ?>
+    <? if ($okfn_carosel == "text-right") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/theme-okfn/css/carousels/text-right.css"/>
     <? endif; ?>
     <? if ($okfn_subheader == "true") : ?>

@@ -234,8 +234,8 @@ add_shortcode('gli', 'gridlist_item_shortcode');
 
 /*********************************************************************************************
 * Name:        RSS
-* Author:      Sam Smith
-* Description: RSS feed reader based on BS & http://www.kevinleary.net/display-rss-feeds-wordpress-shortcodes-simplepie-fetch_feed/
+* Author:      http://www.kevinleary.net/display-rss-feeds-wordpress-shortcodes-simplepie-fetch_feed/
+* Description: Re-usable RSS feed reader
 * Example:     [rss size="10" feed="http://wordpress.org/news/feed/" date="true"]
 **********************************************************************************************/
 
@@ -245,24 +245,10 @@ if( function_exists('base_rss_feed') && !function_exists('base_rss_shortcode') )
 			'size' => '10',
 			'feed' => 'http://wordpress.org/news/feed/',
 			'date' => false,
-			'class' => '',
-			'id' => '1',
-			'type' => '',
 		), $atts));
  
 		$content = base_rss_feed($size, $feed, $date);
-		if ($type == ticker ) {
-			return '<div id="rss'.$id.'" class="rss ticker carousel slide size'.$size.' '.$class.'">'.$content.'
-			<a class="carousel-control left" href="#rss'.$id.'" data-slide="prev">&lsaquo;</a>
-			<a class="carousel-control right" href="#rss'.$id.'" data-slide="next">&rsaquo;</a></div>
-			<script>
-			$("#rss'.$id.' .feedlist li").addClass("item");
-			$("#rss'.$id.' .feedlist li:first-of-type").addClass("active");
-			</script>';
-		}
-		else {
-			return '<div class="rss size'.$size.' '.$class.'">'.$content.'</div>';
-		}
+		return $content;
 	}
 	add_shortcode("rss", "base_rss_shortcode");
 }
