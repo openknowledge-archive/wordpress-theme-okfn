@@ -372,7 +372,7 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_carosel",
         "type" => "radio",
         "desc" => "Change layout style of Bootstrap carousel",
-        "options" => array("default" => "Default", "text-right" => "Text on Right"),
+        "options" => array("default" => "Default", "text-right" => "Text on Right (full width)", "stack" => "Text on Right (photo stack)",),
         "std" => "default"),
 				
 		array(    "type" => "close"),
