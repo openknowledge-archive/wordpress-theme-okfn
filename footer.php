@@ -60,6 +60,19 @@
 		<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/bootstrap.js"></script>
     <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/jquery.dotdotdot-1.4.0-packed.js"></script>
     
+    <!-- cycling for ticker carousel -->
+		<script>
+      $(".ticker").carousel({ interval: 6000 });
+    </script>
+   
+    <!-- photo stack style banner -->
+    <? if ($okfn_carosel == "stack") : ?>
+      <script>
+			  $(".banner > .carousel").addClass("photo-stack");
+      </script>
+    <? endif; ?>
+     
+    <!-- sharethis in buddypress bar -->
     <? if ($okfn_sharethis == "true" && $okfn_buddypress_disable == "false") : ?>
 		  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 
       <script type="text/javascript">stLight.options({publisher: "<? if ($okfn_sharethis_id) : echo $okfn_sharethis_id; else: ?>ur-c524706a-c88f-82a8-ea44-7140256786d3<? endif; ?>"}); </script>
