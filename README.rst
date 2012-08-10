@@ -134,3 +134,4 @@ To use YARPP to display Related Posts as magazine entries on the post view page,
 
 * Disable "Automatically display related posts"
 * Select "Display using a custom template file" (yarpp-template-magazine.php)
+
