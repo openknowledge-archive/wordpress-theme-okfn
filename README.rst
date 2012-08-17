@@ -39,6 +39,16 @@ Other supported attributes are ``heading`` and ``caption``. For example, to add 
   [slide img="http://slide1.jpg" class="active"]  
   [slide img="http://slide2.jpg" caption="My caption for slide two"]  
   [/carousel]  
+	
+	
+**Static Banner**
+
+If you only want a single banner image, use the below::
+
+  [banner bg="http://domain.com/bg-image.jpg"]
+  Banner text here.
+  [/banner]
+
 
 **Pseudo Sidebar**
 
@@ -109,6 +119,13 @@ Use ``class="in"`` to have the accordion open by default
 
   [accordion heading="Heading One" class="in"] content [/accordion]
   [accordion heading="Heading Two"] content [/accordion]
+
+
+**RSS Ticker**
+
+Show scrolling previews from an RSS feed::
+
+  [rss feed="http://planet.okfn.org/feed" type="ticker"]
 
 
 
