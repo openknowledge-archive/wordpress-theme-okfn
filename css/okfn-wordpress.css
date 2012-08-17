@@ -1088,9 +1088,61 @@ body.home-page .st_plusone_buttons {
   transition: top 0.5s, margin-top 0.5s ease-in;
 }
 
+
+/* RSS Ticker */
+/* ========== */
+
+#content .rss.ticker {
+	overflow:hidden;
+	background-color:#333333;
+	color:#FFF;
+	padding:0px 60px 0px 20px;
+	height:42px;
+}
+#content .rss.ticker ul {
+	margin:0px;
+}
+#content .rss.ticker ul h3 {
+	margin:0px;
+	display:inline;
+	line-height:42px;
+}
+#content .rss.ticker ul h3:after {
+	content: ": ";
+	color:#FFF;
+	line-height:42px;
+}
+#content .rss.ticker ul a {
+	color:#FFF;
+}
+#content .rss.ticker .item {
+	text-overflow:ellipsis;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#content .rss.ticker .date {
+	display:none;
+}
+#content .rss.ticker .rss-entry {
+	display:inline;
+	line-height:42px;
+}
+#content .rss.ticker .carousel-control {
+	left:auto;
+	right:25px;
+	bottom:50%;
+	background-color:transparent;
+	margin-bottom:-10px;
+}
+#content .rss.ticker .carousel-control.right {
+	right:10px;
+}
+
+
+
 .body-text {
     margin-top: 20px;
-
 }
 
 
