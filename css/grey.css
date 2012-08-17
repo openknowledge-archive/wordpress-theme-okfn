@@ -145,12 +145,50 @@
 
 /* Menu Pod */
 /* ======== */
+.okfn-dropdown {
+  background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(51%,#ededed), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(top, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
 .okfn-dropdown a {
-  background-color: #333333;
-  color: #fff;
+	background-color: transparent;
+	color: #333333;
+	border: 1px solid #eaeaea;
+}
+#content .okfn-dropdown h5 {
+	color:#333333;
+}
+.okfn-dropdown .okfn-dropdown-items a {
+	background-color: rgb(255, 255, 255); /* Fallback for web browsers that don't support RGBa */
+	background-color: rgba(255, 255, 255, 0.9);/* RGBa with 0.6 opacity */
+	color: #333333;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: dotted;
+	border-left-style: none;
 }
 .okfn-dropdown a:hover {
-  background-color: #3e8f80;
+  background-color: rgb(62, 143, 128); /* Fallback for web browsers that don't support RGBa */
+	background-color: rgba(62, 143, 128, 0.9);/* RGBa with 0.6 opacity */
+	border-color: #3e8f80;
+	color:#FFF;
+}
+#content .okfn-dropdown a:hover h5 {
+	color:#FFF;
+}
+.okfn-dropdown > a.background-cog {
+  background-image: url("http://assets.okfn.org/web/images/menu-icon-cogs-green.png");
+}
+.okfn-dropdown > a.background-bubble {
+  background-image: url("http://assets.okfn.org/web/images/menu-icon-bubble-green.png");
+}
+.okfn-dropdown > a.background-heart {
+  background-image: url("http://assets.okfn.org/web/images/menu-icon-heart-green.png");
 }
 
 
