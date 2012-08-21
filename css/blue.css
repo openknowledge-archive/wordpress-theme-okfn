@@ -323,3 +323,26 @@ body > .corner.ribbon {
 	background-color:#FFF;
 	color:#5090B7;
 }
+
+
+/* Footer */
+/* ====== */
+
+body > footer {
+	background-color: #F5F5F5;
+	background-image: none;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #e5e5e5;
+}
+body > footer > .inner {
+  background-image:none;
+	text-shadow:none;
+}
+body > footer > .inner,
+body > footer > .inner a,
+body > footer > .inner a:hover,
+body > footer > .inner h3 {
+	color:#333333;
+	text-shadow:none;
+}
