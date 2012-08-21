@@ -2231,6 +2231,17 @@ section.chalkboard h2 {
 	font-family:'EraserRegular', 'Open Sans', Helvetica, Arial, sans-serif;
 	font-weight:normal;
 }
+.banner.chalkboard a,
+section.chalkboard a,
+.banner.chalkboard a:visited,
+section.chalkboard a:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+.banner.chalkboard a:hover,
+section.chalkboard a:hover {
+  color: #cef;
+}
 
 .banner.chalkboard.full-width:before,
 .banner.chalkboard.full-width:after,
@@ -2253,6 +2264,7 @@ section.chalkboard.full-width:after  {
 	background-position: left top;
 	background-image: url(../images/chalkboard-after.jpg);
 }
+
 
 .banner.black-banner,
 section.black-banner {
