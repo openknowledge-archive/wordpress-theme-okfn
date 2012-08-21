@@ -2560,3 +2560,60 @@ p:empty {
 .banner > .carousel.photo-stack .carousel-control {
    bottom: 100px;
 }
+
+
+/* Footer */
+/* ====== */
+
+body > footer h3 {
+	font-size:14px;
+}
+
+#footer-widget-area > div#fourth {
+	float:left;
+	clear:left;
+	width:50% !important;
+}
+#footer-widget-area > div#fourth .menu {
+	margin:0px;
+	opacity:0.7;
+}
+#footer-widget-area > div#fourth .widget_nav_menu .menu li {
+	display: inline-block;
+	line-height: 20px;
+	padding:0px;
+}
+#footer-widget-area > div#fourth .widget_nav_menu .menu li a {
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #333333;
+	padding-right:5px;
+	padding-left:2px;
+}
+#footer-widget-area > div#fourth .widget_nav_menu .menu li:first-of-type a {
+	padding-left:0px;
+}
+#footer-widget-area > div#fourth .widget_nav_menu .menu li:last-of-type a {
+	border:none;
+}
+
+.footer-buttons {
+	text-align:right;
+}
+.footer-buttons a {
+	display:inline-block;
+	height:20px;
+	}
+.footer-buttons .twitter,
+.footer-buttons .facebook {
+	background-image: url(../images/social-icons-small.png);
+	background-repeat: no-repeat;
+	width:20px;
+	overflow:hidden;
+	text-indent:-9999px;
+	margin-left:2px;
+	text-align:left;
+}
+.footer-buttons .twitter {
+	background-position: 0px -150px;
+}

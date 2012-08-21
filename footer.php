@@ -34,7 +34,7 @@
         if ( is_active_sidebar( 'first-footer-widget-area'  ) ) $active_footers++;
         if ( is_active_sidebar( 'second-footer-widget-area' ) ) $active_footers++;
         if ( is_active_sidebar( 'third-footer-widget-area'  ) ) $active_footers++;
-        if ( is_active_sidebar( 'fourth-footer-widget-area' ) ) $active_footers++;
+        //if ( is_active_sidebar( 'fourth-footer-widget-area' ) ) $active_footers++;
         if ( $active_footers > 0) :
           $footer_width = (940 - 20 * ($active_footers - 1)) / $active_footers;
         ?>
@@ -46,6 +46,20 @@
           <div class="row">
           <div id="footer-widgets">
             <?php get_sidebar( 'footer' ) ?>
+            <div class="footer-buttons">
+							<?php if ( !empty( $okfn_twitter_username ) && $okfn_twitter_link == "true" && $okfn_twitter_location != "default" ) : ?>
+                <a class="twitter" href="https://twitter.com/<?php echo $okfn_twitter_username ?>">twitter</a>
+              <? endif; ?>
+              <?php if ( !empty( $okfn_facebook_username ) && $okfn_facebook_link == "true" && $okfn_facebook_location != "default" ) : ?>
+                <a class="facebook" href="http://www.facebook.com/<?php echo $okfn_facebook_username ?>">facebook</a>
+              <? endif; ?>
+              
+              <?php if ( $okfn_flattr_okfn == "true" ) : ?>
+                <a href="http://flattr.com/thing/605365/Open-Knowledge-Foundation" target="_blank">
+                  <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+                </a>
+              <? endif; ?>
+            </div>
           </div><!-- /footer-widgets -->
           </div><!-- /row -->
         <?php endif; ?>
@@ -53,7 +67,8 @@
         <div id="row">
           <?php do_action( 'bp_footer' ) ?>
         </div>
-      </div><!-- /container -->
+        
+      </div><!-- /container --> 
     </div><!-- /inner -->
     </footer>
     

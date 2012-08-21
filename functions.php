@@ -317,38 +317,7 @@ function echo_magazine_post($post, $is_featured) {
         "type" => "text"),
 				
 		array(  "type" => "close"),
-		
-		
-		array(    "type" => "open"),
-		
-		array(  "name" => "Twitter Link",
-        "desc" => "Add link to Twitter profile.",
-        "id" => $shortname."_twitter_link",
-        "type" => "checkbox",
-        "std" => "false"),
-		
-		array(  "name" => "Twitter Username",
-        "desc" => "twitter.com/...",
-        "id" => $shortname."_twitter_username",
-        "type" => "text"),
-				
-		array(  "type" => "close"),
-		
-		array(    "type" => "open"),
-		
-		array(  "name" => "Facebook Link",
-        "desc" => "Add link to Facebook profile.",
-        "id" => $shortname."_facebook_link",
-        "type" => "checkbox",
-        "std" => "false"),
-		
-		array(  "name" => "Facebook Username",
-        "desc" => "facebook.com/...",
-        "id" => $shortname."_facebook_username",
-        "type" => "text"),
-				
-		array(  "type" => "close"),
-		
+
 		
 		array(    "name" => "Sub-Header",
         "type" => "title"),
@@ -370,6 +339,54 @@ function echo_magazine_post($post, $is_featured) {
 
 		array(    "type" => "close"),
 		
+		
+		array(    "name" => "Social",
+        "type" => "title"),
+				
+				array(    "type" => "open"),
+		
+		array(  "name" => "Twitter Link",
+        "desc" => "Add link to Twitter profile.",
+        "id" => $shortname."_twitter_link",
+        "type" => "checkbox",
+        "std" => "false"),
+		
+		array(  "name" => "Twitter Username",
+        "desc" => "twitter.com/...",
+        "id" => $shortname."_twitter_username",
+        "type" => "text"),
+				
+		array("name" => "Twitter Location",
+        "id" => $shortname."_twitter_location",
+        "type" => "radio",
+        "desc" => "Where to put Twitter icon",
+        "options" => array("default" => "Header", "footer" => "Footer", "both" => "Header and Footer"),
+        "std" => "default"),
+				
+		array(  "type" => "close"),
+		
+		array(    "type" => "open"),
+		
+		array(  "name" => "Facebook Link",
+        "desc" => "Add link to Facebook profile.",
+        "id" => $shortname."_facebook_link",
+        "type" => "checkbox",
+        "std" => "false"),
+		
+		array(  "name" => "Facebook Username",
+        "desc" => "facebook.com/...",
+        "id" => $shortname."_facebook_username",
+        "type" => "text"),
+				
+		array("name" => "Facebook Location",
+        "id" => $shortname."_facebook_location",
+        "type" => "radio",
+        "desc" => "Where to put Facebook icon",
+        "options" => array("default" => "Header", "footer" => "Footer", "both" => "Header and Footer"),
+        "std" => "default"),
+				
+		array(  "type" => "close"),
+				
 		
 		array(    "name" => "Misc",
         "type" => "title"),
@@ -400,6 +417,17 @@ function echo_magazine_post($post, $is_featured) {
 		array(  "name" => "Large Blog Avatars",
         "desc" => "Check this box to use large avatars on blog post page (requires Gravatar).",
         "id" => $shortname."_large_avatars",
+        "type" => "checkbox",
+        "std" => "false"),
+
+		array(    "type" => "close"),
+		
+		
+		array(    "type" => "open"),
+		
+		array(  "name" => "Flattr OKFN",
+        "desc" => "Check this box to add a link to donate to the Open Knowledge Foundation.",
+        "id" => $shortname."_flattr_okfn",
         "type" => "checkbox",
         "std" => "false"),
 

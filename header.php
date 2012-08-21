@@ -117,10 +117,10 @@
           <div class="container">
           <? if (($okfn_twitter_link == "true") or ($okfn_facebook_link == "true")) : ?>
             <div class="social-links">
-              <?php if ( !empty( $okfn_twitter_username ) && $okfn_twitter_link == "true" ) : ?>
+              <?php if ( !empty( $okfn_twitter_username ) && $okfn_twitter_link == "true" && $okfn_twitter_location != "footer" ) : ?>
                 <a class="twitter" href="https://twitter.com/<?php echo $okfn_twitter_username ?>">twitter</a>
               <? endif; ?>
-              <?php if ( !empty( $okfn_facebook_username ) && $okfn_facebook_link == "true" ) : ?>
+              <?php if ( !empty( $okfn_facebook_username ) && $okfn_facebook_link == "true" && $okfn_facebook_location != "footer" ) : ?>
                 <a class="facebook" href="http://www.facebook.com/<?php echo $okfn_facebook_username ?>">facebook</a>
               <? endif; ?>
             </div>
