@@ -119,11 +119,11 @@ html {
 }
 
 .sub-header {
-	background-color:#333333;
+	background-color:#c8c8c8;
 }
 .sub-header .breadcrumb,
 .sub-header .breadcrumb a {
-	color:#FFF;
+	color:#333333;
 }
 
 
@@ -286,6 +286,13 @@ html {
 .strapline .inner:after {
 	right: 0;
 	border-width: 10px 10px 0 0;
+}
+.home-page .strapline {
+	-webkit-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+}
+.home-page .strapline .inner:after {
+	border:none;
 }
 
 
