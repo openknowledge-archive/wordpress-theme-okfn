@@ -1588,9 +1588,6 @@ ul.scrollButtons li.right a:hover {
 .magazine #sidebar {
   margin-left: 4px;
 }
-.magazine .strapline {
-  display: none;  /* Magazine pages don't use a strapline. */
-}
 .magazine .post .image {
 	overflow: hidden;
 	display: block;
@@ -2522,16 +2519,19 @@ body.page-template-home-page-php.magazine #content {
   width: 100%;
 }
 body.page-template-home-page-php.magazine .post.preview {
-  width: 301px;
-	margin:15px 15px 0px 0px;
+  width: 298px;
+	margin:15px 20px 0px 0px;
 }
-body.page-template-home-page-php.magazine .post.preview:nth-of-type(4) {
+body.page-template-home-page-php.magazine .post.preview:last-of-type {
 	margin-right:0px;
 }
 body.page-template-home-page-php.magazine .post.preview .text {
 	height:110px;
 }
 body.page-template-home-page-php.magazine .post.preview .ribbon {
+	display:none;
+}
+body.page-template-home-page-php.magazine .post.preview .btn.btn-info {
 	display:none;
 }
 
