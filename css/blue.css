@@ -271,7 +271,7 @@ table.table-box tr.highlight td.red {
   box-shadow:none;
 }
 .well.grey,
-.well:hover {
+a.well:hover {
   background-color: #F5F5F5;
   border: 1px solid #eee;
   border: 1px solid rgba(0, 0, 0, 0.05);

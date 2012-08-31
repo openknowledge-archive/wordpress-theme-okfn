@@ -202,7 +202,7 @@ html {
 .well {
 	background-color: #FCFCFC;
 }
-.well:hover {
+a.well:hover {
   background-color: #F5F5F5;
 }
 

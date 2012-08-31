@@ -1158,7 +1158,7 @@ body.home-page .st_plusone_buttons {
 dl.grid-list {
 	margin-left:-16px;
 }
-dl.grid-list a.well {
+dl.grid-list .well {
 	float:left;
 	margin:0px 0px 16px 16px;
 	text-decoration:none;
@@ -1170,7 +1170,7 @@ dl.grid-list dd {
 	color:#333333;
 	margin:0px;
 }
-dl.grid-list.columns3 a.well {
+dl.grid-list.columns3 .well {
 	width:176px;
 }
 dl.grid-list.columns2 .well {
@@ -1200,10 +1200,10 @@ dl.grid-list.columns2 .well .title {
   margin-left:0px;
 }
 
-#content.fullwidth dl.grid-list.columns3 a.well {
+#content.fullwidth dl.grid-list.columns3 .well {
 	width:262px;
 }
-#content.fullwidth dl.grid-list.columns2 a.well {
+#content.fullwidth dl.grid-list.columns2 .well {
 	width:422px;
 }
 

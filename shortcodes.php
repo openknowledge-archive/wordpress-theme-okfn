@@ -211,22 +211,34 @@ function gridlist_item_shortcode( $atts ) {
 	extract( shortcode_atts( array(
 			'title' => '',
 			'description' => '',
-			'link' => '#',
+			'link' => '',
 			'icon' => '',
 			'image' => '',
 		), $atts ) );
 		
-		if (!empty($icon)) {
+		if (!empty($icon) && !empty($link)) {
 			return '<a href="'.$link.'" class="well"><dt><img src="'.$icon.'" alt="'.$title.'" class="icon"><div class="title">'.$title.'</div></dt>
 							<dd style="clear:left;">' .$description. '</dd></a>'; 
 		}
-		else if (!empty($image)) {
+		else if (!empty($image) && !empty($link)) {
 			return '<a href="'.$link.'" class="well"><dt><span class="image"><img src="'.$image.'" alt="'.$title.'"></span><h3>'.$title.'</h3></dt>
 							<dd style="clear:left;">' .$description. '</dd></a>'; 
 		}
-		else {
+		else if (!empty($link)) {
 			return '<a href="'.$link.'" class="well"><dt>'.$title.'</dt>
 							<dd>' .$description. '</dd></a>'; 
+		}
+		else if (!empty($icon)) {
+			return '<div class="well"><dt><img src="'.$icon.'" alt="'.$title.'" class="icon"><div class="title">'.$title.'</div></dt>
+							<dd style="clear:left;">' .$description. '</dd></div>'; 
+		}
+		else if (!empty($image)) {
+			return '<div class="well"><dt><span class="image"><img src="'.$image.'" alt="'.$title.'"></span><h3>'.$title.'</h3></dt>
+							<dd style="clear:left;">' .$description. '</dd></div>'; 
+		}
+		else {
+			return '<div class="well"><dt>'.$title.'</dt>
+							<dd>' .$description. '</dd></div>'; 
 		}
 }  
 add_shortcode('gli', 'gridlist_item_shortcode');  
