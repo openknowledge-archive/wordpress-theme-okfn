@@ -926,27 +926,19 @@ body.my-account .item-list-tabs ul li a {
   height: 0;
 }
 
+
 /* Front-page */
 /* ========== */
-body.home-page .st_facebook_buttons {
-  display: none;
-}
-body.home-page .st_twitter_buttons {
-  display: none;
-}
-body.home-page .st_email_buttons {
-  display: none;
-}
-body.home-page .st_sharethis_buttons {
-  display: none;
-}
-body.home-page .st_fblike_buttons {
-  display: none;
-}
-body.home-page .st_plusone_buttons {
-  display: none;
-}
 
+body.home-page .st_facebook_buttons,
+body.home-page .st_twitter_buttons,
+body.home-page .st_email_buttons,
+body.home-page .st_sharethis_buttons,
+body.home-page .st_fblike_buttons,
+body.home-page .st_plusone_buttons,
+body.home-page .st_pinterest._buttons {
+	display: none;
+}
 
 /* Menu Pod */
 /* ======== */
