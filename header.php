@@ -79,27 +79,29 @@
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/white.css"/>
     <? endif; ?>
     
+		<style type="text/css">
     <? if ($okfn_large_title == "true" && $okfn_tall_header == "true") : ?>
-      <style type="text/css">.navbar .brand {font-size: 36px; letter-spacing:-1px; text-indent:-5px; line-height: 62px;}</style>
+      .navbar .brand {font-size: 36px; letter-spacing:-1px; text-indent:-5px; line-height: 62px;}
     <? endif; ?>
     <? if ($okfn_logo_font == "ubuntu") : ?>
-      <link href='http://fonts.googleapis.com/css?family=Ubuntu:400' rel='stylesheet' type='text/css'>
-      <style type="text/css">.navbar .brand {font-family: 'Ubuntu', sans-serif; font-weight:400;}</style>
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu);
+      .navbar .brand {font-family: 'Ubuntu', sans-serif; font-weight:400;}
     <? endif; ?>
     <? if ($okfn_subheader == "true" && !is_front_page()) : ?>
-      <style type="text/css">.navbar-inner {border-bottom:none;}</style>
+      .navbar-inner {border-bottom:none;}
     <? endif; ?>
+		<? if ($okfn_buddypress_disable == "true") : ?>
+			.topbar {display:none; }
+			html {margin-top: 0px !important;}
+    <? endif; ?>
+    </style>
+    
     <? if (is_front_page()) : ?>
-      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.css"/>
-      <script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/spin.min.js"></script>
-      <script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.min.js"></script>
+      <!--<link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.css"/> -->
+      <!--<script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/spin.min.js"></script> -->
+      <!--<script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.min.js"></script> -->
     <? endif; ?>
-    <? if ($okfn_buddypress_disable == "true") : ?>
-      <style type="text/css">
-			  .topbar {display:none; }
-				html {margin-top: 0px !important;}
-      </style>
-    <? endif; ?>
+    
   </head>
   
 	<body <?php body_class() ?> id="bp-default">
