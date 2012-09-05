@@ -97,9 +97,9 @@
     </style>
     
     <? if (is_front_page()) : ?>
-      <!--<link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.css"/> -->
-      <!--<script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/spin.min.js"></script> -->
-      <!--<script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.min.js"></script> -->
+      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.css"/>
+      <script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/spin.min.js"></script>
+      <script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.min.js"></script>
     <? endif; ?>
     
   </head>
