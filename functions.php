@@ -173,23 +173,7 @@ function echo_magazine_post($post, $is_featured) {
 		
 		array(    "name" => "TopBar",
         "type" => "title"),
-		
-		array(    "type" => "open"),
-		
-		array(  "name" => "ShareThis",
-        "desc" => "Check this box to enable ShareThis in the TopBar.",
-        "id" => $shortname."_sharethis",
-        "type" => "checkbox",
-        "std" => "false"),
-		
-		array(    "name" => "Publisher ID",
-        "desc" => "If you have a ShareThis account, enter your publisher ID here.",
-        "id" => $shortname."_sharethis_id",
-        "std" => "",
-        "type" => "text"),
 				
-		array(  "type" => "close"),
-		
 		array(    "type" => "open"),
 		
 		array(  "name" => "Disable TopBar?",
@@ -197,19 +181,22 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_buddypress_disable",
         "type" => "checkbox",
         "std" => "false"),
-
-		
-		array(  "name" => "Keep Slim Header?",
-        "desc" => "Check this box if you would like to maintain the slim header.",
-        "id" => $shortname."_buddypress_slim",
-        "type" => "checkbox",
-        "std" => "false"),
-
+				
 		array(    "type" => "close"),
-
+		
 
 		array(    "name" => "Header",
         "type" => "title"),
+				
+		array(    "type" => "open"),
+		
+		array(  "name" => "Tall Header",
+        "desc" => "Check this box to make the header taller.",
+        "id" => $shortname."_tall_header",
+        "type" => "checkbox",
+        "std" => "false"),
+				
+		array(    "type" => "close"),
 				
 		array(    "type" => "open"),
 		
@@ -432,6 +419,22 @@ function echo_magazine_post($post, $is_featured) {
         "std" => "false"),
 
 		array(    "type" => "close"),
+		
+		array(    "type" => "open"),
+		
+		array(  "name" => "ShareThis",
+        "desc" => "Check this box to enable ShareThis.",
+        "id" => $shortname."_sharethis",
+        "type" => "checkbox",
+        "std" => "false"),
+		
+		array(    "name" => "Publisher ID",
+        "desc" => "If you have a ShareThis account, enter your publisher ID here.",
+        "id" => $shortname."_sharethis_id",
+        "std" => "",
+        "type" => "text"),
+				
+		array(  "type" => "close"),
 		
 		
 );

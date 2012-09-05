@@ -62,11 +62,7 @@
   
     <!-- Theme Settings -->
     <?
-     if ($okfn_buddypress_disable == "true") : ?>
-      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/nobuddypress.css"/>
-    <? endif; ?>
-    <?
-     if ($okfn_buddypress_disable == "true" && $okfn_buddypress_slim == "false") : ?>
+     if ($okfn_tall_header == "true") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/tall-header.css"/>
     <? endif; ?>
     <? if ($okfn_carosel == "text-right" || $okfn_carosel == "stack") : ?>
@@ -83,7 +79,7 @@
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/white.css"/>
     <? endif; ?>
     
-    <? if ($okfn_large_title == "true" && $okfn_buddypress_disable == "true") : ?>
+    <? if ($okfn_large_title == "true" && $okfn_tall_header == "true") : ?>
       <style type="text/css">.navbar .brand {font-size: 36px; letter-spacing:-1px; text-indent:-5px; line-height: 62px;}</style>
     <? endif; ?>
     <? if ($okfn_logo_font == "ubuntu") : ?>
@@ -97,6 +93,12 @@
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.css"/>
       <script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/spin.min.js"></script>
       <script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.min.js"></script>
+    <? endif; ?>
+    <? if ($okfn_buddypress_disable == "true") : ?>
+      <style type="text/css">
+			  .topbar {display:none; }
+				html {margin-top: 0px !important;}
+      </style>
     <? endif; ?>
   </head>
   
