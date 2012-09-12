@@ -112,6 +112,11 @@ blockquote small {
 }
 
 
+a.more {
+	font-weight:bold;
+}
+
+
 /* ================ */
 /* Wordpress Layout */
 /* ================ */
@@ -2298,6 +2303,15 @@ section.black-banner.full-width:after {
 	-o-background-size: auto;
 	background-size: auto;
 }
+.banner.black-banner.solid,
+section.black-banner.solid,
+.banner.black-banner.full-width.solid:before,
+.banner.black-banner.full-width.solid:after,
+section.black-banner.full-width.solid:before,
+section.black-banner.full-width.solid:after {
+	background-image:none;
+	background-color:#000;
+}
 
 .banner.lined,
 section.lined,
@@ -2316,6 +2330,46 @@ section.lined.full-width:after {
 	background-repeat:repeat;
 }
 
+
+.banner.squared,
+section.squared,
+.banner.squared.full-width:before,
+.banner.squared.full-width:after,
+section.squared.full-width:before,
+section.squared.full-width:after {
+	background-color: #f7f7f9;
+	background-image: url(../images/squared-paper.png);
+	background-position: left top;
+	color:#1d193d;
+	box-shadow: 0 -5px 5px -5px rgba(204, 210, 220, 1.0) inset;
+}
+.banner.squared h1,
+section.squared h1,
+.banner.squared h2,
+section.squared h2 {
+	font-family:'CabinSketchRegular', 'Open Sans', Helvetica, Arial, sans-serif;
+}
+.banner.squared a,
+section.squared a,
+.banner.squared a:visited,
+section.squared a:visited {
+  color: #1d193d;
+  text-decoration: underline;
+}
+.banner.squared a:hover,
+section.squared a:hover {
+  color: #000;
+}
+.banner.squared.full-width:before,
+section.squared.full-width:before {
+	background-position: right top;
+}
+.banner.squared.full-width:after,
+section.squared.full-width:after  {
+	background-position: 20px top;
+}
+
+
 .static-banner {
 	padding: 20px 165px 20px 400px;
 	display: table;
@@ -2328,6 +2382,14 @@ section.lined.full-width:after {
 	font-size:22px;
 	line-height:26px;
 	font-family:OpenSansLight, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+section.coloured,
+section.coloured:before,
+section.coloured:after {
+	background-color:#1C1C1C;
+	color:#FFF;
 }
 	
 
@@ -2505,6 +2567,30 @@ body > .corner.ribbon img {
 		max-width:none;
 		width:100%;
 	}
+}
+
+
+/* Pull Quote */
+/* ========== */
+
+.pull-quote {
+	font-family: OpenSansLight, "Helvetica Neue", Helvetica,Arial,sans-serif;
+	font-size:22px;
+	line-height:22px;
+	padding-left:15px;
+}
+.pull-quote:before,
+.pull-quote:after {
+	font-size:38px;
+	position:absolute;
+}
+.pull-quote:before {
+  content: '\201C';
+	margin-left:-15px;
+}
+.pull-quote:after {
+  content: '\201D';
+	padding-left:5px;
 }
 
 

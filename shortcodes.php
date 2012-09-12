@@ -373,4 +373,44 @@ function pippin_login_form_shortcode( $atts, $content = null ) {
 add_shortcode('loginform', 'pippin_login_form_shortcode');
 
 
+/*********************************************************************************************
+* Name:        Menu Pod
+* Author:      Sam Smith
+* Description: Expanding menu
+* Example:     [menupod icon="cog/bubble/heart" link="http://link.com" heading="Heading Here" subheading="Subheading Here"]
+               [menupoditem text="Text here" link="http://link.com"]
+               [/menupod]
+**********************************************************************************************/
+
+function menupod_shortcode( $atts, $content = null ) {
+	 extract( shortcode_atts( array(
+			'icon' => 'cog',
+			'link' => '#',
+			'heading' => 'Heading Here',
+			'subheading' => '',
+		), $atts ) );
+   return '<div class="okfn-dropdown">
+		 <a href="'.$link.'" class="background-'.$icon.'">
+			<h5>'.$heading.'</h5>
+			<p>'.$subheading.'</p>
+		</a>
+		<div class="okfn-dropdown-items">' 
+		.do_shortcode($content). 
+		'</div>
+	</div>';
+} 
+add_shortcode( 'menupod', 'menupod_shortcode' );
+
+function menupoditem_shortcode( $atts ) {  
+	extract( shortcode_atts( array(
+			'text' => 'Text here',
+			'link' => '#',
+		), $atts ) );
+		
+		return '<a href="'.$link.'">'.$text.'</a>'; 
+		}
+
+add_shortcode('menupoditem', 'menupoditem_shortcode'); 
+
+
 ?>

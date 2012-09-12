@@ -132,6 +132,25 @@ html {
 }
 
 
+section.coloured,
+section.coloured:before,
+section.coloured:after {
+	background-color: #f5f5f5;
+	color: #333333;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #e5e5e5;
+	border-bottom-color: #e5e5e5;
+}
+section.coloured:before,
+section.coloured:after {
+	top:-1px;
+	bottom:-1px;
+}
+
+
 .button-bar ul,
 .button-bar ul:before,
 .button-bar ul:after {
