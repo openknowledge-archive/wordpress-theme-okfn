@@ -47,6 +47,11 @@ Template Name: OKFN Front Page
           restore_current_blog();
         }
       ?>
+      <script>
+        jQuery(document).ready(function() {
+          jQuery(".magazine .post.preview .text").dotdotdot({});
+        });
+      </script>
       </div><!-- .magazine -->
 
 		</div><!-- .page -->
