@@ -1732,13 +1732,6 @@ ul.scrollButtons li.right a:hover {
 .magazine .post h2 a {
   color: #282828;
 }
-/* Display magazine posts on the OKFN.org front page */
-.magazine-3inarow {
-  margin: 15px auto;
-}
-.magazine-3inarow .post.preview {
-  width: 300px;
-}
 
 
 /* Blog Post Page */
@@ -2621,6 +2614,33 @@ body.page-template-home-page-php.magazine .post.preview .ribbon {
 	display:none;
 }
 body.page-template-home-page-php.magazine .post.preview .btn.btn-info {
+	display:none;
+}
+
+#content.okfn-front .magazine .post.box {
+	border:none;
+	margin:0px 0px 0px 20px;
+	width:220px;
+}
+#content.okfn-front [class*="posts"] {
+	margin-left:-20px;
+}
+#content.okfn-front .magazine .post.box .padder {
+	padding:0px;
+}
+#content.okfn-front .magazine .post.box .ribbon {
+	display:none;
+}
+#content.okfn-front .magazine .post.preview .image {
+  height: 136px;
+}
+#content.okfn-front .magazine .post.preview .text {
+	padding:0px;
+}
+#content.okfn-front .magazine .post.preview .text .entry-meta {
+	display:none;
+}
+#content.okfn-front .magazine .post.preview .btn {
 	display:none;
 }
 

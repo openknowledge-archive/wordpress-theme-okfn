@@ -5,7 +5,7 @@ Template Name: OKFN Front Page
 ?>
 <?php get_header(); ?>
 
-	<div id="content">
+	<div id="content" class="okfn-front">
 		<div class="padder">
 
 		<?php do_action( 'bp_before_blog_page' ); ?>
@@ -33,11 +33,13 @@ Template Name: OKFN Front Page
 
 			<?php endwhile; endif; ?>
 
-      <div class="magazine magazine-3inarow">
+			<h3>From our Blog</h3>
+			<?php $okfn_front_post_number="4" ?>
+      <div class="magazine posts<?php echo $okfn_front_post_number ?>">
       <?php 
         if (switch_to_blog(37,true)) {
           // Query remaining posts
-          $post_filter_etc = array('posts_per_page' => 3);
+          $post_filter_etc = array('posts_per_page' => $okfn_front_post_number);
           // Print the remaining posts
           query_posts( $post_filter_etc );
           while (have_posts()) {
