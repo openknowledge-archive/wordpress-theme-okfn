@@ -1732,6 +1732,13 @@ ul.scrollButtons li.right a:hover {
 .magazine .post h2 a {
   color: #282828;
 }
+/* Display magazine posts on the OKFN.org front page */
+.magazine-3inarow {
+  margin: 15px auto;
+}
+.magazine-3inarow .post.preview {
+  width: 300px;
+}
 
 
 /* Blog Post Page */

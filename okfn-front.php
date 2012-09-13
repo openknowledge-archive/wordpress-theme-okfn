@@ -33,24 +33,21 @@ Template Name: OKFN Front Page
 
 			<?php endwhile; endif; ?>
 
+      <div class="magazine magazine-3inarow">
       <?php 
         if (switch_to_blog(37,true)) {
-          echo '<small>Begin Magazine posts:</small>';
           // Query remaining posts
           $post_filter_etc = array('posts_per_page' => 3);
           // Print the remaining posts
           query_posts( $post_filter_etc );
           while (have_posts()) {
             the_post();
-            echo '<pre>';
-            print_r($post);
-            echo '</pre>';
-            //echo_magazine_post($post, false);
+            echo_magazine_post($post, false);
           }
-          echo '<small>End Magazine posts</small>';
           restore_current_blog();
         }
       ?>
+      </div><!-- .magazine -->
 
 		</div><!-- .page -->
 
