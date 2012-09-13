@@ -52,6 +52,7 @@ Template Name: OKFN Front Page
       <script>
         jQuery(document).ready(function() {
           jQuery(".magazine .post.preview .text").dotdotdot({});
+					jQuery(".magazine .post.preview .text h2").dotdotdot({});
         });
       </script>
       </div><!-- .magazine -->

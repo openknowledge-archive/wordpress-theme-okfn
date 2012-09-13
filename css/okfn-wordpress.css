@@ -2637,6 +2637,9 @@ body.page-template-home-page-php.magazine .post.preview .btn.btn-info {
 #content.okfn-front .magazine .post.preview .text {
 	padding:0px;
 }
+#content.okfn-front .magazine .post.preview .text h2 {
+	height:44px;
+}
 #content.okfn-front .magazine .post.preview .text .entry-meta {
 	display:none;
 }
