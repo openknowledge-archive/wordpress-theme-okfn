@@ -2283,6 +2283,12 @@ section.black-banner {
 }
 .banner.black-banner h1,
 section.black-banner h1,
+.banner.black-banner h2,
+section.black-banner h2,
+.banner.black-banner h3,
+section.black-banner h3,
+.banner.black-banner a,
+section.black-banner a,
 section.black-banner label {
 	color: #FFFFFF;
 }
