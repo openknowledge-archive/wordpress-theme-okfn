@@ -2600,6 +2600,43 @@ body > .corner.ribbon img {
 }
 
 
+/* Latest Posts */
+/* ============ */
+
+.latest-posts li {
+	list-style:none;
+}
+.latest-posts li a {
+	display:block;
+	height:66px;
+	padding:3px;
+	text-decoration:none;
+}
+.latest-posts li .image {
+	display:block;
+	float:left;
+	width:66px;
+	height:66px;
+	background-size:cover;
+	background-position:center center;
+	-webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3); 
+}
+.latest-posts li .date {
+	display:none;
+}
+.latest-posts li .text {
+	margin-left:80px;
+	margin-right:8px;
+	color:#333333;
+	height:66px;
+}
+#content .latest-posts li h4 {
+	margin:6px 0px 0px 0px;
+	line-height:18px;
+}
+
+
 /* Mag Homepage */
 /* ============ */
 

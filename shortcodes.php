@@ -413,4 +413,48 @@ function menupoditem_shortcode( $atts ) {
 add_shortcode('menupoditem', 'menupoditem_shortcode'); 
 
 
+/*********************************************************************************************
+* Name:        Latest Posts
+* Author:      Sam Smith
+* Description: Show lastest blog posts, number to show defined by postnumber attribute
+**********************************************************************************************/
+
+function latest_posts_shortcode( $atts ){
+	extract( shortcode_atts( array(
+			'postnumber' => '3',
+			'category' => '',
+		), $atts ) );
+		
+    $q = new WP_Query(
+			array( 'orderby' => 'date', 'posts_per_page' => ''.$postnumber.'', 'category_name' => ''.$category.'')
+		);
+
+		$list = '<ul class="latest-posts">';
+
+		while($q->have_posts()) : $q->the_post();
+			// Extract the first img src from the post body
+			$regex = '/magazine.image\s*=\s*"?([^"\s]*)/';
+			preg_match($regex, get_the_content(), $matches);
+			$post_img = 'http://assets.okfn.org/web/images/blog-placeholder.png';
+			if (count($matches)) $post_img = $matches[1];
+		
+			$list .= '<li><a href="' . get_permalink() . '" class="box"><span class="image" style="background-image:url('.$post_img.');"></span><div class="text"><h4 class="title">' . get_the_title() . '</h4><p class="date">' . get_the_date() . '</p>' . '<span>' . get_the_excerpt() . '</span></div></a></li>';
+
+		endwhile;
+
+		wp_reset_query();
+
+		return $list . '</ul>
+		<script>
+	jQuery(document).ready(function() {
+				jQuery(".latest-posts li .text").dotdotdot({
+						//  configuration goes here
+				});
+		});
+</script>';
+
+}
+add_shortcode( 'latest_posts', 'latest_posts_shortcode' );
+
+
 ?>
