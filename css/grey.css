@@ -149,6 +149,13 @@ section.coloured:after {
 	top:-1px;
 	bottom:-1px;
 }
+section.coloured,
+section.coloured h1,
+section.coloured h2,
+section.coloured h3,
+section.coloured h4 {
+	color:#333333;
+}
 
 
 .button-bar ul,

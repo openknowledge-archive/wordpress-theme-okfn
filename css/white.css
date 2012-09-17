@@ -199,9 +199,20 @@ input:focus, textarea:focus {
 }
 
 
+/* Image Pod */
+/* ========= */
+.image-pod .caption {
+	background-color: rgba(255, 255, 255, 0.8);
+	color:#333333;
+}
+#content .image-pod .caption h2,
+#content .image-pod .caption h3 {
+	color:#333333;
+}
+
+
 /* Well */
 /* ==== */
-
 .well {
 	background-color: #FFFFFF;
 	border: 1px solid ##C6C6C6;
@@ -336,6 +347,16 @@ body.page-template-home-page-php.magazine #content {
 	color:#FFF;
 }
 
+.ribbon.green {
+  background-color: #68aa35;
+  background-image: -moz-linear-gradient(top, #79ba46, #68aa35);
+  background-image: -ms-linear-gradient(top, #79ba46, #68aa35);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#79ba46), to(#68aa35));
+  background-image: -webkit-linear-gradient(top, #79ba46, #68aa35);
+  background-image: -o-linear-gradient(top, #79ba46, #68aa35);
+  background-image: linear-gradient(top, #79ba46, #68aa35);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#79ba46', endColorstr='#68aa35', GradientType=0);
+}
 
 /* Plugins */
 /* ======= */
