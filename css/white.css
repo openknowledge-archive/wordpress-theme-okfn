@@ -206,7 +206,8 @@ input:focus, textarea:focus {
 	color:#333333;
 }
 #content .image-pod .caption h2,
-#content .image-pod .caption h3 {
+#content .image-pod .caption h3,
+#content .image-pod .caption .title {
 	color:#333333;
 }
 

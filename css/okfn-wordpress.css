@@ -1074,11 +1074,14 @@ body.home-page .st_pinterest._buttons {
 	line-height:12px;
 }
 #content .image-pod .caption h2,
-#content .image-pod .caption h3 {
+#content .image-pod .caption h3, 
+#content .image-pod .caption .title {
 	color:#FFF;
 	margin:0px 0px 12px 0px;
 	font-size:16px;
 	line-height:24px;
+	font-family:'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight:600;
 }
 #content .image-pod .caption p {
 	line-height:12px;
