@@ -593,7 +593,8 @@ ul#members-list {
 #sidebar .widget.widget_wp_sidebarlogin form {
 	padding:0px 10px;
 }
-#sidebar .widget.widget_wp_sidebarlogin form input.text {
+#sidebar .widget.widget_wp_sidebarlogin form input.text,
+#sidebar .widget.widget_wp_sidebarlogin form input.input {
   -webkit-box-sizing: inherit !important; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: inherit !important;   /* Firefox, other Gecko */
 	box-sizing: inherit !important;        /* Opera/IE 8+ */
