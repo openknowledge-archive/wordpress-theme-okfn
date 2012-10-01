@@ -2577,6 +2577,7 @@ body > .corner.ribbon {
 }
 body > .corner.ribbon:hover {
 	text-decoration:none;
+	color:#FFF;
 }
 body > .corner.ribbon img {
 	max-height:36px;
