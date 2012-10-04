@@ -218,11 +218,11 @@ function gridlist_item_shortcode( $atts ) {
 		
 		if (!empty($icon) && !empty($link)) {
 			return '<a href="'.$link.'" class="well"><dt><img src="'.$icon.'" alt="'.$title.'" class="icon"><div class="title">'.$title.'</div></dt>
-							<dd style="clear:left;">' .$description. '</dd></a>'; 
+							<dd>' .$description. '</dd></a>'; 
 		}
 		else if (!empty($image) && !empty($link)) {
 			return '<a href="'.$link.'" class="well"><dt><span class="image"><img src="'.$image.'" alt="'.$title.'"></span><h3>'.$title.'</h3></dt>
-							<dd style="clear:left;">' .$description. '</dd></a>'; 
+							<dd>' .$description. '</dd></a>'; 
 		}
 		else if (!empty($link)) {
 			return '<a href="'.$link.'" class="well"><dt>'.$title.'</dt>
@@ -230,11 +230,11 @@ function gridlist_item_shortcode( $atts ) {
 		}
 		else if (!empty($icon)) {
 			return '<div class="well"><dt><img src="'.$icon.'" alt="'.$title.'" class="icon"><div class="title">'.$title.'</div></dt>
-							<dd style="clear:left;">' .$description. '</dd></div>'; 
+							<dd>' .$description. '</dd></div>'; 
 		}
 		else if (!empty($image)) {
 			return '<div class="well"><dt><span class="image"><img src="'.$image.'" alt="'.$title.'"></span><h3>'.$title.'</h3></dt>
-							<dd style="clear:left;">' .$description. '</dd></div>'; 
+							<dd>' .$description. '</dd></div>'; 
 		}
 		else {
 			return '<div class="well"><dt>'.$title.'</dt>

@@ -1218,6 +1218,32 @@ dl.grid-list.columns2 .well .title {
   margin-left:0px;
 }
 
+dl.grid-list.columns1 a.well h3 {
+	padding-top:30px;
+}
+dl.grid-list.columns1 a.well dt:after {
+	content:" ›";
+	float:right;
+	width:36px;
+	height:36px;
+	-webkit-border-radius: 18px;
+  border-radius: 18px;
+	font-size:60px;
+	line-height:28px;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:100;
+	text-align:center;
+	margin:5px 20px 5px 40px;
+	color:#d1d1d1;
+	background-color:#fefefe;
+	-webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3); 
+}
+dl.grid-list.columns1 .well .image {
+	float:left;
+	margin-right:20px;
+}
+
 #content.fullwidth dl.grid-list.columns3 .well {
 	width:262px;
 }
