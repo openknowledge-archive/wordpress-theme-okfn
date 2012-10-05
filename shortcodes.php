@@ -457,4 +457,34 @@ function latest_posts_shortcode( $atts ){
 add_shortcode( 'latest_posts', 'latest_posts_shortcode' );
 
 
+/*********************************************************************************************
+* Name:        Flickr Banner
+* Author:      Sam Smith
+* Description: Requires FlickrRss plugin, with this content: 
+*              <span style="background-image:url(%image_small%);"></span>
+**********************************************************************************************/
+
+add_shortcode( 'fbanner', 'fbanner_shortcode' );
+
+function fbanner_shortcode( $atts, $content = null ) {  
+	extract( shortcode_atts( array(
+	  'id' => '50136062@N03',
+	  'set' => '72157631690090162', 
+		), $atts ) );
+
+			echo '<div class="flickr banner">';
+			get_flickrRSS(
+				array(
+					'set' => $set, 
+					'num_items' => 18, 
+					'type' => 'set', 
+          'id' => $id,
+				 )
+);
+			echo '<div class="inner">' .do_shortcode($content). '</div></div>'; 
+
+}
+add_shortcode('fbanner', 'fbanner_shortcode'); 
+
+
 ?>

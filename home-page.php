@@ -24,7 +24,8 @@ function browser_body_class($classes = '') {
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php the_content(); ?>
 		<?php endwhile; endif; ?>
-    
+    <h3>From our Blog</h3>
+    <div class="posts">
     <?php 
     /* =================== */
     /* == Magazine Body == */
@@ -42,7 +43,7 @@ function browser_body_class($classes = '') {
       }
 
       // Query remaining posts
-      $post_filter_etc = array('posts_per_page' => 3, 'post__not_in' => $idsToSkip);
+      $post_filter_etc = array('posts_per_page' => 4, 'post__not_in' => $idsToSkip);
 
       // Print the remaining posts
       query_posts( $post_filter_etc );
@@ -52,6 +53,7 @@ function browser_body_class($classes = '') {
       }
     /* =================== */
     ?>
+    </div>
     </div>
 
     <?php do_action( 'bp_after_blog_home' ) ?>
@@ -65,8 +67,7 @@ function browser_body_class($classes = '') {
 
 <script>
 	jQuery(document).ready(function() {
-				jQuery(".magazine .post.preview .text").dotdotdot({
-						//  configuration goes here
-				});
-		});
+          jQuery(".magazine .post.preview .text").dotdotdot({});
+					jQuery(".magazine .post.preview .text h2").dotdotdot({});
+        });
 </script>
