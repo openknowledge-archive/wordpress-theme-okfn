@@ -2435,13 +2435,16 @@ section.squared.full-width:after  {
 
 
 .flickr.banner {
-	width:960px;
-	margin:0px 0px 20px -10px;
+	margin:0px 0px 20px 0px;
 	position:relative;
 	height:300px;
 	overflow:hidden;
 }
-.flickr.banner > span {
+.flickr.banner .inner {
+	width:960px;
+	margin-left:-10px
+}
+.flickr.banner .inner > span {
 	display: block;
 	float: left;
 	width: 160px;
@@ -2449,7 +2452,7 @@ section.squared.full-width:after  {
 	background-position: center center;
 	background-size:cover;
 }
-.flickr.banner .inner {
+.flickr.banner .inner .text {
 	position:absolute;
 	left:0px;
 	bottom:25px;

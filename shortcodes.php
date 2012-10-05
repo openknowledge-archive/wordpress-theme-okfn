@@ -472,7 +472,7 @@ function fbanner_shortcode( $atts, $content = null ) {
 	  'set' => '72157631690090162', 
 		), $atts ) );
 
-			echo '<div class="flickr banner">';
+			echo '<div class="flickr banner"><div class="inner">';
 			get_flickrRSS(
 				array(
 					'set' => $set, 
@@ -481,7 +481,7 @@ function fbanner_shortcode( $atts, $content = null ) {
           'id' => $id,
 				 )
 );
-			echo '<div class="inner">' .do_shortcode($content). '</div></div>'; 
+			echo '<div class="text">' .do_shortcode($content). '</div></div></div>'; 
 
 }
 add_shortcode('fbanner', 'fbanner_shortcode'); 
