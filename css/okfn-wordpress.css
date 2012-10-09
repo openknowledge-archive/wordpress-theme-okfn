@@ -430,7 +430,8 @@ ul#members-list {
 #sidebar .widget form {
 	margin:0px;
 }
-#sidebar .widget input[type="text"] {
+#sidebar .widget input[type="text"],
+#sidebar .widget input[type="email"] {
 	width:208px;
 	margin-bottom:10px;
 }
