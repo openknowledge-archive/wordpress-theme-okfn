@@ -272,6 +272,10 @@ ul.feature-list.black li {
 	background-image:url(http://assets.okfn.org/p/ckan/img/icons/16/tick-black.png)
 }
 
+.padder {
+	padding-bottom:15px;
+}
+
 
 /* Wordpress: Pagination */
 /* ===================== */
