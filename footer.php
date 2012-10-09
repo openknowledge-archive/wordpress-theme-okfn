@@ -14,6 +14,48 @@
       </div>     
     </div>
 
+		<?
+      global $options;
+      foreach ($options as $value) {
+          if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+      }
+      if ( $okfn_mailinglist_bar == "true" && $okfn_mailinglist_bar_location == "footer" ) : ?>
+      <section class="subscribe">
+        <div class="container">
+          <!-- Begin MailChimp Signup Form -->
+          <div id="mc_embed_signup">
+            <form action="<?php echo $okfn_mailinglist_action?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div class="row">
+                <div class="span11">
+                  <h5>Join the OKFN Mailing List</h5>
+                  <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address </label>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+                  </div>
+                  <div class="mc-field-group">
+                    <label for="mce-FNAME">First Name </label>
+                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="First Name">
+                  </div>
+                  <div class="mc-field-group">
+                    <label for="mce-LNAME">Last Name </label>
+                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME" placeholder="Last Name">
+                  </div>
+                  <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                  </div>
+                </div>
+                <div class="span1">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </div>
+              </div>
+            </form>
+          </div>
+          <!--End mc_embed_signup-->
+        </div>
+      </section>
+    <? endif; ?>
+
     <footer>
     <div class="inner">
       <div class="container">
@@ -35,12 +77,7 @@
           <div id="footer-widgets">
             <?php get_sidebar( 'footer' ) ?>
             <div class="footer-buttons">
-							<?
-								global $options;
-								foreach ($options as $value) {
-										if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
-								}
-				 				if ( !empty( $okfn_twitter_username ) && $okfn_twitter_link == "true" && $okfn_twitter_location != "default" ) : ?>
+				 			<?php if ( !empty( $okfn_twitter_username ) && $okfn_twitter_link == "true" && $okfn_twitter_location != "default" ) : ?>
                 <a class="twitter" href="https://twitter.com/<?php echo $okfn_twitter_username ?>">twitter</a>
               <? endif; ?>
               <?php if ( !empty( $okfn_facebook_username ) && $okfn_facebook_link == "true" && $okfn_facebook_location != "default" ) : ?>

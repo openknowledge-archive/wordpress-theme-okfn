@@ -373,6 +373,32 @@ function echo_magazine_post($post, $is_featured) {
         "std" => "default"),
 				
 		array(  "type" => "close"),
+		
+		
+		array(    "name" => "Mailing List",
+        "type" => "title"),
+				
+				array(    "type" => "open"),
+		
+		array(  "name" => "Mailing List Bar",
+        "desc" => "Add mailing list form",
+        "id" => $shortname."_mailinglist_bar",
+        "type" => "checkbox",
+        "std" => "false"),
+		
+		array(  "name" => "Action",
+        "desc" => "eg. Mailchimp url",
+        "id" => $shortname."_mailinglist_action",
+        "type" => "text"),
+				
+		array("name" => "Twitter Location",
+        "id" => $shortname."_mailinglist_bar_location",
+        "type" => "radio",
+        "desc" => "Where to put bar",
+        "options" => array("header" => "Header", "footer" => "Footer"),
+        "std" => "footer"),
+				
+		array(  "type" => "close"),
 				
 		
 		array(    "name" => "Misc",

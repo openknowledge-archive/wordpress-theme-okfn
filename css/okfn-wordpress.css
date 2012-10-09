@@ -2755,6 +2755,7 @@ body.page-template-home-page-php.magazine #content {
 body.page-template-home-page-php.magazine .posts,
 #content.okfn-front [class*="posts"] {
 	margin-left:-20px;
+	min-height:300px;
 }
 #content.okfn-front .magazine .post.box,
 body.page-template-home-page-php.magazine .post.preview {
@@ -2798,7 +2799,6 @@ body.page-template-home-page-php.magazine .post.preview .btn,
 
 body > section.subscribe {
 	background-color:#E5E5E5;
-	margin-top:20px;
 	padding-top:11px;
 	border-top:solid 1px #CBCBCB;
 }

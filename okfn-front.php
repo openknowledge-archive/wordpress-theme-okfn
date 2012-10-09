@@ -65,38 +65,5 @@ Template Name: OKFN Front Page
 	</div><!-- #content -->
 
 	<?php get_sidebar(); ?>
-  <section class="subscribe">
-    <div class="container">
-      <!-- Begin MailChimp Signup Form -->
-      <div id="mc_embed_signup">
-        <form action="http://okfn.us2.list-manage2.com/subscribe/post?u=a3f1f88a62b23f51641693977&amp;id=1524478d61" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <div class="row">
-            <div class="span11">
-              <h5>Join the OKFN Mailing List</h5>
-              <div class="mc-field-group">
-                <label for="mce-EMAIL">Email Address </label>
-                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
-              </div>
-              <div class="mc-field-group">
-                <label for="mce-FNAME">First Name </label>
-                <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="First Name">
-              </div>
-              <div class="mc-field-group">
-                <label for="mce-LNAME">Last Name </label>
-                <input type="text" value="" name="LNAME" class="" id="mce-LNAME" placeholder="Last Name">
-              </div>
-              <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-              </div>
-            </div>
-            <div class="span1">
-            	<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-            </div>
-          </div>
-        </form>
-      </div>
-			<!--End mc_embed_signup-->
-    </div>
-  </section>
+  
 <?php get_footer(); ?>
