@@ -2788,6 +2788,37 @@ body.page-template-home-page-php.magazine .post.preview .btn,
 }
 
 
+/* Mailing List */
+/* ============ */
+
+body > section.subscribe {
+	background-color:#E5E5E5;
+	margin-top:20px;
+	padding-top:11px;
+	border-top:solid 1px #CBCBCB;
+}
+body > section.subscribe h5 {
+	display:inline-block;
+}
+body > section.subscribe form {
+	margin-bottom:7px;
+}
+body > section.subscribe [class*="mc-field"] {
+	display:inline-block;
+	margin-left:10px;
+	width:218px;
+}
+body > section.subscribe [class*="mc-field"] input {
+	width:100%;
+}
+body > section.subscribe [class*="mc-field"] label {
+	display:none;
+}
+body > section.subscribe .button {
+	float:right;
+}
+
+
 /* WP Fixes */
 /* ======== */
 
@@ -2829,6 +2860,9 @@ p:empty {
 /* Footer */
 /* ====== */
 
+body > footer {
+	margin-top:0px;
+}
 body > footer h3 {
 	font-size:14px;
 }
