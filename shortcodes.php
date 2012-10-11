@@ -32,8 +32,10 @@ add_shortcode( 'pseudosidebar', 'pseudosidebar_shortcode' );
 **********************************************************************************************/
 
 function carousel_shortcode( $atts, $content = null ) {
-	
-   return '<div id="myCarousel" class="carousel"><div class="carousel-inner">' .do_shortcode($content). '</div><a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a><a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a></div>';
+	extract( shortcode_atts( array(
+			'class' => '',
+		), $atts ) );
+   return '<div id="myCarousel" class="carousel '.$class.'"><div class="carousel-inner">' .do_shortcode($content). '</div><a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a><a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a></div>';
 } 
 add_shortcode( 'carousel', 'carousel_shortcode' );
 

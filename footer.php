@@ -112,6 +112,7 @@
     <!-- cycling for ticker carousel -->
 		<script>
       $(".ticker").carousel({ interval: 6000 });
+			$(".carousel.cycle").carousel({ interval: 8000 });
     </script>
    
     <!-- photo stack style banner -->
