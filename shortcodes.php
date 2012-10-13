@@ -35,38 +35,32 @@ function carousel_shortcode( $atts, $content = null ) {
 	extract( shortcode_atts( array(
 			'class' => '',
 		), $atts ) );
-   return '<div id="myCarousel" class="carousel '.$class.'"><div class="carousel-inner">' .do_shortcode($content). '</div><a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a><a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a></div>';
+   return '<div id="myCarousel" class="carousel '.$class.'"><div class="carousel-inner">' .do_shortcode($content). '</div><a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a><a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a></div><script>$(".text-slide").parent().addClass("not-photo");</script>';
 } 
 add_shortcode( 'carousel', 'carousel_shortcode' );
 
 function carousel_slide_shortcode( $atts ) {  
 	extract( shortcode_atts( array(
-			'img' => 'http://farm8.staticflickr.com/7174/6554801385_83acdc501d_o_d.png',
+			'img' => '',
+			'text' => '',
 			'caption' => '',
 			'class' => '',
 			'heading' => '',
 		), $atts ) );
 		
-		if(!empty($caption) && !empty($heading) ){
-			return '<div class="item ' .$class. '"><img src="' .$img. '">
-								<div class="carousel-caption">
-									<h2>' .$heading. '</h2>
-									' .$caption. '
-								</div>
-							</div>'; 
-		}
-		else if (!empty($caption)) {
-			//return '<div class="item ' .$class. '" style="background-image:url('.$img.')"><img src="' .$img. '">
-			return '<div class="item ' .$class. '"><img src="' .$img. '">
-								<div class="carousel-caption">
-									' .$caption. '
-								</div>
-							</div>'; 
-		}
-		else {
-			return '<div class="item ' .$class. '"><img src="' .$img. '">
-			        </div>'; 
-		}
+		$slideOpen = '<div class="item ' .$class. '">';
+		if (!empty($img)) { $slideContent = '<img src="' .$img. '">';} 
+		elseif (!empty($text)) { $slideContent = '<div class="text-slide">' .$text. '</div>';}
+		else { $slideContent = '<img src="http://farm8.staticflickr.com/7174/6554801385_83acdc501d_o_d.png">';};
+		if (!empty($caption)) { $slideCaptionOpen = '<div class="carousel-caption">';};
+		if (!empty($heading)) { $slideHeading = '<h2>' .$heading. '</h2>';};
+		if (!empty($caption)) { $slideCaption = '' .$caption.' </div>';};
+		$slideClose =  '</div>';
+		
+		$slide = $slideOpen.$slideContent.$slideCaptionOpen.$slideHeading.$slideCaption.$slideClose;
+		
+		return $slide ;
+		
 }  
 add_shortcode('slide', 'carousel_slide_shortcode');  
 

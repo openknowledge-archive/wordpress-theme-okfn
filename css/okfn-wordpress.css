@@ -2860,6 +2860,29 @@ p:empty {
 .banner > .carousel.photo-stack .carousel-control {
    bottom: 100px;
 }
+.banner > .carousel.photo-stack .item.not-photo {
+	background-image:none;
+}
+
+/* Text Slide */
+.banner > .carousel .item .text-slide {
+	text-align:right;
+	width:44%;
+	text-transform:uppercase;
+	font-family:'Open Sans', Helvetica, Arial, sans-serif;
+	border-right:solid 1px #afafaf;
+	padding-left:15px;
+	padding-right:25px;
+}
+.banner > .carousel .item .text-slide p {
+	font-size:40px;
+	line-height:32px;
+	font-weight:700;
+	margin-bottom:4px;
+}
+.banner > .carousel .item .text-slide p:nth-of-type(even) {
+	color:#6a6a6a;
+}
 
 
 /* Footer */
