@@ -460,6 +460,13 @@ function echo_magazine_post($post, $is_featured) {
         "std" => "",
         "type" => "text"),
 				
+		array("name" => "ShareThis Location",
+        "id" => $shortname."_sharethis_location",
+        "type" => "radio",
+        "desc" => "Where is it going?",
+        "options" => array("footer" => "Footer", "elsewhere" => "Elsewhere"),
+        "std" => "footer"),
+				
 		array(  "type" => "close"),
 		
 		

@@ -89,7 +89,7 @@
                   <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
                 </a>
               <? endif; ?>
-              <?php if ($okfn_sharethis == "true") : ?>
+              <?php if ($okfn_sharethis == "true" && $okfn_sharethis_location == "footer") : ?>
                   <span class='st_facebook' displayText='Facebook'></span>
                   <span class='st_twitter' displayText='Twitter'></span>
               <? endif; ?>
