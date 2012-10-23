@@ -109,18 +109,11 @@
 		<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/bootstrap.js"></script>
     <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/jquery.dotdotdot-1.4.0-packed.js"></script>
     
-    <!-- cycling for ticker carousel -->
+    <!-- cycling for carousel -->
 		<script>
       $(".ticker").carousel({ interval: 6000 });
 			$(".carousel.cycle").carousel({ interval: 8000 });
     </script>
-   
-    <!-- photo stack style banner -->
-    <? if ($okfn_carosel == "stack") : ?>
-      <script>
-			  $(".banner > .carousel").addClass("photo-stack");
-      </script>
-    <? endif; ?>
      
     <!-- sharethis -->
     <? if ($okfn_sharethis == "true") : ?>

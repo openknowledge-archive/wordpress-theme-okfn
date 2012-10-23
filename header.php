@@ -36,7 +36,7 @@
 			wp_head();
 		?>
     <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url') . '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>"/>
-    
+    <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/carousels.css"/>
     <?
       global $options;
       foreach ($options as $value) {
@@ -64,9 +64,6 @@
     <?
      if ($okfn_tall_header == "true") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/tall-header.css"/>
-    <? endif; ?>
-    <? if ($okfn_carosel == "text-right" || $okfn_carosel == "stack") : ?>
-      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/theme-okfn/css/carousels/text-right.css"/>
     <? endif; ?>
     <? if ($okfn_subheader == "true") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/sub-header.css"/>
