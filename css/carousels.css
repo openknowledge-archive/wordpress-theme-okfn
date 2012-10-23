@@ -1,0 +1,94 @@
+/* Text Right */
+/* ========== */
+
+.carousel.text-right .carousel-control {
+	left:50%;
+	margin-left:20px;
+	top:auto;
+	bottom:25%;
+	height:20px;
+	width:20px;
+	border: none;
+	line-height:15px;
+	font-size:28px;
+}
+.carousel.text-right .carousel-control.right {
+	left:50%;
+	right:auto;
+	margin-left:50px;
+}
+.carousel.text-right .carousel-caption {
+  left: 50%;
+  right: 0;
+  bottom: 25%;
+  padding: 20px;
+  background-color:transparent !important;
+}
+
+#content .carousel.text-right .carousel-caption h2,
+#content .carousel.text-right .carousel-caption h3,
+#content .carousel.text-right .carousel-caption h4,
+.carousel.text-right .carousel-caption h2,
+.carousel.text-right .carousel-caption h3,
+.carousel.text-right .carousel-caption h4 {
+  color: #333333;
+}
+.carousel.text-right .carousel-caption p {
+  color: #454545;
+	font-size:14px;
+	line-height:20px;
+	margin: 0 0 9px;
+}
+
+
+/* Photo Stack */
+/* =========== */
+
+.banner > .carousel.photo-stack {
+	height:390px;
+}
+.banner > .carousel.photo-stack .item {
+	background-image: url(../images/photo.png);
+	background-repeat: no-repeat;
+	background-position: 7px 30px;
+	padding:45px 0px 0px 20px;
+	height:345px;
+}
+.banner > .carousel.photo-stack .item img {
+	-moz-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	width:415px;
+	border:solid 3px #FFF;
+	-webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5); 
+}
+.banner > .carousel.photo-stack .carousel-caption,
+.banner > .carousel.photo-stack .carousel-control {
+   bottom: 100px;
+}
+.banner > .carousel.photo-stack .item.not-photo {
+	background-image:none;
+}
+
+/* Text Slide */
+.banner > .carousel .item .text-slide {
+	text-align:right;
+	width:44%;
+	text-transform:uppercase;
+	font-family:'Open Sans', Helvetica, Arial, sans-serif;
+	border-right:solid 1px #afafaf;
+	padding-left:15px;
+	padding-right:25px;
+}
+.banner > .carousel .item .text-slide p {
+	font-size:40px;
+	line-height:32px;
+	font-weight:700;
+	margin-bottom:4px;
+}
+.banner > .carousel .item .text-slide p:nth-of-type(even) {
+	color:#6a6a6a;
+}
