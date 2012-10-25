@@ -142,332 +142,250 @@ function echo_magazine_post($post, $is_featured) {
     $themename = "OKFN Master Theme";
     $shortname = "okfn";
     $options = array (
-
-
 		array(    "name" => "General Styling",
         "type" => "title"),
-				
 		array(    "type" => "open"),
-		
-		array("name" => "Colour Scheme",
+		array("name" => "Flavour",
         "id" => $shortname."_colours",
         "type" => "radio",
-        "desc" => "Change the colours of the nav bar, buttons etc",
-        "options" => array("default" => "Black & Green (Default)", "grey" => "Grey & Black (OKFN)", "blue" => "Blue (CKAN)", "white" => "White & Blue (School of Data)"),
+        "desc" => "Change the general look of the site",
+        "options" => array("default" => "Black & Green (Default)", "grey" => "Grey & Green (OKFN)", "blue" => "Blue (CKAN)", "white" => "White & Blue (School of Data)", "turquoise" => "Turquoise (Open Glam)"),
         "std" => "default"),
-				
-		array(    "type" => "close"),
-		
-		
+		array(    "type" => "close"),		
 		array(    "type" => "open"),
-		
 		array("name" => "Tagline Location",
         "id" => $shortname."_tagline_location",
         "type" => "radio",
         "desc" => "Where would you like the tagline to appear on the page?",
         "options" => array("home" => "Top of home page", "default" => "Top of every page", "header" => "In the header", "hide" => "Nowhere"),
         "std" => "default"),
-				
 		array(    "type" => "close"),
-		
-		
 		array(    "name" => "TopBar",
         "type" => "title"),
-				
 		array(    "type" => "open"),
-		
 		array(  "name" => "Disable TopBar?",
         "desc" => "Check this box if you would like to HIDE the BuddyPress bar at the top of this site.",
         "id" => $shortname."_buddypress_disable",
         "type" => "checkbox",
         "std" => "false"),
-				
 		array(    "type" => "close"),
-		
-
 		array(    "name" => "Header",
         "type" => "title"),
-				
 		array(    "type" => "open"),
-		
 		array(  "name" => "Tall Header",
         "desc" => "Check this box to make the header taller.",
         "id" => $shortname."_tall_header",
         "type" => "checkbox",
         "std" => "false"),
-				
 		array(    "type" => "close"),
-				
 		array(    "type" => "open"),
-		
 		array(  "name" => "Make my logo bigger!",
-        "desc" => "Check this box to increase font size of site title. Useful when you have a short title. Only works when BuddyPress bar is disabled.",
+        "desc" => "Check this box to increase font size of site title. Useful when you have a short title. Only works with tall header.",
         "id" => $shortname."_large_title",
         "type" => "checkbox",
         "std" => "false"),
-
 		array(    "type" => "close"),
-		
 		array(    "type" => "open"),
-		
 		array("name" => "Logo Font",
         "id" => $shortname."_logo_font",
         "type" => "radio",
         "desc" => "Font for header logo text",
         "options" => array("default" => "Open Sans", "ubuntu" => "Ubuntu"),
         "std" => "default"),
-				
 		array(    "type" => "close"),
-		
 		array(    "type" => "open"),
-		
 		array(  "name" => "Hide Logo Icon?",
         "desc" => "Check this box if you would like to HIDE the logo image.",
         "id" => $shortname."_logo_icon",
         "type" => "checkbox",
         "std" => "false"),
-
 		array(    "type" => "close"),
-		
 		array(    "type" => "open"),
-		
 		array(  "name" => "Hide Logo Text?",
         "desc" => "Check this box if you would like to HIDE the logo text.",
         "id" => $shortname."_logo_text",
         "type" => "checkbox",
         "std" => "false"),
-
 		array(    "type" => "close"),
-		
 		array(    "type" => "open"),
-		
 		array(  "name" => "Custom Header Text",
         "desc" => "Check this box to enable custom header text.",
         "id" => $shortname."_header_text",
         "type" => "checkbox",
         "std" => "false"),
-		
 		array(  "name" => "Header Text",
         "desc" => "Text or html to display in header.",
         "id" => $shortname."_header_textarea",
         "type" => "textarea"),
-				
 		array("name" => "Align Header Text",
         "id" => $shortname."_header_text_align",
         "type" => "radio",
         "desc" => "Which side of the header would you like this to appear?",
         "options" => array("left" => "Left", "right" => "Right"),
         "std" => "right"),
-				
-		array(  "type" => "close"),
-		
-		
+		array(  "type" => "close"),		
 		array(    "type" => "open"),
-		
 		array(  "name" => "Custom Header Text Two",
         "desc" => "Check this box to enable custom header text.",
         "id" => $shortname."_header_text2",
         "type" => "checkbox",
         "std" => "false"),
-		
 		array(  "name" => "Header Text",
         "desc" => "Text or html to display in header.",
         "id" => $shortname."_header_textarea2",
         "type" => "textarea"),
-				
 		array("name" => "Align Header Text",
         "id" => $shortname."_header_text_align2",
         "type" => "radio",
         "desc" => "Which side of the header would you like this to appear?",
         "options" => array("left" => "Left", "right" => "Right"),
         "std" => "right"),
-				
-		array(  "type" => "close"),
-		
-		
+		array(  "type" => "close"),		
 		array(    "type" => "open"),
-		
 		array(  "name" => "Corner Ribbon Toggle",
         "desc" => "Check this box to enable text in the top right of the page.",
         "id" => $shortname."_corner_ribbon",
         "type" => "checkbox",
         "std" => "false"),
-		
 		array(  "name" => "Corner Ribbon Text",
         "desc" => "Text or html to display in the ribbon.",
         "id" => $shortname."_corner_ribbon_text",
         "type" => "textarea"),
-				
 		array(  "name" => "Corner Ribbon Link",
         "desc" => "url to link to",
         "id" => $shortname."_corner_ribbon_link",
         "type" => "text"),
-				
 		array(  "type" => "close"),
-
-		
+		array(    "type" => "open"),
+		array(  "name" => "OKFN Ribbon",
+        "desc" => "Check this box to show link to okfn.org.",
+        "id" => $shortname."_okf_ribbon",
+        "type" => "checkbox",
+        "std" => "false"),
+		array(  "type" => "close"),
 		array(    "name" => "Sub-Header",
         "type" => "title"),
-		
 		array(    "type" => "open"),
-		
 		array(  "name" => "Sub-header Bar?",
         "desc" => "Check this box to display a bar below the header, inclusing breadcrumbs.",
         "id" => $shortname."_subheader",
         "type" => "checkbox",
-        "std" => "false"),
-
-		
+        "std" => "false"),		
 		array(  "name" => "Search in Sub-header?",
         "desc" => "Check this box to display add a search field to the sub-header bar.",
         "id" => $shortname."_subheader_search",
         "type" => "checkbox",
         "std" => "false"),
-
-		array(    "type" => "close"),
-		
-		
+		array(    "type" => "close"),		
 		array(    "name" => "Social",
         "type" => "title"),
-				
-				array(    "type" => "open"),
-		
+		array(    "type" => "open"),
 		array(  "name" => "Twitter Link",
         "desc" => "Add link to Twitter profile.",
         "id" => $shortname."_twitter_link",
         "type" => "checkbox",
         "std" => "false"),
-		
 		array(  "name" => "Twitter Username",
         "desc" => "twitter.com/...",
         "id" => $shortname."_twitter_username",
         "type" => "text"),
-				
 		array("name" => "Twitter Location",
         "id" => $shortname."_twitter_location",
         "type" => "radio",
         "desc" => "Where to put Twitter icon",
         "options" => array("default" => "Header", "footer" => "Footer", "both" => "Header and Footer"),
         "std" => "default"),
-				
 		array(  "type" => "close"),
-		
 		array(    "type" => "open"),
-		
 		array(  "name" => "Facebook Link",
         "desc" => "Add link to Facebook profile.",
         "id" => $shortname."_facebook_link",
         "type" => "checkbox",
         "std" => "false"),
-		
 		array(  "name" => "Facebook Username",
         "desc" => "facebook.com/...",
         "id" => $shortname."_facebook_username",
         "type" => "text"),
-				
 		array("name" => "Facebook Location",
         "id" => $shortname."_facebook_location",
         "type" => "radio",
         "desc" => "Where to put Facebook icon",
         "options" => array("default" => "Header", "footer" => "Footer", "both" => "Header and Footer"),
         "std" => "default"),
-				
-		array(  "type" => "close"),
-		
-		
-		array(    "name" => "Mailing List",
-        "type" => "title"),
-				
-				array(    "type" => "open"),
-		
-		array(  "name" => "Mailing List Bar",
-        "desc" => "Add mailing list form",
-        "id" => $shortname."_mailinglist_bar",
-        "type" => "checkbox",
-        "std" => "false"),
-		
-		array(  "name" => "Action",
-        "desc" => "eg. Mailchimp url",
-        "id" => $shortname."_mailinglist_action",
-        "type" => "text"),
-				
-		array("name" => "Twitter Location",
-        "id" => $shortname."_mailinglist_bar_location",
-        "type" => "radio",
-        "desc" => "Where to put bar",
-        "options" => array("header" => "Header", "footer" => "Footer"),
-        "std" => "footer"),
-				
-		array(  "type" => "close"),
-				
-		
-		array(    "name" => "Misc",
-        "type" => "title"),
-				
-		
-		//array("name" => "Carousel Style",
-        //"id" => $shortname."_carosel",
-        //"type" => "radio",
-        //"desc" => "Change layout style of Bootstrap carousel",
-        //"options" => array("default" => "Default", "text-right" => "Text on Right (full width)", "stack" => "Text on Right (photo stack)"),
-        //"std" => "default"),
-				
-		
-		array(    "type" => "open"),
-		
-		array(  "name" => "Tagline in meta title?",
-        "desc" => "Check this box to append site title with tagline in the meta title tag.",
-        "id" => $shortname."_tagline_title",
-        "type" => "checkbox",
-        "std" => "false"),
-
-		array(    "type" => "close"),
-		
-		array(    "type" => "open"),
-		
-		array(  "name" => "Large Blog Avatars",
-        "desc" => "Check this box to use large avatars on blog post page (requires Gravatar).",
-        "id" => $shortname."_large_avatars",
-        "type" => "checkbox",
-        "std" => "false"),
-
-		array(    "type" => "close"),
-		
-		
-		array(    "type" => "open"),
-		
-		array(  "name" => "Flattr OKFN",
-        "desc" => "Check this box to add a link to donate to the Open Knowledge Foundation.",
-        "id" => $shortname."_flattr_okfn",
-        "type" => "checkbox",
-        "std" => "false"),
-
-		array(    "type" => "close"),
-		
-		array(    "type" => "open"),
-		
+		array(  "type" => "close"),				
+		array(    "type" => "open"),		
 		array(  "name" => "ShareThis",
         "desc" => "Check this box to enable ShareThis.",
         "id" => $shortname."_sharethis",
         "type" => "checkbox",
-        "std" => "false"),
-		
+        "std" => "false"),	
 		array(    "name" => "Publisher ID",
         "desc" => "If you have a ShareThis account, enter your publisher ID here.",
         "id" => $shortname."_sharethis_id",
         "std" => "",
-        "type" => "text"),
-				
+        "type" => "text"),			
 		array("name" => "ShareThis Location",
         "id" => $shortname."_sharethis_location",
         "type" => "radio",
         "desc" => "Where is it going?",
         "options" => array("footer" => "Footer", "elsewhere" => "Elsewhere"),
+        "std" => "footer"),		
+		array(  "type" => "close"),		
+		array(    "name" => "Mailing List",
+        "type" => "title"),
+		array(    "type" => "open"),
+		array(  "name" => "Mailing List Bar",
+        "desc" => "Add mailing list form",
+        "id" => $shortname."_mailinglist_bar",
+        "type" => "checkbox",
+        "std" => "false"),
+		array(  "name" => "Action",
+        "desc" => "URL from Mailchimp form",
+        "id" => $shortname."_mailinglist_action",
+        "type" => "text"),
+		array("name" => "Mailing List Location",
+        "id" => $shortname."_mailinglist_bar_location",
+        "type" => "radio",
+        "desc" => "Where to put bar",
+        "options" => array("header" => "Header", "footer" => "Footer"),
         "std" => "footer"),
-				
-		array(  "type" => "close"),
-		
-		
+		array(  "type" => "close"),		
+		array(    "name" => "Misc",
+        "type" => "title"),	
+		//array("name" => "Carousel Style",
+        //"id" => $shortname."_carosel",
+        //"type" => "radio",
+        //"desc" => "Change layout style of Bootstrap carousel",
+        //"options" => array("default" => "Default", "text-right" => "Text on Right (full width)", "stack" => "Text on Right (photo stack)"),
+        //"std" => "default"),		
+		array(    "type" => "open"),
+		array(  "name" => "Tagline in meta title?",
+        "desc" => "Check this box to append site title with tagline in the meta title tag.",
+        "id" => $shortname."_tagline_title",
+        "type" => "checkbox",
+        "std" => "false"),
+		array(    "type" => "close"),
+		array(    "type" => "open"),
+		array(  "name" => "Large Blog Avatars",
+        "desc" => "Check this box to use large avatars on blog post page (requires Gravatar).",
+        "id" => $shortname."_large_avatars",
+        "type" => "checkbox",
+        "std" => "false"),
+		array(    "type" => "close"),		
+		array(    "type" => "open"),
+		array(  "name" => "Flattr OKFN",
+        "desc" => "Check this box to add a link to donate to the Open Knowledge Foundation.",
+        "id" => $shortname."_flattr_okfn",
+        "type" => "checkbox",
+        "std" => "false"),
+		array(    "type" => "close"),		
+		array(    "type" => "open"),
+		array(  "name" => "Enable Tweet",
+        "desc" => "Include Seaclouds Tweet script. Uses twitter username specified above.",
+        "id" => $shortname."_enable_tweet",
+        "type" => "checkbox",
+        "std" => "false"),
+		array(    "type" => "close"),		
 );
 
 function mytheme_add_admin() {

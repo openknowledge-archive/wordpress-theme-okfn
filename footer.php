@@ -109,12 +109,39 @@
 		<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/bootstrap.js"></script>
     <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/jquery.dotdotdot-1.4.0-packed.js"></script>
     
+    <?php if ( $okfn_enable_tweet == "true" ) : ?>
+    <!-- Tweet -->
+    <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/include/jquery.tweet.js"></script>
+    <script type='text/javascript'>
+			jQuery(function($){
+					$(".tweet").tweet({
+							username: "<?php if (!empty( $okfn_twitter_username)) {echo $okfn_twitter_username;} else {echo 'okfn';}  ?>",
+							page: 1,
+							avatar_size: 32,
+							count: 20,
+							loading_text: "loading ..."
+						}).bind("loaded", function() {
+							var ul = $(this).find(".tweet_list");
+							var ticker = function() {
+								setTimeout(function() {
+									ul.find('li:first').animate( {marginTop: '-4em'}, 500, function() {
+										$(this).detach().appendTo(ul).removeAttr('style');
+									});
+									ticker();
+								}, 6000);
+							};
+							ticker();
+						});
+					});
+		</script> 
+    <? endif; ?>
+    
     <!-- cycling for carousel -->
 		<script>
       $(".ticker").carousel({ interval: 6000 });
 			$(".carousel.cycle").carousel({ interval: 8000 });
     </script>
-     
+    
     <!-- sharethis -->
     <? if ($okfn_sharethis == "true") : ?>
 		  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 

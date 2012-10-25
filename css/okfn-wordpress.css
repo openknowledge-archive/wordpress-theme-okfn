@@ -219,6 +219,16 @@ body > header {
 	border-bottom: 4px solid transparent;
 }
 
+.okfn-ribbon {
+	background-image: url(http://assets.okfn.org/web/images/okf-ribbon.png);
+	background-repeat: no-repeat;
+	background-position: center 0px;
+	float:right;
+	width:48px;
+	height:100px;
+	margin-top: -36px;
+	display:block;
+}
 
 .sub-header {display:none;}
 
@@ -2824,9 +2834,63 @@ body > section.subscribe .button {
 }
 
 
+/* Tweet */
+/* ===== */
+.tweet_list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow-y: hidden;
+}
+.tweet_list li {
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 0.5em;
+	list-style-type: none;
+}
+.tweet_list li a {
+	color: #0C717A;
+}
+.tweet_list .tweet_even {
+	background: rgba(255, 255, 255, 0.5);
+}
+.tweet_list .tweet_avatar {
+	padding-right: .5em; float: left;
+}
+.tweet_list .tweet_avatar img {
+	vertical-align: middle;
+}
+
+
+/* Google Calendar */
+/* =============== */
+.gce-event-info {
+	border: none;
+}
+.gce-qtip {
+	-webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.7); 
+}
+.gce-event-info ul {
+	margin:0px;
+}
+.gce-event-info ul div {
+	padding:2px 10px;
+}
+.gce-event-info ul div:last-of-type {
+	padding-bottom:10px;
+}
+.gce-event-info .gce-tooltip-title {
+	padding:10px 10px 0px 10px;
+	margin:0px;
+}
+.gce-event-info .gce-tooltip-event {
+	padding:5px 10px;
+}
+
+
 /* WP Fixes */
 /* ======== */
-
 p:empty {
 	display: none;
 }

@@ -44,7 +44,7 @@
       }
       if ($okfn_colours == "blue") : ?>
         <link rel="shortcut icon" href="http://assets.okfn.org/p/ckan/img/ckan.ico" />
-      <?php elseif ($okfn_colours == "white") : ?>
+      <?php elseif ($okfn_colours == "white" || $okfn_colours == "turquoise") : ?>
         <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/grey-favicon.ico" />
       <?php else: ?>
         <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
@@ -74,6 +74,8 @@
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/grey.css"/>
     <?php elseif ($okfn_colours == "white") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/white.css"/>
+    <?php elseif ($okfn_colours == "turquoise") : ?>
+      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/turquoise.css"/>
     <? endif; ?>
     
 		<style type="text/css">
@@ -152,6 +154,9 @@
       <div class="navbar">
         <div class="navbar-inner">
           <div class="container">
+          <? if ($okfn_okf_ribbon == "true"):?>
+            <a class="okfn-ribbon" href="http://okfn.org/">okfn</a>
+          <? endif; ?>
           <? if (($okfn_twitter_link == "true") or ($okfn_facebook_link == "true")) : ?>
             <div class="social-links">
               <?php if ( !empty( $okfn_twitter_username ) && $okfn_twitter_link == "true" && $okfn_twitter_location != "footer" ) : ?>
