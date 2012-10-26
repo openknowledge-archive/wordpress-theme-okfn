@@ -13,6 +13,14 @@ h1, h2, h3, h4, h5, h6, .brand, .strapline {
 #content h6 {
 	margin-top:0px;
 }
+#content h1 a,
+#content h2 a,
+#content h3 a,
+#content h4 a,
+#content h5 a,
+#content h6 a {
+	color:#333333;
+}
 h1 {
 	font-size:24px;
 	line-height:30px;
@@ -194,7 +202,7 @@ section.coloured:after {
 #content #sidebar .widget h3,
 #content .sidebar .widget h3 {
 	margin:0px;
-	padding:10px;
+	padding:12px 10px 8px 10px;
 	color:#FFF;
 	font-size:20px;
 }
@@ -253,7 +261,9 @@ widget.follow {
 	padding:5px 10px;
 }
 .mailing.widget form label {
-	display:none;
+	color:#FFF;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top:0px;
 }
 .mailing.widget form input {
 	margin:5px 0px;
