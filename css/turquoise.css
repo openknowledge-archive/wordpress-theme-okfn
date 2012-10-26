@@ -117,6 +117,9 @@ body > header,
 .navbar .nav {
 	float:none;
 }
+.navbar .nav > li {
+  float: right;
+}
 .navbar .nav > li > a {
 	color: #1d1d1d;
 	text-shadow:none;
@@ -138,6 +141,7 @@ header .dropdown-toggle:after {
 
 .okfn-ribbon {
 	margin-top: -45px;
+	margin-left:10px;
 	background-position: center -100px;
 }
 .okfn-ribbon:hover {
