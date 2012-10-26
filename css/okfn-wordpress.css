@@ -636,6 +636,18 @@ ul#members-list {
 }
 
 
+/* Google Calendar Events Widget */
+.widget.widget_gce_widget .gce-list {
+	margin:0px;
+}
+.widget.widget_gce_widget .gce-list li {
+	display:block;
+	border-top:dotted 1px #FFF;
+	padding-top:5px;
+	margin-top:5px;
+}
+
+
 /* OKFN Widget */
 .textwidget .okfn-widget {
 	background-image: url(http://assets.okfn.org/web/images/header-logox2.png);

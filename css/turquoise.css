@@ -267,6 +267,20 @@ widget.follow {
 	margin-bottom:6px;
 }
 
+/* Google Calendar Events Widget */
+.gce-widget-list .gce-list .gce-list-title {
+  font-weight: normal;
+}
+.gce-widget-list .gce-list .gce-list-event {
+  background-color: transparent;
+	margin:5px 0px;
+	font-weight:bold;
+}
+.gce-widget-list .gce-list p span,
+.gce-widget-list .gce-list div span {
+  color: #FFF;
+}
+
 
 /* Tweet */
 /* ===== */
