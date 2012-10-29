@@ -1987,6 +1987,7 @@ ul.scrollButtons li.right a:hover {
 	border: 1px solid #DEE0DF;
 	margin-bottom:10px;
 	width:218px;
+	word-wrap: break-word;
 }
 .single-post .container > .author-box img {
 	margin-bottom:5px;
