@@ -797,7 +797,8 @@ if ( !function_exists('base_rss_feed') ) {
 include('shortcodes.php');
 
 
-function is_tree( $pid ) {      // $pid = The ID of the page we're looking for pages underneath
+function is_tree( $pid ) {      // $pid = The ID of the page we're looking for
+pages underneath
     global $post;               // load details about this page
 
     if ( is_page($pid) )
