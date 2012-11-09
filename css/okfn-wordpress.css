@@ -2831,15 +2831,25 @@ body > section.subscribe h5 {
 body > section.subscribe form {
 	margin-bottom:7px;
 }
-body > section.subscribe [class*="mc-field"] {
-	display:inline-block;
-	margin-left:10px;
-	width:218px;
+body > section.subscribe table {
+	margin:0px;
 }
-body > section.subscribe [class*="mc-field"] input {
-	width:100%;
+body > section.subscribe table th,
+body > section.subscribe table td {
+	padding:0px;
+	border:none;
 }
-body > section.subscribe [class*="mc-field"] label {
+body > section.subscribe table th {
+	line-height:29px;
+}
+body > section.subscribe table td.submit {
+	width:81px;
+}
+body > section.subscribe input[type="email"],
+body > section.subscribe input[type="text"] {
+	width:92%;
+}
+body > section.subscribe label {
 	display:none;
 }
 body > section.subscribe .button {
