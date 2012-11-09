@@ -2825,9 +2825,6 @@ body > section.subscribe {
 	padding-top:11px;
 	border-top:solid 1px #CBCBCB;
 }
-body > section.subscribe h5 {
-	display:inline-block;
-}
 body > section.subscribe form {
 	margin-bottom:7px;
 }
