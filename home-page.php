@@ -37,13 +37,13 @@ function browser_body_class($classes = '') {
       query_posts( $post_filter_main );
       if (have_posts()) {
         the_post();
-        //echo_magazine_post($post, true);
+      //echo_magazine_post($post, true);
         // Skip that post's ID in the remining section
-        //array_push($idsToSkip, $post->ID);
+      //array_push($idsToSkip, $post->ID);
       }
 
       // Query remaining posts
-      $post_filter_etc = array('posts_per_page' => 4, 'post__not_in' => $idsToSkip);
+      $post_filter_etc = array('category_name' => 'Featured', 'posts_per_page' => 4, 'post__not_in' => $idsToSkip);
 
       // Print the remaining posts
       query_posts( $post_filter_etc );
