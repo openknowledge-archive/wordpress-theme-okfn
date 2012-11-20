@@ -1461,9 +1461,7 @@ label,
 input,
 select,
 textarea {
-  /* Override bootstrap.css */
-
-  font-family: OpenSansLight, serif;
+  font-family: OpenSansLight,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 label {
   display: block;
@@ -2656,6 +2654,7 @@ body > .corner.ribbon {
 	height:40px;
 	line-height:40px;
 	z-index: 99999;
+	font-size:12px;
 }
 body > .corner.ribbon:hover {
 	text-decoration:none;
