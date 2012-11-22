@@ -554,7 +554,7 @@ ul#members-list {
 	border:none;
 }
 #sidebar .widget.widget_categories h3 {
-	display:none;
+	margin-left:0px;
 }
 #sidebar .widget.widget_categories {
 	overflow:auto;
@@ -585,6 +585,9 @@ ul#members-list {
 	text-decoration:none;
 	border-color:#3E8F80;
 	color:#FFF;
+}
+#sidebar .widget.widget_categories select {
+	width:100%;
 }
 
 /* Login Widget */
