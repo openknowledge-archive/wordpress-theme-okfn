@@ -483,4 +483,29 @@ function fbanner_shortcode( $atts, $content = null ) {
 add_shortcode('fbanner', 'fbanner_shortcode'); 
 
 
+/*********************************************************************************************
+* Name:        HeaderImage
+* Author:      Sam Smith
+* Description: Put page title inside a small banner image
+**********************************************************************************************/
+
+function himg_shortcode( $atts ){
+	extract( shortcode_atts( array(
+			'image' => '',
+			'break' => '',
+			'width' => '340',
+			'offset' => '0'
+		), $atts ) );
+		if (!empty($image)) { $bgimg = 'style="background-image:url('.$image.'); background-position: '.$offset.'px bottom;"';}
+		else {$bgimg = '';}
+	  if (!empty($break)) { return '<div class="himg" '.$bgimg.'></div><style>#content h2.pagetitle {position:absolute;right:30px;top:10px;width:'.$width.'px;text-align:right;text-transform:uppercase;font-size:36px;line-height:31px;}#content h2.pagetitle:first-line {color:#6a6a6a;}</style><script>var html = $(".pagetitle").html();
+html = html.substring(0, '.$break.') + "<br>" + html.substring('.$break.');
+$(".pagetitle").html(html);</script>';
+	 }
+		else {
+			return '<div class="himg" '.$bgimg.'></div><style>#content h2.pagetitle {position:absolute;right:30px;top:10px;width:'.$width.'px;text-align:right;text-transform:uppercase;font-size:36px;line-height:31px;}#content h2.pagetitle:first-line {color:#6a6a6a;}</style>';
+		}
+	}
+add_shortcode( 'himg', 'himg_shortcode' );
+
 ?>
