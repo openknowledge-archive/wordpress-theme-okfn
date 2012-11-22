@@ -111,6 +111,11 @@ blockquote small {
 	margin-top:-9px;
 }
 
+p.intro {
+	font-family:OpenSansLight, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:19px;
+	line-height:24px;
+}
 
 a.more {
 	font-weight:bold;
