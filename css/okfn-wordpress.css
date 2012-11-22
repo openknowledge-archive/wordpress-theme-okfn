@@ -554,7 +554,7 @@ ul#members-list {
 	border:none;
 }
 #sidebar .widget.widget_categories h3 {
-	margin-left:0px;
+	padding-left:0px;
 }
 #sidebar .widget.widget_categories {
 	overflow:auto;
