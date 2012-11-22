@@ -36,8 +36,7 @@ Please note that one of the slides must have ``class="active"`` applied to it, t
 
 Some predefined classes can be applied to the carousel to alter the styling::
 
-  text-right
-	photo-stack
+  text-right photo-stack
 
 Other supported attributes are ``heading`` and ``caption``. For example, to add a caption to a slide you would enter it as follows:::
 
