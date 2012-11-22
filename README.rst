@@ -34,6 +34,11 @@ To add a carousel to your page can be as simple as::
 
 Please note that one of the slides must have ``class="active"`` applied to it, this will be the first slide that is displayed.
 
+Some predefined classes can be applied to the carousel to alter the styling::
+
+  text-right
+	photo-stack
+
 Other supported attributes are ``heading`` and ``caption``. For example, to add a caption to a slide you would enter it as follows:::
 
   [carousel]  
@@ -129,9 +134,10 @@ Show scrolling previews from an RSS feed::
   [rss feed="http://planet.okfn.org/feed" type="ticker"]
 
 
+Templates
+---------
 
-Magazine Mode
--------------
+**Magazine**
 
 To create a magazine frontpage for your blog, create a page and choose 'Magazine' as its Template (on the right hand side).
 
@@ -153,3 +159,7 @@ To use YARPP to display Related Posts as magazine entries on the post view page,
 * Disable "Automatically display related posts"
 * Select "Display using a custom template file" (yarpp-template-magazine.php)
 
+
+**Home**
+
+The Home template adds Magazine style blogposts to the bottom of the page. Only posts in a category named "Featured" will be displayed. Images are handled in the same manor as described above.
