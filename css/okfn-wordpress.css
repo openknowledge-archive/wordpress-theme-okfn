@@ -2511,6 +2511,7 @@ section.coloured h4 {
 	background: -ms-linear-gradient(top, #dbdbdb 0%,#f7f7f7 100%); /* IE10+ */
 	background: linear-gradient(to bottom, #dbdbdb 0%,#f7f7f7 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#f7f7f7',GradientType=0 ); /* IE6-9 */
+	margin-bottom:15px;
 }
 
 .button-bar {
