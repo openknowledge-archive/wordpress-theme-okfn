@@ -20,6 +20,43 @@ And additionally provide function hooks in::
 ...and that's it! Wordpress' output is modified via callbacks in functions.php. We structure the page in header/footer but aim to use the parent theme's templates in all other cases. Wordpress always provides a more robust override mechanism.
 
 
+Templates
+---------
+
+**Magazine**
+
+To create a magazine frontpage for your blog, create a page and choose 'Magazine' as its Template (on the right hand side).
+
+Magazine mode will display:
+
+* The latest blogpost with the category "Featured" at the top.
+* The latest four blogposts which aren't that one beneath it.
+
+The algorithm which displays a picture looks for "magazine.image" in the blogpost. Just add a HTML comment to your blog post:
+
+  <!-- magazine.image = http://flickr.com/my/magazine/image.jpg -->
+
+There is a simple algorithm to choose which category is displayed on the ribbon. This file decides which category will be chosen first:
+
+https://github.com/okfn/wordpress-theme-okfn/blob/master/category-priority.php
+
+To use YARPP to display Related Posts as magazine entries on the post view page, open up the YARPP widget settings.
+
+* Disable "Automatically display related posts"
+* Select "Display using a custom template file" (yarpp-template-magazine.php)
+
+
+**Home**
+
+The Home template adds Magazine style blogposts to the bottom of the page. Only posts in a category named "Featured" will be displayed. Images are handled in the same manor as described above.
+
+
+Theme Options
+-------------
+
+The theme can be customised in a variety of ways via the Theme Options. These settings can be found in WordPress admin under Appearance >OKFN Master Theme Options. 
+
+
 Supported Shortcode
 -------------------
 
@@ -133,32 +170,3 @@ Show scrolling previews from an RSS feed::
   [rss feed="http://planet.okfn.org/feed" type="ticker"]
 
 
-Templates
----------
-
-**Magazine**
-
-To create a magazine frontpage for your blog, create a page and choose 'Magazine' as its Template (on the right hand side).
-
-Magazine mode will display:
-
-* The latest blogpost with the category "Featured" at the top.
-* The latest four blogposts which aren't that one beneath it.
-
-The algorithm which displays a picture looks for "magazine.image" in the blogpost. Just add a HTML comment to your blog post:
-
-  <!-- magazine.image = http://flickr.com/my/magazine/image.jpg -->
-
-There is a simple algorithm to choose which category is displayed on the ribbon. This file decides which category will be chosen first:
-
-https://github.com/okfn/wordpress-theme-okfn/blob/master/category-priority.php
-
-To use YARPP to display Related Posts as magazine entries on the post view page, open up the YARPP widget settings.
-
-* Disable "Automatically display related posts"
-* Select "Display using a custom template file" (yarpp-template-magazine.php)
-
-
-**Home**
-
-The Home template adds Magazine style blogposts to the bottom of the page. Only posts in a category named "Featured" will be displayed. Images are handled in the same manor as described above.
