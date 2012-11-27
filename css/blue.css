@@ -327,6 +327,9 @@ body > .corner.ribbon {
 	background-color:#FFF;
 	color:#5090B7;
 }
+body > .corner.ribbon:hover {
+	color:#5090B7;
+}
 
 
 /* Footer */
