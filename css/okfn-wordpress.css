@@ -2493,7 +2493,10 @@ section.squared.full-width:after  {
 	width:50%;
 	padding:20px;
 	background: rgb(255, 255, 255);
-  background: rgba(255, 255, 255, 0.9); 
+  background: rgba(255, 255, 255, 0.9);
+	font-size:20px;
+	line-height: normal;
+	font-family: OpenSansLight, "Helvetica Neue", Helvetica,Arial,sans-serif;
 }
 
 section.coloured,
