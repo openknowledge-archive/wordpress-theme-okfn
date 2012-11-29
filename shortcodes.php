@@ -508,4 +508,28 @@ $(".pagetitle").html(html);</script>';
 	}
 add_shortcode( 'himg', 'himg_shortcode' );
 
+
+/*********************************************************************************************
+* Name:        MailMan
+* Author:      Sam Smith
+* Description: Inline subscribe form
+**********************************************************************************************/
+
+function mailman_shortcode( $atts ){
+	extract( shortcode_atts( array(
+			'domain' => 'http://lists.okfn.org',
+			'list' => '',
+			'button' => 'Subscribe'
+		), $atts ) );
+		return '<form method="post" action="'.$domain.'/mailman/subscribe/'.$list.'">
+<label>Name</label>
+<input name="fullname" type="text">
+<label>E-mail Address</label>
+<input name="email" type="email"> 
+<p style="margin-top:10px;"><input type="submit" name="email-button" value= "'.$button.'"></p>
+</form>';
+		}
+add_shortcode( 'mailman', 'mailman_shortcode' );
+
+
 ?>
