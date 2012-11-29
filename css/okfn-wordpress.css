@@ -566,6 +566,11 @@ ul#members-list {
 	max-height:436px;
 	background-color:#FFF;
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	display:none;
+}
+.magazine #sidebar .widget.widget_categories,
+.single-post #sidebar .widget.widget_categories {
+	display:block;
 }
 #sidebar .widget.widget_categories ul {
 	margin:0px;
