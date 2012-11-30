@@ -117,6 +117,7 @@
 	<? if ( $okfn_mailinglist_bar == "true" && $okfn_mailinglist_bar_location == "header" && is_front_page()) : ?>
       <section class="subscribe">
         <div class="container">
+          <? if ( $okfn_mailinglist_bar_type == "mailchimp") : ?>
           <!-- Begin MailChimp Signup Form -->
           <div id="mc_embed_signup">
             <form action="<?php echo $okfn_mailinglist_action?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -139,6 +140,32 @@
             </form>
           </div>
           <!--End mc_embed_signup-->
+          <?php elseif ( $okfn_mailinglist_bar_type == "mailman") : ?>
+          <form method="post" action="<?php echo $okfn_mailinglist_action?>">
+            <table width="100%">
+              <tr>
+                <th scope="row"><? if (!empty($okfn_mailinglist_heading)) { echo $okfn_mailinglist_heading;} else { echo 'Mailing List';} ?></th>
+                <td>
+                  <label>Name</label>
+                  <input name="fullname" placeholder="Name" type="text">
+                </td>
+                <td>
+                  <label>Email Address</label>
+                  <input name="email" placeholder="Email Address" type="email">
+                </td>
+                <td class="announce">
+                  <label class="checkbox">
+                    <input type="checkbox" value="" disabled>
+                    Receive newsletter
+                  </label>
+                </td>
+                <td class="submit">
+                  <input type="submit" name="email-button" value="Subscribe" class="button">
+                </td>
+              </tr>
+            </table>
+          </form>
+         <? endif; ?>
         </div>
       </section>
     <? endif; ?>

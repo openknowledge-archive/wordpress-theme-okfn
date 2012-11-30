@@ -2876,6 +2876,12 @@ body > section.subscribe input[type="text"] {
 body > section.subscribe label {
 	display:none;
 }
+body > section.subscribe .announce {
+	width:160px;
+}
+body > section.subscribe .announce label {
+	display:block;
+}
 body > section.subscribe .button {
 	float:right;
 }
