@@ -402,3 +402,12 @@ body.page-template-home-page-php.magazine .post.preview {
 body.page-template-home-page-php.magazine .post.preview .text {
 	padding:5px;
 }
+
+
+/* Ribbon */
+/* ====== */
+
+.ribbon,
+.magazine h3.ribbon {
+  background-color: #0eada9;
+}
