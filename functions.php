@@ -350,7 +350,7 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_mailinglist_heading",
         "type" => "text"),
 		array(  "name" => "Action",
-        "desc" => "URL from Mailchimp form",
+        "desc" => "URL from form action attribute",
         "id" => $shortname."_mailinglist_action",
         "type" => "text"),
 		array("name" => "Mailing List Location",
