@@ -88,6 +88,7 @@
 	line-height:32px;
 	font-weight:700;
 	margin-bottom:4px;
+	font-family:'Open Sans', Helvetica, Arial, sans-serif;
 }
 .banner > .carousel .item .text-slide p:nth-of-type(even) {
 	color:#6a6a6a;
