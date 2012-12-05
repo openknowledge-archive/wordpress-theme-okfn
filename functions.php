@@ -150,7 +150,8 @@ function echo_magazine_post($post, $is_featured) {
         "type" => "radio",
         "desc" => "Change the general look of the site",
         "options" => array("default" => "Classic", "grey" => "OKF", "blue" => "Ckan", "turquoise" => "Glam", "white" => "Simple"),
-        "std" => "default"),
+        "std" => "default",
+				"class" => "thumbs"),
 		array(    "type" => "close"),		
 		array(    "type" => "open"),
 		array("name" => "Tagline Location",
@@ -438,7 +439,27 @@ function mytheme_admin() {
     if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings reset.</strong></p></div>';
     
 ?>
-<div class="wrap">
+
+<div class="options wrap">
+<style scoped>
+	.options .radio label {
+			margin-bottom:5px;
+			display:block;
+		}
+	.options .radio.thumbs label {
+		width:150px;
+		display:inline-block;
+		padding-top:112px;
+		margin:0px 10px 10px 0px;
+		border:solid 1px #DDDDDD;
+	}
+	.options .radio.thumbs label span {
+		display:block;
+		padding:3px;
+		background: rgb(255, 255, 255); /* fallback */
+    background: rgba(255, 2554, 255, 0.9); 
+	}
+</style>
 <h2><?php echo $themename; ?> Options</h2>
 
 <form method="post">
@@ -525,7 +546,7 @@ function mytheme_admin() {
         <?php 		break;
 				
 				case "radio":?>
-        <tr>
+        <tr class="radio <?php echo $value['class'] ?>">
           <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
           <td>
 						<? foreach ($value['options'] as $option_value => $option_text) {
@@ -539,8 +560,16 @@ function mytheme_admin() {
 							else {
 									$checked = ' ';
 							}
-							echo '<div style="margin-bottom:5px;"><input type="radio" style="margin-right:10px;" name="'.$value['id'].'" value="'.
-									$option_value.'" '.$checked."/>".$option_text."</div>";
+							
+							if ($value['class'] == "thumbs") {
+									$bgimage = "".get_bloginfo('stylesheet_directory')."/screenshot-".$option_value.".png";
+							}
+							else {
+									$bgimage = '';
+							}
+					
+							echo '<label style="background-image:url('.$bgimage.');"><span><input type="radio" style="margin-right:10px;" name="'.$value['id'].'" value="'.
+									$option_value.'" '.$checked."/>".$option_text."</span></label>";
 					} ?>
       	</td>
           <td><em><?php echo $value['desc']; ?></em></td>
