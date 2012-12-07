@@ -2,7 +2,7 @@ html {
 	background-color: #ececec;
 }
 
-h1, h2, h3, h4, h5, h6, .brand, .strapline {
+h1, h2, h3, h4, h5, h6, .brand, .strapline, label {
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, OpenSansLight, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #content h1,
