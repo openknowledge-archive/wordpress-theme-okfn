@@ -358,7 +358,7 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_mailinglist_bar_location",
         "type" => "radio",
         "desc" => "Where to put bar",
-        "options" => array("header" => "Header", "footer" => "Footer"),
+        "options" => array("header" => "Header (home page only)", "footer" => "Footer"),
         "std" => "footer"),
 		array(  "type" => "close"),		
 		array(    "name" => "Misc",

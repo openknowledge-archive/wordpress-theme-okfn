@@ -145,14 +145,18 @@ header .dropdown-toggle:after {
 }
 
 .okfn-ribbon {
-	margin-top: -45px;
+	margin-top:-18px;
 	margin-left:10px;
-	background-position: center -100px;
 }
-.okfn-ribbon:hover {
-	background-position: center 0px;
+.okfn-ribbon a {
+	background-position: center -127px;
 }
-
+.okfn-ribbon a:hover {
+	background-position: center -27px;
+}
+#okf-panel {
+	border-bottom-color:#5d5d5d; 
+}
 
 .banner.full-width,
 .banner.full-width:before,

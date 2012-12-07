@@ -225,14 +225,80 @@ body > header {
 }
 
 .okfn-ribbon {
-	background-image: url(http://assets.okfn.org/web/images/okf-ribbon.png);
-	background-repeat: no-repeat;
-	background-position: center 0px;
+	position:relative;
 	float:right;
 	width:48px;
-	height:100px;
-	margin-top: -36px;
+	height:65px;
+	margin-left:5px;
+}
+.okfn-ribbon a {
+	background-image: url(http://assets.okfn.org/web/images/okf-ribbon.png);
+	background-repeat: no-repeat;
+	background-position: center -27px;
+	width:48px;
+	height:73px;
 	display:block;
+	cursor:pointer;
+	text-indent:-999px;
+	overflow:hidden;
+	position:absolute;
+}
+#okf-panel {
+	border-bottom: solid 7px #5b8b85;
+	margin-top:-7px;
+	-webkit-box-shadow: inset 0px -1px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px -1px 2px 0px rgba(0, 0, 0, 0.3); 
+}
+#okf-panel .container {
+	padding-top:20px;
+	padding-bottom:13px;
+}
+#okf-panel .container .logo {
+	padding:35px 20px 23px 0;
+}
+#okf-panel .container .border {
+	border-right:dotted 1px #cfcfcf;
+}
+#okf-panel .container h6 {
+	color:#333333;
+	text-transform:capitalize;
+	font-size:14px;
+	font-weight:normal;
+	padding-top:20px;
+	padding-bottom:5px;
+}
+#okf-panel .container label {
+	margin-top: 0px;
+	width:auto;
+	font-size:14px;
+	margin-top:20px;
+	padding-bottom:5px;
+	cursor:pointer;
+}
+#okf-panel .container a {
+	color:#333333;
+}
+#okf-panel .container ul {
+	margin:0px;
+	padding:0px 0px 10px 0px;
+}
+#okf-panel .container ul li {
+	list-style:none;
+	font-size:11px;
+	line-height:normal;
+}
+#okf-panel .container ul li a {
+	opacity:0.8;
+}
+#okf-panel .container ul li a:hover {
+	opacity:1.0;
+	text-decoration:none;
+}
+#okf-panel .container form {
+	margin:0px;
+}
+#okf-panel .container form input[type="text"] {
+	width:100%;
 }
 
 .sub-header {display:none;}
