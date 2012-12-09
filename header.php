@@ -61,8 +61,10 @@
     <![endif]-->
   
     <!-- Theme Settings -->
-    <?
-     if ($okfn_tall_header == "true") : ?>
+    <? if ($okfn_okf_ribbon == "true"):?>
+      <link rel="stylesheet" href="http://assets.okfn.org/themes/okfn/okf-panel.css"/>
+    <? endif; ?>
+    <? if ($okfn_tall_header == "true") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/tall-header.css"/>
     <? endif; ?>
     <? if ($okfn_subheader == "true") : ?>
@@ -115,66 +117,10 @@
       </a>';
 		} ?>
     
-    <? if ($okfn_okf_ribbon == "true"):?>
-    <div id="okf-panel" class="collapse">
-    	<div class="container">
-      	<div class="row">
-          <div class="span2">
-            <div class="border logo">
-           	  <a href="http://okfn.org/"><img src="http://assets.okfn.org/p/okfn/img/okfn-logo-landscape.png"></a>
-            </div>
-          </div>
-          <div class="span2">
-            <div class="border">
-              <h6><a href="http://okfn.org/about/">About Us</a></h6>
-              <ul>
-                <li><a href="http://okfn.org/about/vision/">Our Vision</a></li>
-                <li><a href="http://okfn.org/about/team/">Our Team</a></li>
-                <li><a href="http://okfn.org/jobs/">Careers</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="span2">
-            <div class="border">
-              <h6><a href="http://okfn.org/activities/">Activities</a></h6>
-              <ul>
-                <li><a href="http://okfn.org/projects/">Projects</a></li>
-                <li><a href="http://okfn.org/wg/">Working Groups</a></li>
-                <li><a href="http://okfn.org/local/">Groups &amp; Chapters</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="span2">
-            <div class="border">
-              <h6><a href="http://okfn.org/contact/">Contact Us</a></h6>
-              <ul>
-                <li><a href="http://okfn.org/contact/">Email</a></li>
-                <li><a href="https://www.facebook.com/OKFNetwork">Facebook</a></li>
-                <li><a href="http://twitter.com/okfn">Twitter</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="span2">
-            <div class="border">
-              <h6><a href="http://okfn.org/support/">Support our Work</a></h6>
-              <ul>
-                <li><a href="http://okfn.org/support/#why">Why Support Us</a></li>
-                <li><a href="http://okfn.org/support/">Donate</a></li>
-                <li><a href="http://okfn.org/community/get-involved/">Get Involved</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="span2">
-            <form method="get" action="http://okfn.org">
-              <label for="s">Search</label>
-               <input type="text" name="s" id="s" />
-               <input type="hidden" id="searchsubmit" value="Search" />
-              <input type="hidden" name="searchblogs" value="37" />
-            </form>
-          </div>
-        </div>
+    <? if ($okfn_okf_ribbon == "true") :?>
+      <div id="okf-panel" class="collapse">
+        <iframe src="http://assets.okfn.org/themes/okfn/okf-panel.html"></iframe>
       </div>
-    </div>
     <? endif; ?>
 	  <? if ( $okfn_mailinglist_bar == "true" && $okfn_mailinglist_bar_location == "header" && is_front_page()) : ?>
       <section class="subscribe">
