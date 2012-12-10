@@ -170,3 +170,14 @@ Show scrolling previews from an RSS feed::
   [rss feed="http://planet.okfn.org/feed" type="ticker"]
 
 
+**Image List**
+
+List of images with text beside
+
+::
+
+  [il]
+  [ili image="http://assets.okfn.org/web/images/blog-placeholder.png" title="Title One" description="Description One"]
+  [ili image="http://assets.okfn.org/web/images/blog-placeholder.png" title="Title Two" description="Description Two"]
+  [ili image="http://assets.okfn.org/web/images/blog-placeholder.png" title="Title Three" description="Description Three"]
+  [/il]
