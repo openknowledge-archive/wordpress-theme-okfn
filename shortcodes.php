@@ -532,4 +532,54 @@ function mailman_shortcode( $atts ){
 add_shortcode( 'mailman', 'mailman_shortcode' );
 
 
+/*********************************************************************************************
+* Name:        Image List
+* Author:      Sam Smith
+* Description: Use to present a list in a grid format
+* Example:     [il]
+               [ili image="http://assets.okfn.org/web/images/blog-placeholder.png" title="Title One" description="Description One"]
+               [ili image="http://assets.okfn.org/web/images/blog-placeholder.png" title="Title Two" description="Description Two"]
+               [ili image="http://assets.okfn.org/web/images/blog-placeholder.png" title="Title Three" description="Description Three"]
+               [/il]
+**********************************************************************************************/
+
+function imagelist_shortcode( $atts, $content = null ) {
+	 extract( shortcode_atts( array(
+		), $atts ) );
+   return '<ul class="image-list">' .do_shortcode($content). '</ul>';
+} 
+add_shortcode( 'il', 'imagelist_shortcode' );
+
+function imagelist_item_shortcode( $atts ) {  
+	extract( shortcode_atts( array(
+			'title' => '',
+			'description' => '',
+			'link' => '',
+			'image' => 'http://assets.okfn.org/web/images/blog-placeholder.png',
+		), $atts ) );
+		
+	  if (!empty($link)) {
+			return '<a href="'.$link.'">
+							<li>
+							<span class="image" style="background-image:url('.$image.');"></span>
+							<span class="text">
+							<h3>'.$title.'</h3>
+							' .$description. '
+							</span>
+							</li>
+							</a>'; 
+		}	
+		else {
+			return '<li>
+							<span class="image" style="background-image:url('.$image.');"></span>
+							<span class="text">
+							<h3>'.$title.'</h3>
+							' .$description. '
+							</span>
+							</li>'; 
+		}
+}  
+add_shortcode('ili', 'imagelist_item_shortcode');  
+
+
 ?>

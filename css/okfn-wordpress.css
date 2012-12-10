@@ -1321,6 +1321,39 @@ ul.dot-grid:after {
 }
 
 
+/* Image List */
+/* ========== */
+ul.image-list {
+	margin:0px;
+}
+ul.image-list li {
+	display:block;
+	border: 1px solid #DEE0DF;
+	margin-bottom:15px;
+}
+ul.image-list li > span {
+	display:inline-block;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+ul.image-list li > span.image {
+	height:340px;
+	width:50%;
+	margin:10px 10px 7px 10px;
+	background-size:cover;
+	background-position:center center;
+	-webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.2); 
+}
+ul.image-list li > span.text {
+	padding:0px 20px 20px 35px;
+	vertical-align:top;
+	margin-left:-25px;
+	width:50%;
+}
+
+
 /* Post Content */
 /* ============ */
 div.alignleft,
