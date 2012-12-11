@@ -21,3 +21,6 @@ msgstr "Ganzen Post"
 msgid "From our Blog"
 msgstr "Von unserem Blog"
 
+msgid "Receive newsletter"
+msgstr "Newsletter abonnieren"
+

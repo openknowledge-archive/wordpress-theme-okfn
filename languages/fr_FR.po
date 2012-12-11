@@ -21,3 +21,6 @@ msgstr "Complet"
 msgid "From our Blog"
 msgstr "De notre Blog"
 
+msgid "Receive newsletter"
+msgstr "Recevoir la newsletter"
+

@@ -20,3 +20,7 @@ msgstr ""
 #: home-page.php:27
 msgid "From our Blog"
 msgstr ""
+
+msgid "Receive newsletter"
+msgstr ""
+

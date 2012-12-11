@@ -21,3 +21,6 @@ msgstr "Leia Tudo"
 msgid "From our Blog"
 msgstr "Do nosso Blog"
 
+msgid "Receive newsletter"
+msgstr "Receber boletim"
+

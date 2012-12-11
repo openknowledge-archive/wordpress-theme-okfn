@@ -61,7 +61,7 @@
                 <td class="announce">
                   <label class="checkbox">
                     <input type="checkbox" value="" disabled>
-                    Receive newsletter
+                    <? echo __("Receive newsletter", "okfn")?>
                   </label>
                 </td>
                 <td class="submit">
