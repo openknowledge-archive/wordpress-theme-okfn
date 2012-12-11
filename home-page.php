@@ -24,7 +24,7 @@ function browser_body_class($classes = '') {
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php the_content(); ?>
 		<?php endwhile; endif; ?>
-    <h3 class="blog-latest-heading">From our Blog</h3>
+    <h3 class="blog-latest-heading"><? echo __("From our Blog", "okfn")?></h3>
     <div class="posts">
     <?php 
     /* =================== */
