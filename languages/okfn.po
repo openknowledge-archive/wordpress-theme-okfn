@@ -21,6 +21,16 @@ msgstr ""
 msgid "From our Blog"
 msgstr ""
 
+#: newsletter
 msgid "Receive newsletter"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Email Address"
+msgstr ""
+
+msgid "Subscribe"
 msgstr ""
 

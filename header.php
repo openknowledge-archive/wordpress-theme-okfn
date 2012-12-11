@@ -154,12 +154,12 @@
               <tr>
                 <th scope="row"><? if (!empty($okfn_mailinglist_heading)) { echo $okfn_mailinglist_heading;} else { echo 'Mailing List';} ?></th>
                 <td>
-                  <label>Name</label>
-                  <input name="fullname" placeholder="Name" type="text">
+                  <label><? echo __("Name", "okfn")?></label>
+                  <input name="fullname" placeholder="<? echo __("Name", "okfn")?>" type="text">
                 </td>
                 <td>
-                  <label>Email Address</label>
-                  <input name="email" placeholder="Email Address" type="email">
+                  <label><? echo __("Email Address", "okfn")?></label>
+                  <input name="email" placeholder="<? echo __("Email Address", "okfn")?>" type="email">
                 </td>
                 <td class="announce">
                   <label class="checkbox">
@@ -168,7 +168,7 @@
                   </label>
                 </td>
                 <td class="submit">
-                  <input type="submit" name="email-button" value="Subscribe" class="button">
+                  <input type="submit" name="email-button" value="<? echo __("Subscribe", "okfn")?>" class="button">
                 </td>
               </tr>
             </table>
