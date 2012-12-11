@@ -649,6 +649,13 @@ ul#members-list {
 	padding-top:5px;
 	margin-top:5px;
 }
+.widget.widget_gce_widget .gce-widget-grid table {
+	margin:0px;
+}
+.widget.widget_gce_widget .gce-widget-grid table th,
+.widget.widget_gce_widget .gce-widget-grid table td {
+	padding:7px;
+}
 
 
 /* OKFN Widget */
