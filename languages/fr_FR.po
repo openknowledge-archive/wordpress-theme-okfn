@@ -11,13 +11,13 @@ msgstr ""
 
 #: footer.php:23
 msgid "Donate"
-msgstr "Doar"
+msgstr "Donner"
 
 #: functions.php:480
 msgid "Full Post"
-msgstr "Leia Tudo"
+msgstr "Complet"
 
 #: home-page.php:27
 msgid "From our Blog"
-msgstr "Do nosso Blog"
+msgstr "De notre Blog"
 

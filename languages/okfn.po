@@ -17,3 +17,6 @@ msgstr ""
 msgid "Full Post"
 msgstr ""
 
+#: home-page.php:27
+msgid "From our Blog"
+msgstr ""

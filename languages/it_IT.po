@@ -17,3 +17,7 @@ msgstr "Donare"
 msgid "Full Post"
 msgstr "Leggi Tutto"
 
+#: home-page.php:27
+msgid "From our Blog"
+msgstr "Dal nostro Blog"
+
