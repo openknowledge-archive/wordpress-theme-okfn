@@ -351,7 +351,7 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_mailinglist_heading",
         "type" => "text"),
 		array(  "name" => "Action",
-        "desc" => "URL from form action attribute",
+        "desc" => "URL from form action attribute. Mailman example: http://lists.okfn.org/mailman/subscribe/XYZ",
         "id" => $shortname."_mailinglist_action",
         "type" => "text"),
 		array("name" => "Mailing List Location",
