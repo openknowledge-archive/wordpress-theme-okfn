@@ -15,7 +15,7 @@ msgstr "Donner"
 
 #: functions.php:480
 msgid "Full Post"
-msgstr "Complet"
+msgstr "Lire l'article"
 
 #: home-page.php:27
 msgid "From our Blog"
