@@ -2972,6 +2972,13 @@ body > section.subscribe .button {
 }
 
 
+/* Fluid Template */
+/* ============== */
+body.fluid > .container {
+	width:100%;
+}
+
+
 /* WP Fixes */
 /* ======== */
 p:empty {

@@ -161,6 +161,13 @@
 			$(".carousel.cycle").carousel({ interval: 8000 });
     </script>
     
+    <!-- allow button to hide elements -->
+    <script>
+			$(".hide-it").click(function () {
+				$(".hide-me").hide("slow");
+			});    
+		</script>
+    
     <!-- sharethis -->
     <? if ($okfn_sharethis == "true") : ?>
 		  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 
