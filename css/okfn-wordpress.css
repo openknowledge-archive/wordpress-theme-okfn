@@ -122,6 +122,37 @@ a.more {
 }
 
 
+/* ===== */
+/* Icons */
+/* ===== */
+h1.icon,
+h2.icon,
+h3.icon,
+h4.icon,
+h5.icon,
+h6.icon {
+	padding-left:40px;
+	background-repeat:no-repeat;
+	line-height:33px;
+}
+h1.marker.icon,
+h2.marker.icon,
+h3.marker.icon,
+h4.marker.icon,
+h5.marker.icon,
+h6.marker.icon {
+	background-image: url(../images/marker-icons.png);
+	background-position: -13px -50px;
+}
+h1.blue-dot.marker.icon,
+h2.blue-dot.marker.icon,
+h3.blue-dot.marker.icon,
+h4.blue-dot.marker.icon,
+h5.blue-dot.marker.icon,
+h6.blue-dot.marker.icon {
+	background-position: -13px 0px;
+}
+
 /* ================ */
 /* Wordpress Layout */
 /* ================ */
