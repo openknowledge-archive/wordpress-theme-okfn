@@ -119,7 +119,7 @@
     
     <? if ($okfn_okf_ribbon == "true") :?>
       <div id="okf-panel" class="collapse">
-        <iframe src="http://assets.okfn.org/themes/okfn/okf-panel.html"></iframe>
+        <iframe src="http://assets.okfn.org/themes/okfn/okf-panel.html" scrolling="no"></iframe>
       </div>
     <? endif; ?>
 	  <? if ( $okfn_mailinglist_bar == "true" && $okfn_mailinglist_bar_location == "header" && is_front_page()) : ?>
