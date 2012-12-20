@@ -46,6 +46,8 @@
         <link rel="shortcut icon" href="http://assets.okfn.org/p/ckan/img/ckan.ico" />
       <?php elseif ($okfn_colours == "white" || $okfn_colours == "turquoise") : ?>
         <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/grey-favicon.ico" />
+      <?php elseif ($okfn_colours == "school") : ?>
+        <link rel="shortcut icon" href="http://assets.okfn.org/p/schoolofdata/img/favicon.ico" />
       <?php else: ?>
         <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
 		  <? endif; ?>
