@@ -32,7 +32,7 @@
     font-style: normal;
 }
 
-/* PTSans 
+/* PTSans */
 @font-face {
     font-family: 'PTSans';
     src: url('PTS76F-webfont.eot');
@@ -72,4 +72,4 @@
          url('PTS55F-webfont.svg#PTSansRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-}*/
+}

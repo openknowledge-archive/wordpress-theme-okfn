@@ -149,7 +149,7 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_colours",
         "type" => "radio",
         "desc" => "Change the general look of the site",
-        "options" => array("default" => "Classic", "grey" => "OKF", "blue" => "Ckan", "turquoise" => "Glam", "white" => "Simple"),
+        "options" => array("default" => "Classic", "grey" => "OKF", "blue" => "Ckan", "turquoise" => "Glam", "school" => "School", "white" => "Simple"),
         "std" => "default",
 				"class" => "thumbs"),
 		array(    "type" => "close"),		

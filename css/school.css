@@ -1,0 +1,272 @@
+html {
+	background-color: #0db1db;
+	background-image: url(../images/blue-tiles.png);
+	background-position: center top;
+	background-repeat: repeat;
+	padding-bottom:10px;
+}
+
+h1, h2, h3, h4, h5, h6, .brand, .strapline, label, .btn, button, input, p.intro {
+	font-family: PTSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1 {
+	margin-bottom: 6px;
+}
+h2 {
+	font-size:24px;
+	margin-bottom:4px;
+}
+h4 {
+  font-size: 16px;
+}
+
+body,
+p {
+	font-size:16px;
+	line-height:20px;
+}
+
+p.intro {
+	font-size:24px;
+}
+
+a {
+	color:#0db1db;
+}
+
+.btn,
+button,
+a.group-button,
+input[type="submit"],
+input[type="reset"] {
+	-webkit-border-radius: 14px;
+  border-radius: 14px; 
+}
+
+.btn-large {
+	-webkit-border-radius: 20px;
+  border-radius: 20px; 
+	padding: 7px 14px;
+	font-weight:bold;
+	font-size: 16px;
+}
+
+.btn-primary,
+button,
+a.group-button,
+input[type="submit"],
+input[type="reset"] {
+  background-color: #0db1db;
+  background-image: -moz-linear-gradient(top, #0db1db, #0ca9d2);
+  background-image: -ms-linear-gradient(top, #0db1db, #0ca9d2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0db1db), to(#0ca9d2));
+  background-image: -webkit-linear-gradient(top, #0db1db, #0ca9d2);
+  background-image: -o-linear-gradient(top, #0db1db, #0ca9d2);
+  background-image: linear-gradient(top, #0db1db, #0ca9d2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0db1db', endColorstr='#0ca9d2', GradientType=0);
+  border-color: #0ca9d2;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); /* Not modified, but ie seems to not render radius without it */
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled],
+button:hover,
+a.group-button:hover,
+input[type=submit]:hover,
+input[type=reset]:hover {
+  background-color: #0ca9d2;
+}
+.btn-primary:active, .btn-primary.active {
+  background-color: #0ca9d2 \9;
+}
+
+.btn-inverse {
+  background-color: #FFF;
+  background-image: -moz-linear-gradient(top, #FFF, #FFF);
+  background-image: -ms-linear-gradient(top, #FFF, #FFF);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FFF), to(#FFF));
+  background-image: -webkit-linear-gradient(top, #FFF, #FFF);
+  background-image: -o-linear-gradient(top, #FFF, #FFF);
+  background-image: linear-gradient(top, #FFF, #FFF);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='#FFF', GradientType=0);
+  border-color: #FFF;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); /* Not modified, but ie seems to not render radius without it */
+	color:#0db1db;
+}
+.btn-inverse:hover,
+.btn-inverse:active,
+.btn-inverse.active,
+.btn-inverse.disabled,
+.btn-inverse[disabled] {
+  background-color: #FFF;
+}
+.btn-inverse:active, .btn-info.active {
+  background-color: #FFF \9;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(13, 177, 219, 0.8);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(13, 177, 219, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(13, 177, 219, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(13, 177, 219, 0.6);
+}
+
+.well {
+  border:none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+	position:relative;
+	padding:25px;
+}
+.well:after {
+	border-bottom: 20px solid transparent;
+  border-left: 35px solid #F5F5F5;
+  border-top: 0 solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  bottom: -19px;
+	left: 25px;
+}
+.coloured .well {
+  background-color: #FFF;
+}
+.coloured .well:after {
+	border-left-color: #FFF;
+}
+
+.padder {
+	padding:10px;
+}
+
+/* Header */
+/* ====== */
+.navbar-inner {
+	filter: none; /* IE6-9 */
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	background-color: #0db1db;
+	background-image: url(../images/blue-tiles.png);
+	background-position: center bottom;
+	background-repeat: repeat;
+}
+
+.navbar .nav > li > a {
+	color: #FFF;
+	text-shadow:none;
+	font-family:PTSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:16px;
+}
+.navbar .nav > li > a:hover,
+.navbar .dropdown-menu,
+.navbar .nav > li > a:hover,
+.navbar .nav .sfhover {
+  background-color: #0db1db;
+}
+.navbar .dropdown-menu {
+	-webkit-box-shadow: inset 0px -2px 2px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px -2px 2px 0px rgba(0, 0, 0, 0.1); 
+}
+.navbar .dropdown-menu a {
+  color: #FFF;
+}
+.navbar .dropdown-menu li > a:hover,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover {
+  background-color: #0ca9d2;
+}
+
+.navbar .navbar-inner .social-links a.facebook:hover {
+	background-position: center 0px;
+}
+.navbar .navbar-inner .social-links a.twitter:hover {
+	background-position: center -150px;
+}
+
+.okfn-ribbon {
+	margin-left:10px;
+}
+.okfn-ribbon a {
+	background-position: center -227px;
+}
+.okfn-ribbon a:hover {
+	background-position: center -127px;
+}
+#okf-panel {
+	border-bottom-color:#353535; 
+}
+
+
+/* Banners */
+/* ======= */
+section.coloured,
+section.coloured:before,
+section.coloured:after {
+	background-color: #0db1db;
+	background-image: url(../images/blue-tiles.png);
+	background-position: center top;
+	background-repeat: repeat;
+}
+section.coloured .well,
+section.coloured .well h1,
+section.coloured .well h2,
+section.coloured .well h3,
+section.coloured .well h4 {
+	color:#333333;
+}
+
+
+/* Widgets */
+/* ======= */
+.tweet_list {
+	position:relative;
+}
+.tweet_list li {
+	padding:25px;
+}
+.tweet_list li:before,
+.tweet_list li:after {
+	font-family: PTSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:60px;
+	position:absolute;
+	color:#dbdbdb;
+}
+.tweet_list li:first-of-type:before {
+	content:'\201C';
+	top:40px;
+	left:0px;
+}
+.tweet_list li:first-of-type:after {
+	content:'\201D';
+	bottom:0px;
+	right:0px;
+}
+.tweet_list li a {
+  color: #0db1db;
+}
+.tweet_list li .tweet_avatar {
+	display:none;
+}
+
+
+/* Footer */
+/* ====== */
+body > footer {
+	background-color: #333333;
+	background-image:none;
+}
+body > footer > .inner {
+	min-height:100px;
+	padding:20px 0px;
+	background-image:none;
+}

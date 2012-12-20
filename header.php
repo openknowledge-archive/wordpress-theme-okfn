@@ -78,6 +78,8 @@
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/white.css"/>
     <?php elseif ($okfn_colours == "turquoise") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/turquoise.css"/>
+    <?php elseif ($okfn_colours == "school") : ?>
+      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/school.css"/>
     <? endif; ?>
     
 		<style type="text/css">

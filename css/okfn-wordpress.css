@@ -2909,9 +2909,10 @@ body.page-template-home-page-php.magazine .post.preview .btn,
 /* ============ */
 
 body > section.subscribe {
-	background-color:#E5E5E5;
+	background-color:#3d3d3d;
 	padding-top:11px;
-	border-top:solid 1px #CBCBCB;
+	border-top:solid 1px #3d3d3d;
+	color:#f5f5f5;
 }
 body > section.subscribe form {
 	margin-bottom:7px;
@@ -2936,6 +2937,7 @@ body > section.subscribe input[type="text"] {
 }
 body > section.subscribe label {
 	display:none;
+	color:#f5f5f5;
 }
 body > section.subscribe .announce {
 	width:185px;

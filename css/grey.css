@@ -361,6 +361,19 @@ a.well:hover {
 }
 
 
+/* Mailing List */
+/* ============ */
+
+body > section.subscribe {
+	background-color:#E5E5E5;
+	border-top:solid 1px #CBCBCB;
+	color: #333333;
+}
+body > section.subscribe label {
+	color:#333333;
+}
+
+
 /* Footer */
 /* ====== */
 
