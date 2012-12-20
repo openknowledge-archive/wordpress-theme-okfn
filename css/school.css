@@ -25,9 +25,12 @@ p {
 	font-size:16px;
 	line-height:20px;
 }
-
 p.intro {
 	font-size:24px;
+}
+
+li {
+  line-height: 22px;
 }
 
 a {
@@ -83,6 +86,7 @@ input[type=reset]:hover {
   background-color: #0ca9d2 \9;
 }
 
+#sidebar .widget input[type="submit"],
 .btn-inverse {
   background-color: #FFF;
   background-image: -moz-linear-gradient(top, #FFF, #FFF);
@@ -96,6 +100,11 @@ input[type=reset]:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); /* Not modified, but ie seems to not render radius without it */
 	color:#0db1db;
 }
+#sidebar .widget input[type="submit"]:hover,
+#sidebar .widget input[type="submit"]:active,
+#sidebar .widget input[type="submit"].active,
+#sidebar .widget input[type="submit"].disabled,
+#sidebar .widget input[type="submit"][disabled],
 .btn-inverse:hover,
 .btn-inverse:active,
 .btn-inverse.active,
@@ -103,6 +112,7 @@ input[type=reset]:hover {
 .btn-inverse[disabled] {
   background-color: #FFF;
 }
+#sidebar .widget .btn.active,
 .btn-inverse:active, .btn-info.active {
   background-color: #FFF \9;
 }
@@ -144,9 +154,6 @@ textarea:focus {
 	border-left-color: #FFF;
 }
 
-.padder {
-	padding:10px;
-}
 
 /* Header */
 /* ====== */
@@ -228,6 +235,27 @@ section.coloured .well h4 {
 
 /* Widgets */
 /* ======= */
+#sidebar {
+	margin-left:15px;
+}
+#sidebar,
+#sidebar p {
+	font-size:13px;
+}
+#sidebar .widget {
+	background-image:none;
+	background-color:#0db1db;
+	border:none;
+	color:#FFF;
+}
+#sidebar .widget > ul li {
+	border-top-color:#FFF;
+}
+
+.gce-widget-grid .gce-calendar {
+	border-color:#FFF;
+}
+
 .tweet_list {
 	position:relative;
 }
