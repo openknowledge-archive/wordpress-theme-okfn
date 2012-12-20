@@ -2908,45 +2908,78 @@ body.page-template-home-page-php.magazine .post.preview .btn,
 /* Mailing List */
 /* ============ */
 
-body > section.subscribe {
+body > section.subscribe,
+body > .tabbable.mailing-lists > section.subscribe {
 	background-color:#3d3d3d;
 	padding-top:11px;
 	border-top:solid 1px #3d3d3d;
 	color:#f5f5f5;
 }
-body > section.subscribe form {
+body > section.subscribe form,
+body > .tabbable.mailing-lists > section.subscribe form {
 	margin-bottom:7px;
 }
-body > section.subscribe table {
+body > section.subscribe table,
+body > .tabbable.mailing-lists > section.subscribe table {
 	margin:0px;
 }
 body > section.subscribe table th,
-body > section.subscribe table td {
+body > section.subscribe,
+body > .tabbable.mailing-lists > section.subscribe table th,
+body > .tabbable.mailing-lists > section.subscribe table td {
 	padding:0px;
 	border:none;
 }
-body > section.subscribe table th {
+body > section.subscribe table th,
+body > .tabbable.mailing-lists > section.subscribe table th {
 	line-height:29px;
 }
-body > section.subscribe table td.submit {
+body > section.subscribe table td.submit,
+body > .tabbable.mailing-lists > section.subscribe table td.submit {
 	width:81px;
 }
 body > section.subscribe input[type="email"],
-body > section.subscribe input[type="text"] {
+body > section.subscribe input[type="text"],
+body > .tabbable.mailing-lists > section.subscribe input[type="email"],
+body > .tabbable.mailing-lists > section.subscribe input[type="text"] {
 	width:92%;
 }
-body > section.subscribe label {
+body > section.subscribe label,
+body > .tabbable.mailing-lists > section.subscribe label {
 	display:none;
 	color:#f5f5f5;
 }
-body > section.subscribe .announce {
+body > section.subscribe .announce,
+body > .tabbable.mailing-lists > section.subscribe .announce {
 	width:185px;
 }
-body > section.subscribe .announce label {
+body > section.subscribe .announce label,
+body > .tabbable.mailing-lists > section.subscribe .announce label {
 	display:block;
 }
-body > section.subscribe .button {
+body > section.subscribe .button,
+body > .tabbable.mailing-lists > section.subscribe .button {
 	float:right;
+}
+
+body > .tabbable.mailing-lists .nav {
+  margin-bottom: 0px;
+}
+body > .tabbable.mailing-lists .nav-tabs {
+  border-bottom: none;
+}
+body > .tabbable.mailing-lists .nav li a {
+	background-color:#646464;
+	border: none;
+  border-radius: 0;
+  padding-bottom: 5px;
+  padding-top: 5px;
+	font-size:14px;
+	line-height:normal;
+	color:#FFF;
+}
+body > .tabbable.mailing-lists .nav li.active a {
+	background-color:#3d3d3d;
 }
 
 

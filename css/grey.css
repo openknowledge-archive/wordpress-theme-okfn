@@ -364,13 +364,25 @@ a.well:hover {
 /* Mailing List */
 /* ============ */
 
-body > section.subscribe {
+body > section.subscribe,
+body > .tabbable.mailing-lists > section.subscribe {
 	background-color:#E5E5E5;
 	border-top:solid 1px #CBCBCB;
 	color: #333333;
 }
-body > section.subscribe label {
+body > section.subscribe label,
+body > .tabbable.mailing-lists > section.subscribe label {
 	color:#333333;
+}
+body > .tabbable.mailing-lists .nav li a {
+	background-color:#EFEFEF;
+	border: none;
+	color:#333333;
+	border:solid 1px #CBCBCB;
+}
+body > .tabbable.mailing-lists .nav li.active a {
+	background-color:#E5E5E5;
+	border-bottom-color:transparent;
 }
 
 
