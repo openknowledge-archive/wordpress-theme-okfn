@@ -2952,6 +2952,7 @@ body > .tabbable.mailing-lists > section.subscribe label {
 body > section.subscribe .announce,
 body > .tabbable.mailing-lists > section.subscribe .announce {
 	width:185px;
+	display:none; /*awaiting dev*/
 }
 body > section.subscribe .announce label,
 body > .tabbable.mailing-lists > section.subscribe .announce label {
