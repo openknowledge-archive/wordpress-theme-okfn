@@ -43,7 +43,6 @@
 
 /* Photo Stack */
 /* =========== */
-
 .banner > .carousel.photo-stack {
 	height:390px;
 }
@@ -72,6 +71,29 @@
 .banner > .carousel.photo-stack .item.not-photo {
 	background-image:none;
 }
+
+
+/* Shadowed */
+/* ======== */
+.banner > .carousel.shadowed {
+	height:350px;
+}
+.banner > .carousel.shadowed .item img {
+	height:311px;
+	margin-top:40px;
+	-webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+	margin-left: 3px;
+}
+.banner > .carousel.shadowed .carousel-caption,
+.banner > .carousel.shadowed .carousel-control {
+   bottom: 100px;
+}
+.banner > .carousel.shadowed .item.not-photo {
+	height:311px;
+	margin-top:40px;
+}
+
 
 /* Text Slide */
 .banner > .carousel .item .text-slide {
