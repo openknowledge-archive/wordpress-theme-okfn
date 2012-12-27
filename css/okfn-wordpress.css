@@ -2915,7 +2915,9 @@ body > .tabbable.mailing-lists > section.subscribe {
 	border-top:solid 1px #3d3d3d;
 	color:#f5f5f5;
 }
-body > section.subscribe form,
+body > section.subscribe form {
+	margin-bottom:0px;
+}
 body > .tabbable.mailing-lists > section.subscribe form {
 	margin-bottom:7px;
 }
@@ -2933,6 +2935,7 @@ body > .tabbable.mailing-lists > section.subscribe table td {
 body > section.subscribe table th,
 body > .tabbable.mailing-lists > section.subscribe table th {
 	line-height:29px;
+	vertical-align:middle;
 }
 body > section.subscribe table td.submit,
 body > .tabbable.mailing-lists > section.subscribe table td.submit {
