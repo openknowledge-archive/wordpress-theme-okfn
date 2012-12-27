@@ -35,7 +35,7 @@ function carousel_shortcode( $atts, $content = null ) {
 	extract( shortcode_atts( array(
 			'class' => '',
 		), $atts ) );
-   return '<div id="myCarousel" class="carousel '.$class.'"><div class="carousel-inner">' .do_shortcode($content). '</div><a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a><a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a></div><script>$(".text-slide").parent().addClass("not-photo");</script>';
+   return '<div id="myCarousel" class="carousel '.$class.'"><div class="carousel-inner">' .do_shortcode($content). '</div><a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a><a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a></div><script>$("div.text-slide, div.calendar-slide").parent().addClass("not-photo");</script>';
 } 
 add_shortcode( 'carousel', 'carousel_shortcode' );
 
@@ -46,11 +46,15 @@ function carousel_slide_shortcode( $atts ) {
 			'caption' => '',
 			'class' => '',
 			'heading' => '',
+			'calendar' => '',
 		), $atts ) );
+		
+		if (!empty($calendar)) { $googleCalendar = '[google-calendar-events id="'.$calendar.'" type="ajax"]';}
 		
 		$slideOpen = '<div class="item ' .$class. '">';
 		if (!empty($img)) { $slideContent = '<img src="' .$img. '">';} 
 		elseif (!empty($text)) { $slideContent = '<div class="text-slide">' .$text. '</div>';}
+		elseif (!empty($calendar)) { $slideContent = '<div class="calendar-slide">'.do_shortcode($googleCalendar).'</div>';}
 		else { $slideContent = '<img src="http://farm8.staticflickr.com/7174/6554801385_83acdc501d_o_d.png">';};
 		if (!empty($caption)) { $slideCaptionOpen = '<div class="carousel-caption">';};
 		if (!empty($heading)) { $slideHeading = '<h2>' .$heading. '</h2>';};
