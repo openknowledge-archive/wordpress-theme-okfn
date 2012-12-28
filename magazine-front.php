@@ -38,16 +38,35 @@ function browser_body_class($classes = '') {
       }
 
       // Query remaining posts
-      $post_filter_etc = array('posts_per_page' => 4, 'post__not_in' => $idsToSkip);
+      $post_filter_etc = array('posts_per_page' => 20, 'post__not_in' => $idsToSkip);
 
-      // Print the remaining posts
-      query_posts( $post_filter_etc );
-      while (have_posts()) {
-        the_post();
-        echo_magazine_post($post, false);
-      }
-    /* =================== */
-    ?>
+		  $counter = 1; ?>
+      <div id="myCarousel" class="carousel slide">
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <div class="item active">
+						<?
+            // Print the remaining posts
+            query_posts( $post_filter_etc );
+            while (have_posts()) {
+              the_post();
+              echo_magazine_post($post, false);
+                
+               if ($counter % 4 == 0) : ?>
+                </div>
+                <div class="item">
+              <?php endif;
+              $counter += 1;
+            }
+						/* =================== */
+						?>
+          </div><!-- close item -->
+        </div>
+        <div class="blog-nav">
+          <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+      </div>
     </div>
 
     <?php do_action( 'bp_after_blog_home' ) ?>

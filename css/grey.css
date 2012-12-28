@@ -359,6 +359,14 @@ a.well:hover {
 .magazine .featured .text h2 a {
   color: #333333;
 }
+.magazine .blog-nav .carousel-control {
+	background-color:#F3F3F3;
+	color:#333333;
+}
+.magazine .blog-nav .carousel-control:hover {
+	background-color:#333333;
+	color:#FFF;
+}
 
 
 /* Mailing List */
