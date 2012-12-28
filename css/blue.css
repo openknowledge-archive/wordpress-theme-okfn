@@ -57,6 +57,16 @@ a:hover {
 	background-position: center -200px;
 }
 
+.okfn-ribbon a {
+	background-position: center -227px;
+}
+.okfn-ribbon a:hover {
+	background-position: center -127px;
+}
+#okf-panel {
+	border-bottom-color:#353535; 
+}
+
 .sub-header {
 	background-color:#b2cedf;
 }

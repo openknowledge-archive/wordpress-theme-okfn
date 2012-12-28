@@ -418,8 +418,21 @@ body.page-template-home-page-php.magazine .post.preview .text {
 
 /* Ribbon */
 /* ====== */
-
 .ribbon,
-.magazine h3.ribbon {
+.magazine h3.ribbon,
+.magazine .featured .ribbon {
   background-color: #0eada9;
+}
+
+
+/* Magazine */
+/* ======== */
+.magazine #content .featured h2 a {
+  color: #FFF;
+}
+.magazine .blog-nav .carousel-control {
+	background-color:#A4A4A4;
+}
+.magazine .blog-nav .carousel-control:hover {
+	background-color:#0eada9;
 }

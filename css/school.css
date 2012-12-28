@@ -287,6 +287,17 @@ section.coloured .well h4 {
 }
 
 
+/* Magazine */
+/* ======== */
+.magazine,
+.magazine p {
+	font-size:13px;
+}
+.magazine .featured .ribbon {
+  background-color: #0db1db;
+}
+
+
 /* Footer */
 /* ====== */
 body > footer {
