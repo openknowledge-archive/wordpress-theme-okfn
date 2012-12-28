@@ -134,11 +134,19 @@ body > header,
 .navbar .nav > li > a:hover,
 .navbar .dropdown-menu,
 .navbar .nav > li > a:hover,
-.navbar .nav .sfhover {
+.navbar .nav .sfhover,
+.navbar .nav .dropdown.sfhover.active {
   background-color: #a4a4a4;
 }
-.navbar .dropdown-menu a {
+.navbar .dropdown-menu a,
+.navbar .nav .dropdown.sfhover a {
   color: #FFF;
+}
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover,
+.navbar .nav .sfhover.active {
+	background-color: transparent;
+	color: #0EADA9;
 }
 header .dropdown-toggle:after {
   border-top: 4px solid #1d1d1d;
