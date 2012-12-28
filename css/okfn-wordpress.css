@@ -2918,6 +2918,7 @@ body > .tabbable.mailing-lists > section.subscribe {
 body > section.subscribe form {
 	margin-bottom:0px;
 }
+body > section.subscribe form,
 body > .tabbable.mailing-lists > section.subscribe form {
 	margin-bottom:7px;
 }
@@ -2926,7 +2927,7 @@ body > .tabbable.mailing-lists > section.subscribe table {
 	margin:0px;
 }
 body > section.subscribe table th,
-body > section.subscribe,
+body > section.subscribe table td,
 body > .tabbable.mailing-lists > section.subscribe table th,
 body > .tabbable.mailing-lists > section.subscribe table td {
 	padding:0px;
@@ -2935,7 +2936,6 @@ body > .tabbable.mailing-lists > section.subscribe table td {
 body > section.subscribe table th,
 body > .tabbable.mailing-lists > section.subscribe table th {
 	line-height:29px;
-	vertical-align:middle;
 }
 body > section.subscribe table td.submit,
 body > .tabbable.mailing-lists > section.subscribe table td.submit {
