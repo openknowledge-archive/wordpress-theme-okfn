@@ -429,7 +429,13 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_enable_tweet",
         "type" => "checkbox",
         "std" => "false"),
-		array(    "type" => "close"),		
+		array(    "type" => "close"),
+		array(    "type" => "open"),
+		array(  "name" => "Blog Archive",
+        "desc" => "URL to all blog posts, used in Magazine template",
+        "id" => $shortname."_blog_link",
+        "type" => "text"),
+		array(    "type" => "close"),
 );
 
 function mytheme_add_admin() {

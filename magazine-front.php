@@ -38,7 +38,7 @@ function browser_body_class($classes = '') {
       }
 
       // Query remaining posts
-      $post_filter_etc = array('posts_per_page' => 20, 'post__not_in' => $idsToSkip);
+      $post_filter_etc = array('posts_per_page' => 39, 'post__not_in' => $idsToSkip);
 
 		  $counter = 1; ?>
       <div id="myCarousel" class="carousel slide">
@@ -65,6 +65,14 @@ function browser_body_class($classes = '') {
         <div class="blog-nav">
           <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
           <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+          <?
+					global $options;
+					foreach ($options as $value) {
+							if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+					}
+						if (!empty($okfn_blog_link)) : ?>
+						<a href="<? echo $okfn_blog_link ?>" class="all-posts">See all posts</a>
+					<? endif; ?>
         </div>
       </div>
     </div>
@@ -79,7 +87,7 @@ function browser_body_class($classes = '') {
 
 
 <script>
-	jQuery(window).load(function() {
+	jQuery(document).ready(function() {
 				jQuery(".magazine .post.preview .text").dotdotdot({
 						//  configuration goes here
 				});

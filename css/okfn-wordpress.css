@@ -1895,6 +1895,10 @@ ul.scrollButtons li.right a:hover {
 	right: auto;
 	left:35px;
 }
+.magazine .blog-nav .all-posts {
+	line-height:25px;
+	margin-right:5px;
+}
 
 
 /* Blog Post Page */
