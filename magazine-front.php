@@ -79,7 +79,7 @@ function browser_body_class($classes = '') {
 
 
 <script>
-	jQuery(document).ready(function() {
+	jQuery(window).load(function() {
 				jQuery(".magazine .post.preview .text").dotdotdot({
 						//  configuration goes here
 				});
