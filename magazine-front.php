@@ -92,4 +92,7 @@ function browser_body_class($classes = '') {
 						//  configuration goes here
 				});
 		});
+	jQuery('#myCarousel').bind('slid', function() {
+			jQuery(".magazine .post.preview .text").trigger("update");
+		});
 </script>
