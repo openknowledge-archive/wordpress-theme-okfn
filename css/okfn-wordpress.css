@@ -2880,6 +2880,39 @@ body > .corner.ribbon img {
 	margin:6px 0px 0px 0px;
 	line-height:18px;
 }
+.latest-posts.horizontal {
+	margin-left:-10px;
+}
+.latest-posts.horizontal li {
+	float:left;
+	width:25%;
+}
+.latest-posts.horizontal li a {
+	height:auto;
+	border:none;
+	margin-left:10px;
+}
+.latest-posts.horizontal li .image {
+	float:none;
+	width:auto;
+	height:136px;
+}
+.latest-posts.horizontal li .text {
+	margin-left:0px;
+	height:126px;
+}
+#content .latest-posts.horizontal li .text h4 {
+	font-size:18px;
+	line-height:22px;
+	margin-bottom: 5px;
+  margin-top: 10px;
+}
+.latest-posts.horizontal.posts1 li {
+	width:100%;
+}
+.latest-posts.horizontal.posts2 li {
+	width:50%;
+}
 
 
 /* Mag Homepage */

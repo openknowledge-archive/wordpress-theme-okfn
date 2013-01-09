@@ -423,13 +423,14 @@ function latest_posts_shortcode( $atts ){
 	extract( shortcode_atts( array(
 			'postnumber' => '3',
 			'category' => '',
+			'class' => '',
 		), $atts ) );
 		
     $q = new WP_Query(
 			array( 'orderby' => 'date', 'posts_per_page' => ''.$postnumber.'', 'category_name' => ''.$category.'')
 		);
 
-		$list = '<ul class="latest-posts">';
+		$list = '<ul class="latest-posts posts'.$postnumber.' '.$class.'">';
 
 		while($q->have_posts()) : $q->the_post();
 			// Extract the first img src from the post body
