@@ -465,25 +465,37 @@ add_shortcode( 'latest_posts', 'latest_posts_shortcode' );
 *              <span style="background-image:url(%image_small%);"></span>
 **********************************************************************************************/
 
-add_shortcode( 'fbanner', 'fbanner_shortcode' );
-
 function fbanner_shortcode( $atts, $content = null ) {  
 	extract( shortcode_atts( array(
 	  'id' => '50136062@N03',
-	  'set' => '72157631690090162', 
+	  'set' => '72157631690090162',
+		'link' => ''
 		), $atts ) );
 
-			echo '<div class="flickr banner"><div class="inner">';
-			get_flickrRSS(
-				array(
-					'set' => $set, 
-					'num_items' => 18, 
-					'type' => 'set', 
-          'id' => $id,
-				 )
-);
-			echo '<div class="text">' .do_shortcode($content). '</div></div></div>'; 
-
+		if ($link == y ) {
+			$open = '<a href="http://www.flickr.com/photos/'.$id.'/sets/'.$set.'/show/" class="flickr banner"><span class="inner">';
+		}
+		else {
+			$open = '<div class="flickr banner"><div class="inner">';
+		}
+		ob_start();
+		get_flickrRSS(
+			array(
+				'set' => $set, 
+				'num_items' => 18, 
+				'type' => 'set', 
+				'id' => $id,
+			 )
+		);
+		$images = ob_get_clean();
+		if ($link == y ) {
+			$close = '<div class="text">' .do_shortcode($content). '</div></span></a>';
+		}
+		else {
+			$close = '<div class="text">' .do_shortcode($content). '</div></div></div>';
+		}
+		$banner = $open.$images.$close;
+		return $banner;
 }
 add_shortcode('fbanner', 'fbanner_shortcode'); 
 

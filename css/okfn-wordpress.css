@@ -2564,10 +2564,12 @@ section.squared.full-width:after  {
 	position:relative;
 	height:300px;
 	overflow:hidden;
+	display:block;
 }
 .flickr.banner .inner {
 	width:960px;
-	margin-left:-10px
+	margin-left:-10px;
+	display:block;
 }
 .flickr.banner .inner > span {
 	display: block;
@@ -2588,6 +2590,9 @@ section.squared.full-width:after  {
 	font-size:20px;
 	line-height: normal;
 	font-family: OpenSansLight, "Helvetica Neue", Helvetica,Arial,sans-serif;
+}
+.flickr.banner .inner .text:empty {
+	padding:0px;
 }
 
 section.coloured,
