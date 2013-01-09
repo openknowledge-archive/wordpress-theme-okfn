@@ -108,11 +108,12 @@ add_shortcode( 'banner', 'banner_shortcode' );
 function banner_shortcode( $atts, $content = null ) {  
 	extract( shortcode_atts( array(
 			'bg' => 'http://assets.okfn.org/web/images/banner.png',
-			'height' => '280',
+			'height' => '320',
 			'bgcolour' => 'd4d4d4',
+			'class' => ''
 		), $atts ) );
-		
-		return '<div class="static-banner" style="background-image:url('.$bg.'); height:'.$height.'px; background-color:#'.$bgcolour.';"><div class="inner">' .do_shortcode($content). '</div></div>'; 
+		$padheight = $height - 40;
+		return '<div class="static-banner '.$class.'" style="background-image:url('.$bg.'); height:'.$padheight.'px; background-color:#'.$bgcolour.';"><div class="inner">' .do_shortcode($content). '</div></div>'; 
 		}
 
 add_shortcode('banner', 'banner_shortcode'); 

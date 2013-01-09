@@ -2557,6 +2557,23 @@ section.squared.full-width:after  {
 	line-height:26px;
 	font-family:OpenSansLight, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.static-banner.text-left {
+	padding: 20px 0px;
+	display: block;
+	position:relative;
+}
+.static-banner.text-left .inner {
+  display: block;
+	position:absolute;
+	bottom:20px;
+	background-color:rgb(255,255,255);
+	background-color:rgba(255,255,255,0.8);
+	max-width:67%;
+	padding:15px 30px 15px 25px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
 
 
 .flickr.banner {
