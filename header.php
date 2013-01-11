@@ -35,22 +35,21 @@
 
 			wp_head();
 		?>
+    <? if ($okfn_flags_sprite == "true") : ?>
+      <link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
+      <link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
+    <? endif; ?>
     <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url') . '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>"/>
     <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/carousels.css"/>
-    <?
-      global $options;
-      foreach ($options as $value) {
-          if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
-      }
-      if ($okfn_colours == "blue") : ?>
-        <link rel="shortcut icon" href="http://assets.okfn.org/p/ckan/img/ckan.ico" />
-      <?php elseif ($okfn_colours == "white" || $okfn_colours == "turquoise") : ?>
-        <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/grey-favicon.ico" />
-      <?php elseif ($okfn_colours == "school") : ?>
-        <link rel="shortcut icon" href="http://assets.okfn.org/p/schoolofdata/img/favicon.ico" />
-      <?php else: ?>
-        <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
-		  <? endif; ?>
+    <? if ($okfn_colours == "blue") : ?>
+      <link rel="shortcut icon" href="http://assets.okfn.org/p/ckan/img/ckan.ico" />
+    <?php elseif ($okfn_colours == "white" || $okfn_colours == "turquoise") : ?>
+      <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/grey-favicon.ico" />
+    <?php elseif ($okfn_colours == "school") : ?>
+      <link rel="shortcut icon" href="http://assets.okfn.org/p/schoolofdata/img/favicon.ico" />
+    <?php else: ?>
+      <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
+    <? endif; ?>
     
     <script type="text/javascript">
       var Okfn = Okfn || {};
@@ -61,7 +60,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  
+    
     <!-- Theme Settings -->
     <? if ($okfn_okf_ribbon == "true"):?>
       <link rel="stylesheet" href="http://assets.okfn.org/themes/okfn/okf-panel.css"/>
