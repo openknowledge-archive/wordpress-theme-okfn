@@ -316,6 +316,16 @@ section.coloured .well h4 {
 }
 
 
+/* Home */
+/* ==== */
+.home-page > .container > section:nth-of-type(odd) {
+	background-color:#dbf3fa;
+}
+body > .container > section > .container {
+	padding: 20px 0px;
+}
+
+
 /* Magazine */
 /* ======== */
 .magazine,
