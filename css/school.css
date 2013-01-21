@@ -192,7 +192,36 @@ textarea:focus {
 .dropdown-menu .active > a:hover {
   background-color: #0ca9d2;
 }
-
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover {
+  background-color: transparent;
+	position:relative;
+}
+.navbar .nav .active > a:before,
+.navbar .nav .active > a:hover:before {
+	content:' ';
+	position:absolute;
+	top:0;
+	background-color:#333333;
+	height:4px;
+	width:100%;
+	margin-left:-10px;
+}
+/*
+.navbar .nav .active > a:after,
+.navbar .nav .active > a:hover:after {
+	content:' ';
+	position:absolute;
+	top:4px;
+	left:50%;
+	width: 0; 
+	height: 0; 
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #333333;
+	margin-left:-6px;
+}
+*/
 .navbar .navbar-inner .social-links a.facebook:hover {
 	background-position: center 0px;
 }
