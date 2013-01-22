@@ -154,6 +154,10 @@ textarea:focus {
 	border-left-color: #FFF;
 }
 
+code {
+  color: #0db1db;
+}
+
 
 /* Header */
 /* ====== */

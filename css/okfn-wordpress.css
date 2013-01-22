@@ -121,6 +121,13 @@ a.more {
 	font-weight:bold;
 }
 
+code {
+  color: #114c45;
+}
+pre code {
+	border:none;
+}
+
 
 /* ===== */
 /* Icons */
