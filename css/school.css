@@ -353,7 +353,12 @@ body > .container > section > .container {
 /* ==== */
 .magazine,
 .magazine p {
-	font-size:13px;
+	font-size:13px; /* due to inline-block layout */
+}
+.magazine .featured .text p,
+.magazine .post.preview .text p {
+  line-height: 20px;
+	font-size:16px;
 }
 .magazine .featured .ribbon {
   background-color: #0db1db;
@@ -375,6 +380,20 @@ body > .container > section > .container {
 .wp-caption-text a,
 .magazine #blog-single p.wp-caption-text a {
 	color:#333333;
+}
+#sidebar .widget,
+#sidebar .widget p {
+  font-size: 16px;
+  line-height:20px;
+	color:#FFF;
+}
+#sidebar .widget h1,
+#sidebar .widget h2,
+#sidebar .widget h3,
+#sidebar .widget h4,
+#sidebar .widget h5,
+#sidebar .widget h6 {
+  font-size: 18px;
 }
 
 
