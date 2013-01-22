@@ -3134,6 +3134,10 @@ body.fluid > .container {
 p:empty {
 	display: none;
 }
+a.toc-anchor+br
+{
+	display: none;
+}
 
 
 /* Footer */
