@@ -355,6 +355,7 @@ a.well:hover {
   color: #333;
   border-bottom-color: #FFFFFF;
 }
+.magazine .featured .text p,
 .magazine .featured .text a,
 .magazine .featured .text h2 a {
   color: #333333;

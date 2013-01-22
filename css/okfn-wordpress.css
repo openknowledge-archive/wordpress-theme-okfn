@@ -1812,6 +1812,7 @@ ul.scrollButtons li.right a:hover {
 .magazine .featured .text p {
 	line-height:14px;
 	margin-bottom:14px;
+	color:#FFF;
 }
 .magazine .featured .text .entry-meta {
   display: none;
@@ -1848,7 +1849,8 @@ ul.scrollButtons li.right a:hover {
 	line-height:14px;
 	margin-bottom:14px;
 }
-.magazine .post.preview .text p:nth-of-type(n+2) {
+.magazine .post.preview .text p:nth-of-type(n+2),
+.magazine .post.preview .text div.sharethis-plugin {
 	display:none;
 }
 .magazine .post.preview .text strong {
@@ -1935,6 +1937,7 @@ ul.scrollButtons li.right a:hover {
 
 .single-post #blog-single .post .date {
 	font-size:12px;
+	line-height:normal;
 	padding:0px 10px;
 	color:#9B9B9B;
 }
@@ -2631,7 +2634,8 @@ section.coloured,
 section.coloured h1,
 section.coloured h2,
 section.coloured h3,
-section.coloured h4 {
+section.coloured h4,
+section.coloured p {
 	color:#FFF;
 }
 	

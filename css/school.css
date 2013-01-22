@@ -12,18 +12,31 @@ h1, h2, h3, h4, h5, h6, .brand, .strapline, label, .btn, button, input, p.intro 
 h1 {
 	margin-bottom: 6px;
 }
-h2 {
+h2,
+#content h2 {
 	font-size:24px;
-	margin-bottom:4px;
+  margin-bottom: 5px;
+  margin-top: 25px;
+}
+h3 {
+	font-size:20px;
+	line-height:24px;
 }
 h4 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body,
-p {
+p,
+.magazine #blog-single,
+.magazine #blog-single p { 
 	font-size:16px;
-	line-height:20px;
+	line-height:22px;
+	color:#444444;
+	font-family: PTSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+p {
+	margin-bottom:12px;
 }
 p.intro {
 	font-size:24px;
@@ -261,7 +274,8 @@ section.coloured .well,
 section.coloured .well h1,
 section.coloured .well h2,
 section.coloured .well h3,
-section.coloured .well h4 {
+section.coloured .well h4,
+section.coloured .well p {
 	color:#333333;
 }
 
@@ -322,6 +336,11 @@ section.coloured .well h4 {
 
 /* Home */
 /* ==== */
+body.home-page,
+.home-page p {
+	font-size:18px;
+	line-height:22px;
+}
 .home-page > .container > section:nth-of-type(odd) {
 	background-color:#dbf3fa;
 }
@@ -330,14 +349,32 @@ body > .container > section > .container {
 }
 
 
-/* Magazine */
-/* ======== */
+/* Blog */
+/* ==== */
 .magazine,
 .magazine p {
 	font-size:13px;
 }
 .magazine .featured .ribbon {
   background-color: #0db1db;
+}
+.single-post #blog-single .post .post-content {
+  padding: 10px 20px;
+}
+.wp-caption {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.wp-caption-text,
+.magazine #blog-single p.wp-caption-text {
+	font-size: 14px;
+  line-height: 16px;
+}
+.wp-caption-text,
+.magazine #blog-single p.wp-caption-text,
+.wp-caption-text a,
+.magazine #blog-single p.wp-caption-text a {
+	color:#333333;
 }
 
 
