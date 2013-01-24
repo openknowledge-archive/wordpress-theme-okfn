@@ -334,6 +334,15 @@ section.coloured .well p {
 }
 
 
+li.toc-level-2,
+li.toc-level-3,
+li.toc-level-4,
+li.toc-level-5,
+li.toc-level-6 {
+	font-size:14px;
+}
+
+
 /* Home */
 /* ==== */
 body.home-page,
