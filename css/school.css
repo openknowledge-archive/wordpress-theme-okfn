@@ -386,6 +386,9 @@ body > .container > section > .container {
 .single-post .container > .author-box.small p {
   font-size: 14px;
   line-height:18px;
+}
+#sidebar .widget,
+#sidebar .widget p {
 	color:#FFF;
 }
 #sidebar .widget h1,
