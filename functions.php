@@ -400,7 +400,27 @@ function echo_magazine_post($post, $is_featured) {
         "options" => array("header" => "Header (home page only)", "footer" => "Footer"),
         "std" => "footer"),
 		array(  "type" => "close"),		
-			
+		array(    "name" => "Blog",
+        "type" => "title"),		
+		array(    "type" => "open"),
+		array(  "name" => "Large Blog Avatars",
+        "desc" => "Check this box to use large avatars on blog post page (requires Gravatar).",
+        "id" => $shortname."_large_avatars",
+        "type" => "checkbox",
+        "std" => "false"),
+		array(    "type" => "close"),
+		array(    "type" => "open"),
+		array(  "name" => "Blog Archive",
+        "desc" => "URL to all blog posts, used in Magazine template",
+        "id" => $shortname."_blog_link",
+        "type" => "text"),
+		array(    "type" => "close"),
+		array(    "type" => "open"),
+		array(  "name" => "Magazine Posts",
+        "desc" => "How many posts to show in the Magazine template",
+        "id" => $shortname."_magazine_posts",
+        "type" => "text"),
+		array(    "type" => "close"),		
 		array(    "name" => "Misc",
         "type" => "title"),	
 		//array("name" => "Carousel Style",
@@ -415,14 +435,7 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_tagline_title",
         "type" => "checkbox",
         "std" => "false"),
-		array(    "type" => "close"),
-		array(    "type" => "open"),
-		array(  "name" => "Large Blog Avatars",
-        "desc" => "Check this box to use large avatars on blog post page (requires Gravatar).",
-        "id" => $shortname."_large_avatars",
-        "type" => "checkbox",
-        "std" => "false"),
-		array(    "type" => "close"),		
+		array(    "type" => "close"),	
 		array(    "type" => "open"),
 		array(  "name" => "Flattr OKFN",
         "desc" => "Check this box to add a link to donate to the Open Knowledge Foundation.",
@@ -438,11 +451,6 @@ function echo_magazine_post($post, $is_featured) {
         "std" => "false"),
 		array(    "type" => "close"),
 		array(    "type" => "open"),
-		array(  "name" => "Blog Archive",
-        "desc" => "URL to all blog posts, used in Magazine template",
-        "id" => $shortname."_blog_link",
-        "type" => "text"),
-		array(    "type" => "close"),
 );
 
 function mytheme_add_admin() {
@@ -635,7 +643,7 @@ function mytheme_admin() {
 </form>
 <form method="post">
 <span class="submit" style="float:left; padding:0px;">
-<input name="reset" type="submit" value="Reset" />
+<input name="reset" type="submit" value="Reset" class="button" />
 <input type="hidden" name="action" value="reset" />
 </span>
 </form>

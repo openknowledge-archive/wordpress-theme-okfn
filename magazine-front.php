@@ -11,6 +11,19 @@ function browser_body_class($classes = '') {
 }
 ?>
 
+<?
+      global $options;
+      foreach ($options as $value) {
+          if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+      }
+     if (!empty($okfn_magazine_posts)) {
+			 $magazinePostNumber = $okfn_magazine_posts;
+		 } else {
+			 $magazinePostNumber = '39';
+		 }
+	?>
+
+
 <?php get_header() ?>
 <div id="content">
     <div class="padder">
@@ -38,7 +51,7 @@ function browser_body_class($classes = '') {
       }
 
       // Query remaining posts
-      $post_filter_etc = array('posts_per_page' => 39, 'post__not_in' => $idsToSkip);
+      $post_filter_etc = array('posts_per_page' => $magazinePostNumber, 'post__not_in' => $idsToSkip);
 
 		  $counter = 1; ?>
       <div id="myCarousel" class="carousel slide">
