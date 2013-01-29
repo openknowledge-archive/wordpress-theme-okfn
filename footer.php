@@ -285,6 +285,15 @@
 			});    
 		</script>
     
+    <? if ($okfn_okf_ribbon == "true"):?>
+    <!-- disable ribbon link -->   
+		<script>
+      $('.okfn-ribbon a').click(function(e) {
+          e.preventDefault();
+      });
+    </script>
+    <? endif; ?>
+    
     <!-- sharethis -->
     <? if ($okfn_sharethis == "true") : ?>
 		  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 

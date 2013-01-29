@@ -186,7 +186,7 @@
           <div class="container">
           <? if ($okfn_okf_ribbon == "true"):?>
             <div class="okfn-ribbon">
-              <a data-toggle="collapse" data-target="#okf-panel">okfn</a>
+              <a href="http://okfn.org/" data-toggle="collapse" data-target="#okf-panel" title="Part of the Open Knowledge Foundation Network">okfn</a>
             </div>
           <? endif; ?>
           <? if (($okfn_twitter_link == "true") or ($okfn_facebook_link == "true")) : ?>
