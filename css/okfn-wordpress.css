@@ -2556,6 +2556,23 @@ section.squared.full-width:after  {
 	background-position: 20px top;
 }
 
+.banner.light-banner,
+section.light-banner,
+.banner.light-banner.full-width:before,
+.banner.light-banner.full-width:after,
+section.light-banner.full-width:before,
+section.light-banner.full-width:after {
+	background: #f6f5f6; /* Old browsers */
+	background: -moz-linear-gradient(top, #f6f5f6 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f5f6), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f6f5f6 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f6f5f6 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f6f5f6 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #f6f5f6 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f5f6', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	box-shadow:none;
+}
+
 
 .static-banner {
 	padding: 20px 165px 20px 400px;
