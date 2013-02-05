@@ -3,13 +3,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 	<head>
 		<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ) ?>; charset=<?php bloginfo( 'charset' ) ?>" />
-		
-    <title>
-      <?php
+		<?php
         /* Force our chosen version of jquery */
         wp_deregister_script( 'jquery' );
         wp_register_script( 'jquery', 'http://code.jquery.com/jquery-1.7.2.min.js');
       ?>
+    <title>
 		  <?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?>
       <?
       global $options;
@@ -41,26 +40,7 @@
     <? endif; ?>
     <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url') . '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>"/>
     <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/carousels.css"/>
-    <? if ($okfn_colours == "blue") : ?>
-      <link rel="shortcut icon" href="http://assets.okfn.org/p/ckan/img/ckan.ico" />
-    <?php elseif ($okfn_colours == "white" || $okfn_colours == "turquoise") : ?>
-      <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/grey-favicon.ico" />
-    <?php elseif ($okfn_colours == "school") : ?>
-      <link rel="shortcut icon" href="http://assets.okfn.org/p/schoolofdata/img/favicon.ico" />
-    <?php else: ?>
-      <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
-    <? endif; ?>
-    
-    <script type="text/javascript">
-      var Okfn = Okfn || {};
-      // Make this variable available to Javascript
-      Okfn.theme_directory = '<?php echo bloginfo('stylesheet_directory'); ?>';
-    </script>
-    
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    
+   
     <!-- Theme Settings -->
     <? if ($okfn_okf_ribbon == "true"):?>
       <link rel="stylesheet" href="http://assets.okfn.org/themes/okfn/okf-panel.css"/>
@@ -100,12 +80,32 @@
     <? endif; ?>
     </style>
     
+    <? if ($okfn_colours == "blue") : ?>
+      <link rel="shortcut icon" href="http://assets.okfn.org/p/ckan/img/ckan.ico" />
+    <?php elseif ($okfn_colours == "white" || $okfn_colours == "turquoise") : ?>
+      <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/grey-favicon.ico" />
+    <?php elseif ($okfn_colours == "school") : ?>
+      <link rel="shortcut icon" href="http://assets.okfn.org/p/schoolofdata/img/favicon.ico" />
+    <?php else: ?>
+      <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
+    <? endif; ?>
+    
+    <script type="text/javascript">
+      var Okfn = Okfn || {};
+      // Make this variable available to Javascript
+      Okfn.theme_directory = '<?php echo bloginfo('stylesheet_directory'); ?>';
+    </script>
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- zcarousel -->
     <? if (is_front_page()) : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.css"/>
       <script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/spin.min.js"></script>
       <script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.min.js"></script>
     <? endif; ?>
-    
   </head>
   
 	<body <?php body_class() ?> id="bp-default">
