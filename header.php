@@ -5,36 +5,6 @@
 		<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ) ?>; charset=<?php bloginfo( 'charset' ) ?>" />
 		
     <title>
-      <?php
-        /* Force our chosen version of jquery */
-        wp_deregister_script( 'jquery' );
-        wp_register_script( 'jquery', 'http://code.jquery.com/jquery-1.7.2.min.js');
-      ?>
-		  <?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?>
-      <?
-      global $options;
-      foreach ($options as $value) {
-          if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
-      }
-     if ($okfn_tagline_title == "true" && get_bloginfo( 'description' )) : ?>
-      - <?php echo bloginfo( 'description' ); ?>
-     <? endif; ?>
-    </title>
-		 
-		<? if (get_bloginfo( 'description' )) : ?>
-    <meta name="description" content="<?php echo bloginfo( 'description' ); ?>" />
-    <? endif; ?>
-    <meta name="author" content="Sam Smith" />
-		<?php do_action( 'bp_head' ) ?>
-    
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ) ?>" />
-		
-		<?php
-			if ( is_singular() && bp_is_blog_page() && get_option( 'thread_comments' ) )
-				wp_enqueue_script( 'comment-reply' );
-
-			wp_head();
-		?>
     <? if ($okfn_flags_sprite == "true") : ?>
       <link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
       <link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
@@ -50,18 +20,6 @@
     <?php else: ?>
       <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
     <? endif; ?>
-    
-    <script type="text/javascript">
-      var Okfn = Okfn || {};
-      // Make this variable available to Javascript
-      Okfn.theme_directory = '<?php echo bloginfo('stylesheet_directory'); ?>';
-    </script>
-    
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    
-    <!-- Theme Settings -->
     <? if ($okfn_okf_ribbon == "true"):?>
       <link rel="stylesheet" href="http://assets.okfn.org/themes/okfn/okf-panel.css"/>
     <? endif; ?>
@@ -99,9 +57,55 @@
 			html {margin-top: 0px !important;}
     <? endif; ?>
     </style>
-    
     <? if (is_front_page()) : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.css"/>
+    <? endif; ?>
+
+    <!-- no stylesheets below here -->
+      <?php
+        /* Force our chosen version of jquery */
+        wp_deregister_script( 'jquery' );
+        wp_register_script( 'jquery', 'http://code.jquery.com/jquery-1.7.2.min.js');
+      ?>
+		  <?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?>
+      <?
+      global $options;
+      foreach ($options as $value) {
+          if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+      }
+     if ($okfn_tagline_title == "true" && get_bloginfo( 'description' )) : ?>
+      - <?php echo bloginfo( 'description' ); ?>
+     <? endif; ?>
+    </title>
+		 
+		<? if (get_bloginfo( 'description' )) : ?>
+    <meta name="description" content="<?php echo bloginfo( 'description' ); ?>" />
+    <? endif; ?>
+    <meta name="author" content="Sam Smith" />
+		<?php do_action( 'bp_head' ) ?>
+    
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ) ?>" />
+		
+		<?php
+			if ( is_singular() && bp_is_blog_page() && get_option( 'thread_comments' ) )
+				wp_enqueue_script( 'comment-reply' );
+
+			wp_head();
+		?>
+    
+    <script type="text/javascript">
+      var Okfn = Okfn || {};
+      // Make this variable available to Javascript
+      Okfn.theme_directory = '<?php echo bloginfo('stylesheet_directory'); ?>';
+    </script>
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- Theme Settings -->
+    
+    <? if (is_front_page()) : ?>
       <script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/spin.min.js"></script>
       <script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/include/jquery.zcarousel.min.js"></script>
     <? endif; ?>
