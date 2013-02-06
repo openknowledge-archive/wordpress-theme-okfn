@@ -242,8 +242,8 @@
     </div><!-- /inner -->
     </footer>
     
-		<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/bootstrap.js"></script>
-    <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/theme-okfn/js/jquery.dotdotdot-1.4.0-packed.js"></script>
+		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/include/jquery.dotdotdot-1.4.0-packed.js"></script>
     
     <?php if ( $okfn_enable_tweet == "true" ) : ?>
     <!-- Tweet -->
