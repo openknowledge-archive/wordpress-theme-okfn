@@ -35,7 +35,7 @@ function carousel_shortcode( $atts, $content = null ) {
 	extract( shortcode_atts( array(
 			'class' => '',
 		), $atts ) );
-   return '<div id="myCarousel" class="carousel '.$class.'"><div class="carousel-inner">' .do_shortcode($content). '</div><a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a><a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a></div><script>$("div.text-slide, div.calendar-slide").parent().addClass("not-photo");</script>';
+   return '<div id="myCarousel" class="carousel slide '.$class.'"><div class="carousel-inner">' .do_shortcode($content). '</div><a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a><a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a></div><script>$("div.text-slide, div.calendar-slide").parent().addClass("not-photo");</script>';
 } 
 add_shortcode( 'carousel', 'carousel_shortcode' );
 
