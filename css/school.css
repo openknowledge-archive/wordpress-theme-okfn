@@ -374,17 +374,9 @@ body > .container > section > .container {
 .magazine .featured .ribbon {
   background-color: #0db1db;
 }
-.single-post #blog-single .post .post-content {
-  padding: 10px 20px;
-}
-.wp-caption {
-	margin-top:20px;
-	margin-bottom:20px;
-}
 .wp-caption-text,
 .magazine #blog-single p.wp-caption-text {
 	font-size: 14px;
-  line-height: 16px;
 }
 .wp-caption-text,
 .magazine #blog-single p.wp-caption-text,

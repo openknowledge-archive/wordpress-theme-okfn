@@ -2761,6 +2761,8 @@ section.coloured p {
   -moz-border-radius: 3px;
   border-radius: 3px;
 	margin: 10px auto;
+	margin-top:20px;
+	margin-bottom:20px;
 	text-align:center;
 	display:block;
 }
@@ -2965,6 +2967,22 @@ body > .corner.ribbon img {
 }
 .latest-posts.horizontal.posts2 li {
 	width:50%;
+}
+
+
+#blog-single,
+#blog-single p { 
+	font-size:15px;
+	line-height:22px;
+	color:#444444;
+}
+.single-post #blog-single .post .post-content {
+  padding: 10px 20px;
+}
+.wp-caption-text,
+.magazine #blog-single p.wp-caption-text {
+	font-size: 12px;
+  line-height: 16px;
 }
 
 
