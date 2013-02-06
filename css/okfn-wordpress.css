@@ -2971,7 +2971,8 @@ body > .corner.ribbon img {
 
 
 #blog-single,
-#blog-single p { 
+#blog-single p,
+#blog-single li { 
 	font-size:15px;
 	line-height:22px;
 	color:#444444;
