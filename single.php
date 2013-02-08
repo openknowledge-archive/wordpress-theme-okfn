@@ -41,14 +41,6 @@
     
         </div>
     
-        <div class="related-posts"><!--TEST-->
-          <?php
-            if (function_exists('related_posts')) {
-              related_posts();
-            }
-          ?>
-        </div>
-    
         <?php do_action( 'bp_after_blog_single_post' ) ?>
       </div><!-- #content -->
     
