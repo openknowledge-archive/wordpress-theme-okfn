@@ -1,5 +1,6 @@
 .sub-header {
 	display:block;
+	margin-top:1px;
 }
 
 .navbar-inner {
@@ -10,7 +11,7 @@
 .nav > .current-page-ancestor {
 	background-image: url(../images/nav-arrow.png);
 	background-repeat: no-repeat;
-	background-position: center 55px;
+	background-position: center 56px;
 }
 
 .nav > .current_page_item.sfhover,
@@ -49,7 +50,7 @@
 }
 .sub-header .breadcrumb .delimiter {
 	padding:0px 3px;
-	font-weight:normal;;
+	font-weight:normal;
 }
 
 .sub-header .search-bar {
@@ -63,6 +64,7 @@
 	width:200px;
 	padding:4px 30px 4px 10px;
 	border-color: #999;
+	margin-bottom: 6px;
 }
 .sub-header .search-bar form input[type=submit],
 .sub-header .search-bar form input[type=submit]:hover {

@@ -25,7 +25,7 @@ function browser_body_class($classes = '') {
 
 
 <?php get_header() ?>
-<div id="content">
+<div id="content" class="span8">
     <div class="padder">
 
     <?php do_action( 'bp_before_blog_home' ) ?>
@@ -54,7 +54,7 @@ function browser_body_class($classes = '') {
       $post_filter_etc = array('posts_per_page' => $magazinePostNumber, 'post__not_in' => $idsToSkip);
 
 		  $counter = 1; ?>
-      <div id="myCarousel" class="carousel slide">
+      <div id="magCarousel" class="carousel slide">
         <!-- Carousel items -->
         <div class="carousel-inner">
           <div class="item active">
@@ -76,8 +76,8 @@ function browser_body_class($classes = '') {
           </div><!-- close item -->
         </div>
         <div class="blog-nav">
-          <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-          <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+          <a class="carousel-control left" href="#magCarousel" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right" href="#magCarousel" data-slide="next">&rsaquo;</a>
           <?
 					global $options;
 					foreach ($options as $value) {
@@ -100,12 +100,13 @@ function browser_body_class($classes = '') {
 
 
 <script>
+	jQuery("#magCarousel").carousel({ interval: false });
 	jQuery(document).ready(function() {
 				jQuery(".magazine .post.preview .text").dotdotdot({
 						//  configuration goes here
 				});
 		});
-	jQuery('#myCarousel').bind('slide', function() {
+	jQuery('#magCarousel').bind('slid', function() {
 			jQuery(".magazine .post.preview .text").trigger("update");
 		});
 </script>

@@ -175,7 +175,7 @@
       </section>
     <? endif; ?>
     <header<? if ($okfn_subheader == "true"):?> class="has-subheader"<? endif; ?>>
-      <div class="navbar">
+      <div class="navbar<? if ($okfn_colours == "default") : ?> navbar-inverse<? endif; ?>">
         <div class="navbar-inner">
           <div class="container">
           <? if ($okfn_okf_ribbon == "true"):?>
@@ -204,7 +204,11 @@
               <? echo stripslashes($okfn_header_textarea2); ?>
             </div>
           <? endif; ?>
-        
+          <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar collapsed">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
           <a title="<?php _ex( 'Home', 'Home page banner link title', 'buddypress' ); ?>" 
               class="brand" 
               href="<?php echo home_url(); ?>">
@@ -231,7 +235,7 @@
              </span>
           <?php endif; ?>
           
-            <nav>
+            <nav class="nav-collapse collapse">
               <?php  
                 wp_nav_menu( array( 
                   'container' => false, 
@@ -261,24 +265,28 @@
       
       <div class="sub-header">
         <div class="container">
-        
-        	<? if ($okfn_subheader == "true" && $okfn_subheader_search == "true" && !is_front_page()) : ?>
-            <div class="search-bar">
-              <?php do_action( 'bp_before_blog_search_form' ) ?>
-              <form role="search" method="get" id="searchform" action="<?php echo home_url() ?>/">
-                <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" placeholder="Search" />
-                <input type="submit" id="searchsubmit" value="<?php _e( 'Search', 'buddypress' ) ?>" />
-                <?php do_action( 'bp_blog_search_form' ) ?>
-              </form>
-              <?php do_action( 'bp_after_blog_search_form' ) ?>
+          <div class="row">
+            <div class="span8">
+              <?php
+                //function_exists() — Return TRUE if the given function has been defined.
+                //code by BOUTROS ABICHEDID. Adding breadcrumb trail to the WordPress theme.
+                if (function_exists('wp_bac_breadcrumb') && $okfn_subheader == "true") {wp_bac_breadcrumb();}
+              ?>
             </div>
-					<? endif; ?>
-          
-          <?php
-            //function_exists() — Return TRUE if the given function has been defined.
-            //code by BOUTROS ABICHEDID. Adding breadcrumb trail to the WordPress theme.
-            if (function_exists('wp_bac_breadcrumb') && $okfn_subheader == "true") {wp_bac_breadcrumb();}
-          ?>
+            <div class="span4">
+              <? if ($okfn_subheader == "true" && $okfn_subheader_search == "true" && !is_front_page()) : ?>
+                <div class="search-bar">
+                  <?php do_action( 'bp_before_blog_search_form' ) ?>
+                  <form role="search" method="get" id="searchform" action="<?php echo home_url() ?>/">
+                    <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" placeholder="Search" />
+                    <input type="submit" id="searchsubmit" value="<?php _e( 'Search', 'buddypress' ) ?>" />
+                    <?php do_action( 'bp_blog_search_form' ) ?>
+                  </form>
+                  <?php do_action( 'bp_after_blog_search_form' ) ?>
+                </div>
+              <? endif; ?>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -313,5 +321,5 @@
 
 		<?php do_action( 'bp_before_container' ) ?>
     <div class="container">
-
+      <div class="row">
 

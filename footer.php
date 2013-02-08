@@ -1,3 +1,4 @@
+      </div> <!-- /row -->
     </div> <!-- /container -->
 		
 		<?php do_action( 'bp_after_container' ) ?>

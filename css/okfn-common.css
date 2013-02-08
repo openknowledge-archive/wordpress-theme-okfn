@@ -1,4 +1,5 @@
-@import url("bootstrap.min.css");
+@import url('//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.min.css');
+@import url('http://assets.okfn.org/themes/bootstrap-responsive.css');
 
 /*
    =======================================
@@ -16,6 +17,9 @@
     border-radius: 0px 0px 0px 0px;
     padding-left: 0px;
     padding-right: 0px;
+		border-top:none;
+		border-right:none;
+		border-left:none;
 }
 
 .btn-primary {
@@ -119,10 +123,16 @@ input:focus, textarea:focus {
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover {
   background-color: #1F1F1F;
+	background-image:none;
 }
 .navbar .dropdown-menu:after,
 .navbar .dropdown-menu:before {
   display: none;
+}
+
+.navbar .nav > li > .dropdown-menu:before,
+.navbar .nav > li > .dropdown-menu:after {
+	border:none;
 }
 
 .navbar .nav {
@@ -149,6 +159,10 @@ input:focus, textarea:focus {
     line-height: 27px;
 }
 */
+
+.navbar-inner .container {
+  max-width: 940px;
+}
 
 /* Main CSS */
 /* ======== */
@@ -206,9 +220,9 @@ ul.xoxo ul li {
 
 .box {
   background-color: #FFF;
-  border: 1px solid #dee0df;
-  margin: 0px 4px 8px 4px;
+  border: 1px solid #e9eaea;
   position: relative;
+	display: inline-block;
 }
 .box .padder {
   padding: 10px;
@@ -232,6 +246,32 @@ ul.xoxo ul li {
 .box.black h5,
 .box.black h6 {
   color: #FFF;
+}
+.box.extend {
+	border-left:none;
+	border-right:none;
+	margin-bottom:15px;
+}
+.box.extend:before,
+.box.extend:after {
+   content: "";
+   position: absolute;
+   background-color: #FFF;
+   top: -1px;
+   bottom: -1px;
+   width: 20px;
+	 border: 1px solid #e9eaea;
+} 
+.box.extend:before {
+   right: 100%;
+	 border-right:none;
+}
+.box.extend:after {
+   left: 100%;
+	 border-left:none;
+}
+.box.extend .padder {
+	padding:10px 0px;
 }
 
 
@@ -329,12 +369,6 @@ header .dropdown-toggle:after {
 }
 
 /* Main Content */
-#content {
-  display: inline-block;
-  width: 680px;
-	zoom:1; *display: inline; /* fix inline-block for ie7 */
-}
-
 #content h1 {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -358,15 +392,6 @@ header .dropdown-toggle:after {
 #content h6 {
   margin-top: 20px;
   margin-bottom: 5px;
-}
-
-/* Sidebar */
-#sidebar {
-  display: inline-block;
-  vertical-align: top;
-  width: 240px;
-  margin-left: 16px; /* 4px Hack to avoid whitespace glitch between inline-block elements */
-	zoom:1; *display: inline; /* fix inline-block for ie7 */
 }
 
 
@@ -412,4 +437,25 @@ footer .widget-area {
   float: left;
   margin-left: 20px;
   width: 300px;
+}
+
+@media (max-width: 979px) {
+	.navbar .nav {
+    float: none;
+	}
+	.navbar .nav > li > a:hover,
+	.navbar .nav .sfhover,
+	.navbar .nav > li > .dropdown-toggle:hover,
+	.navbar .nav .sfhover,
+	.navbar .dropdown-menu,
+	.navbar .dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover {
+		background-color: transparent !important;
+		-webkit-box-shadow: none !important;
+		box-shadow: none !important;
+	}
+	.dropdown-menu li > a:hover {
+	  color: #999999 !important;
+	}
 }
