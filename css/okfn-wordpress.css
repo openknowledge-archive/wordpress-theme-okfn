@@ -2042,6 +2042,11 @@ ul.scrollButtons li.right a:hover {
 	border-bottom:dotted 1px #E9EAEA;
 	display:block;
 }
+.single-post .container .row .author-box p {
+	font-size:11px;
+	line-height:17px;
+	color:#444444;
+}
 .single-post .container .row .author-box h3 {
 	font-size:14px;
 	font-weight:normal;
