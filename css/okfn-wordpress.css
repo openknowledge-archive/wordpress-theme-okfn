@@ -491,12 +491,12 @@ ul#members-list {
 
 /* Search Widget */
 #sidebar .widget.widget_search {
-	padding:10px 0px 6px 10px;
+	padding:10px;
 }
-#sidebar .widget.widget_search input[type="text"] {
-  margin-bottom: 4px;
-  width: 140px;
-	margin-right:2px;
+#sidebar .widget.widget_search input[type="submit"] {
+	margin-top: 1px;
+	position: absolute;
+	right: 11px;
 }
 
 /* RSS Widget */
@@ -512,12 +512,12 @@ ul#members-list {
 }
 #sidebar .widget.BFW #BFW_email {
 	padding-right:32px;
-	width:180px;
+	width:100%;
 	margin-bottom:5px;
 }
 #sidebar .widget.BFW #BFW_submit {
 	position:absolute;
-	right:10px;
+	right:22px;
 	background-color:transparent;
 	background-image: url(http://assets.okfn.org/web/images/rss.png);
 	text-indent:-500px;
@@ -525,7 +525,7 @@ ul#members-list {
 	width:32px;
 	border:none;
 	padding:0px;
-	margin:0px;
+	margin:1px 0px 0px 0px;
 	height:28px;
 	background-position: center center;
 	box-shadow:none;
