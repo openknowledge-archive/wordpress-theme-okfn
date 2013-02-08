@@ -2697,6 +2697,7 @@ section.coloured p {
 	margin-bottom:20px;
 	text-align:center;
 	display:block;
+	max-width:100%;
 }
 
 .wp-caption.alignleft {
@@ -2911,10 +2912,6 @@ body > .corner.ribbon img {
 }
 #blog-single p {
 	text-align:justify;
-}
-
-#blog-single .wp-caption {
-	max-width:460px;
 }
 
 .wp-caption-text,
