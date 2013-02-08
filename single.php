@@ -41,7 +41,7 @@
     
         </div>
     
-        <div class="related-posts">
+        <div class="related-posts"><!--TEST-->
           <?php
             if (function_exists('related_posts')) {
               related_posts();
