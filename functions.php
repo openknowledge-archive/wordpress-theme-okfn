@@ -262,7 +262,7 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "Check this box to show link to okfn.org.",
         "id" => $shortname."_okf_ribbon",
         "type" => "checkbox",
-        "std" => "true"),
+        "std" => "false"),
 		array(  "type" => "close"),
 		array(    "name" => "Sub-Header",
         "type" => "title"),
