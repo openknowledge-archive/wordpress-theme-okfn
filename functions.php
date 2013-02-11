@@ -150,7 +150,7 @@ function echo_magazine_post($post, $is_featured) {
         "type" => "radio",
         "desc" => "Change the general look of the site",
         "options" => array("default" => "Classic", "grey" => "OKF", "blue" => "Ckan", "turquoise" => "Glam", "school" => "School", "white" => "Simple"),
-        "std" => "default",
+        "std" => "grey",
 				"class" => "thumbs"),
 		array(    "type" => "close"),		
 		array(    "type" => "open"),
@@ -159,7 +159,7 @@ function echo_magazine_post($post, $is_featured) {
         "type" => "radio",
         "desc" => "Where would you like the tagline to appear on the page?",
         "options" => array("home" => "Top of home page", "default" => "Top of every page", "header" => "In the header", "hide" => "Nowhere"),
-        "std" => "default"),
+        "std" => "hide"),
 		array(    "type" => "close"),
 		array(    "name" => "TopBar",
         "type" => "title"),
@@ -168,7 +168,7 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "Check this box if you would like to HIDE the BuddyPress bar at the top of this site.",
         "id" => $shortname."_buddypress_disable",
         "type" => "checkbox",
-        "std" => "false"),
+        "std" => "true"),
 		array(    "type" => "close"),
 		array(    "name" => "Header",
         "type" => "title"),
@@ -177,7 +177,7 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "Check this box to make the header taller.",
         "id" => $shortname."_tall_header",
         "type" => "checkbox",
-        "std" => "false"),
+        "std" => "true"),
 		array(    "type" => "close"),
 		array(    "type" => "open"),
 		array(  "name" => "Make my logo bigger!",
@@ -262,7 +262,7 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "Check this box to show link to okfn.org.",
         "id" => $shortname."_okf_ribbon",
         "type" => "checkbox",
-        "std" => "false"),
+        "std" => "true"),
 		array(  "type" => "close"),
 		array(    "name" => "Sub-Header",
         "type" => "title"),
@@ -591,7 +591,8 @@ function mytheme_admin() {
 		?>
           <tr>
             <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
-            <td><? if(get_settings($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = ""; } ?>
+            <td>
+              <? if( get_option($value['id'] ) ){ $checked = "checked=\"checked\""; } else { if ( $value['std'] === "true" ){ $checked = "checked=\"checked\""; } else { $checked = ""; } } ?>
                 <input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> />
             </td>
             <td><em><?php echo $value['desc']; ?></em></td>
