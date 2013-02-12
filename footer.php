@@ -286,7 +286,7 @@
 			});    
 		</script>
     
-    <? if ($okfn_okf_ribbon == "true"):?>
+    <? if ($okfn_okf_ribbon !== "true"):?>
     <!-- disable ribbon link -->   
 		<script>
       $('.okfn-ribbon a').click(function(e) {

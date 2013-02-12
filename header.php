@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/carousels.css"/>
    
     <!-- Theme Settings -->
-    <? if ($okfn_okf_ribbon == "true"):?>
+    <? if ($okfn_okf_ribbon !== "true"):?>
       <link rel="stylesheet" href="http://assets.okfn.org/themes/okfn/okf-panel.css"/>
     <? endif; ?>
     <? if ($okfn_tall_header == "true") : ?>
@@ -114,7 +114,7 @@
       </a>';
 		} ?>
     
-    <? if ($okfn_okf_ribbon == "true") :?>
+    <? if ($okfn_okf_ribbon !== "true") :?>
       <div id="okf-panel" class="collapse">
         <iframe src="http://assets.okfn.org/themes/okfn/okf-panel.html" scrolling="no"></iframe>
       </div>
@@ -178,7 +178,7 @@
       <div class="navbar<? if ($okfn_colours == "default") : ?> navbar-inverse<? endif; ?>">
         <div class="navbar-inner">
           <div class="container">
-          <? if ($okfn_okf_ribbon == "true"):?>
+          <? if ($okfn_okf_ribbon !== "true"):?>
             <div class="okfn-ribbon">
               <a href="http://okfn.org/" data-toggle="collapse" data-target="#okf-panel" title="Part of the Open Knowledge Foundation Network">An Open Knowledge Foundation Site</a>
             </div>
