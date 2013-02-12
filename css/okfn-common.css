@@ -457,6 +457,10 @@ footer .widget-area {
 }
 
 @media (max-width: 979px) {
+	.navbar-inner {
+		padding-left:20px;
+		padding-right:20px;
+	}
 	.navbar .nav {
     float: none;
 	}
@@ -474,5 +478,12 @@ footer .widget-area {
 	}
 	.dropdown-menu li > a:hover {
 	  color: #999999 !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-inner {
+		margin-left:-20px;
+		margin-right:-20px;
 	}
 }
