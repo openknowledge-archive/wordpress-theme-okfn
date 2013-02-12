@@ -1853,6 +1853,8 @@ ul.scrollButtons li.right a:hover {
 .magazine .post.preview {
 	float:left;
 	width:310px;
+}
+.page-template-magazine-front-php.magazine .post.preview {
 	margin: 0px 0px 15px 15px !important;
 }
 .magazine .post.preview .image {
@@ -2956,47 +2958,47 @@ body > .corner.ribbon img {
 /* Mag Homepage */
 /* ============ */
 
-body.page-template-home-page-php.magazine #content {
+body.page-template-home-page-php.home-template #content {
   width: 100%;
 }
-body.page-template-home-page-php.magazine .posts,
+body.page-template-home-page-php.home-template .posts,
 #content.okfn-front [class*="posts"] {
 	margin-left:-20px;
 	min-height:300px;
 }
-#content.okfn-front .magazine .post.box,
-body.page-template-home-page-php.magazine .post.preview {
+#content.okfn-front .post.box,
+body.page-template-home-page-php.home-template .post.preview {
 	border:none;
 	margin:0px 0px 0px 20px;
 	width:220px;
 }
-body.page-template-home-page-php.magazine .post.box .padder,
-#content.okfn-front .magazine .post.box .padder {
+body.page-template-home-page-php.home-template .post.box .padder,
+#content.okfn-front .post.box .padder {
 	padding:0px;
 }
-body.page-template-home-page-php.magazine .post.box .ribbon,
-#content.okfn-front .magazine .post.box .ribbon {
+body.page-template-home-page-php.home-template .post.box .ribbon,
+#content.okfn-front .post.box .ribbon {
 	display:none;
 }
-body.page-template-home-page-php.magazine .post.preview .image,
-#content.okfn-front .magazine .post.preview .image {
+body.page-template-home-page-php.home-template .post.preview .image,
+#content.okfn-front .post.preview .image {
   height: 136px;
 }
-body.page-template-home-page-php.magazine .post.preview .text,
-#content.okfn-front .magazine .post.preview .text {
+body.page-template-home-page-php.home-template .post.preview .text,
+#content.okfn-front .post.preview .text {
 	padding:0px;
 	height:126px;
 }
-body.page-template-home-page-php.magazine .post.preview .text h2,
-#content.okfn-front .magazine .post.preview .text h2 {
+body.page-template-home-page-php.home-template .post.preview .text h2,
+#content.okfn-front .post.preview .text h2 {
 	height:44px;
 }
-body.page-template-home-page-php.magazine .post.preview .text .entry-meta,
-#content.okfn-front .magazine .post.preview .text .entry-meta {
+body.page-template-home-page-php.home-template .post.preview .text .entry-meta,
+#content.okfn-front .post.preview .text .entry-meta {
 	display:none;
 }
-body.page-template-home-page-php.magazine .post.preview .btn,
-#content.okfn-front .magazine .post.preview .btn {
+body.page-template-home-page-php.home-template .post.preview .btn,
+#content.okfn-front .post.preview .btn {
 	display:none;
 }
 

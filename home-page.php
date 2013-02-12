@@ -6,13 +6,13 @@ Template Name: Home
 /* body class="magazine" */
 add_filter('body_class','browser_body_class');
 function browser_body_class($classes = '') {
-  array_push($classes,"magazine");
+  array_push($classes,"magazine home-template");
   return $classes;
 }
 ?>
 
 <?php get_header() ?>
-<div id="content">
+<div id="content" class="span12">
     <div class="padder">
 
     <?php do_action( 'bp_before_blog_home' ) ?>
@@ -67,7 +67,7 @@ function browser_body_class($classes = '') {
 
 <script>
 	jQuery(document).ready(function() {
-          jQuery(".magazine .post.preview .text").dotdotdot({});
-					jQuery(".magazine .post.preview .text h2").dotdotdot({});
+          jQuery(".post.preview .text").dotdotdot({});
+					jQuery(".post.preview .text h2").dotdotdot({});
         });
 </script>

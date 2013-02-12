@@ -5,7 +5,7 @@ Template Name: OKFN Front Page
 ?>
 <?php get_header(); ?>
 
-	<div id="content" class="okfn-front">
+	<div id="content" class="okfn-front span12">
 		<div class="padder">
 
 		<?php do_action( 'bp_before_blog_page' ); ?>
