@@ -479,6 +479,7 @@ ul#members-list {
 #sidebar .widget > div > .full {
 	display:block;
 	margin:0px -10px -10px -10px;
+	text-align:center;
 }
 
 #sidebar .widget form {
@@ -1306,10 +1307,10 @@ dl.grid-list dd {
 	margin:0px;
 }
 dl.grid-list.columns3 .well {
-	width:176px;
+	width:156px;
 }
 dl.grid-list.columns2 .well {
-	width:292px;
+	width:262px;
 }
 dl.grid-list .well img.icon {
   width:36px;
