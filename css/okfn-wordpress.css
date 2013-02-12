@@ -476,6 +476,11 @@ ul#members-list {
 	border:none;
 }
 
+#sidebar .widget > div > .full {
+	display:block;
+	margin:0px -10px -10px -10px;
+}
+
 #sidebar .widget form {
 	margin:0px;
 }
