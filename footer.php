@@ -289,9 +289,12 @@
     <? if ($okfn_okf_ribbon !== "true"):?>
     <!-- disable ribbon link -->   
 		<script>
-      $('.okfn-ribbon a').click(function(e) {
-          e.preventDefault();
-      });
+		
+			if ( $(document).width() > 767) {
+				$('.okfn-ribbon a').click(function(e) {
+						e.preventDefault();
+				});
+			}
     </script>
     <? endif; ?>
     
