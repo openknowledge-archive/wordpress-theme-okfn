@@ -9,12 +9,12 @@
 
 function pseudocontent_shortcode( $atts, $content = null ) {
    return '<style type="text/css">#content {width: 100%;} #content #sidebar h5 {margin-top:0px;}</style>
-<article style="display: inline-block; width: 680px;">' .do_shortcode($content).  '</article>';
+<article class="span8" style="margin-left:0px;">' .do_shortcode($content).  '</article>';
 } 
 add_shortcode( 'pseudocontent', 'pseudocontent_shortcode' );
 
 function pseudosidebar_shortcode( $atts, $content = null ) {
-   return '<div id="sidebar" role="complementary" style="margin-top:-56px;">' . $content . '</div>';
+   return '<div id="sidebar" role="complementary" class="span4 pseudo-sidebar">' . $content . '</div>';
 } 
 add_shortcode( 'pseudosidebar', 'pseudosidebar_shortcode' );
 

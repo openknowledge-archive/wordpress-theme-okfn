@@ -811,6 +811,14 @@ ul#members-list {
 	font-weight:bold;
 }
 
+
+@media (min-width: 768px) {
+	#sidebar.pseudo-sidebar {
+		margin-top: -56px;
+	}
+}
+
+
 /* Wordpress: End-of-article response form */
 /* ======================================= */
 #respond {
