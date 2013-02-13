@@ -627,7 +627,6 @@ ul#members-list {
 #sidebar .widget.widget_categories {
 	overflow:auto;
 	max-height:436px;
-	background-color:#FFF;
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 	display:none;
 }
