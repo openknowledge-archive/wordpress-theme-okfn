@@ -622,7 +622,7 @@ ul#members-list {
 	border:none;
 }
 #sidebar .widget.widget_categories h3 {
-	padding-left:0px;
+	display:none;
 }
 #sidebar .widget.widget_categories {
 	overflow:auto;
@@ -645,7 +645,7 @@ ul#members-list {
 	padding:0px;
 }
 #sidebar .widget.widget_categories ul li a {
-	padding:8px 10px;
+	padding:5px 10px;
 	display:block;
 	border: 1px solid #dee0df;
 	margin:0px 8px 8px 0px;
