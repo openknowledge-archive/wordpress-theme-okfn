@@ -98,6 +98,10 @@ input[type="color"]:focus,
   background-color: #2B8271;
 }
 
+.navbar-inverse .brand {
+  color: #FFF;
+}
+
 .navbar .brand {
   padding: 0px 10px 0px 0px;
 	margin:0px;
