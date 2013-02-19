@@ -19,7 +19,7 @@
       - <?php echo bloginfo( 'description' ); ?>
      <? endif; ?>
     </title>
-		 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<? if (get_bloginfo( 'description' )) : ?>
     <meta name="description" content="<?php echo bloginfo( 'description' ); ?>" />
     <? endif; ?>
