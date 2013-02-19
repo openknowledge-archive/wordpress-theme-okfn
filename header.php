@@ -183,16 +183,7 @@
               <a href="http://okfn.org/" data-toggle="collapse" data-target="#okf-panel" title="Part of the Open Knowledge Foundation Network">An Open Knowledge Foundation Site</a>
             </div>
           <? endif; ?>
-          <? if (($okfn_twitter_link == "true") or ($okfn_facebook_link == "true")) : ?>
-            <div class="social-links">
-              <?php if ( !empty( $okfn_twitter_username ) && $okfn_twitter_link == "true" && $okfn_twitter_location != "footer" ) : ?>
-                <a class="twitter" href="https://twitter.com/<?php echo $okfn_twitter_username ?>">twitter</a>
-              <? endif; ?>
-              <?php if ( !empty( $okfn_facebook_username ) && $okfn_facebook_link == "true" && $okfn_facebook_location != "footer" ) : ?>
-                <a class="facebook" href="http://www.facebook.com/<?php echo $okfn_facebook_username ?>">facebook</a>
-              <? endif; ?>
-            </div>
-          <? endif; ?>
+          
           
           <? if (!empty($okfn_header_textarea) && $okfn_header_text == "true") : ?>
             <div class="header-text"<? if ($okfn_header_text_align == "left") : ?> style="float:left; padding-left:0px; padding-right:5px;"<? endif; ?>>
@@ -236,6 +227,16 @@
           <?php endif; ?>
           
             <nav class="nav-collapse collapse">
+              <? if (($okfn_twitter_link == "true") or ($okfn_facebook_link == "true")) : ?>
+              <div class="social-links">
+                <?php if ( !empty( $okfn_twitter_username ) && $okfn_twitter_link == "true" && $okfn_twitter_location != "footer" ) : ?>
+                  <a class="twitter" href="https://twitter.com/<?php echo $okfn_twitter_username ?>">twitter</a>
+                <? endif; ?>
+                <?php if ( !empty( $okfn_facebook_username ) && $okfn_facebook_link == "true" && $okfn_facebook_location != "footer" ) : ?>
+                  <a class="facebook" href="http://www.facebook.com/<?php echo $okfn_facebook_username ?>">facebook</a>
+                <? endif; ?>
+              </div>
+          		<? endif; ?>
               <?php  
                 wp_nav_menu( array( 
                   'container' => false, 
