@@ -2834,7 +2834,13 @@ body > .corner.ribbon img {
 		top:0;
 		left:0;
 		max-width:none;
-		width:100%;
+		width: auto;
+	}
+}
+@media (max-width: 767px) {
+	body > .corner.ribbon {
+		margin-left:-20px !important;
+		margin-right:-20px !important;
 	}
 }
 
@@ -3104,6 +3110,12 @@ body > .tabbable.mailing-lists .nav li a {
 }
 body > .tabbable.mailing-lists .nav li.active a {
 	background-color:#3d3d3d;
+}
+@media (max-width: 767px) {
+	body > .mailing-lists {
+		margin-left:-20px;
+		margin-right:-20px;
+	}
 }
 
 

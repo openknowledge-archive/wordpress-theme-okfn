@@ -486,7 +486,8 @@ footer .widget-area {
 }
 
 @media (max-width: 767px) {
-	.navbar-inner {
+	.navbar-inner,
+	body > footer {
 		margin-left:-20px;
 		margin-right:-20px;
 	}
