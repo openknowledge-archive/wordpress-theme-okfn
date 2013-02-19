@@ -1241,11 +1241,13 @@ body.home-page .st_pinterest._buttons {
 	margin:0px;
 	display:inline;
 	line-height:42px;
+	font-size:20px;
 }
 #content .rss.ticker ul h3:after {
 	content: ": ";
 	color:#FFF;
 	line-height:42px;
+	font-size:20px;
 }
 #content .rss.ticker ul a {
 	color:#FFF;
@@ -1278,6 +1280,27 @@ body.home-page .st_pinterest._buttons {
 }
 #content .rss.ticker .carousel-control.right {
 	right:10px;
+}
+
+#content .well .rss.ticker {
+	background-color:transparent;
+	margin:-4px 0 0 0;
+	color:#333333;
+	padding:0px 60px 0px 10px;
+	height:30px;
+}
+#content .well .rss.ticker ul h3,
+#content .well .rss.ticker ul h3:after,
+#content .well .rss.ticker ul a {
+	color:#333333;
+}
+#content .well .rss.ticker ul h3,
+#content .well .rss.ticker ul h3:after {
+	font-size:18px;
+	line-height:30px;
+}
+#content .well .rss.ticker .carousel-control {
+	margin-bottom:-15px;
 }
 
 

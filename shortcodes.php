@@ -159,18 +159,25 @@ add_shortcode( 'fullwidth', 'fullwidth_shortcode' );
 
 function row_shortcode( $atts, $content = null ) {
 	extract( shortcode_atts( array(
+			'class' => '',
 			'style' => '',
 		), $atts ) );
-   return '<div class="row" style="width:960px; '.$style.'">' .do_shortcode($content). '</div>';
+    if (!empty($style)) { $styles = ' style="'.$style.'"';}
+    
+		return '<div class="row '.$class.'"'.$styles.'>' .do_shortcode($content). '</div>';
 } 
 add_shortcode( 'row', 'row_shortcode' );
 
 function column_shortcode( $atts, $content = null ) {  
 	extract( shortcode_atts( array(
 			'span' => '12',
+			'offset' => '0',
+			'class' => '',
+			'style' => '',
 		), $atts ) );
+		if (!empty($style)) { $styles = ' style="'.$style.'"';}
 		
-		return '<div class="span'.$span.'">' .do_shortcode($content). '</div>'; 
+		return '<div class="span'.$span.' offset'.$offset.' '.$class.'"'.$styles.'>' .do_shortcode($content). '</div>'; 
 		}
 
 add_shortcode('column', 'column_shortcode'); 
