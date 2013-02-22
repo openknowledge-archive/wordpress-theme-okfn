@@ -1660,12 +1660,6 @@ body {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-#content .post .entry h2 {
-  font-size: 20px;
-}
-#content .post .entry h3 {
-  font-size: 16px;
-}
 #content h2.posttitle a {
   color: #000;
 }
