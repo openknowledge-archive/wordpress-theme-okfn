@@ -63,7 +63,7 @@
 
 		</div><!-- .padder -->
 	</div><!-- #content -->
-
+<div id="sidebar" class="span4" role="complementary">
 	<?php get_sidebar(); ?>
-
+</div>
 <?php get_footer(); ?>
