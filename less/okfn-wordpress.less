@@ -1,3 +1,10 @@
+@import "okfn-common.less";
+
+/* ======= */
+/* Colours */
+/* ======= */
+
+@okfgreen: #1A988B;
 
 /* ======================= */
 /* Bootstrap Modifications */
@@ -654,9 +661,9 @@ ul#members-list {
 	color:#212121;
 }
 #sidebar .widget.widget_categories ul li a:hover {
-	background-color:#3E8F80;
+	background-color:@okfgreen;
 	text-decoration:none;
-	border-color:#3E8F80;
+	border-color:@okfgreen;
 	color:#FFF;
 }
 #sidebar .widget.widget_categories select {
@@ -995,7 +1002,7 @@ ul#groups-list .item:after {
   border: none;
 }
 .item-list-tabs#subnav ul .current a, .item-list-tabs#subnav ul .current a:hover {
-  background-color: #3e8f80;
+  background-color: @okfgreen;
   color: #fff;
 }
 .item-list-tabs#subnav ul .current a span, .item-list-tabs#subnav ul .current a:hover span {
@@ -1003,7 +1010,7 @@ ul#groups-list .item:after {
 }
 .item-list-tabs#subnav ul a:hover {
   background-color: #f0f0f0;
-  color: #3e8f80;
+  color: @okfgreen;
 }
 
 /* Buddypress: My account: Special case */
@@ -1095,7 +1102,7 @@ body.home-page .st_pinterest._buttons {
 }
 .okfn-dropdown a {
   display: block;
-  background-color: #3e8f80;
+  background-color: @okfgreen;
   color: #fff;
   padding: 11px 18px;
   font-size: 16px;
@@ -1857,7 +1864,7 @@ ul.scrollButtons li.right a:hover {
   display: none;
 }
 .magazine .featured .ribbon {
-  background-color: #267f70;
+  background-color: @okfgreen;
 }
 .magazine .featured .btn {
   display: none;
@@ -1915,7 +1922,7 @@ ul.scrollButtons li.right a:hover {
 		margin:0px;
     text-shadow:none;
 		display:inline;
-		color:#3E8F80;
+		color:@okfgreen;
 }
 .magazine .post {
 	display:block;
@@ -3161,7 +3168,7 @@ body > .tabbable.mailing-lists .nav li.active a {
 	list-style-type: none;
 }
 .tweet_list li a {
-	color: #0C717A;
+	color: @okfgreen;
 }
 .tweet_list .tweet_even {
 	background: rgba(255, 255, 255, 0.5);
