@@ -39,14 +39,10 @@
       <link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
     <? endif; ?>
     <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url') . '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>"/>
-    <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/carousels.css"/>
    
     <!-- Theme Settings -->
     <? if ($okfn_okf_ribbon !== "true"):?>
       <link rel="stylesheet" href="http://assets.okfn.org/themes/okfn/okf-panel.css"/>
-    <? endif; ?>
-    <? if ($okfn_tall_header == "true") : ?>
-      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/tall-header.css"/>
     <? endif; ?>
     <? if ($okfn_subheader == "true") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/sub-header.css"/>
@@ -64,6 +60,33 @@
     <? endif; ?>
     
 		<style type="text/css">
+    <? if ($okfn_tall_header == "true") : ?>
+      @media (min-width: 980px) {
+				.navbar {
+					height:65px;
+				}
+				.navbar .brand {
+					line-height: 65px;
+				}
+				.navbar .brand img {
+					margin-top:15px;
+					height:35px;
+				}
+				.navbar .nav > li > a {
+					padding: 24px 10px 22px 10px;
+				}
+				.navbar .sub-brand {
+					line-height:60px;
+					padding-top:5px;
+				}
+				.header-text {
+					margin-top:15px;
+				}
+				.navbar .navbar-inner .social-links {
+					margin-top:22px;
+				}
+			}
+    <? endif; ?>
     <? if ($okfn_large_title == "true" && $okfn_tall_header == "true") : ?>
       .navbar .brand {font-size: 36px; letter-spacing:-1px; text-indent:-5px; line-height: 62px;}
     <? endif; ?>
