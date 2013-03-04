@@ -1,9 +1,16 @@
+/* Colours */
+/* ======= */
+
+@primary: #5090b7;
+
+/* ======= */
+
 html {
 	background-color: #F5F5F5;
 }
 
 a {
-  color: #5090b7;
+  color: @primary;
 }
 a:hover {
   color: #4e7b96;
@@ -17,7 +24,7 @@ a:hover {
 }
 
 .navbar-inner {
-  background-color: #5090b7;
+  background-color: @primary;
   background-image:none;
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
@@ -100,7 +107,7 @@ header.has-subheader .navbar .nav .active > a {
 	border-color: #889fad;
 }
 .sub-header .search-bar form input[type=text]:focus {
-	border-color: #5090B7;
+	border-color: @primary;
 }
 .sub-header .search-bar form input[type=submit],
 .sub-header .search-bar form input[type=submit]:hover {
@@ -108,12 +115,12 @@ header.has-subheader .navbar .nav .active > a {
 }
 
 #wp-admin-bar ul li ul {
-  background: none repeat scroll 0 0 #5090B7;
-  border: 1px solid #5090B7;
+  background: none repeat scroll 0 0 @primary;
+  border: 1px solid @primary;
 }
 #wp-admin-bar ul.main-nav li:hover,
 #wp-admin-bar ul.main-nav li.sfhover {
-  background-color: #5090B7;
+  background-color: @primary;
 }
 #wp-admin-bar ul.main-nav li ul li.sfhover {
   background-color: #619BBE;
@@ -130,7 +137,7 @@ input[type=reset],
 .btn-info {
   color: #FFF;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #5090b7;
+  background-color: @primary;
   background-image: -moz-linear-gradient(top, #6aa4c5, #37739f);
   background-image: -ms-linear-gradient(top, #6aa4c5, #37739f);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6aa4c5), to(#37739f));
@@ -138,7 +145,7 @@ input[type=reset],
   background-image: -o-linear-gradient(top, #6aa4c5, #37739f);
   background-image: linear-gradient(top, #6aa4c5, #37739f);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6aa4c5', endColorstr='#37739f', GradientType=0);
-  border-color: #5090b7 #5090b7 #5090b7;
+  border-color: @primary @primary @primary;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); /* Not modified, but ie seems to not render radius without it */
 }
@@ -221,7 +228,7 @@ input[type="color"]:focus,
 /* Carousel */
 /* ======== */
 .carousel-control {
-  background: none repeat scroll 0 0 #5090B7;
+  background: none repeat scroll 0 0 @primary;
 }
 #content .carousel.text-right .carousel-caption h2,
 #content .carousel.text-right .carousel-caption h3,
@@ -229,7 +236,7 @@ input[type="color"]:focus,
 .carousel.text-right .carousel-caption h2,
 .carousel.text-right .carousel-caption h3,
 .carousel.text-right .carousel-caption h4 {
-  color: #5090B7;
+  color: @primary;
 	line-height:32px;
 	margin-bottom:9px;
 }
@@ -239,7 +246,7 @@ input[type="color"]:focus,
 /* ======== */
 
 .okfn-dropdown a {
-  background-color: #5090B7;
+  background-color: @primary;
 }
 .okfn-dropdown a:hover {
   background-color: #E9473F;
@@ -354,8 +361,8 @@ body.single {
   background-color: #e5eef4;
 }
 #sidebar .widget.widget_categories ul li a:hover {
-	background-color:#5090B7;
-	border-color:#5090B7;
+	background-color:@primary;
+	border-color:@primary;
 }
 
 
@@ -370,10 +377,10 @@ body.single {
 
 body > .corner.ribbon {
 	background-color:#FFF;
-	color:#5090B7;
+	color:@primary;
 }
 body > .corner.ribbon:hover {
-	color:#5090B7;
+	color:@primary;
 }
 
 

@@ -1,5 +1,12 @@
+/* Colours */
+/* ======= */
+
+@primary: #0db1db;
+
+/* ======= */
+
 html {
-	background-color: #0db1db;
+	background-color: @primary;
 	background-image: url(../images/blue-tiles.png);
 	background-position: center top;
 	background-repeat: repeat;
@@ -59,7 +66,7 @@ li {
 }
 
 a {
-	color:#0db1db;
+	color:@primary;
 }
 
 .btn,
@@ -85,7 +92,7 @@ button,
 a.group-button,
 input[type="submit"],
 input[type="reset"] {
-  background-color: #0db1db;
+  background-color: @primary;
   background-image: -moz-linear-gradient(top, #0db1db, #0ca9d2);
   background-image: -ms-linear-gradient(top, #0db1db, #0ca9d2);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0db1db), to(#0ca9d2));
@@ -124,7 +131,7 @@ input[type=reset]:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='#FFF', GradientType=0);
   border-color: #FFF;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); /* Not modified, but ie seems to not render radius without it */
-	color:#0db1db;
+	color:@primary;
 }
 #sidebar .widget input[type="submit"] {
 	border:none;
@@ -140,7 +147,7 @@ input[type=reset]:hover {
 .btn-inverse.disabled,
 .btn-inverse[disabled] {
   background-color: #FFF;
-	color:#0db1db;
+	color:@primary;
 }
 #sidebar .widget .btn.active,
 .btn-inverse:active, .btn-info.active {
@@ -210,7 +217,7 @@ code {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
-	background-color: #0db1db;
+	background-color: @primary;
 	background-image: url(../images/blue-tiles.png);
 	background-position: center bottom;
 	background-repeat: repeat;
@@ -229,7 +236,7 @@ code {
 .navbar .dropdown-menu,
 .navbar .nav > li > a:hover,
 .navbar .nav .sfhover {
-  background-color: #0db1db;
+  background-color: @primary;
 	color:#FFF;
 }
 .navbar .dropdown-menu {
@@ -308,7 +315,7 @@ code {
 section.coloured,
 section.coloured:before,
 section.coloured:after {
-	background-color: #0db1db;
+	background-color: @primary;
 	background-image: url(../images/blue-tiles.png);
 	background-position: center top;
 	background-repeat: repeat;
@@ -331,8 +338,8 @@ section.coloured .well p {
 }
 #sidebar .widget {
 	background-image:none;
-	background-color:#0db1db;
-	border-color:#0db1db;
+	background-color:@primary;
+	border-color:@primary;
 	color:#FFF;
 }
 #sidebar .widget > ul li {
@@ -367,7 +374,7 @@ section.coloured .well p {
 	right:0px;
 }
 .tweet_list li a {
-  color: #0db1db;
+  color: @primary;
 }
 .tweet_list li .tweet_avatar {
 	display:none;
@@ -429,7 +436,7 @@ body.single {
 	font-size:16px;
 }
 .magazine .featured .ribbon {
-  background-color: #0db1db;
+  background-color: @primary;
 }
 .wp-caption-text,
 #blog-single p.wp-caption-text {
