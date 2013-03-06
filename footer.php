@@ -104,30 +104,28 @@
 		</script> 
     <? endif; ?>
     
-    <!-- cycling for carousel -->
 		<script>
+		  // cycling for carousel
       $(".carousel.ticker").carousel({ interval: 6000 });
 			$(".carousel.cycle").carousel({ interval: 8000 });
-    </script>
-    
-    <!-- allow button to hide elements -->
-    <script>
+
+		  // allow button to hide elements
 			$(".hide-it").click(function () {
 				$(".hide-me").hide("slow");
 			});    
-		</script>
     
-    <? if ($okfn_okf_ribbon !== "true"):?>
-    <!-- disable ribbon link -->   
-		<script>
-		
+      <? if ($okfn_okf_ribbon !== "true"):?>
+		  // disable ribbon link
 			if ( $(document).width() > 767) {
 				$('.okfn-ribbon a').click(function(e) {
 						e.preventDefault();
 				});
 			}
+			<? endif; ?>
+			
+			// button for mailchimp form
+		  $("div.nm_mc_form input.nm_mc_button").addClass("btn btn-primary");
     </script>
-    <? endif; ?>
     
     <!-- sharethis -->
     <? if ($okfn_sharethis == "true") : ?>

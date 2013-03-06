@@ -175,7 +175,6 @@ if ( $okfn_mailchimp_bar == "true" or $okfn_mailinglist_bar == "true" or $okfn_m
     $("div.mailing-lists").removeClass("tabbable");
 	  <? endif; ?>
 		<? if ( $okfn_mailchimp_bar == "true") : ?>
-		$("input.nm_mc_button").addClass("btn btn-primary");
 		// label over input
 		$("section.subscribe div.mailchimp-plugin").addClass("label-over");
 		$('div.label-over input').each(function() {
