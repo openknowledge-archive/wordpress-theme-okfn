@@ -343,8 +343,29 @@ function echo_magazine_post($post, $is_featured) {
 		array(    "type" => "close"),	
 		array(    "name" => "Mailing List Bar",
         "type" => "title"),
+				
+				array(    "type" => "open"),
+		array(  "name" => "MailChimp Plugin",
+        "desc" => "MailChimp form powered by N-Media MailChimp plugin",
+        "id" => $shortname."_mailchimp_bar",
+        "type" => "checkbox",
+        "std" => "false"),
+		array(  "name" => "Mailing List Heading",
+        "desc" => "Appears next to the form",
+        "id" => $shortname."_mailchimp_heading",
+        "type" => "text"),
+		array(  "name" => "Description",
+				"desc" => "Used if multiple lists",
+        "id" => $shortname."_mailchimp_description",
+        "type" => "text"),
+		array(  "name" => "Form ID",
+        "desc" => "fid number found in shortcode",
+        "id" => $shortname."_mailchimp_id",
+        "type" => "text"),
+		array(  "type" => "close"),
+				
 		array(    "type" => "open"),
-		array(  "name" => "Mailing List 1",
+		array(  "name" => "Native Mailing List 1",
         "desc" => "Add mailing list form",
         "id" => $shortname."_mailinglist_bar",
         "type" => "checkbox",
@@ -353,8 +374,8 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_mailinglist_bar_type",
         "type" => "radio",
         "desc" => "Where is the mailing list",
-        "options" => array("mailchimp" => "MailChimp", "mailman" => "Mailman"),
-        "std" => "mailchimp"),
+        "options" => array("mailman" => "Mailman", "mailchimp" => "MailChimp"),
+        "std" => "mailman"),
 		array(  "name" => "Mailing List Heading",
         "desc" => "Appears next to the form",
         "id" => $shortname."_mailinglist_heading",
@@ -370,7 +391,7 @@ function echo_magazine_post($post, $is_featured) {
 		array(  "type" => "close"),
 		
 		array(    "type" => "open"),
-		array(  "name" => "Mailing List 2 (footer only)",
+		array(  "name" => "Native Mailing List 2",
         "desc" => "Add mailing list form",
         "id" => $shortname."_mailinglist_bar2",
         "type" => "checkbox",
@@ -379,8 +400,8 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_mailinglist_bar_type2",
         "type" => "radio",
         "desc" => "Where is the mailing list",
-        "options" => array("mailchimp" => "MailChimp", "mailman" => "Mailman"),
-        "std" => "mailchimp"),
+        "options" => array("mailman" => "Mailman", "mailchimp" => "MailChimp"),
+        "std" => "mailman"),
 		array(  "name" => "Mailing List Heading",
         "desc" => "Appears next to the form",
         "id" => $shortname."_mailinglist_heading2",
@@ -399,7 +420,7 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_mailinglist_bar_location",
         "type" => "radio",
         "desc" => "Where to put bar",
-        "options" => array("header" => "Header (home page only)", "footer" => "Footer"),
+        "options" => array("header" => "Header (home page, first list only)", "footer" => "Footer"),
         "std" => "footer"),
 		array(  "type" => "close"),		
 		array(    "name" => "Blog",
@@ -894,7 +915,6 @@ if ( !function_exists('base_rss_feed') ) {
 		return $html;
 	}
 }
-
 
 include('shortcodes.php');
 
