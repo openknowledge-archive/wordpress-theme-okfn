@@ -185,6 +185,33 @@ input[type="color"]:focus,
   max-width: 940px;
 }
 
+a.thumbnail:hover {
+  border-color: #1A988B;
+  -webkit-box-shadow: 0 1px 4px rgba(26, 152, 139, 0.25);
+  -moz-box-shadow: 0 1px 4px rgba(26, 152, 139, 0.25);
+  box-shadow: 0 1px 4px rgba(26, 152, 139, 0.25);
+}
+
+a.thumbnail:hover {
+	text-decoration:none;
+}
+
+.thumbnail > .row [class*="span"]:first-of-type {
+	padding:10px 0px 10px 10px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.thumbnail > .row .caption {
+   padding: 9px 18px 9px 0px;
+}
+@media (max-width: 767px) {
+  .thumbnail > .row [class*="offset"] {
+		margin-left:9px;
+	}
+}
+
+
 /* Main CSS */
 /* ======== */
 html {

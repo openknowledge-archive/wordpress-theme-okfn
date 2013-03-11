@@ -103,6 +103,7 @@ input[type="reset"] {
   border-color: #0ca9d2;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); /* Not modified, but ie seems to not render radius without it */
+	border:none;
 }
 .btn-primary:hover,
 .btn-primary:active,
@@ -119,7 +120,6 @@ input[type=reset]:hover {
   background-color: #0ca9d2 \9;
 }
 
-#sidebar .widget input[type="submit"],
 .btn-inverse {
   background-color: #FFF;
   background-image: -moz-linear-gradient(top, #FFF, #FFF);
@@ -133,14 +133,6 @@ input[type=reset]:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); /* Not modified, but ie seems to not render radius without it */
 	color:@primary;
 }
-#sidebar .widget input[type="submit"] {
-	border:none;
-}
-#sidebar .widget input[type="submit"]:hover,
-#sidebar .widget input[type="submit"]:active,
-#sidebar .widget input[type="submit"].active,
-#sidebar .widget input[type="submit"].disabled,
-#sidebar .widget input[type="submit"][disabled],
 .btn-inverse:hover,
 .btn-inverse:active,
 .btn-inverse.active,
@@ -149,7 +141,6 @@ input[type=reset]:hover {
   background-color: #FFF;
 	color:@primary;
 }
-#sidebar .widget .btn.active,
 .btn-inverse:active, .btn-info.active {
   background-color: #FFF \9;
 }
@@ -338,12 +329,30 @@ section.coloured .well p {
 }
 #sidebar .widget {
 	background-image:none;
-	background-color:@primary;
-	border-color:@primary;
-	color:#FFF;
+	background-color:fade(@primary, 13%);
+	border-color:fade(@primary, 0%);
+	color: #444444;
 }
 #sidebar .widget > ul li {
-	border-top-color:#FFF;
+	border-top-color:fade(@primary, 35%);
+}
+
+#sidebar .widget h1,
+#sidebar .widget h2,
+#sidebar .widget h3,
+#sidebar .widget h4,
+#sidebar .widget h5,
+#sidebar .widget h6 {
+	color:@primary;
+}
+#sidebar .widget a {
+	color:#333333;
+}
+#sidebar .widget label {
+  color: #444444;
+}
+#sidebar .tb_tweet-info {
+  color: #444444;
 }
 
 .gce-widget-grid .gce-calendar {
@@ -405,7 +414,7 @@ body.home-page,
 	line-height:22px;
 }
 .home-page > .container > .row section:nth-of-type(odd) {
-	background-color:#dbf3fa;
+	background-color:fade(@primary, 13%);
 }
 body > .container > .row section > .container {
 	padding: 20px 0px;
@@ -454,10 +463,6 @@ body.single {
   font-size: 14px;
   line-height:18px;
 }
-#sidebar .widget,
-#sidebar .widget p {
-	color:#FFF;
-}
 #sidebar .widget h1,
 #sidebar .widget h2,
 #sidebar .widget h3,
@@ -465,7 +470,7 @@ body.single {
 #sidebar .widget h5,
 #sidebar .widget h6 {
   font-size: 18px;
-	margin:0px;
+	margin-bottom:0px;
 }
 
 
@@ -488,4 +493,32 @@ body > .tabbable.mailing-lists .nav li a {
 	-webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
+}
+
+
+/* Thumbnails */
+/* ========== */
+.thumbnail,
+a.thumbnail:hover {
+  border: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+.thumbnail {
+	background-color:fade(@primary, 13%);
+}
+a.thumbnail:hover {
+	background-color:fade(@primary, 20%);
+}
+.thumbnail > .row img {
+	border:solid 3px #FFF;
+}
+
+
+a.sidelink:after {
+	background-color: @primary;
+}
+a.sidelink:hover:after {
+	background-color: @primary;
 }
