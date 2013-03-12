@@ -1501,6 +1501,40 @@ img.alignleft, img.alignright {
 }
 
 
+/* Table of Contents Plus Plugin */
+/* ============================= */
+div#toc_container {
+	background-color:#FFF;
+	border-color:#E9EAEA;
+	padding:0px;/* allow width option to work properly */
+}
+div#toc_container .toc_toggle {
+	display:none; /* hide because it doesn't work */
+}
+#toc_container p.toc_title {
+  text-align: left;
+	background-color: #E9EAEA;
+	padding: 3px 10px;
+	font-weight:normal;
+	font-family: OpenSansLight,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+div#toc_container ul.toc_list {
+	margin:20px;
+}
+div#toc_container ul.toc_list ul {
+	margin-bottom:10px;
+}
+div#toc_container li {
+	font-weight:bold;
+}
+div#toc_container li li {
+	font-weight:normal;
+}
+div#toc_container a {
+	color:#222222;
+}
+
+
 /* Hackadelic SEO Table Of Contents Plugin */
 /* ======================================= */
 div.toc {
