@@ -23,7 +23,6 @@
 		<? if (get_bloginfo( 'description' )) : ?>
     <meta name="description" content="<?php echo bloginfo( 'description' ); ?>" />
     <? endif; ?>
-    <meta name="author" content="Sam Smith" />
 		<?php do_action( 'bp_head' ) ?>
     
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ) ?>" />
