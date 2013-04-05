@@ -104,10 +104,6 @@
 		</script> 
     <? endif; ?>
     
-    <?php if ( $okfn_enable_slides == "true" ) : ?>
-    <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/include/shower.min.js"></script>
-    <? endif; ?>
-    
 		<script>
 		  // cycling for carousel
       $(".carousel.ticker").carousel({ interval: 6000 });

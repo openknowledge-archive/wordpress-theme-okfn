@@ -1,0 +1,48 @@
+/* Colours */
+@primary: #0db1db;
+
+.caption a,
+.slide a,
+.slide pre mark {
+	color: @primary;
+}
+
+.badge > div,
+.slide pre mark.important,
+.slide.shout {
+	background-color: @primary;
+}
+.badge > div {
+  background-image: url(../images/blue-tiles.png);
+	background-position: center top;
+}
+
+@media screen {
+	.list .slide:target:before {
+		box-shadow: 0 0 10px 0 #3c96db, 0 0 0 12px @primary;
+	}
+	
+	.list .slide:target:after {
+		color: @primary;
+	}
+	
+	.full .progress div {
+		background-color: @primary;
+	}
+	
+	.list {
+		background-color: #F6F6F6;
+	}
+	
+	.list .slide:hover:before {
+		box-shadow: 0 0 0 1px #eee, 0 0 0 12px fade(@primary, 13%);
+	}
+}
+
+/* Fonts */
+
+body,
+.caption h1,	
+.slide h2 {
+	font-family: PTSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

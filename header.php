@@ -37,9 +37,6 @@
       <link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
       <link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
     <? endif; ?>
-    <?php if ( $okfn_enable_slides == "true" ) : ?>
-      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/shower.css"/>
-    <? endif; ?>
     <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url') . '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>"/>
    
     <!-- Theme Settings -->

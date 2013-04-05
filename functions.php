@@ -479,13 +479,6 @@ function echo_magazine_post($post, $is_featured) {
         "type" => "checkbox",
         "std" => "false"),
 		array(    "type" => "close"),
-		array(    "type" => "open"),
-		array(  "name" => "Enable Slides",
-        "desc" => "WIP",
-        "id" => $shortname."_enable_slides",
-        "type" => "checkbox",
-        "std" => "false"),
-		array(    "type" => "close"),
 );
 
 function mytheme_add_admin() {

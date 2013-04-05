@@ -1,0 +1,28 @@
+/* Colours */
+@primary: #1A988B;
+
+.caption a,
+.slide a,
+.slide pre mark {
+	color: @primary;
+}
+
+.badge > div,
+.slide pre mark.important,
+.slide.shout {
+	background-color: @primary;
+}
+
+@media screen {
+	.list .slide:target:before {
+		box-shadow: 0 0 10px 0 #3c96db, 0 0 0 12px @primary;
+	}
+	
+	.list .slide:target:after {
+		color: @primary;
+	}
+	
+	.full .progress div {
+		background-color: @primary;
+	}
+}
