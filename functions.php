@@ -917,4 +917,8 @@ if ( !function_exists('base_rss_feed') ) {
 
 include('shortcodes.php');
 
+// Fix output of custom cookie notification bar
+remove_action ( 'wp_footer', 'catapult_add_cookie_bar', 1000 );
+add_action ( 'cookie_bar', 'catapult_add_cookie_bar');
+
 ?>
