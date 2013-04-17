@@ -51,6 +51,11 @@ To use YARPP to display Related Posts as magazine entries on the post view page,
 The Home template adds Magazine style blogposts to the bottom of the page. Only posts in a category named "Featured" will be displayed. Images are handled in the same manor as described above.
 
 
+**Presentation**
+
+Display content in a series of slides. Example here: http://staging.okfn.org/slides/
+
+
 Theme Options
 -------------
 
