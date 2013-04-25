@@ -97,7 +97,7 @@
       .navbar-inner {border-bottom:none;}
     <? endif; ?>
 		<? if ($okfn_buddypress_disable == "true") : ?>
-			.topbar {display:none; }
+			#wpadminbar {display:none; }
 			html {margin-top: 0px !important;}
     <? endif; ?>
     </style>
