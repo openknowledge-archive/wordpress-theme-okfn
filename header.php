@@ -40,9 +40,6 @@
     <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url') . '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>"/>
    
     <!-- Theme Settings -->
-    <? if ($okfn_okf_ribbon !== "true"):?>
-      <link rel="stylesheet" href="http://assets.okfn.org/themes/okfn/okf-panel.css"/>
-    <? endif; ?>
     <? if ($okfn_subheader == "true") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/sub-header.css"/>
     <? endif; ?>
@@ -137,9 +134,7 @@
 		} ?>
     
     <? if ($okfn_okf_ribbon !== "true") :?>
-      <div id="okf-panel" class="collapse">
-        <iframe src="http://assets.okfn.org/themes/okfn/okf-panel.html" scrolling="no"></iframe>
-      </div>
+      <? do_action('okf_panel'); ?>
     <? endif; ?>
     <? if ( $okfn_mailinglist_bar_location == "header" && is_front_page() ) {
 			include('mailing-bar.php'); 
@@ -148,12 +143,10 @@
       <div class="navbar<? if ($okfn_colours == "default") : ?> navbar-inverse<? endif; ?>">
         <div class="navbar-inner">
           <div class="container">
+                    
           <? if ($okfn_okf_ribbon !== "true"):?>
-            <div class="okfn-ribbon">
-              <a href="http://okfn.org/" data-toggle="collapse" data-target="#okf-panel" title="Part of the Open Knowledge Foundation Network">An Open Knowledge Foundation Site</a>
-            </div>
+            <? do_action('okf_ribbon'); ?>
           <? endif; ?>
-          
           
           <? if (!empty($okfn_header_textarea) && $okfn_header_text == "true") : ?>
             <div class="header-text"<? if ($okfn_header_text_align == "left") : ?> style="float:left; padding-left:0px; padding-right:5px;"<? endif; ?>>

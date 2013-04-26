@@ -113,15 +113,6 @@
 			$(".hide-it").click(function () {
 				$(".hide-me").hide("slow");
 			});    
-    
-      <? if ($okfn_okf_ribbon !== "true"):?>
-		  // disable ribbon link
-			if ( $(document).width() > 767) {
-				$('.okfn-ribbon a').click(function(e) {
-						e.preventDefault();
-				});
-			}
-			<? endif; ?>
 			
 			// button for mailchimp form
 		  $("div.nm_mc_form input.nm_mc_button").addClass("btn btn-primary");
