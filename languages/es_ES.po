@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Sam Smith\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+
+#: footer.php:23
+msgid "Donate"
+msgstr "Donar"
+
+#: functions.php:480
+msgid "Full Post"
+msgstr "Full Post"
+
+#: home-page.php:27
+msgid "From our Blog"
+msgstr "Desde nuestro Blog"
+
+#: newsletter
+msgid "Receive newsletter"
+msgstr "Recibir newsletter"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Email Address"
+msgstr "Direccion Email"
+
+msgid "Subscribe"
+msgstr "Suscribir"
+
