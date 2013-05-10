@@ -970,11 +970,11 @@ function my_theme_register_required_plugins() {
 		),
 		*/
 		// This is an example of how to include a plugin from the WordPress Plugin Repository
-		array(
-			'name' 		=> 'WPSocialite',
-			'slug' 		=> 'wpsocialite',
-			'required' 	=> false,
-		),
+//		array(
+//			'name' 		=> 'WPSocialite',
+//			'slug' 		=> 'wpsocialite',
+//			'required' 	=> false,
+//		),
 	);
 	// Change this to your theme text domain, used for internationalising strings
 	$theme_text_domain = 'okfn';
