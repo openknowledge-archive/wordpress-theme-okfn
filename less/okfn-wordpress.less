@@ -720,8 +720,17 @@ ul#members-list {
 
 
 /* Google Calendar Events Widget */
+#sidebar .widget.widget_gce_widget {
+	padding-bottom:10px;
+}
 .widget.widget_gce_widget .gce-list {
 	margin:0px;
+}
+.widget.widget_gce_widget .gce-caption {
+	font-weight:200;
+	text-align:left;
+	padding-top:10px;
+	padding-bottom:5px;
 }
 .widget.widget_gce_widget .gce-list li {
 	display:block;
@@ -729,12 +738,35 @@ ul#members-list {
 	padding-top:5px;
 	margin-top:5px;
 }
-.widget.widget_gce_widget .gce-widget-grid table {
+.widget.widget_gce_widget table {
 	margin:0px;
 }
 .widget.widget_gce_widget .gce-widget-grid table th,
-.widget.widget_gce_widget .gce-widget-grid table td {
+.widget.widget_gce_widget .gce-widget-grid table td,
+#sidebar .widget.widget_gce_widget .gce-page-grid table th,
+#sidebar .widget.widget_gce_widget .gce-page-grid table td {
 	padding:7px;
+}
+
+.widget.widget_gce_widget .widgettitle + div .gce-calendar {
+	border-top:none;
+}
+.widget.widget_gce_widget .widgettitle + div .gce-caption {
+	position:absolute;
+	right: 19px;
+  top: 21px;
+	padding:0;
+}
+.widget.widget_gce_widget .widgettitle + div .gce-calendar .gce-month-title {
+  width: auto;
+}
+
+#sidebar .widget.widget_gce_widget .gce-page-grid table th,
+#sidebar .widget.widget_gce_widget .gce-page-grid table td {
+	height:auto;
+}
+#sidebar .gce-page-grid .gce-calendar .gce-day-number {
+	font-size:13px;
 }
 
 
@@ -1839,7 +1871,8 @@ ul.scrollButtons li.right a:hover {
 	float:left;
 	width:310px;
 }
-.page-template-magazine-front-php.magazine .post.preview {
+.page-template-magazine-front-php.magazine .post.preview,
+.page-template-events-php.magazine .post.preview {
 	margin: 0px 0px 15px 15px !important;
 }
 .magazine .post.preview .image {
@@ -1930,6 +1963,16 @@ ul.scrollButtons li.right a:hover {
 	.magazine #sidebar .widget {
     margin-left: 0px;
   }
+}
+
+/* Events */
+.events.magazine .pagetitle {
+	font-weight:200;
+	margin-bottom:20px;
+	font-size:27px;
+}
+.events.magazine .ribbon {
+	display:none;
 }
 
 
