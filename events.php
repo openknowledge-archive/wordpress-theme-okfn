@@ -11,7 +11,7 @@ function browser_body_class($classes = '') {
 }
 ?>
 
-<?
+<? // to use if custom post number is required
       global $options;
       foreach ($options as $value) {
           if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
@@ -25,11 +25,31 @@ function browser_body_class($classes = '') {
 
 
 <?php get_header() ?>
+
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    
+	<?php $event_content = get_the_content(); ?>
+      
+  <?php // get custom field named GCID
+    if (get_post_meta($post->ID,'GCEID')) {
+      $gceid = get_post_meta($post->ID,'GCEID', true);
+      } else {
+      $gceid = 'notset';
+      }
+  ?>
+
+<?php endwhile; endif; ?>
+    
+<?php // if GCEID is valid use for calendar ID, else use 1
+	if (is_numeric ($gceid))  { 
+		$calendar_id = $gceid; 
+	} else { 
+		$calendar_id = '1';  
+	} ;
+?>
+    
   <div class="span12">
       <h2 class="pagetitle"><?php the_title(); ?></h2>
-  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <?php $event_content = get_the_content(); ?>
-		<?php endwhile; endif; ?>
   </div>
 </div>
 <div class="row">
@@ -136,17 +156,13 @@ function browser_body_class($classes = '') {
   
   <div class="widget widget_gce_widget">
     <h3 class="widgettitle">Calendar</h3>
-    
-      <? if (is_numeric ($event_content))  { 
-				$calendar_id = $event_content; 
-			} else { 
-				$calendar_id = '1';  
-			} ;?>
-      
-      <?php echo do_shortcode( '[google-calendar-events id="'.$calendar_id.'" type="ajax" title="Events on"]' ); ?>
-    </div>
-    
+		<?php echo do_shortcode( '[google-calendar-events id="'.$calendar_id.'" type="ajax" title="Events on"]' ); ?>
   </div>
+  
+  <div class="sidebar-content">
+    <?php echo $event_content; ?>
+  </div>
+ </div>
   
 <?php //get_sidebar() ?>
 </div>
