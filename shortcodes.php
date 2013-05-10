@@ -607,4 +607,15 @@ function imagelist_item_shortcode( $atts ) {
 add_shortcode('ili', 'imagelist_item_shortcode');  
 
 
+/*********************************************************************************************
+* Name:        Share
+* Author:      Sam Smith
+* Description: Place your social links
+**********************************************************************************************/
+
+function share_shortcode( $atts ){
+ return wpsocialite_markup();
+}
+add_shortcode( 'share', 'share_shortcode' );
+
 ?>
