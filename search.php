@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-	<div id="content" class="search-page">
+	<div id="content" class="search-page span8">
 		<div class="padder">
 
 		<?php do_action( 'bp_before_blog_search' ) ?>
