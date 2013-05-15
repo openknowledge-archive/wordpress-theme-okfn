@@ -78,7 +78,8 @@
 				.header-text {
 					margin-top:15px;
 				}
-				.navbar .navbar-inner .social-links {
+				.navbar .navbar-inner .social-links,
+				.navbar .navbar-inner .header-search {
 					margin-top:22px;
 				}
 			}
@@ -190,6 +191,20 @@
           <?php endif; ?>
           
             <nav class="nav-collapse collapse">
+              <? if (($okfn_header_search == "true") && ($okfn_subheader_search == "false")) : ?>
+                <div class="header-search">
+                  <a>Search</a>
+                  <div class="search-bar">
+                  <?php do_action( 'bp_before_blog_search_form' ) ?>
+                  <form role="search" method="get" id="searchform" action="<?php echo home_url() ?>/">
+                    <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" placeholder="Search" />
+                    <input type="submit" id="searchsubmit" value="<?php _e( 'Search', 'buddypress' ) ?>" />
+                    <?php do_action( 'bp_blog_search_form' ) ?>
+                  </form>
+                  <?php do_action( 'bp_after_blog_search_form' ) ?>
+                </div>
+                </div>
+              <? endif; ?>
               <? if (($okfn_twitter_link == "true") or ($okfn_facebook_link == "true")) : ?>
               <div class="social-links">
                 <?php if ( !empty( $okfn_twitter_username ) && $okfn_twitter_link == "true" && $okfn_twitter_location != "footer" ) : ?>

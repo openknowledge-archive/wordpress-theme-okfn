@@ -118,6 +118,14 @@
 		  $("div.nm_mc_form input.nm_mc_button").addClass("btn btn-primary");
     </script>
     
+		<? if (($okfn_header_search == "true") && ($okfn_subheader_search == "false")) : ?>
+    <script>
+			$("div.header-search a").click(function(){
+			  $("div.header-search").toggleClass("active");
+			});
+    </script>
+    <? endif; ?>
+    
     <!-- sharethis -->
     <? if ($okfn_sharethis == "true") : ?>
 		  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 
