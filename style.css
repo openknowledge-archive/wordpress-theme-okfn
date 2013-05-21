@@ -3207,6 +3207,12 @@ section.squared.full-width:before {
 section.squared.full-width:after {
   background-position: 20px top;
 }
+.banner.squared .well,
+section.squared .well {
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  margin-right: 2px;
+}
 .banner.light-banner,
 section.light-banner,
 .banner.light-banner.full-width:before,
