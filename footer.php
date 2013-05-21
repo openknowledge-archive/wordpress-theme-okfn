@@ -87,7 +87,8 @@
 							page: 1,
 							avatar_size: 32,
 							count: 20,
-							loading_text: "loading ..."
+							loading_text: "loading ..."<?php if ($okfn_colours == "school") : ?>,
+							template: "{text}"<? endif; ?>
 						}).bind("loaded", function() {
 							var ul = $(this).find(".tweet_list");
 							var ticker = function() {
