@@ -44,7 +44,7 @@
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/sub-header.css?ver=1"/>
     <? endif; ?>
     <? if ($okfn_colours == "blue") : ?>
-      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/blue.css?ver=1"/>
+      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/blue.css?ver=1.0.1"/>
     <?php elseif ($okfn_colours == "grey") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/grey.css?ver=1"/>
     <?php elseif ($okfn_colours == "white") : ?>
@@ -52,7 +52,7 @@
     <?php elseif ($okfn_colours == "turquoise") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/turquoise.css?ver=1"/>
     <?php elseif ($okfn_colours == "school") : ?>
-      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/school.css?ver=1.0.1"/>
+      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/school.css?ver=1.0.2"/>
     <? endif; ?>
     
 		<style type="text/css">
