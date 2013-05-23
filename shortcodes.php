@@ -351,7 +351,9 @@ function sticky_shortcode( $atts ){
 	if ($(this).scrollTop() < ".$scroll." && ".$id.".css('position') == 'fixed') {
 	  $('.".$class."').css({'position': 'absolute', 'top': '0px'});
 	}
-});</script>";
+});
+$('body').addClass('sticky-".$class."');
+</script>";
 }
 add_shortcode( 'sticky', 'sticky_shortcode' );
 

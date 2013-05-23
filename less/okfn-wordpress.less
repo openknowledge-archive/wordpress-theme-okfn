@@ -3236,6 +3236,77 @@ body.page-template-home-page-php.home-template .post.preview .btn,
 }
 
 
+/* Sticky Menu */
+/* =========== */
+body.sticky-subnav > header {
+	margin-bottom: 0px;
+}
+body.sticky-subnav .entry {
+	padding-top:30px;
+}
+.subnav {
+	height: 30px;
+	line-height: 30px;
+	background: #313131;
+	background: -moz-linear-gradient(top, #313131 0%, #232323 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #313131), color-stop(100%, #232323));
+	background: -webkit-linear-gradient(top, #313131 0%, #232323 100%);
+	background: -o-linear-gradient(top, #313131 0%, #232323 100%);
+	background: -ms-linear-gradient(top, #313131 0%, #232323 100%);
+	background: linear-gradient(to bottom, #313131 0%, #232323 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#313131', endColorstr='#232323', GradientType=0 );
+	border-top: solid 1px #313131;
+	border-bottom: solid 1px #000;
+	font-size: 14px;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	position: absolute;
+	top: 0px;
+	z-index: 100;
+}
+.subnav:before,
+.subnav:after {
+	content: "";
+	position: absolute;
+	background: #313131;
+	background: -moz-linear-gradient(top, #313131 0%, #232323 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #313131), color-stop(100%, #232323));
+	background: -webkit-linear-gradient(top, #313131 0%, #232323 100%);
+	background: -o-linear-gradient(top, #313131 0%, #232323 100%);
+	background: -ms-linear-gradient(top, #313131 0%, #232323 100%);
+	background: linear-gradient(to bottom, #313131 0%, #232323 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#313131', endColorstr='#232323', GradientType=0 );
+	border-top: solid 1px #313131;
+	border-bottom: solid 1px #000;
+	top: -1px;
+	bottom: -1px;
+	width: 9999px;
+}
+.subnav:before {
+	right: 100%;
+}
+.subnav:after {
+	left: 100%;
+}
+.subnav a {
+	color: #FFF;
+	padding: 0px 10px;
+	display: inline-block;
+	border-left: solid 1px #393939;
+	border-right: solid 1px #282828;
+	margin: 0px;
+}
+.subnav a:first-of-type {
+	border-left: none;
+}
+.subnav a:hover {
+	text-decoration: none;
+	background-color: #000;
+}
+.subnav .separator {
+	display: none;
+}
+
+
 /* Mailing List */
 /* ============ */
 

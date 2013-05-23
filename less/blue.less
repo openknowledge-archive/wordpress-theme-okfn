@@ -139,6 +139,49 @@ header.has-subheader .navbar .nav .active > a {
 }
 
 
+/* Sticky Menu */
+/* =========== */
+body.sticky-subnav .entry {
+	padding-top:40px;
+}
+.subnav,
+.subnav:before,
+.subnav:after {
+	background: #F3F3F3;
+	background-image:none;
+  filter:none;
+	border-top: solid 1px rgb(255,255,255);
+	border-top: solid 1px rgba(255,255,255,0.1);
+	border-bottom: solid 1px rgb(0,0,0);
+	border-bottom: solid 1px rgba(0,0,0,0.1);
+}
+.subnav {
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+}
+.subnav a {
+	color: #333;
+	padding: 0px 10px;
+	display: inline-block;
+	border-left: solid 1px rgb(0,0,0);
+	border-left: solid 1px rgba(0,0,0,0.1);
+	border-right: solid 1px rgb(255,255,255);
+	border-right: solid 1px rgba(255,255,255,0.1);
+	margin: 0px
+}
+.subnav a:first-of-type {
+	border-left: none;
+}
+.subnav a:hover {
+	text-decoration: none;
+	background-color: rgba(0,0,0,0.1);
+}
+.subnav .separator {
+	display: none
+}
+
+
 /* Components */
 /* ========== */
 button,
