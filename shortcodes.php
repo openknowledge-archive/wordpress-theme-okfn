@@ -609,4 +609,29 @@ function imagelist_item_shortcode( $atts ) {
 add_shortcode('ili', 'imagelist_item_shortcode');  
 
 
+/*********************************************************************************************
+* Name:        Scroll Me
+* Author:      Sam Smith
+* Description: Makes all links which start with a # have an animated scroll to the target
+**********************************************************************************************/
+
+function scrollme_shortcode( $atts ){
+	extract( shortcode_atts( array(
+			'duration' => '900',
+		), $atts ) );
+ return "<script>
+   $('a[href^=\"#\"]').on('click',function (e) {
+	    e.preventDefault();
+	    var target = this.hash,
+	    \$target = \$(target);
+	    $('html, body').stop().animate({
+	        'scrollTop': \$target.offset().top
+	    }, ".$duration.", 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+</script>";
+}
+add_shortcode( 'scrollme', 'scrollme_shortcode' );
+
 ?>
