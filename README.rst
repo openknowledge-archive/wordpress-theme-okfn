@@ -1,6 +1,7 @@
 =================
 OKFN Master Theme
 =================
+
 This is a child theme of the BuddyPress bp-default theme. 
 http://codex.buddypress.org/theme-development/building-a-buddypress-child-theme/
 
