@@ -346,13 +346,15 @@ function sticky_shortcode( $atts ){
  return "<script>$(window).scroll(function(e){ 
   ".$id." = $('.".$class."'); 
   if ($(this).scrollTop() > ".$scroll." && ".$id.".css('position') != 'fixed'){ 
-    $('.".$class."').css({'position': 'fixed', 'top': '0px'}); 
+    $('.".$class."').css({'position': 'fixed', 'top': '0px'});
+		$('body').removeClass('top');
   } 
 	if ($(this).scrollTop() < ".$scroll." && ".$id.".css('position') == 'fixed') {
 	  $('.".$class."').css({'position': 'absolute', 'top': '0px'});
+		$('body').addClass('top');
 	}
 });
-$('body').addClass('sticky-".$class."');
+$('body').addClass('sticky-".$class." top');
 </script>";
 }
 add_shortcode( 'sticky', 'sticky_shortcode' );
