@@ -52,7 +52,7 @@
     <?php elseif ($okfn_colours == "turquoise") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/turquoise.css?ver=1.0.1"/>
     <?php elseif ($okfn_colours == "school") : ?>
-      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/school.css?ver=1.0.2"/>
+      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/school.css?ver=1.0.3"/>
     <? endif; ?>
     
 		<style type="text/css">
