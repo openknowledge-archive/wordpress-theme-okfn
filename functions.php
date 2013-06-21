@@ -342,11 +342,11 @@ function echo_magazine_post($post, $is_featured) {
         "std" => "footer"),		
 		array(  "type" => "close"),
 		array(    "type" => "open"),
-		array(  "name" => "Enable Tweet",
-        "desc" => "Include Seaclouds Tweet script. Uses twitter username specified above.",
-        "id" => $shortname."_enable_tweet",
-        "type" => "checkbox",
-        "std" => "false"),
+//		array(  "name" => "Enable Tweet",
+//        "desc" => "Include Seaclouds Tweet script. Uses twitter username specified above.",
+//        "id" => $shortname."_enable_tweet",
+//        "type" => "checkbox",
+//        "std" => "false"),
 		array(    "type" => "close"),	
 		array(    "name" => "Mailing List Bar",
         "type" => "title"),
@@ -977,11 +977,11 @@ function my_theme_register_required_plugins() {
 		),
 		*/
 		// This is an example of how to include a plugin from the WordPress Plugin Repository
-//		array(
-//			'name' 		=> 'WPSocialite',
-//			'slug' 		=> 'wpsocialite',
-//			'required' 	=> false,
-//		),
+		array(
+			'name' 		=> 'JM Last Twit Shortcode',
+			'slug' 		=> 'jm-last-twit-shortcode',
+			'required' 	=> false,
+		),
 	);
 	// Change this to your theme text domain, used for internationalising strings
 	$theme_text_domain = 'okfn';

@@ -636,4 +636,28 @@ function scrollme_shortcode( $atts ){
 }
 add_shortcode( 'scrollme', 'scrollme_shortcode' );
 
+
+/*********************************************************************************************
+* Name:        Tweeter
+* Author:      Sam Smith
+* Description: Shows a Twitter ticket, requires JM Last Twit Shortcode plugin
+**********************************************************************************************/
+
+function tweeter_shortcode( $atts ){
+	extract( shortcode_atts( array(
+			'total' => '999',
+			'user' => '',
+			'id' => '1',
+		), $atts ) );
+		$open = '<div id="tweeter'.$id.'" class="tweeter carousel slide ticker">';
+	  if (!empty($user)) {
+	 	 $jmlt = do_shortcode('[jmlt count="'.$total.'" username="'.$user.'"]');
+	  }
+	  else $jmlt = do_shortcode('[jmlt count="'.$total.'"]');
+	  $close = '</div>';
+		
+	  return $open.$jmlt.$close;
+}
+add_shortcode( 'tweeter', 'tweeter_shortcode' );
+
 ?>

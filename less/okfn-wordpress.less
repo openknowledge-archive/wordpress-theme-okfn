@@ -165,6 +165,18 @@ h6.blue-dot.marker.icon {
 	background-position: -13px 0px;
 }
 
+.twitter.icon28 {
+	display:block;
+	width:28px;
+	height:28px;
+	background-image: url(images/social-icons.png);
+	background-position: center -199px;
+	background-repeat:no-repeat;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+
+
 /* ================ */
 /* Wordpress Layout */
 /* ================ */
@@ -654,25 +666,23 @@ ul#members-list {
 	top:10px;
 }
 
-/* Tweet Blender Widget */
-#sidebar .widget.widget_tweetblender {
-	padding-top:10px;
+/* JM Last Twit */
+#sidebar .widget .tweetfeed {
+	margin:0 0 10px 0;
 }
-#sidebar .widget.widget_tweetblender .widgettitle {
-	padding-top:0px;
+#sidebar .widget .tweetfeed li {
+	display:block;
+	border-bottom:dotted 1px #cccccc;
+	padding:10px 0;
 }
-#sidebar .widget.widget_tweetblender .tb_tweet {
-  padding: 10px 0;
-}
-#sidebar .widget.widget_tweetblender .tb_footer {
-  margin: 6px auto;
-  display: block;
-}
-#sidebar .widget.widget_tweetblender .tb_footer * {
-  float: none;
-}
-#sidebar .widget.widget_tweetblender .tb-widget-configuration {
-  margin: 0;
+#sidebar .widget .tweetfeed li img {
+	float:left;
+	width:48px;
+	height:48px;
+	padding:3px;
+	margin:0 7px 3px 0;
+	border:solid 1px #cccccc;
+	background-color:#FFF;
 }
 
 /* Archive Widget */
@@ -3512,29 +3522,36 @@ body > .tabbable.mailing-lists span.description {
 
 /* Tweet */
 /* ===== */
-.tweet_list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	overflow-y: hidden;
+section.twitter {
+	min-height:64px;
+	margin-bottom:20px;
 }
-.tweet_list li {
-	overflow-y: auto;
-	overflow-x: hidden;
-	padding: 0.5em;
-	list-style-type: none;
+section.twitter .twitter.icon28 {
+	top:10px;
+	position:absolute;
 }
-.tweet_list li a {
-	color: @okfgreen;
+section.twitter .tweetfeed {
+	margin-left: -20px;
+	padding-left:60px;
+	height:54px;
+	overflow:hidden;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box; 
 }
-.tweet_list .tweet_even {
-	background: rgba(255, 255, 255, 0.5);
+section.twitter .tweetfeed li {
+	font-size:18px;
+	line-height:20px;
+	height:64px;
+	padding:10px 0 0 0;
+	list-style:none;
 }
-.tweet_list .tweet_avatar {
-	padding-right: .5em; float: left;
+section.twitter .tweetfeed li em:last-of-type {
+	display:none;	
 }
-.tweet_list .tweet_avatar img {
-	vertical-align: middle;
+section.twitter .tweetfeed li a {
+	color: #FFF;
+	font-weight:bold;
 }
 
 

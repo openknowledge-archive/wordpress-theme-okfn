@@ -77,35 +77,12 @@
 		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/include/jquery.dotdotdot-1.5.6-packed.js"></script>
     
-    <?php if ( $okfn_enable_tweet == "true" ) : ?>
-    <!-- Tweet -->
-    <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/include/jquery.tweet.js"></script>
-    <script type='text/javascript'>
-			jQuery(function($){
-					$(".tweet").tweet({
-							username: "<?php if (!empty( $okfn_twitter_username)) {echo $okfn_twitter_username;} else {echo 'okfn';}  ?>",
-							page: 1,
-							avatar_size: 32,
-							count: 20,
-							loading_text: "loading ..."<?php if ($okfn_colours == "school") : ?>,
-							template: "{text}"<? endif; ?>
-						}).bind("loaded", function() {
-							var ul = $(this).find(".tweet_list");
-							var ticker = function() {
-								setTimeout(function() {
-									ul.find('li:first').animate( {marginTop: '-4em'}, 500, function() {
-										$(this).detach().appendTo(ul).removeAttr('style');
-									});
-									ticker();
-								}, 6000);
-							};
-							ticker();
-						});
-					});
-		</script> 
-    <? endif; ?>
-    
 		<script>
+		  // Tweeter
+			$("div.tweeter.carousel .tweetfeed").addClass("carousel-inner");
+			$("div.tweeter.carousel .tweetfeed li").addClass("item");
+			$("div.tweeter.carousel .tweetfeed li:nth-child(1)").addClass("active");
+			
 		  // cycling for carousel
       $(".carousel.ticker").carousel({ interval: 6000 });
 			$(".carousel.cycle").carousel({ interval: 8000 });
