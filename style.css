@@ -1180,6 +1180,12 @@ ul#members-list {
   border: solid 1px #cccccc;
   background-color: #FFF;
 }
+#sidebar .widget .tweetfeed li .tweetcontent {
+  display: block;
+}
+#sidebar .widget .tweetfeed li img + .tweetcontent {
+  min-height: 36px;
+}
 /* Archive Widget */
 #sidebar .widget.widget_archive select {
   margin-left: 10px;
