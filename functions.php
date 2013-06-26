@@ -922,12 +922,17 @@ if ( !function_exists('base_rss_feed') ) {
 	}
 }
 
-include('shortcodes.php');
+
+// Default avatar fix
+add_filter( 'bp_user_gravatar_default', 'set_bp_default_avatar_style' );
+function set_bp_default_avatar_style($avatar_default) {
+  return 'mystery';
+}
+
 
 // Fix output of custom cookie notification bar
 remove_action ( 'wp_footer', 'catapult_add_cookie_bar', 1000 );
 add_action ( 'cookie_bar', 'catapult_add_cookie_bar');
-
 
 
 /**
@@ -1025,5 +1030,7 @@ function my_theme_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 
+
+include('shortcodes.php');
 
 ?>
