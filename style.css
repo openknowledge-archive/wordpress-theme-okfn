@@ -2276,6 +2276,7 @@ body.single {
 }
 body.blog #content .post {
   margin-bottom: 15px;
+  padding-bottom: 10px;
 }
 body.blog #content .post .author-box {
   float: right;
@@ -3735,16 +3736,21 @@ a.sidelink {
 }
 #blog-single,
 #blog-single p,
-#blog-single li {
+#blog-single li,
+body.blog,
+body.blog p,
+body.blog li {
   font-size: 15px;
   line-height: 22px;
   color: #444444;
 }
-#blog-single p {
+#blog-single p,
+body.blog p {
   text-align: justify;
 }
 .wp-caption-text,
-#blog-single p.wp-caption-text {
+#blog-single p.wp-caption-text,
+body.blog p.wp-caption-text {
   font-size: 12px;
   line-height: 16px;
 }
