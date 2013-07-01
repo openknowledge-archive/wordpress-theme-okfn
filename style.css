@@ -2274,9 +2274,10 @@ body {
 body.single {
   background-color: #f1f3f2;
 }
-body.blog #content .post {
+body.blog #content .post.box.extend {
   margin-bottom: 15px;
   padding-bottom: 10px;
+  width: 100%;
 }
 body.blog #content .post .author-box {
   float: right;
