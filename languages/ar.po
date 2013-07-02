@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Sam Smith\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+
+#: footer.php:23
+msgid "Donate"
+msgstr "تبرع"
+
+#: functions.php:480
+msgid "Full Post"
+msgstr "المقال كاملا"
+
+#: home-page.php:27
+msgid "From our Blog"
+msgstr "من المدونة"
+
+#: newsletter
+msgid "Receive newsletter"
+msgstr "النشرة الإخبارية"
+
+msgid "Name"
+msgstr "الإسم"
+
+msgid "Email Address"
+msgstr "عنوان البريد الإلكتروني"
+
+msgid "Subscribe"
+msgstr "اشتراك"
+
