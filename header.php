@@ -69,7 +69,8 @@
 					height:35px;
 				}
 				.navbar .nav > li > a {
-					padding: 24px 10px 22px 10px;
+					padding-top:24px;
+					padding-bottom:22px;
 				}
 				.navbar .sub-brand {
 					line-height:60px;

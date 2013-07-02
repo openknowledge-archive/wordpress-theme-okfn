@@ -726,6 +726,9 @@ body > header {
 .navbar .navbar-inner {
   border: none;
 }
+.navbar .nav > li > a {
+  padding: 10px 9px;
+}
 .navbar .navbar-inner .social-links {
   float: right;
   margin-top: 7px;
