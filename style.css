@@ -434,12 +434,12 @@ header .dropdown-toggle:after {
   margin-bottom: 5px;
 }
 /* Footer */
-footer {
+body > footer {
   background: #222222 url('http://assets.okfn.org/web/images/footer-watermark.png') top right no-repeat;
   margin-top: 50px;
   padding: 0;
 }
-footer > .inner {
+body > footer > .inner {
   background: url('http://assets.okfn.org/web/images/footer-bevel.png') top repeat-x;
   padding: 10px 0 30px 0;
   color: #C0C0C0;
@@ -447,30 +447,30 @@ footer > .inner {
   min-height: 190px;
   font-size: 11px;
 }
-footer > .inner a {
+body > footer a {
   color: #C0C0C0;
 }
-footer > .inner a:hover {
+body > footer a:hover {
   color: #FFF;
 }
-footer > .inner a:hover {
+body > footer > .inner a:hover {
   text-decoration: underline;
 }
-footer > .inner p {
+body > footer > .inner p {
   margin-bottom: 4px;
 }
-footer > .inner h1,
-footer > .inner h2,
-footer > .inner h3 {
+body > footer h1,
+body > footer h2,
+body > footer h3 {
   color: #C0C0C0;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
   font-weight: bold;
   padding-bottom: 4px;
 }
-footer li {
+body > footer li {
   line-height: 14px;
 }
-footer .widget-area {
+body > footer .widget-area {
   display: inline;
   float: left;
   margin-left: 20px;
