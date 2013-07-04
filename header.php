@@ -44,7 +44,7 @@
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/sub-header.css?ver=1"/>
     <? endif; ?>
     <? if ($okfn_colours == "blue") : ?>
-      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/blue.css?ver=1.1.0"/>
+      <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/blue.css?ver=1.1.1"/>
     <?php elseif ($okfn_colours == "grey") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/grey.css?ver=1.1.0"/>
     <?php elseif ($okfn_colours == "white") : ?>
