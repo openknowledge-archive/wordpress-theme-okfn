@@ -3746,20 +3746,20 @@ a.sidelink {
 #blog-single,
 #blog-single p,
 #blog-single li,
-body.blog,
-body.blog p,
-body.blog li {
+body.blog #content,
+body.blog #content p,
+body.blog #content li {
   font-size: 15px;
   line-height: 22px;
   color: #444444;
 }
 #blog-single p,
-body.blog p {
+body.blog #content p {
   text-align: justify;
 }
 .wp-caption-text,
 #blog-single p.wp-caption-text,
-body.blog p.wp-caption-text {
+body.blog #content p.wp-caption-text {
   font-size: 12px;
   line-height: 16px;
 }

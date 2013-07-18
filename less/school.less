@@ -42,8 +42,14 @@ h6 {
 }
 
 body,
+body #content,
 p,
+#content p,
 li,
+#content li,
+body.blog #content,
+body.blog #content p,
+body.blog #content li 
 #blog-single,
 #blog-single p,
 #blog-single li { 
@@ -348,8 +354,14 @@ section.coloured .well p {
 /* Widgets */
 /* ======= */
 #sidebar,
-#sidebar p {
-	font-size:13px;
+#sidebar p,
+#sidebar li,
+#sidebar .widget,
+#sidebar .widget p,
+#sidebar .widget li,
+.single-post .container > .author-box.small p {
+  font-size: 15px;
+  line-height:20px;
 }
 #sidebar .widget {
 	background-image:none;
@@ -368,6 +380,8 @@ section.coloured .well p {
 #sidebar .widget h5,
 #sidebar .widget h6 {
 	color:@primary;
+  font-size: 18px;
+	margin-bottom:0px;
 }
 #sidebar .widget a {
 	color:#333333;
@@ -469,21 +483,6 @@ body.single {
 .wp-caption-text a,
 #blog-single p.wp-caption-text a {
 	color:#333333;
-}
-#sidebar .widget,
-#sidebar .widget p,
-.single-post .container > .author-box.small p {
-  font-size: 14px;
-  line-height:18px;
-}
-#sidebar .widget h1,
-#sidebar .widget h2,
-#sidebar .widget h3,
-#sidebar .widget h4,
-#sidebar .widget h5,
-#sidebar .widget h6 {
-  font-size: 18px;
-	margin-bottom:0px;
 }
 
 
