@@ -24,15 +24,15 @@
 }
 
 .btn-primary {
-  background-color: #2b7d78;
-  background-image: -moz-linear-gradient(top, #2b8271, #2b7682);
-  background-image: -ms-linear-gradient(top, #2b8271, #2b7682);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2b8271), to(#2b7682));
-  background-image: -webkit-linear-gradient(top, #2b8271, #2b7682);
-  background-image: -o-linear-gradient(top, #2b8271, #2b7682);
-  background-image: linear-gradient(top, #2b8271, #2b7682);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2b8271', endColorstr='#2b7682', GradientType=0);
-  border-color: #2b7682 #2b7682 #184249;
+  background-color: @okfgreen;
+  background-image: -moz-linear-gradient(top, saturate(@okfgreen, 15%), @okfgreen);
+  background-image: -ms-linear-gradient(top, saturate(@okfgreen, 15%), @okfgreen);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(saturate(@okfgreen, 15%)), to(@okfgreen));
+  background-image: -webkit-linear-gradient(top, saturate(@okfgreen, 15%), @okfgreen);
+  background-image: -o-linear-gradient(top, saturate(@okfgreen, 15%), @okfgreen);
+  background-image: linear-gradient(top, saturate(@okfgreen, 15%), @okfgreen);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='saturate(@okfgreen, 15%)', endColorstr='@okfgreen', GradientType=0);
+  border-color: @okfgreen;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); /* Not modified, but ie seems to not render radius without it */
 }
@@ -41,10 +41,10 @@
 .btn-primary.active,
 .btn-primary.disabled,
 .btn-primary[disabled] {
-  background-color: #2b7682;
+  background-color: @okfgreen;
 }
 .btn-primary:active, .btn-primary.active {
-  background-color: #1e535c \9;
+  background-color: @okfgreen;
 }
 
 .btn-info {

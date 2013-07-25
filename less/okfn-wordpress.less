@@ -12,16 +12,16 @@ button, a.group-button, input[type=submit], input[type=reset] {
   color: #FFF;
   text-align: center;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #2b7d78;
-  background-image: -moz-linear-gradient(top, #2b8271, #2b7682);
-  background-image: -ms-linear-gradient(top, #2b8271, #2b7682);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2b8271), to(#2b7682));
-  background-image: -webkit-linear-gradient(top, #2b8271, #2b7682);
-  background-image: -o-linear-gradient(top, #2b8271, #2b7682);
-  background-image: linear-gradient(top, #2b8271, #2b7682);
+  background-color: @okfgreen;
+  background-image: -moz-linear-gradient(top, saturate(@okfgreen, 15%), @okfgreen);
+  background-image: -ms-linear-gradient(top, saturate(@okfgreen, 15%), @okfgreen);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(saturate(@okfgreen, 15%)), to(@okfgreen));
+  background-image: -webkit-linear-gradient(top, saturate(@okfgreen, 15%), @okfgreen);
+  background-image: -o-linear-gradient(top, saturate(@okfgreen, 15%), @okfgreen);
+  background-image: linear-gradient(top, saturate(@okfgreen, 15%), @okfgreen);
   background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2b8271', endColorstr='#2b7682', GradientType=0);
-  border-color: #2b7682 #2b7682 #184249;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='saturate(@okfgreen, 15%)', endColorstr='@okfgreen', GradientType=0);
+  border-color: @okfgreen;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -35,7 +35,7 @@ button, a.group-button, input[type=submit], input[type=reset] {
 button:hover, a.group-button:hover, input[type=submit]:hover, input[type=reset]:hover {
   color: #FFF;
   text-decoration: none;
-  background-color: #2b7682;
+  background-color: @okfgreen;
   background-position: 0 -15px;
   -webkit-transition: background-position 0.1s linear;
   -moz-transition: background-position 0.1s linear;
@@ -49,39 +49,6 @@ button:focus, a.group-button:focus, input[type=submit]:focus, input[type=reset]:
   outline-offset: -2px;
 }
 
-input[type="submit"] {
-  background-color: #2b7d78;
-  background-image: -moz-linear-gradient(top, #2b8271, #2b7682);
-  background-image: -ms-linear-gradient(top, #2b8271, #2b7682);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2b8271), to(#2b7682));
-  background-image: -webkit-linear-gradient(top, #2b8271, #2b7682);
-  background-image: -o-linear-gradient(top, #2b8271, #2b7682);
-  background-image: linear-gradient(top, #2b8271, #2b7682);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2b8271', endColorstr='#2b7682', GradientType=0);
-  border-color: #2b7682 #2b7682 #184249;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-}
-button:active, a.group-button:active, input[type=submit]:active, input[type=reset]:focus {
-  background-color: #1e535c \9;
-  background-image: none;
-  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  background-color: #e6e6e6;
-  background-color: #d9d9d9 \9;
-  color: rgba(0, 0, 0, 0.5);
-  outline: 0;
-  cursor: default;
-  background-image: none;
-  background-color: #e6e6e6;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
 button::-moz-focus-inner, input[type=submit]::-moz-focus-inner,
 button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
   padding: 0;
