@@ -10,7 +10,7 @@ Description:    The default theme for OKFN websites. Built on the Buddypress cor
 Author:         Tom Rees and Sam Smith
 Template:       bp-default
 Tags:           buddypress
-Version:        1.4.1
+Version:        1.4.2
 */
 /*
    =======================================
@@ -243,7 +243,12 @@ h4,
 h5,
 h6,
 header,
-.strapline {
+.strapline,
+label,
+input,
+select,
+textarea,
+.btn {
   font-family: OpenSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h4 {
@@ -276,6 +281,12 @@ ul.xoxo {
 }
 ul.xoxo ul li {
   padding-bottom: 4px;
+}
+p.intro,
+p.lead {
+  font-family: OpenSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  line-height: 26px;
 }
 .box {
   background-color: #FFF;
@@ -596,11 +607,6 @@ blockquote li,
 }
 blockquote small {
   margin-top: -9px;
-}
-p.intro {
-  font-family: OpenSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 19px;
-  line-height: 24px;
 }
 a.more {
   font-weight: bold;
@@ -1017,6 +1023,9 @@ ul#members-list {
 }
 #sidebar .widget label {
   color: #FFF;
+}
+#content #sidebar .widget h3 {
+  margin-top: 10px;
 }
 #sidebar .widget.white {
   background-color: #FFF;
@@ -2143,12 +2152,6 @@ table.notification-settings tr td:nth-child(2) {
 /* =========== */
 input[type="image"] {
   width: auto;
-}
-label,
-input,
-select,
-textarea {
-  font-family: OpenSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 label {
   display: block;
