@@ -634,6 +634,7 @@ ul#members-list {
 	top:10px;
 }
 
+
 /* JM Last Twit */
 #sidebar .widget .tweetfeed {
 	margin:0 0 10px 0;
@@ -641,23 +642,78 @@ ul#members-list {
 #sidebar .widget .tweetfeed li {
 	display:block;
 	border-bottom:dotted 1px #cccccc;
-	padding:10px 0;
+	padding:10px 0 10px 50px;
+	position:relative;
 }
-#sidebar .widget .tweetfeed li img {
-	float:left;
-	width:48px;
-	height:48px;
-	padding:3px;
-	margin:0 7px 3px 0;
-	border:solid 1px #cccccc;
-	background-color:#FFF;
+#sidebar .widget .tweetfeed li:first-child {
+	padding-top:0;
 }
-#sidebar .widget .tweetfeed li .tweetcontent {
+#sidebar .widget .tweetfeed li img.tweet-twittar {
+	position:absolute;
+	left:0;
+	width:36px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+#sidebar .widget .tweetfeed li .tweet-name a {
+	color:@text;
+	font-weight:bold;
+}
+#sidebar .widget .tweetfeed li .tweet-screen-name,
+#sidebar .widget .tweetfeed li .tweet-screen-name a {
+	color:lighten(@text, 50%);
+	font-size:12px;
+}
+#sidebar .widget .tweetfeed li .tweet-screen-name:before {
+	content:' ';
+}
+#sidebar .widget .tweetfeed li .tweet-content {
 	display:block;
+	margin:0;
 }
-#sidebar .widget .tweetfeed li img + .tweetcontent {
-	min-height:36px;
+#sidebar .widget .tweetfeed li .tweet-timestamp,
+#sidebar .widget .tweetfeed li .tweet-timestamp a {
+	color:lighten(@text, 50%);
+	font-size:12px;
 }
+#sidebar .widget .tweetfeed li .intent-meta {
+	display:block;
+	text-align:right;
+	margin-top:5px;
+	margin-bottom:-5px;
+}
+#sidebar .widget .tweetfeed li .intent-meta a {
+	display:inline-block;
+	background-image: url(images/twitter-icons.png);
+	background-repeat: no-repeat;
+	width:21px;
+	height:21px;
+	overflow:hidden;
+	text-indent:999px;
+	opacity:0.2;
+}
+#sidebar .widget .tweetfeed li .intent-meta a:hover {
+	opacity:0.8;
+}
+#sidebar .widget .tweetfeed li .intent-meta a:nth-of-type(1) {
+	background-position: center 2px;
+}
+#sidebar .widget .tweetfeed li .intent-meta a:nth-of-type(2) {
+	background-position: center -48px;
+}
+#sidebar .widget .tweetfeed li .intent-meta a:nth-of-type(3) {
+	background-position: center -98px;
+}
+@media (min-width: 768px) {
+	#sidebar .widget .tweetfeed li .intent-meta {
+		display:none;
+	}
+	#sidebar .widget .tweetfeed li:hover .intent-meta {
+		display:block;
+	}
+}
+
 
 /* Archive Widget */
 #sidebar .widget.widget_archive select {
@@ -3547,6 +3603,26 @@ section.twitter .tweetfeed li em:last-of-type {
 section.twitter .tweetfeed li a {
 	color: #FFF;
 	font-weight:bold;
+}
+
+
+.tweeter .tweetfeed {
+	position:relative;
+	margin-left:0px;
+}
+.tweeter .tweetfeed .tweet-twittar,
+.tweeter .tweetfeed .tweet-name,
+.tweeter .tweetfeed .tweet-screen-name {
+	display:none;
+}
+.tweeter .tweetfeed .tweet-content {
+	margin:0;
+}
+.tweeter .tweetfeed .tweet-timestamp a {
+	display:none;
+}
+.tweeter .tweetfeed .intent-meta {
+	display:none;
 }
 
 
