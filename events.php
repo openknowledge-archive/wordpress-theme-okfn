@@ -49,7 +49,7 @@ function browser_body_class($classes = '') {
 ?>
     
   <div class="span12">
-      <h2 class="pagetitle"><?php the_title(); ?></h2>
+      <h1 class="pagetitle"><?php the_title(); ?></h1>
   </div>
 </div>
 <div class="row">

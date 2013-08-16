@@ -10,9 +10,9 @@
 			<!--<h2 class="pagetitle"><?php _e( 'Site', 'buddypress' ) ?></h2> -->
 
 			<?php if (have_posts()) : ?>
-      <h2 class="pagetitle">
+      <h1 class="pagetitle">
       Search Results for <?php /* Search Count */ $allsearch = &new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('<span class="search-terms">'); echo $key; _e('</span>'); _e(' &mdash; '); echo $count . ' '; _e('match(es)'); wp_reset_query(); ?>
-      </h2>
+      </h1>
 				<!--<h3 class="pagetitle"><?php _e( 'Search Results', 'buddypress' ) ?></h3> -->
 
 				<?php bp_dtheme_content_nav( 'nav-above' ); ?>
