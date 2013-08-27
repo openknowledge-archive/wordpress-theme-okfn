@@ -29,6 +29,20 @@ function browser_body_class($classes = '') {
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     
 	<?php $event_content = get_the_content(); ?>
+	
+	<?php $featured_event_image = get_the_post_thumbnail($page->ID, 'full'); ?>
+  <?php 
+		global $post;
+	
+		$thumbnail_id    = get_post_thumbnail_id($post->ID);
+		$thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
+	
+		if ($thumbnail_image && isset($thumbnail_image[0])) {
+			$featured_event_link = $thumbnail_image[0]->post_excerpt;
+		}
+		else $featured_event_link = '#';
+
+?>
       
   <?php // get custom field named GCID
     if (get_post_meta($post->ID,'GCEID')) {
@@ -129,7 +143,17 @@ function browser_body_class($classes = '') {
     </div><!-- .padder -->
 </div><!-- #content -->
 <div id="sidebar" class="span4" role="complementary">
- 
+  
+  <?php if (!empty($featured_event_image)) { ?>
+  <div class="widget widget_text">
+    <div class="textwidget">
+     <a class="full" target="_blank" href="<? echo $featured_event_link; ?>">
+        <? echo $featured_event_image; ?>
+      </a>
+    </div>
+  </div>
+  <?php } ?>
+  
  <?php
  $events_category_id = get_cat_ID('Events');
  ?>

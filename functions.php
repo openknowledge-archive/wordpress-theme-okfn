@@ -1031,6 +1031,9 @@ function my_theme_register_required_plugins() {
 }
 
 
+add_theme_support( 'post-thumbnails' );
+ 
+
 include('shortcodes.php');
 
 ?>
