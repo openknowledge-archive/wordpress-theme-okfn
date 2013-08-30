@@ -85,7 +85,9 @@ input[type="reset"] {
 	text-shadow:none;
 }
 
-.btn-large {
+.btn-large,
+input[type=submit].btn-large,
+input[type=reset].btn-large {
 	-webkit-border-radius: 20px;
   border-radius: 20px; 
 	padding: 7px 14px;
@@ -503,6 +505,47 @@ body > .tabbable.mailing-lists .nav li a {
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
+
+/* Popups */
+#bp-default .fsp_content {
+	background-color: @primary;
+	background-image: url(../images/blue-tiles.png);
+	background-position: center top;
+	background-repeat: repeat;
+	border-color:#333333;
+}
+#bp-default .fsp_content #closediv {
+	padding: 10px 0 2px 32px;
+	right: -22px;
+	background-image: url(../images/close-icon.png);
+	background-repeat: no-repeat;
+	background-position: 7px 7px;
+}
+
+.mailman-popup p {
+	font-size:30px;
+}
+
+.xyz.mailman-popup .icon {
+	background-position: center -100px;
+}
+.xyz.mailman-popup p {
+	color:#FFF;
+}
+.xyz.mailman-popup .field input {
+	border:none;
+}
+.xyz.mailman-popup .btn {
+	background-color:#FFF;
+	background-image:none;
+	color:@primary;
+	-webkit-border-radius: 25px;
+  border-radius: 25px; 
+	font-size: 22px;
+	font-weight: bold;
+	padding: 10px 40px;
+}
+
 
 
 /* Thumbnails */

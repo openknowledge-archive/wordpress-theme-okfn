@@ -548,15 +548,26 @@ function mailman_shortcode( $atts ){
 	extract( shortcode_atts( array(
 			'domain' => 'http://lists.okfn.org',
 			'list' => '',
-			'button' => 'Subscribe'
+			'button' => 'Subscribe',
+			'popup' => ''
 		), $atts ) );
-		return '<form method="post" action="'.$domain.'/mailman/subscribe/'.$list.'">
+		
+		if (!empty($popup)) {
+			$mailman = '<div class="'.$popup.' mailman-popup"><div class="icon"></div><p>'.__('Get updates from').' '. get_bloginfo( 'sitename' ) .' '.__('in your inbox').'</p><form method="post" action="'.$domain.'/mailman/subscribe/'.$list.'">
+<div class="field"><input name="email" type="email" placeholder="your email address"></div>
+<input type="submit" name="email-button" value= "'.$button.'" class="btn btn-large btn-inverse">
+</form></div>';
+		}
+		
+		else $mailman = '<form method="post" action="'.$domain.'/mailman/subscribe/'.$list.'">
 <label>Name</label>
 <input name="fullname" type="text">
 <label>E-mail Address</label>
 <input name="email" type="email"> 
 <p style="margin-top:10px;"><input type="submit" name="email-button" value= "'.$button.'"></p>
 </form>';
+		
+		return $mailman;
 		}
 add_shortcode( 'mailman', 'mailman_shortcode' );
 
