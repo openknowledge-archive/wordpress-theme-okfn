@@ -1,3 +1,5 @@
+@import "variables";
+
 html {
 	background-color: #efefef;
 }
@@ -87,9 +89,11 @@ html {
   color: #333333;
 }
 .navbar .dropdown-menu li > a:hover,
+.dropdown-menu li > a:hover,
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover {
-  background-color: #328d81;
+  background-color: @okfgreen;
+	background-image:none;
 }
 
 .navbar .sub-brand {
