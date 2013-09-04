@@ -173,15 +173,17 @@ function browser_body_class($classes = '') {
   <div class="widget widget_text">
     <div class="textwidget">
       <a class="full" target="_blank" href="http://www.meetup.com/OpenKnowledgeFoundation/">
-        <img src="http://assets.okfn.org/web/images/promo/meetups-285.jpg">
+        <img src="http://assets.okfn.org/web/images/promo/local-events.png">
       </a>
     </div>
   </div>
   
+  <!--
   <div class="widget widget_gce_widget">
     <h3 class="widgettitle">Calendar</h3>
-		<?php echo do_shortcode( '[google-calendar-events id="'.$calendar_id.'" type="ajax" title="Events on"]' ); ?>
+		<?php //echo do_shortcode( '[google-calendar-events id="'.$calendar_id.'" type="ajax" title="Events on"]' ); ?>
   </div>
+  -->
   
   <div class="sidebar-content">
     <?php echo $event_content; ?>
