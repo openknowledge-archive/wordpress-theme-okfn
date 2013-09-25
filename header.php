@@ -301,5 +301,4 @@
 
 		<?php do_action( 'bp_before_container' ) ?>
     <div class="container">
-      <div class="row">
 

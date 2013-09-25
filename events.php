@@ -25,7 +25,7 @@ function browser_body_class($classes = '') {
 
 
 <?php get_header() ?>
-
+<div class="row">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     
 	<?php $event_content = get_the_content(); ?>
@@ -191,6 +191,7 @@ function browser_body_class($classes = '') {
  </div>
   
 <?php //get_sidebar() ?>
+</div>
 </div>
 <?php get_footer() ?>
 

@@ -1,5 +1,5 @@
 <?php get_header() ?>
-
+<div class="row">
 	<div id="content" class="search-page span8">
 		<div class="padder">
 
@@ -65,4 +65,5 @@
   <div id="sidebar" class="span4" role="complementary">
 	<?php get_sidebar() ?>
   </div>
+</div>
 <?php get_footer() ?>

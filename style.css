@@ -221,6 +221,9 @@ a.thumbnail:hover {
 .nav-pills > .active > a:hover {
   background-color: #1a988b;
 }
+.margin-bottom {
+  margin-bottom: 20px;
+}
 /* Main CSS */
 /* ======== */
 html {
@@ -286,7 +289,7 @@ p.intro,
 p.lead {
   font-family: OpenSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 19px;
-  line-height: 26px;
+  line-height: 30px;
 }
 .box {
   background-color: #FFF;
@@ -443,6 +446,14 @@ header .dropdown-toggle:after {
 #content h6 {
   margin-top: 20px;
   margin-bottom: 5px;
+}
+#content h1.collapse-margin,
+#content h2.collapse-margin,
+#content h3.collapse-margin,
+#content h4.collapse-margin,
+#content h5.collapse-margin,
+#content h6.collapse-margin {
+  margin-bottom: 0;
 }
 /* Footer */
 body > footer {
@@ -3506,7 +3517,7 @@ section.coloured p {
 /* ======== */
 .wp-caption {
   background-color: #F0F0F0;
-  padding: 5px 0px;
+  padding: 0;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -3516,6 +3527,7 @@ section.coloured p {
   text-align: center;
   display: block;
   max-width: 100%;
+  overflow: hidden;
 }
 .wp-caption.alignleft {
   margin: 0px 15px 9px 0px;
@@ -3536,12 +3548,17 @@ section.coloured p {
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-.wp-caption-text {
+.wp-caption-text,
+#blog-single p.wp-caption-text,
+body.blog #content p.wp-caption-text {
   margin: 0px;
-  padding: 5px 10px 0px 10px;
+  padding: 5px 8px;
   font-size: 11px;
   line-height: normal;
   text-align: left;
+}
+.wp-caption-text a {
+  color: #333333;
 }
 .comments-closed {
   display: none;
@@ -3784,12 +3801,6 @@ body.blog #content li {
 #blog-single p,
 body.blog #content p {
   text-align: justify;
-}
-.wp-caption-text,
-#blog-single p.wp-caption-text,
-body.blog #content p.wp-caption-text {
-  font-size: 12px;
-  line-height: 16px;
 }
 /* Mag Homepage */
 /* ============ */
@@ -4206,6 +4217,76 @@ section.twitter .tweetfeed li a {
 /* ============== */
 body.fluid > .container {
   width: 100%;
+}
+/* Full Banner Template */
+/* ==================== */
+.page-template-full-banner-php > .container > .banner {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #ECECEC;
+  position: relative;
+  font-size: 24px;
+  line-height: 28px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  margin-bottom: 35px;
+}
+.page-template-full-banner-php > .container > .banner .container {
+  height: 390px;
+  position: relative;
+}
+.page-template-full-banner-php > .container > .banner .container .text {
+  position: absolute;
+  bottom: 15px;
+  z-index: 1;
+}
+.page-template-full-banner-php > .container > .banner .container .text .caption {
+  max-width: 870px;
+  display: block;
+}
+.page-template-full-banner-php > .container > .banner a.attribution {
+  font-size: 11px;
+  left: 0;
+  line-height: normal;
+  opacity: 0.8;
+  text-decoration: none;
+  display: block;
+  margin-top: 25px;
+}
+.page-template-full-banner-php > .container > .banner a.attribution:hover {
+  opacity: 1;
+}
+.page-template-full-banner-php > .container > .banner,
+.page-template-full-banner-php > .container > .banner h1,
+.page-template-full-banner-php > .container > .banner a {
+  color: #FFF;
+}
+.page-template-full-banner-php > .container > .banner:after {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.57) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.57)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.57) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.57) 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.57) 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.57) 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#91000000', GradientType=0);
+  /* IE6-9 */
+
+  bottom: 0;
+  content: "";
+  height: 210px;
+  left: 0;
+  position: absolute;
+  right: 0;
 }
 /* WP Fixes */
 /* ======== */

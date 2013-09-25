@@ -10,7 +10,7 @@
  */
 
 get_header(); ?>
-
+<div class="row">
 	<div id="content" class="span12">
 		<div class="padder one-column">
 
@@ -45,5 +45,5 @@ get_header(); ?>
 
 		</div><!-- .padder -->
 	</div><!-- #content -->
-
+</div>
 <?php get_footer(); ?>

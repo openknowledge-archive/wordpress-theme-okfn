@@ -12,7 +12,8 @@ function browser_body_class($classes = '') {
 ?>
 
 <?php get_header() ?>
-<div id="content" class="span12">
+<div class="row">
+  <div id="content" class="span12">
     <div class="padder">
 
     <?php do_action( 'bp_before_blog_home' ) ?>
@@ -61,7 +62,7 @@ function browser_body_class($classes = '') {
     </div><!-- .padder -->
 </div><!-- #content -->
 <?php //get_sidebar() ?>
-
+</div>
 <?php get_footer() ?>
 
 
