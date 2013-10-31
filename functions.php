@@ -139,12 +139,13 @@ function echo_magazine_post($post, $is_featured) {
 
 
  // Theme options
-    $themename = "OKFN Master Theme";
+    $themename = "OKF Theme";
     $shortname = "okfn";
     $options = array (
+		array(    "name" => "general_options",
+		"type" => "open"),
 		array(    "name" => "General Styling",
         "type" => "title"),
-		array(    "type" => "open"),
 		array("name" => "Flavour",
         "id" => $shortname."_colours",
         "type" => "radio",
@@ -152,65 +153,49 @@ function echo_magazine_post($post, $is_featured) {
         "options" => array("default" => "Classic", "grey" => "OKF", "blue" => "Ckan", "turquoise" => "Glam", "school" => "School", "white" => "Simple"),
         "std" => "grey",
 				"class" => "thumbs"),
-		array(    "type" => "close"),		
-		array(    "type" => "open"),
 		array("name" => "Tagline Location",
         "id" => $shortname."_tagline_location",
         "type" => "radio",
         "desc" => "Where would you like the tagline to appear on the page?",
         "options" => array("home" => "Top of home page", "default" => "Top of every page", "header" => "In the header", "hide" => "Nowhere"),
         "std" => "hide"),
-		array(    "type" => "close"),
 		array(    "name" => "TopBar",
         "type" => "title"),
-		array(    "type" => "open"),
 		array(  "name" => "Show TopBar?",
         "desc" => "Show / hide the BuddyPress bar at the top of this site.",
         "id" => $shortname."_buddypress_disable",
         "type" => "radio",
 				"options" => array("true" => "Hide", "false" => "Show"),
         "std" => "true"),
-		array(    "type" => "close"),
 		array(    "name" => "Header",
         "type" => "title"),
-		array(    "type" => "open"),
 		array(  "name" => "Header Height",
         "desc" => "Check this box to make the header taller.",
         "id" => $shortname."_tall_header",
         "type" => "radio",
 				"options" => array("true" => "Tall", "false" => "Short"),
         "std" => "true"),
-		array(    "type" => "close"),
-		array(    "type" => "open"),
 		array(  "name" => "Make my logo bigger!",
         "desc" => "Check this box to increase font size of site title. Useful when you have a short title. Only works with tall header.",
         "id" => $shortname."_large_title",
         "type" => "checkbox",
         "std" => "false"),
-		array(    "type" => "close"),
-		array(    "type" => "open"),
 		array("name" => "Logo Font",
         "id" => $shortname."_logo_font",
         "type" => "radio",
         "desc" => "Font for header logo text",
         "options" => array("default" => "Open Sans", "ubuntu" => "Ubuntu"),
         "std" => "default"),
-		array(    "type" => "close"),
-		array(    "type" => "open"),
 		array(  "name" => "Hide Logo Icon?",
         "desc" => "Check this box if you would like to HIDE the logo image.",
         "id" => $shortname."_logo_icon",
         "type" => "checkbox",
         "std" => "false"),
-		array(    "type" => "close"),
-		array(    "type" => "open"),
 		array(  "name" => "Hide Logo Text?",
         "desc" => "Check this box if you would like to HIDE the logo text.",
         "id" => $shortname."_logo_text",
         "type" => "checkbox",
         "std" => "false"),
-		array(    "type" => "close"),
-		array(    "type" => "open"),
 		array(  "name" => "Custom Header Text",
         "desc" => "Check this box to enable custom header text.",
         "id" => $shortname."_header_text",
@@ -226,8 +211,6 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "Which side of the header would you like this to appear?",
         "options" => array("left" => "Left", "right" => "Right"),
         "std" => "right"),
-		array(  "type" => "close"),		
-		array(    "type" => "open"),
 		array(  "name" => "Custom Header Text Two",
         "desc" => "Check this box to enable custom header text.",
         "id" => $shortname."_header_text2",
@@ -243,8 +226,6 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "Which side of the header would you like this to appear?",
         "options" => array("left" => "Left", "right" => "Right"),
         "std" => "right"),
-		array(  "type" => "close"),		
-		array(    "type" => "open"),
 		array(  "name" => "Corner Ribbon Toggle",
         "desc" => "Check this box to enable text in the top right of the page.",
         "id" => $shortname."_corner_ribbon",
@@ -258,24 +239,18 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "url to link to",
         "id" => $shortname."_corner_ribbon_link",
         "type" => "text"),
-		array(  "type" => "close"),
-		array(    "type" => "open"),
 		array(  "name" => "Hide OKF Ribbon",
         "desc" => "Check this box to disable OKF Panel hooks.",
         "id" => $shortname."_okf_ribbon",
         "type" => "checkbox",
         "std" => "false"),
-		array(  "type" => "close"),
-		array(    "type" => "open"),
 		array(  "name" => "Search Icon",
         "desc" => "Enable search bar in header",
         "id" => $shortname."_header_search",
         "type" => "checkbox",
         "std" => "false"),
-		array(  "type" => "close"),
 		array(    "name" => "Sub-Header",
         "type" => "title"),
-		array(    "type" => "open"),
 		array(  "name" => "Sub-header Bar?",
         "desc" => "Check this box to display a bar below the header, inclusing breadcrumbs. (Does not appear on homepage)",
         "id" => $shortname."_subheader",
@@ -286,10 +261,12 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_subheader_search",
         "type" => "checkbox",
         "std" => "false"),
-		array(    "type" => "close"),		
-		array(    "name" => "Social",
+		array(    "type" => "close"),	
+	
+		array(    "name" => "social_options",
+		"type" => "open"),
+		array(  	"name" => "Social",
         "type" => "title"),
-		array(    "type" => "open"),
 		array(  "name" => "Twitter Link",
         "desc" => "Add link to Twitter profile.",
         "id" => $shortname."_twitter_link",
@@ -305,8 +282,6 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "Where to put Twitter icon",
         "options" => array("default" => "Header", "footer" => "Footer", "both" => "Header and Footer"),
         "std" => "default"),
-		array(  "type" => "close"),
-		array(    "type" => "open"),
 		array(  "name" => "Facebook Link",
         "desc" => "Add link to Facebook profile.",
         "id" => $shortname."_facebook_link",
@@ -321,9 +296,7 @@ function echo_magazine_post($post, $is_featured) {
         "type" => "radio",
         "desc" => "Where to put Facebook icon",
         "options" => array("default" => "Header", "footer" => "Footer", "both" => "Header and Footer"),
-        "std" => "default"),
-		array(  "type" => "close"),				
-		array(    "type" => "open"),		
+        "std" => "default"),	
 		array(  "name" => "ShareThis",
         "desc" => "Check this box to enable ShareThis.",
         "id" => $shortname."_sharethis",
@@ -340,18 +313,13 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "Where is it going?",
         "options" => array("footer" => "Footer", "elsewhere" => "Elsewhere"),
         "std" => "footer"),		
-		array(  "type" => "close"),
-		array(    "type" => "open"),
 //		array(  "name" => "Enable Tweet",
 //        "desc" => "Include Seaclouds Tweet script. Uses twitter username specified above.",
 //        "id" => $shortname."_enable_tweet",
 //        "type" => "checkbox",
 //        "std" => "false"),
-		array(    "type" => "close"),	
 		array(    "name" => "Mailing List Bar",
         "type" => "title"),
-				
-				array(    "type" => "open"),
 		array(  "name" => "MailChimp Plugin",
         "desc" => "MailChimp form powered by N-Media MailChimp plugin",
         "id" => $shortname."_mailchimp_bar",
@@ -369,9 +337,6 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "fid number found in shortcode",
         "id" => $shortname."_mailchimp_id",
         "type" => "text"),
-		array(  "type" => "close"),
-				
-		array(    "type" => "open"),
 		array(  "name" => "Native Mailing List 1",
         "desc" => "Add mailing list form",
         "id" => $shortname."_mailinglist_bar",
@@ -395,9 +360,6 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "URL from form action attribute. Mailman example: http://lists.okfn.org/mailman/subscribe/XYZ",
         "id" => $shortname."_mailinglist_action",
         "type" => "text"),
-		array(  "type" => "close"),
-		
-		array(    "type" => "open"),
 		array(  "name" => "Native Mailing List 2",
         "desc" => "Add mailing list form",
         "id" => $shortname."_mailinglist_bar2",
@@ -421,60 +383,52 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "URL from form action attribute. Mailman example: http://lists.okfn.org/mailman/subscribe/XYZ",
         "id" => $shortname."_mailinglist_action2",
         "type" => "text"),
-		array(  "type" => "close"),
-		array(    "type" => "open"),
 		array("name" => "Mailing List Location",
         "id" => $shortname."_mailinglist_bar_location",
         "type" => "radio",
         "desc" => "Where to put bar",
         "options" => array("header" => "Header (home page, first list only)", "footer" => "Footer"),
         "std" => "footer"),
-		array(  "type" => "close"),		
+		array(  "type" => "close"),	
+				
+		array(    "name" => "blog_options",
+		     "type" => "open"),	
 		array(    "name" => "Blog",
-        "type" => "title"),		
-		array(    "type" => "open"),
+        "type" => "title"),
 		array(  "name" => "Large Blog Avatars",
         "desc" => "Check this box to use large avatars on blog post page (requires Gravatar).",
         "id" => $shortname."_large_avatars",
         "type" => "checkbox",
         "std" => "false"),
-		array(    "type" => "close"),
-		array(    "type" => "open"),
 		array(  "name" => "Blog Archive",
         "desc" => "URL to all blog posts, used in Magazine template",
         "id" => $shortname."_blog_link",
         "type" => "text"),
-		array(    "type" => "close"),
-		array(    "type" => "open"),
 		array(  "name" => "Magazine Posts",
         "desc" => "How many posts to show in the Magazine template",
         "id" => $shortname."_magazine_posts",
         "type" => "text"),
-		array(    "type" => "close"),
-		array(    "type" => "open"),
 		array(  "name" => "Featured Category",
         "desc" => "Name of category to feature on magazine style pages ('Featured' by default)",
         "id" => $shortname."_magazine_featured",
         "type" => "text"),
-		array(    "type" => "close"),
-		array(    "type" => "open"),
 		array(  "name" => "Home Category",
         "desc" => "Name of category to feature on homepage ('Featured' by default)",
         "id" => $shortname."_home_featured",
         "type" => "text"),
-		array(    "type" => "close"),
-		array(    "type" => "open"),
 		array(  "name" => "Events Category",
         "desc" => "Name of category to feature on events page ('Events' by default)",
         "id" => $shortname."_events_featured",
         "type" => "text"),
-		array(    "type" => "close"),
-		array(    "type" => "open"),
 		array(  "name" => "Narrow Post Column",
         "desc" => "Check this box to use alternative post page layout.",
         "id" => $shortname."_narrow_blog",
         "type" => "checkbox",
-        "std" => "false"),	
+        "std" => "false"),
+		array(    "type" => "close"),	
+		
+		array(    "name" => "misc_options",
+		    "type" => "open"),
 		array(    "name" => "Misc",
         "type" => "title"),	
 		//array("name" => "Carousel Style",
@@ -483,21 +437,16 @@ function echo_magazine_post($post, $is_featured) {
         //"desc" => "Change layout style of Bootstrap carousel",
         //"options" => array("default" => "Default", "text-right" => "Text on Right (full width)", "stack" => "Text on Right (photo stack)"),
         //"std" => "default"),		
-		array(    "type" => "open"),
 		array(  "name" => "Tagline in meta title?",
         "desc" => "Check this box to append site title with tagline in the meta title tag.",
         "id" => $shortname."_tagline_title",
         "type" => "checkbox",
         "std" => "false"),
-		array(    "type" => "close"),	
-		array(    "type" => "open"),
 		array(  "name" => "Flattr OKFN",
         "desc" => "Check this box to add a link to donate to the Open Knowledge Foundation.",
         "id" => $shortname."_flattr_okfn",
         "type" => "checkbox",
         "std" => "false"),
-		array(    "type" => "close"),		
-		array(    "type" => "open"),
 		array(  "name" => "Enable Flags",
         "desc" => "https://github.com/lafeber/world-flags-sprite",
         "id" => $shortname."_flags_sprite",
@@ -549,158 +498,232 @@ function mytheme_admin() {
 
 <div class="options wrap">
 <style scoped>
-	.options .radio label {
-			margin-bottom:5px;
-			display:block;
-		}
-	.options .radio.thumbs label {
-		width:150px;
-		display:inline-block;
-		padding-top:112px;
-		margin:0px 10px 10px 0px;
-		border:solid 1px #DDDDDD;
+  .options .group h3 {
+		font-family: sans-serif;
+		font-weight:bold;
+		background-color:#DFDFDF;
 	}
-	.options .radio.thumbs label span {
+	.options .section {
+		padding:10px 0;
+		border-top:solid 1px #ECECEC;
+	}
+	.options h3 + .section {
+		border:none;
+	}
+	.options .section .heading {
+		float:left;
+		width:25%;
+	}
+	.options .section .heading h4,
+	.options .section .heading .explain {
+		margin:0;
+		padding:0 10px;
+	}
+	.options .section .heading + .option {
+		margin-left:25%;
+	}
+	.options .section-radio label {
+		margin-bottom:5px;
+		display:block;
+	}
+	.options .section-radio.thumbs label {
+		width:240px;
+		display:inline-block;
+		padding-top:122px;
+		margin:0px 15px 15px 0px;
+		border:solid 1px #DDDDDD;
+		background-position:center top;
+	}
+	.options .section-radio.thumbs label span {
 		display:block;
 		padding:3px;
 		background: rgb(255, 255, 255); /* fallback */
     background: rgba(255, 2554, 255, 0.9); 
 	}
+	.options .submit {
+		display:block;
+		float:left;
+		margin-left:10px;
+	}
 </style>
 <h2><?php echo $themename; ?> Options</h2>
+<div class="icon32" id="icon-themes"><br></div>
+<?php settings_errors(); ?> 
+<?php $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'general_options'; ?> 
+<h2 class="nav-tab-wrapper">
+  <a href="?page=functions.php&tab=general_options" title="General" class="nav-tab<?php echo $active_tab == 'general_options' ? ' nav-tab-active' : ''; ?>" id="of-option-general-tab">General</a>
+  <a href="?page=functions.php&tab=social_options" title="Social" class="nav-tab<?php echo $active_tab == 'social_options' ? ' nav-tab-active' : ''; ?>" id="of-option-social-tab">Social</a>
+  <a href="?page=functions.php&tab=blog_options" title="Blog" class="nav-tab<?php echo $active_tab == 'blog_options' ? ' nav-tab-active' : ''; ?>" id="of-option-blog-tab">Blog</a>
+  <a href="?page=functions.php&tab=misc_options" title="Misc" class="nav-tab<?php echo $active_tab == 'misc_options' ? ' nav-tab-active' : ''; ?>" id="of-option-misc-tab">Misc</a>
+</h2>
 
-<form method="post">
-
-
-
-<?php foreach ($options as $value) { 
+<div class="metabox-holder">	
+  <form method="post">
+  
+  <?php foreach ($options as $value) { 
+      
+    switch ( $value['type'] ) {
     
-	switch ( $value['type'] ) {
-	
-		case "open":
-		?>
-        <table width="100%" border="0" style="background-color:#FFFFFF; padding:10px; border-bottom:solid 1px #ECECEC;">
-		
-        
-        
-		<?php break;
-		
-		case "close":
-		?>
-		
-        </table>
-        
-        
-		<?php break;
-		
-		case "title":
-		?>
-		<table width="100%" border="0" style="background-color:#ECECEC; padding:0px 10px;"><tr>
-        	<td colspan="3"><h3><?php echo $value['name']; ?></h3></td>
-        </tr>
+      case "open":
+      ?>
+         <div id="<?php echo $value['name']; ?>" class="group" <?php if( $active_tab !== $value['name'] ) : ?> style="display:none;"<? endif; ?> >
+
+      <?php break;
+      
+      case "close":
+      ?>
+      
+          </div>
+          
+          
+      <?php break;
+      
+      case "title":
+      ?>
+      <h3><?php echo $value['name']; ?></h3>
+                  
+          
+      <?php break;
+  
+      case 'text':
+      ?>
+      
+        <div class="section section-text" id="section_<?php echo $value['id']; ?>">
+          <div class="heading">
+            <h4><?php echo $value['name']; ?></h4>
+            <p class="explain"><?php echo $value['desc']; ?></p>
+          </div>
+          <div class="option">
+            <div class="controls">
+              <input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" />
+              <br>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+          
+  
+      <?php 
+      break;
+      
+      case 'textarea':
+      ?>        
+          
+          <?php $input = get_settings( $value['id'] ); $output = stripslashes ($input); ?>
+          
+          <div class="section section-textarea" id="section_<?php echo $value['id']; ?>">
+            <div class="heading">
+              <h4><?php echo $value['name']; ?></h4>
+              <p class="explain"><?php echo $value['desc']; ?></p>
+            </div>
+            <div class="option">
+              <div class="controls">
+                <textarea name="<?php echo $value['id']; ?>" cols="70" rows="5"><?php if ( get_settings( $value['id'] ) != "") { echo $output; } else { echo $value['std']; } ?></textarea>
+                <br>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+          
+      <?php 
+      break;
+      
+      case 'select':
+      ?>
+      
+      <div class="section section-select" id="section_<?php echo $value['id']; ?>">
+        <div class="heading">
+          <h4><?php echo $value['name']; ?></h4>
+					<p class="explain"><?php echo $value['desc']; ?></p>
+        </div>
+        <div class="option">
+          <div class="controls">
+          <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select>
+          <br>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+  
+      <?php
+          break;
+              
+      case "checkbox":
+      ?>
+      
+      <div class="section section-checkbox" id="section_<?php echo $value['id']; ?>">
+        <div class="heading">
+        	<h4><?php echo $value['name']; ?></h4>
+        </div>
+        <div class="option">
+          <div class="controls">
+            <? if( get_option($value['id'] ) ){ $checked = "checked=\"checked\""; } else { if ( $value['std'] === "true" ){ $checked = "checked=\"checked\""; } else { $checked = ""; } } ?>
+            <input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> />
+            <label for="<?php echo $value['id']; ?>" class="explain"><?php echo $value['desc']; ?></label>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+              
+          <?php 		break;
+          
+          case "radio":?>
+          
+      <div class="section section-radio <?php echo $value['class'] ?>" id="section_<?php echo $value['id']; ?>">
+        <div class="heading">
+          <h4><?php echo $value['name']; ?></h4>
+          <p class="explain"><?php echo $value['desc']; ?></p>
+        </div>
+        <div class="option">
+          <div class="controls">
+            <? foreach ($value['options'] as $option_value => $option_text) {
+                $checked = ' ';
+                if (get_option($value['id']) == $option_value) {
+                    $checked = ' checked="checked" ';
+                }
+                else if (get_option($value['id']) === FALSE && $value['std'] == $option_value){
+                    $checked = ' checked="checked" ';
+                }
+                else {
+                    $checked = ' ';
+                }
                 
-        
-		<?php break;
-
-		case 'text':
-		?>
-        
-        <tr>
-            <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
-            <td><input style="width:400px;" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" />
-            </td>
-            <td><em><?php echo $value['desc']; ?></em></td>
-        </tr>
-
-		<?php 
-		break;
-		
-		case 'textarea':
-		?>        
-        
-        <?php $input = get_settings( $value['id'] ); $output = stripslashes ($input); ?>
-				<tr>
-          <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
-          <td><textarea name="<?php echo $value['id']; ?>" cols="70" rows="5"><?php if ( get_settings( $value['id'] ) != "") { echo $output; } else { echo $value['std']; } ?></textarea></td>
-          <td><em><?php echo $value['desc']; ?></em></td>
-        </tr>
-        
-		<?php 
-		break;
-		
-		case 'select':
-		?>
-        <tr>
-            <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
-            <td><select style="width:240px;" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select>
-            </td>
-            <td><em><?php echo $value['desc']; ?></em></td>
-        </tr>
-
-		<?php
-        break;
+                if ($value['class'] == "thumbs") {
+                    $bgimage = "".get_bloginfo('stylesheet_directory')."/screenshot-".$option_value.".png";
+                }
+                else {
+                    $bgimage = '';
+                }
             
-		case "checkbox":
-		?>
-          <tr>
-            <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
-            <td>
-              <? if( get_option($value['id'] ) ){ $checked = "checked=\"checked\""; } else { if ( $value['std'] === "true" ){ $checked = "checked=\"checked\""; } else { $checked = ""; } } ?>
-                <input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> />
-            </td>
-            <td><em><?php echo $value['desc']; ?></em></td>
-         </tr>
-            
-        <?php 		break;
-				
-				case "radio":?>
-        <tr class="radio <?php echo $value['class'] ?>">
-          <th scope="row" width="25%" align="left"><?php echo $value['name']; ?></th>
-          <td>
-						<? foreach ($value['options'] as $option_value => $option_text) {
-							$checked = ' ';
-							if (get_option($value['id']) == $option_value) {
-									$checked = ' checked="checked" ';
-							}
-							else if (get_option($value['id']) === FALSE && $value['std'] == $option_value){
-									$checked = ' checked="checked" ';
-							}
-							else {
-									$checked = ' ';
-							}
-							
-							if ($value['class'] == "thumbs") {
-									$bgimage = "".get_bloginfo('stylesheet_directory')."/screenshot-".$option_value.".png";
-							}
-							else {
-									$bgimage = '';
-							}
-					
-							echo '<label style="background-image:url('.$bgimage.');"><span><input type="radio" style="margin-right:10px;" name="'.$value['id'].'" value="'.
-									$option_value.'" '.$checked."/>".$option_text."</span></label>";
-					} ?>
-      	</td>
-          <td><em><?php echo $value['desc']; ?></em></td>
-        </tr>
-			  <?php break;
-	
-} 
-}
-?>
+                echo '<label style="background-image:url('.$bgimage.');"><span><input type="radio" style="margin-right:10px;" name="'.$value['id'].'" value="'.
+                    $option_value.'" '.$checked."/>".$option_text."</span></label>";
+            } ?>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
 
-<!--</table>-->
+          <?php break;
+    
+  } 
+  }
+  ?>
+  
+  
+  <span class="submit">
+  <input name="save" type="submit" value="Save changes" class="button-primary" />    
+  <input type="hidden" name="action" value="save" />
+  </span>
+  </form>
+  <form method="post">
+  <span class="submit">
+  <input name="reset" type="submit" value="Reset" class="button" />
+  <input type="hidden" name="action" value="reset" />
+  </span>
+  </form>
 
-<span class="submit" style="float:left; margin-right:10px; padding:0px;">
-<input name="save" type="submit" value="Save changes" class="button-primary" />    
-<input type="hidden" name="action" value="save" />
-</span>
-</form>
-<form method="post">
-<span class="submit" style="float:left; padding:0px;">
-<input name="reset" type="submit" value="Reset" class="button" />
-<input type="hidden" name="action" value="reset" />
-</span>
-</form>
+</div>
 
 <?php
 }
