@@ -9,20 +9,25 @@ function browser_body_class($classes = '') {
   array_push($classes,"magazine events");
   return $classes;
 }
+
+  // Get options
+  global $options;
+  foreach ($options as $value) {
+    if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+   }
+  // to use if custom post number is required
+  if (!empty($okfn_event_posts)) {
+	  $eventPostNumber = $okfn_event_posts;
+	} else {
+	  $eventPostNumber = '39';
+	}
+	// to use if custom category is required
+	if (!empty($okfn_events_featured)) {
+	  $featured_cat = $okfn_events_featured;
+	} else {
+	  $featured_cat = 'Events';
+	}
 ?>
-
-<? // to use if custom post number is required
-      global $options;
-      foreach ($options as $value) {
-          if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
-      }
-     if (!empty($okfn_event_posts)) {
-			 $eventPostNumber = $okfn_event_posts;
-		 } else {
-			 $eventPostNumber = '39';
-		 }
-	?>
-
 
 <?php get_header() ?>
 <div class="row">
@@ -83,7 +88,7 @@ function browser_body_class($classes = '') {
     /* =================== */
 		
 		if (switch_to_blog(37,true)) {
-      $post_filter_main = array('category_name' => 'Events', 'posts_per_page' => 1 );
+      $post_filter_main = array('category_name' => $featured_cat, 'posts_per_page' => 1 );
 
       $idsToSkip = array();
       // Print the main post
@@ -96,7 +101,7 @@ function browser_body_class($classes = '') {
       }
 
       // Query remaining posts
-      $post_filter_etc = array('category_name' => 'Events', 'posts_per_page' => $eventPostNumber, 'post__not_in' => $idsToSkip);
+      $post_filter_etc = array('category_name' => $featured_cat, 'posts_per_page' => $eventPostNumber, 'post__not_in' => $idsToSkip);
 
 		  $counter = 1; ?>
       <div id="magCarousel" class="carousel slide">

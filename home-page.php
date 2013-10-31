@@ -9,6 +9,17 @@ function browser_body_class($classes = '') {
   array_push($classes,"magazine home-template");
   return $classes;
 }
+
+    // Get options
+    global $options;
+    foreach ($options as $value) {
+      if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+    }
+		if (!empty($okfn_home_featured)) {
+		  $featured_cat = $okfn_home_featured;
+		} else {
+			$featured_cat = 'Featured';
+		}
 ?>
 
 <?php get_header() ?>
@@ -31,7 +42,7 @@ function browser_body_class($classes = '') {
     /* =================== */
     /* == Magazine Body == */
     /* =================== */
-      $post_filter_main = array('category_name' => 'Featured', 'posts_per_page' => 1 );
+      $post_filter_main = array('category_name' => $featured_cat, 'posts_per_page' => 1 );
 
       $idsToSkip = array();
       // Print the main post
@@ -44,7 +55,7 @@ function browser_body_class($classes = '') {
       }
 
       // Query remaining posts
-      $post_filter_etc = array('category_name' => 'Featured', 'posts_per_page' => 4, 'post__not_in' => $idsToSkip);
+      $post_filter_etc = array('category_name' => $featured_cat, 'posts_per_page' => 4, 'post__not_in' => $idsToSkip);
 
       // Print the remaining posts
       query_posts( $post_filter_etc );
