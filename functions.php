@@ -91,8 +91,17 @@ function register_form_blurb( $args ) {
 function choose_best_category( $categories) {
   // Cannot fathom why my array comes inside an array...
   $categories = $categories[0];
-  include('category-priority.php');
-
+  global $options;
+	foreach ($options as $value) {
+		if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+	}
+  if (!empty($okfn_category_priority)) {
+		$category_priority_custom = stripslashes($okfn_category_priority);
+		$category_priority = explode(',', $category_priority_custom);
+	}
+	else {
+	  $category_priority = file( get_bloginfo('stylesheet_directory').'/category-priority.txt', FILE_IGNORE_NEW_LINES);
+	}
   // Choose the first category I have in the priority list
   $first = null;
   foreach ($category_priority as $priority) {
@@ -138,7 +147,13 @@ function echo_magazine_post($post, $is_featured) {
 		define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'bp_dtheme_header_image_height', 60  ) );
 
 
- // Theme options
+/*
+ *  Theme Options
+ */
+ // Get default category priority list to use as placeholder
+		$default_category_priority = file( get_bloginfo('stylesheet_directory').'/category-priority.txt', FILE_IGNORE_NEW_LINES);
+		$default_category_priority_string = implode(', ',$default_category_priority);
+ // Settings
     $themename = "OKF Theme";
     $shortname = "okfn";
     $options = array (
@@ -425,6 +440,14 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_narrow_blog",
         "type" => "checkbox",
         "std" => "false"),
+	  array(    "name" => "Category Priority",
+        "type" => "title"),	
+		array(  "name" => "Which category is shown, when only room for one?",
+        "desc" => "List in order of priority. Categories must be comma separated, and are case sensitive.",
+        "id" => $shortname."_category_priority",
+        "type" => "textarea",
+				"rows" => "11",
+				"placeholder" => $default_category_priority_string),
 		array(    "type" => "close"),	
 		
 		array(    "name" => "misc_options",
@@ -618,7 +641,7 @@ function mytheme_admin() {
             </div>
             <div class="option">
               <div class="controls">
-                <textarea name="<?php echo $value['id']; ?>" cols="70" rows="5"><?php if ( get_settings( $value['id'] ) != "") { echo $output; } else { echo $value['std']; } ?></textarea>
+                <textarea name="<?php echo $value['id']; ?>" cols="70" rows="<?php if (  $value['rows']  != "") { echo $value['rows']; } else { echo '5'; } ?>" <?php if (  $value['placeholder']  != "") : ?>placeholder="<?php echo $value['placeholder']; ?>"<? endif ?>><?php if ( get_settings( $value['id'] ) != "") { echo $output; } else { echo $value['std']; } ?></textarea>
                 <br>
               </div>
               <div class="clear"></div>
