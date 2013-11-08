@@ -303,7 +303,7 @@ function echo_magazine_post($post, $is_featured) {
         "type" => "checkbox",
         "std" => "false"),
 		array(  "name" => "Facebook Username",
-        "desc" => "facebook.com/...",
+        "desc" => "This is what comes after'facebook.com/' in the URL (this will also be used for Open Graph tags).",
         "id" => $shortname."_facebook_username",
         "type" => "text"),
 		array("name" => "Facebook Location",

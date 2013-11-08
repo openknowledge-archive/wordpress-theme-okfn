@@ -121,6 +121,11 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     
+    <?php if ( !empty( $okfn_facebook_username )) : ?>
+    <meta property="og:type" content="article" />
+    <meta property="article:publisher" content="https://www.facebook.com/<?php echo $okfn_facebook_username ?>" />
+    <? endif; ?>
+    
   </head>
   
 	<body <?php body_class() ?> id="bp-default">
