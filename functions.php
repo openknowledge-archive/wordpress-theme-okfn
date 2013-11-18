@@ -121,8 +121,13 @@ function echo_magazine_post($post, $is_featured) {
     // Extract the first img src from the post body
     $regex = '/magazine.image\s*=\s*"?([^"\s]*)/';
     preg_match($regex, get_the_content(), $matches);
-    $post_img = 'http://assets.okfn.org/web/images/blog-placeholder.png';
-    if (count($matches)) $post_img = $matches[1];
+    if ( has_post_thumbnail() ) {
+      $post_img = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); // use wp featured image
+    }		
+    elseif (count($matches)) $post_img = $matches[1]; // else use old featured image
+    else {
+      $post_img = 'http://assets.okfn.org/web/images/blog-placeholder.png'; // else use placeholder
+    }
     echo '<div class="box post '.$post_class.'">';
     echo '<div class="padder"> <a class="image" href="'.get_permalink().'" style="background-image:url('.$post_img.');"></a>';
     echo '<div class="text">';
