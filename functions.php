@@ -131,7 +131,7 @@ function echo_magazine_post($post, $is_featured) {
     echo '<div class="box post '.$post_class.'">';
     echo '<div class="padder"> <a class="image" href="'.get_permalink().'" style="background-image:url('.$post_img.');"></a>';
     echo '<div class="text">';
-    echo '<h2><a href="'.get_permalink().'"rel="bookmark">'; the_title(); echo '</a></h2>';
+    echo '<h2><a href="'.get_permalink().'" rel="bookmark">'; the_title(); echo '</a></h2>';
     echo '<span class="entry-meta"> Posted on '; 
     printf( __( '%1$s <span>in %2$s</span>', 'buddypress' ), get_the_date(), get_the_category_list( ', ' ) );
     echo 'by ' . bp_core_get_userlink( $post->post_author );
