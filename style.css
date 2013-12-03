@@ -1321,8 +1321,11 @@ ul#members-list {
   width: 100%;
 }
 /* Login Widget */
+#sidebar .widget.widget_wp_sidebarlogin {
+  overflow: hidden;
+}
 #sidebar .widget.widget_wp_sidebarlogin div.avatar_container {
-  padding: 0px 0px 10px 10px;
+  padding: 0px 0px 15px 10px;
 }
 #sidebar .widget.widget_wp_sidebarlogin img {
   border: none;
