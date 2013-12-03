@@ -33,13 +33,9 @@ Magazine mode will display:
 * The latest blogpost with the category "Featured" at the top.
 * The latest four blogposts which aren't that one beneath it.
 
-The algorithm which displays a picture looks for "magazine.image" in the blogpost. Just add a HTML comment to your blog post:
+The magazine template will display the 'Featured Image' from each blog post.
 
-  <!-- magazine.image = http://flickr.com/my/magazine/image.jpg -->
-
-There is a simple algorithm to choose which category is displayed on the ribbon. This file decides which category will be chosen first:
-
-https://github.com/okfn/wordpress-theme-okfn/blob/master/category-priority.php
+There is a simple algorithm to choose which category is displayed on the ribbon. The priority order of categories can be viewed and overwritten in the 'Blog' section of the theme options.
 
 To use YARPP to display Related Posts as magazine entries on the post view page, open up the YARPP widget settings.
 
@@ -49,7 +45,7 @@ To use YARPP to display Related Posts as magazine entries on the post view page,
 
 **Home**
 
-The Home template adds Magazine style blogposts to the bottom of the page. Only posts in a category named "Featured" will be displayed. Images are handled in the same manor as described above.
+The Home template adds Magazine style blogposts to the bottom of the page. By default, only posts in a category named "Featured" will be displayed (this category can be changed in the 'Blog' section of the theme options). Images are handled in the same manor as described above.
 
 
 **Presentation**
@@ -60,7 +56,7 @@ Display content in a series of slides. Example here: http://staging.okfn.org/sli
 Theme Options
 -------------
 
-The theme can be customised in a variety of ways via the Theme Options. These settings can be found in WordPress admin under Appearance >OKFN Master Theme Options. 
+The theme can be customised in a variety of ways via the Theme Options. These settings can be found in WordPress admin under Appearance >OKF Theme Options. 
 
 
 Supported Shortcode
