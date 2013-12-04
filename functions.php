@@ -173,6 +173,11 @@ function echo_magazine_post($post, $is_featured) {
         "options" => array("default" => "Classic", "grey" => "OKF", "blue" => "Ckan", "turquoise" => "Glam", "school" => "School", "white" => "Simple"),
         "std" => "grey",
 				"class" => "thumbs"),
+		array(  "name" => "Favicon",
+        "desc" => "Replace default favicon with your own ico file",
+        "id" => $shortname."_favicon",
+        "type" => "media",
+				"placeholder" => "enter url"),
 		array("name" => "Tagline Location",
         "id" => $shortname."_tagline_location",
         "type" => "radio",
@@ -673,6 +678,27 @@ function mytheme_admin() {
         </div>
       </div>
 
+  <?php break;
+  
+      case 'media':
+			$upload_button_text = __( 'Upload', 'okfn' );
+      ?>
+      
+        <div class="section section-text" id="section_<?php echo $value['id']; ?>">
+          <div class="heading">
+            <h4><?php echo $value['name']; ?></h4>
+            <p class="explain"><?php echo $value['desc']; ?></p>
+          </div>
+          <div class="option">
+            <div class="controls">
+              <input type="text" id="<?php echo $value['id']; ?>" name="<?php echo $value['id']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" <?php if (  $value['placeholder']  != "") : ?>placeholder="<?php echo $value['placeholder']; ?>"<? endif ?> />  
+              <!--<input id="<?php echo $value['id']; ?>_upload_button" type="button" class="button" value="<?php echo $upload_button_text; ?>" /> -->           
+              <br>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+          
   
       <?php
           break;

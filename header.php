@@ -101,15 +101,24 @@
     <? endif; ?>
     </style>
     
-    <? if ($okfn_colours == "blue") : ?>
-      <link rel="shortcut icon" href="http://assets.okfn.org/p/ckan/img/ckan.ico" />
-    <?php elseif ($okfn_colours == "white" || $okfn_colours == "turquoise") : ?>
-      <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/grey-favicon.ico" />
-    <?php elseif ($okfn_colours == "school") : ?>
-      <link rel="shortcut icon" href="http://assets.okfn.org/p/schoolofdata/img/favicon.ico" />
-    <?php else: ?>
-      <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
-    <? endif; ?>
+    <?
+		  if ( !empty( $okfn_favicon )) {
+				$favicon_url = $okfn_favicon;
+			}
+			elseif ($okfn_colours == "blue") {
+				$favicon_url = 'http://assets.okfn.org/p/ckan/img/ckan.ico';
+			}
+			elseif ($okfn_colours == "white" || $okfn_colours == "turquoise") {
+				$favicon_url = 'http://assets.okfn.org/p/okfn/img/grey-favicon.ico';
+			}
+			elseif ($okfn_colours == "school") {
+				$favicon_url = 'http://assets.okfn.org/p/schoolofdata/img/favicon.ico';
+			}
+			else {
+				$favicon_url = 'http://assets.okfn.org/p/okfn/img/favicon.ico';
+			}
+		?>
+    <link rel="shortcut icon" href="<? echo $favicon_url; ?>" />
     
     <script type="text/javascript">
       var Okfn = Okfn || {};
