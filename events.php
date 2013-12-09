@@ -178,7 +178,7 @@ function browser_body_class($classes = '') {
   <div class="widget widget_text">
     <div class="textwidget">
       <a class="full" target="_blank" href="https://www.google.com/calendar/b/2/embed?src=okfn.org_1v0fovp5uh4b3l88qr2c6q74o4@group.calendar.google.com&ctz=Europe/Berlin&gsessionid=6x2dZ-lGClbCnUtmhuaDeA&gt">
-        <img src="http://okfn.org/wp-content/uploads/2013/12/okf-events.png">
+        <img src="http://assets.okfn.org/web/images/promo/okf-events.png">
       </a>
     </div>
   </div>
@@ -186,7 +186,7 @@ function browser_body_class($classes = '') {
   <div class="widget widget_text">
     <div class="textwidget">
       <a class="full" target="_blank" href="http://www.meetup.com/OpenKnowledgeFoundation/">
-        <img src="http://okfn.org/wp-content/uploads/2013/12/local-events.png">
+        <img src="http://assets.okfn.org/web/images/promo/local-events.png">
       </a>
     </div>
   </div>
