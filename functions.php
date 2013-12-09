@@ -176,7 +176,7 @@ function echo_magazine_post($post, $is_featured) {
 		array(  "name" => "Favicon",
         "desc" => "Replace default favicon with your own ico file",
         "id" => $shortname."_favicon",
-        "type" => "media",
+        "type" => "text",
 				"placeholder" => "enter url"),
 		array("name" => "Tagline Location",
         "id" => $shortname."_tagline_location",
@@ -628,7 +628,7 @@ function mytheme_admin() {
           </div>
           <div class="option">
             <div class="controls">
-              <input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" />
+              <input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" <?php if (  $value['placeholder']  != "") : ?>placeholder="<?php echo $value['placeholder']; ?>"<? endif ?>/>
               <br>
             </div>
             <div class="clear"></div>
@@ -792,6 +792,20 @@ if ( function_exists('register_sidebar') )
         'after_title' => '',
     ));
 
+	function okfn_options_enqueue_scripts() {  
+			wp_register_script( 'options-upload', get_template_directory_uri() .'/include/options-upload.js', array('jquery','media-upload','thickbox') );  
+		
+			if ( 'appearance_page_functions' == get_current_screen() -> id ) {  
+					wp_enqueue_script('jquery');  
+		
+					wp_enqueue_script('thickbox');  
+					wp_enqueue_style('thickbox');  
+		
+					wp_enqueue_script('media-upload');  
+					wp_enqueue_script('wptuts-upload');  
+			}  
+	}  
+	add_action('admin_enqueue_scripts', 'okfn_options_enqueue_scripts');  
 
 
 
