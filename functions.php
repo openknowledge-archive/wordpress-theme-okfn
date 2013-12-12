@@ -792,20 +792,6 @@ if ( function_exists('register_sidebar') )
         'after_title' => '',
     ));
 
-	function okfn_options_enqueue_scripts() {  
-			wp_register_script( 'options-upload', get_template_directory_uri() .'/include/options-upload.js', array('jquery','media-upload','thickbox') );  
-		
-			if ( 'appearance_page_functions' == get_current_screen() -> id ) {  
-					wp_enqueue_script('jquery');  
-		
-					wp_enqueue_script('thickbox');  
-					wp_enqueue_style('thickbox');  
-		
-					wp_enqueue_script('media-upload');  
-					wp_enqueue_script('wptuts-upload');  
-			}  
-	}  
-	add_action('admin_enqueue_scripts', 'okfn_options_enqueue_scripts');  
 
 
 
