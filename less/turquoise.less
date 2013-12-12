@@ -129,19 +129,23 @@ body > header,
 .navbar .nav .dropdown.sfhover.active {
   background-color: #a4a4a4;
 }
-.navbar .dropdown-menu a,
-.navbar .nav .dropdown.sfhover a {
-  color: #FFF;
-}
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover,
-.navbar .nav .sfhover.active {
+.navbar .nav .sfhover.active,
+.navbar .nav li.dropdown.active > .dropdown-toggle {
 	background-color: transparent;
 	color: @primary;
 	box-shadow:none;
 }
 header .dropdown-toggle:after {
   border-top: 4px solid #1d1d1d;
+}
+.navbar .dropdown-menu a,
+.navbar .nav .dropdown.sfhover a,
+.navbar .nav li.dropdown.sfhover > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle:hover,
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+  color: #FFF;
 }
 
 .okfn-ribbon {
