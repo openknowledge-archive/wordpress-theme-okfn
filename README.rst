@@ -45,7 +45,7 @@ To use YARPP to display Related Posts as magazine entries on the post view page,
 
 **Home**
 
-The Home template adds Magazine style blogposts to the bottom of the page. By default, only posts in a category named "Featured" will be displayed (this category can be changed in the 'Blog' section of the theme options). Images are handled in the same manor as described above.
+The Home template adds Magazine style blogposts to the bottom of the page. By default, only posts in a category named "Featured" will be displayed (this category can be changed in the 'Blog' section of the theme options). Images are handled in the same manner as described above.
 
 
 **Presentation**
