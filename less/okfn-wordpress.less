@@ -1945,6 +1945,8 @@ ul.scrollButtons li.right a:hover {
   width: 690px;
 }
 .magazine .post.featured .text {
+  position: absolute;
+  bottom: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";  /* IE 8 */
   filter: alpha(opacity=90);  /* IE 5-7 */
   -moz-opacity: 0.9;  /* Netscape */
@@ -1959,14 +1961,8 @@ ul.scrollButtons li.right a:hover {
   background: linear-gradient(top, #2e2e2e 0%, #1d1d1d 100%);  /* W3C */
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#1d1d1d', GradientType=0);  /* IE6-9 */
   color: #FFF;
-  padding: 10px 15px 5px 15px;
-  height: 66px;
-  overflow: hidden;
-  border-bottom-width: 10px;
-  border-bottom-style: solid;
-  border-bottom-color: #1d1d1d;
-	line-height:14px;
-	margin-top: -91px;
+  padding: 10px 15px;
+  line-height: 14px;
 }
 .magazine .post.featured .text strong {
 	font-weight:normal;
@@ -1976,21 +1972,13 @@ ul.scrollButtons li.right a:hover {
   font-size: 11px;
   display: block;
   margin-bottom: 4px;
-	line-height:14px;
+ line-height:14px;
 }
 .magazine .post .entry-meta span {
 	display:none;
 }
-.magazine .featured .text h2 {
-  color: #FFF;
-  margin: 0px !important;
-  font-size: 18px;
-  height: 28px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  -ms-text-overflow: ellipsis;
-  overflow: hidden;
+.magazine #content .featured .text h2 {
+  margin-top: 0px;
 }
 .magazine .featured .text a,
 .magazine .featured .text h2 a {
