@@ -134,14 +134,6 @@
     <meta property="og:type" content="article" />
     <meta property="article:publisher" content="https://www.facebook.com/<?php echo $okfn_facebook_username ?>" />
     <? endif; ?>
-
-    <?php
-      wp_register_script( 'snow', get_stylesheet_directory_uri() . '/js/snow.min.js' );
-      wp_register_script( 'snow-load', get_stylesheet_directory_uri() . '/js/snow-load.js' );
-      wp_enqueue_script( 'snow' );
-      wp_enqueue_script( 'snow-load' );
-    ?>
-
     
   </head>
   
