@@ -273,7 +273,7 @@ if( function_exists('base_rss_feed') && !function_exists('base_rss_shortcode') )
 		), $atts));
  
 		$content = base_rss_feed($size, $feed, $date);
-		if ($type == ticker ) {
+		if ($type == 'ticker' ) {
 			return '<div id="rss'.$id.'" class="rss ticker carousel slide size'.$size.' '.$class.'">'.$content.'
 			<a class="carousel-control left" href="#rss'.$id.'" data-slide="prev">&lsaquo;</a>
 			<a class="carousel-control right" href="#rss'.$id.'" data-slide="next">&rsaquo;</a></div>
