@@ -162,6 +162,7 @@ function row_shortcode( $atts, $content = null ) {
 			'class' => '',
 			'style' => '',
 		), $atts ) );
+    $styles = '';
     if (!empty($style)) { $styles = ' style="'.$style.'"';}
     
 		return '<div class="row '.$class.'"'.$styles.'>' .do_shortcode($content). '</div>';
@@ -175,6 +176,7 @@ function column_shortcode( $atts, $content = null ) {
 			'class' => '',
 			'style' => '',
 		), $atts ) );
+    $styles = '';
 		if (!empty($style)) { $styles = ' style="'.$style.'"';}
 		
 		return '<div class="span'.$span.' offset'.$offset.' '.$class.'"'.$styles.'>' .do_shortcode($content). '</div>'; 
