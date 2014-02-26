@@ -1,7 +1,7 @@
 <?
 global $options;
 foreach ($options as $value) {
-	if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+	if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
 }
 if ( $okfn_mailchimp_bar == "true" or $okfn_mailinglist_bar == "true" or $okfn_mailinglist_bar2 == "true") : ?>
 	<? 

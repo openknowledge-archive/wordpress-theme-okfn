@@ -93,7 +93,7 @@ function choose_best_category( $categories) {
   $categories = $categories[0];
   global $options;
 	foreach ($options as $value) {
-		if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+		if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
 	}
   if (!empty($okfn_category_priority)) {
 		$category_priority_custom = stripslashes($okfn_category_priority);
@@ -628,7 +628,7 @@ function mytheme_admin() {
           </div>
           <div class="option">
             <div class="controls">
-              <input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" <?php if (  $value['placeholder']  != "") : ?>placeholder="<?php echo $value['placeholder']; ?>"<? endif ?>/>
+              <input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_option( $value['id'] ) != "") { echo get_option( $value['id'] ); } else { echo $value['std']; } ?>" <?php if (  $value['placeholder']  != "") : ?>placeholder="<?php echo $value['placeholder']; ?>"<? endif ?>/>
               <br>
             </div>
             <div class="clear"></div>
@@ -642,7 +642,7 @@ function mytheme_admin() {
       case 'textarea':
       ?>        
           
-          <?php $input = get_settings( $value['id'] ); $output = stripslashes ($input); ?>
+          <?php $input = get_option( $value['id'] ); $output = stripslashes ($input); ?>
           
           <div class="section section-textarea" id="section_<?php echo $value['id']; ?>">
             <div class="heading">
@@ -651,7 +651,7 @@ function mytheme_admin() {
             </div>
             <div class="option">
               <div class="controls">
-                <textarea name="<?php echo $value['id']; ?>" cols="70" rows="<?php if (  $value['rows']  != "") { echo $value['rows']; } else { echo '5'; } ?>" <?php if (  $value['placeholder']  != "") : ?>placeholder="<?php echo $value['placeholder']; ?>"<? endif ?>><?php if ( get_settings( $value['id'] ) != "") { echo $output; } else { echo $value['std']; } ?></textarea>
+                <textarea name="<?php echo $value['id']; ?>" cols="70" rows="<?php if (  $value['rows']  != "") { echo $value['rows']; } else { echo '5'; } ?>" <?php if (  $value['placeholder']  != "") : ?>placeholder="<?php echo $value['placeholder']; ?>"<? endif ?>><?php if ( get_option( $value['id'] ) != "") { echo $output; } else { echo $value['std']; } ?></textarea>
                 <br>
               </div>
               <div class="clear"></div>
@@ -671,7 +671,7 @@ function mytheme_admin() {
         </div>
         <div class="option">
           <div class="controls">
-          <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select>
+          <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_option( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select>
           <br>
           </div>
           <div class="clear"></div>
@@ -691,7 +691,7 @@ function mytheme_admin() {
           </div>
           <div class="option">
             <div class="controls">
-              <input type="text" id="<?php echo $value['id']; ?>" name="<?php echo $value['id']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" <?php if (  $value['placeholder']  != "") : ?>placeholder="<?php echo $value['placeholder']; ?>"<? endif ?> />  
+              <input type="text" id="<?php echo $value['id']; ?>" name="<?php echo $value['id']; ?>" value="<?php if ( get_option( $value['id'] ) != "") { echo get_option( $value['id'] ); } else { echo $value['std']; } ?>" <?php if (  $value['placeholder']  != "") : ?>placeholder="<?php echo $value['placeholder']; ?>"<? endif ?> />  
               <!--<input id="<?php echo $value['id']; ?>_upload_button" type="button" class="button" value="<?php echo $upload_button_text; ?>" /> -->           
               <br>
             </div>

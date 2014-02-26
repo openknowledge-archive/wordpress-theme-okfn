@@ -13,7 +13,7 @@
       <?
       global $options;
       foreach ($options as $value) {
-          if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+          if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
       }
      if ($okfn_tagline_title == "true" && get_bloginfo( 'description' )) : ?>
       - <?php echo bloginfo( 'description' ); ?>
@@ -292,7 +292,7 @@
 		 <?
       global $options;
       foreach ($options as $value) {
-          if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+          if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
       }
      if ($okfn_tagline_location == "default" && get_bloginfo( 'description' )) : ?>
       <h2 id="site-description"></h2>

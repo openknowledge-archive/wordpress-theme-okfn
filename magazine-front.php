@@ -13,7 +13,7 @@ function browser_body_class($classes = '') {
     // Get options
     global $options;
     foreach ($options as $value) {
-      if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+      if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
     }
     if (!empty($okfn_magazine_posts)) {
 		  $magazinePostNumber = $okfn_magazine_posts;
@@ -85,7 +85,7 @@ function browser_body_class($classes = '') {
           <?
 					global $options;
 					foreach ($options as $value) {
-							if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_settings( $value['id'] ); }
+							if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
 					}
 						if (!empty($okfn_blog_link)) : ?>
 						<a href="<? echo $okfn_blog_link ?>" class="all-posts">See all posts</a>
