@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Magazine 
+Template Name: Magazine
  */
 
 /* body class="magazine" */
@@ -13,7 +13,15 @@ function browser_body_class($classes = '') {
     // Get options
     global $options;
     foreach ($options as $value) {
-      if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
+      if(array_key_exists('id', $value)) {
+        if (get_option( $value['id'] ) === FALSE) {
+          if (array_key_exists('std', $value)) {
+            $$value['id'] = $value['std'] or NULL;
+          }
+        } else {
+          $$value['id'] = get_option( $value['id'] );
+        }
+      }
     }
     if (!empty($okfn_magazine_posts)) {
 		  $magazinePostNumber = $okfn_magazine_posts;
@@ -38,7 +46,7 @@ function browser_body_class($classes = '') {
 
     <div class="page" id="blog-latest" role="main">
 
-    <?php 
+    <?php
     /* =================== */
     /* == Magazine Body == */
     /* =================== */
@@ -68,7 +76,7 @@ function browser_body_class($classes = '') {
             while (have_posts()) {
               the_post();
               echo_magazine_post($post, false);
-                
+
                if ($counter % 4 == 0) : ?>
                 </div>
                 <div class="item">
@@ -83,10 +91,18 @@ function browser_body_class($classes = '') {
           <a class="carousel-control left" href="#magCarousel" data-slide="prev">&lsaquo;</a>
           <a class="carousel-control right" href="#magCarousel" data-slide="next">&rsaquo;</a>
           <?
-					global $options;
-					foreach ($options as $value) {
-							if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
-					}
+          global $options;
+          foreach ($options as $value) {
+            if(array_key_exists('id', $value)) {
+              if (get_option( $value['id'] ) === FALSE) {
+                if (array_key_exists('std', $value)) {
+                  $$value['id'] = $value['std'] or NULL;
+                }
+              } else {
+                $$value['id'] = get_option( $value['id'] );
+              }
+            }
+          }
 						if (!empty($okfn_blog_link)) : ?>
 						<a href="<? echo $okfn_blog_link ?>" class="all-posts">See all posts</a>
 					<? endif; ?>

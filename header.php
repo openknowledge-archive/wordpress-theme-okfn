@@ -24,9 +24,9 @@
     <meta name="description" content="<?php echo bloginfo( 'description' ); ?>" />
     <? endif; ?>
 		<?php do_action( 'bp_head' ) ?>
-    
+
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ) ?>" />
-		
+
 		<?php
 			if ( is_singular() && bp_is_blog_page() && get_option( 'thread_comments' ) )
 				wp_enqueue_script( 'comment-reply' );
@@ -38,7 +38,7 @@
       <link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
     <? endif; ?>
     <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url') . '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>"/>
-   
+
     <!-- Theme Settings -->
     <? if ($okfn_subheader == "true") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/sub-header.css?ver=1"/>
@@ -54,7 +54,7 @@
     <?php elseif ($okfn_colours == "school") : ?>
       <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/school.css?ver=1.1.2"/>
     <? endif; ?>
-    
+
 		<style type="text/css">
     <? if ($okfn_tall_header == "true") : ?>
       @media (min-width: 980px) {
@@ -100,7 +100,7 @@
 			html {margin-top: 0px !important;}
     <? endif; ?>
     </style>
-    
+
     <?
 		  if ( !empty( $okfn_favicon )) {
 				$favicon_url = $okfn_favicon;
@@ -119,28 +119,28 @@
 			}
 		?>
     <link rel="shortcut icon" href="<? echo $favicon_url; ?>" />
-    
+
     <script type="text/javascript">
       var Okfn = Okfn || {};
       // Make this variable available to Javascript
       Okfn.theme_directory = '<?php echo bloginfo('stylesheet_directory'); ?>';
     </script>
-    
+
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
+
     <?php if ( !empty( $okfn_facebook_username )) : ?>
     <meta property="og:type" content="article" />
     <meta property="article:publisher" content="https://www.facebook.com/<?php echo $okfn_facebook_username ?>" />
     <? endif; ?>
-    
+
   </head>
-  
+
 	<body <?php body_class() ?> id="bp-default">
-    <?php 
+    <?php
       /* Javascript includes */
-      do_action( 'bp_before_header' ) 
+      do_action( 'bp_before_header' )
     ?>
     <? if (!empty($okfn_corner_ribbon_text) && $okfn_corner_ribbon == "true") {
 			echo '
@@ -148,22 +148,22 @@
         ' . stripslashes($okfn_corner_ribbon_text).'
       </a>';
 		} ?>
-    
+
     <? if ($okfn_okf_ribbon !== "true") :?>
       <? do_action('okf_panel'); ?>
     <? endif; ?>
     <? if ( $okfn_mailinglist_bar_location == "header" && is_front_page() ) {
-			include('mailing-bar.php'); 
+			include('mailing-bar.php');
 		} ?>
     <header<? if ($okfn_subheader == "true"):?> class="has-subheader"<? endif; ?>>
       <div class="navbar<? if ($okfn_colours == "default") : ?> navbar-inverse<? endif; ?>">
         <div class="navbar-inner">
           <div class="container">
-                    
+
           <? if ($okfn_okf_ribbon !== "true"):?>
             <? do_action('okf_ribbon'); ?>
           <? endif; ?>
-          
+
           <? if (!empty($okfn_header_textarea) && $okfn_header_text == "true") : ?>
             <div class="header-text"<? if ($okfn_header_text_align == "left") : ?> style="float:left; padding-left:0px; padding-right:5px;"<? endif; ?>>
               <? echo stripslashes($okfn_header_textarea); ?>
@@ -179,10 +179,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a title="<?php _ex( 'Home', 'Home page banner link title', 'buddypress' ); ?>" 
-              class="brand" 
+          <a title="<?php _ex( 'Home', 'Home page banner link title', 'buddypress' ); ?>"
+              class="brand"
               href="<?php echo home_url(); ?>">
-              
+
             <?php
               // Check for header image
               $header_image = get_header_image();
@@ -197,14 +197,14 @@
               <?php bp_site_name(); ?>
             <?php endif; ?>
           </a>
-          
+
           <?
            if ($okfn_tagline_location == "header" && get_bloginfo( 'description' )) : ?>
              <span class="sub-brand">
               <?php echo bloginfo( 'description' ); ?>
              </span>
           <?php endif; ?>
-          
+
             <nav class="nav-collapse collapse">
               <? if (($okfn_header_search == "true") && ($okfn_subheader_search == "false")) : ?>
                 <div class="header-search">
@@ -230,19 +230,19 @@
                 <? endif; ?>
               </div>
           		<? endif; ?>
-              <?php  
-                wp_nav_menu( array( 
-                  'container' => false, 
-                  'menu_class' => 'nav', 
-                  'menu_id' => 'nav', 
-                  'theme_location' => 'primary', 
-                  'fallback_cb' => 'okfn_fallback_nav_menu' ) ) 
+              <?php
+                wp_nav_menu( array(
+                  'container' => false,
+                  'menu_class' => 'nav',
+                  'menu_id' => 'nav',
+                  'theme_location' => 'primary',
+                  'fallback_cb' => 'okfn_fallback_nav_menu' ) )
                 ; ?>
             </nav>
             <!-- Disabled until I've got separate images and confirmed link addresses -->
           </div>
         </div>
-        
+
       </div>
 
       <form action="<?php echo bp_search_form_action() ?>" method="post" class="search-form" role="search">
@@ -256,7 +256,7 @@
       </form><!-- #search-form -->
       <?php do_action( 'bp_search_login_bar' ) ?>
       <?php do_action( 'bp_header' ) ?>
-      
+
       <div class="sub-header">
         <div class="container">
           <div class="row">
@@ -283,17 +283,25 @@
           </div>
         </div>
       </div>
-      
+
     </header>
 		<?php do_action( 'bp_after_header' ) ?>
 
-		
-    
+
+
 		 <?
-      global $options;
-      foreach ($options as $value) {
-          if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
+    global $options;
+    foreach ($options as $value) {
+      if(array_key_exists('id', $value)) {
+        if (get_option( $value['id'] ) === FALSE) {
+          if (array_key_exists('std', $value)) {
+            $$value['id'] = $value['std'] or NULL;
+          }
+        } else {
+          $$value['id'] = get_option( $value['id'] );
+        }
       }
+    }
      if ($okfn_tagline_location == "default" && get_bloginfo( 'description' )) : ?>
       <h2 id="site-description"></h2>
       <div class="container">

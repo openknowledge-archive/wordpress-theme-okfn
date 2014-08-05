@@ -6,20 +6,20 @@
 	//load_theme_textdomain( 'okfn', TEMPLATEPATH.'/languages' );
 	load_child_theme_textdomain( 'okfn', get_stylesheet_directory() . '/languages' );
   load_child_theme_textdomain('buddypress', get_stylesheet_directory() .'/languages/bp-languages' );
-	
-/* 
- * Register a series of DOM-manipulating filters.
- */
-add_filter('wp_nav_menu', 'filter_nav_menu'); 
-add_filter('bp_before_account_details_fields', 'register_form_blurb'); 
 
 /*
- * Use the simple_html_dom library to perform 
+ * Register a series of DOM-manipulating filters.
+ */
+add_filter('wp_nav_menu', 'filter_nav_menu');
+add_filter('bp_before_account_details_fields', 'register_form_blurb');
+
+/*
+ * Use the simple_html_dom library to perform
  * easy manipulations on wordpress' output.
  */
 include('simple_html_dom.php');
 
-/* 
+/*
  * Kill Buddypress' profile links. They are wrong and stupid!
  */
 function remove_xprofile_links() {
@@ -82,8 +82,8 @@ function register_form_blurb( $args ) {
     ."<p><a href=\"/governance/#community-membership\">Read more about Community Membership &raquo;</a></p>";
 }
 
-/* 
- * Choose the "best" category (ie. most 
+/*
+ * Choose the "best" category (ie. most
  * important) category from multiple categories.
  *
  * This will be displayed on a post tab.
@@ -92,9 +92,17 @@ function choose_best_category( $categories) {
   // Cannot fathom why my array comes inside an array...
   $categories = $categories[0];
   global $options;
-	foreach ($options as $value) {
-		if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
-	}
+  foreach ($options as $value) {
+    if(array_key_exists('id', $value)) {
+      if (get_option( $value['id'] ) === FALSE) {
+        if (array_key_exists('std', $value)) {
+          $$value['id'] = $value['std'] or NULL;
+        }
+      } else {
+        $$value['id'] = get_option( $value['id'] );
+      }
+    }
+  }
   if (!empty($okfn_category_priority)) {
 		$category_priority_custom = stripslashes($okfn_category_priority);
 		$category_priority = explode(',', $category_priority_custom);
@@ -106,7 +114,7 @@ function choose_best_category( $categories) {
   $first = null;
   foreach ($category_priority as $priority) {
     foreach ($categories as $category) {
-      if ($priority == $category->name) 
+      if ($priority == $category->name)
         return $category->name;
     }
   }
@@ -123,7 +131,7 @@ function echo_magazine_post($post, $is_featured) {
     preg_match($regex, get_the_content(), $matches);
     if ( has_post_thumbnail() ) {
       $post_img = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); // use wp featured image
-    }		
+    }
     elseif (count($matches)) $post_img = $matches[1]; // else use old featured image
     else {
       $post_img = 'http://assets.okfn.org/web/images/blog-placeholder.png'; // else use placeholder
@@ -132,7 +140,7 @@ function echo_magazine_post($post, $is_featured) {
     echo '<div class="padder"> <a class="image" href="'.get_permalink().'" style="background-image:url('.$post_img.');"></a>';
     echo '<div class="text">';
     echo '<h2><a href="'.get_permalink().'" rel="bookmark">'; the_title(); echo '</a></h2>';
-    echo '<span class="entry-meta"> Posted on '; 
+    echo '<span class="entry-meta"> Posted on ';
     printf( __( '%1$s <span>in %2$s</span>', 'buddypress' ), get_the_date(), get_the_category_list( ', ' ) );
     echo 'by ' . bp_core_get_userlink( $post->post_author );
     echo '</span>';
@@ -280,14 +288,14 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "Check this box to display a bar below the header, inclusing breadcrumbs. (Does not appear on homepage)",
         "id" => $shortname."_subheader",
         "type" => "checkbox",
-        "std" => "false"),		
+        "std" => "false"),
 		array(  "name" => "Search in Sub-header?",
         "desc" => "Check this box to display add a search field to the sub-header bar.",
         "id" => $shortname."_subheader_search",
         "type" => "checkbox",
         "std" => "false"),
-		array(    "type" => "close"),	
-	
+		array(    "type" => "close"),
+
 		array(    "name" => "social_options",
 		"type" => "open"),
 		array(  	"name" => "Social",
@@ -321,23 +329,23 @@ function echo_magazine_post($post, $is_featured) {
         "type" => "radio",
         "desc" => "Where to put Facebook icon",
         "options" => array("default" => "Header", "footer" => "Footer", "both" => "Header and Footer"),
-        "std" => "default"),	
+        "std" => "default"),
 		array(  "name" => "ShareThis",
         "desc" => "Check this box to enable ShareThis.",
         "id" => $shortname."_sharethis",
         "type" => "checkbox",
-        "std" => "false"),	
+        "std" => "false"),
 		array(    "name" => "Publisher ID",
         "desc" => "If you have a ShareThis account, enter your publisher ID here.",
         "id" => $shortname."_sharethis_id",
         "std" => "",
-        "type" => "text"),			
+        "type" => "text"),
 		array("name" => "ShareThis Location",
         "id" => $shortname."_sharethis_location",
         "type" => "radio",
         "desc" => "Where is it going?",
         "options" => array("footer" => "Footer", "elsewhere" => "Elsewhere"),
-        "std" => "footer"),		
+        "std" => "footer"),
 //		array(  "name" => "Enable Tweet",
 //        "desc" => "Include Seaclouds Tweet script. Uses twitter username specified above.",
 //        "id" => $shortname."_enable_tweet",
@@ -414,10 +422,10 @@ function echo_magazine_post($post, $is_featured) {
         "desc" => "Where to put bar",
         "options" => array("header" => "Header (home page, first list only)", "footer" => "Footer"),
         "std" => "footer"),
-		array(  "type" => "close"),	
-				
+		array(  "type" => "close"),
+
 		array(    "name" => "blog_options",
-		     "type" => "open"),	
+		     "type" => "open"),
 		array(    "name" => "Blog",
         "type" => "title"),
 		array(  "name" => "Large Blog Avatars",
@@ -451,25 +459,25 @@ function echo_magazine_post($post, $is_featured) {
         "type" => "checkbox",
         "std" => "false"),
 	  array(    "name" => "Category Priority",
-        "type" => "title"),	
+        "type" => "title"),
 		array(  "name" => "Which category is shown, when only room for one?",
         "desc" => "List in order of priority. Categories must be comma separated, and are case sensitive.",
         "id" => $shortname."_category_priority",
         "type" => "textarea",
 				"rows" => "11",
 				"placeholder" => $default_category_priority_string),
-		array(    "type" => "close"),	
-		
+		array(    "type" => "close"),
+
 		array(    "name" => "misc_options",
 		    "type" => "open"),
 		array(    "name" => "Misc",
-        "type" => "title"),	
+        "type" => "title"),
 		//array("name" => "Carousel Style",
         //"id" => $shortname."_carosel",
         //"type" => "radio",
         //"desc" => "Change layout style of Bootstrap carousel",
         //"options" => array("default" => "Default", "text-right" => "Text on Right (full width)", "stack" => "Text on Right (photo stack)"),
-        //"std" => "default"),		
+        //"std" => "default"),
 		array(  "name" => "Tagline in meta title?",
         "desc" => "Check this box to append site title with tagline in the meta title tag.",
         "id" => $shortname."_tagline_title",
@@ -493,7 +501,7 @@ function mytheme_add_admin() {
     global $themename, $shortname, $options;
 
     if ( $_GET['page'] == basename(__FILE__) ) {
-    
+
         if ( 'save' == $_REQUEST['action'] ) {
 
                 foreach ($options as $value) {
@@ -526,7 +534,7 @@ function mytheme_admin() {
 
     if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings saved.</strong></p></div>';
     if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings reset.</strong></p></div>';
-    
+
 ?>
 
 <div class="options wrap">
@@ -571,7 +579,7 @@ function mytheme_admin() {
 		display:block;
 		padding:3px;
 		background: rgb(255, 255, 255); /* fallback */
-    background: rgba(255, 2554, 255, 0.9); 
+    background: rgba(255, 2554, 255, 0.9);
 	}
 	.options .submit {
 		display:block;
@@ -581,8 +589,8 @@ function mytheme_admin() {
 </style>
 <h2><?php echo $themename; ?> Options</h2>
 <div class="icon32" id="icon-themes"><br></div>
-<?php settings_errors(); ?> 
-<?php $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'general_options'; ?> 
+<?php settings_errors(); ?>
+<?php $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'general_options'; ?>
 <h2 class="nav-tab-wrapper">
   <a href="?page=functions.php&tab=general_options" title="General" class="nav-tab<?php echo $active_tab == 'general_options' ? ' nav-tab-active' : ''; ?>" id="of-option-general-tab">General</a>
   <a href="?page=functions.php&tab=social_options" title="Social" class="nav-tab<?php echo $active_tab == 'social_options' ? ' nav-tab-active' : ''; ?>" id="of-option-social-tab">Social</a>
@@ -590,37 +598,37 @@ function mytheme_admin() {
   <a href="?page=functions.php&tab=misc_options" title="Misc" class="nav-tab<?php echo $active_tab == 'misc_options' ? ' nav-tab-active' : ''; ?>" id="of-option-misc-tab">Misc</a>
 </h2>
 
-<div class="metabox-holder">	
+<div class="metabox-holder">
   <form method="post">
-  
-  <?php foreach ($options as $value) { 
-      
+
+  <?php foreach ($options as $value) {
+
     switch ( $value['type'] ) {
-    
+
       case "open":
       ?>
          <div id="<?php echo $value['name']; ?>" class="group" <?php if( $active_tab !== $value['name'] ) : ?> style="display:none;"<? endif; ?> >
 
       <?php break;
-      
+
       case "close":
       ?>
-      
+
           </div>
-          
-          
+
+
       <?php break;
-      
+
       case "title":
       ?>
       <h3><?php echo $value['name']; ?></h3>
-                  
-          
+
+
       <?php break;
-  
+
       case 'text':
       ?>
-      
+
         <div class="section section-text" id="section_<?php echo $value['id']; ?>">
           <div class="heading">
             <h4><?php echo $value['name']; ?></h4>
@@ -634,16 +642,16 @@ function mytheme_admin() {
             <div class="clear"></div>
           </div>
         </div>
-          
-  
-      <?php 
+
+
+      <?php
       break;
-      
+
       case 'textarea':
-      ?>        
-          
+      ?>
+
           <?php $input = get_option( $value['id'] ); $output = stripslashes ($input); ?>
-          
+
           <div class="section section-textarea" id="section_<?php echo $value['id']; ?>">
             <div class="heading">
               <h4><?php echo $value['name']; ?></h4>
@@ -657,13 +665,13 @@ function mytheme_admin() {
               <div class="clear"></div>
             </div>
           </div>
-          
-      <?php 
+
+      <?php
       break;
-      
+
       case 'select':
       ?>
-      
+
       <div class="section section-select" id="section_<?php echo $value['id']; ?>">
         <div class="heading">
           <h4><?php echo $value['name']; ?></h4>
@@ -679,11 +687,11 @@ function mytheme_admin() {
       </div>
 
   <?php break;
-  
+
       case 'media':
 			$upload_button_text = __( 'Upload', 'okfn' );
       ?>
-      
+
         <div class="section section-text" id="section_<?php echo $value['id']; ?>">
           <div class="heading">
             <h4><?php echo $value['name']; ?></h4>
@@ -691,21 +699,21 @@ function mytheme_admin() {
           </div>
           <div class="option">
             <div class="controls">
-              <input type="text" id="<?php echo $value['id']; ?>" name="<?php echo $value['id']; ?>" value="<?php if ( get_option( $value['id'] ) != "") { echo get_option( $value['id'] ); } else { echo $value['std']; } ?>" <?php if (  $value['placeholder']  != "") : ?>placeholder="<?php echo $value['placeholder']; ?>"<? endif ?> />  
-              <!--<input id="<?php echo $value['id']; ?>_upload_button" type="button" class="button" value="<?php echo $upload_button_text; ?>" /> -->           
+              <input type="text" id="<?php echo $value['id']; ?>" name="<?php echo $value['id']; ?>" value="<?php if ( get_option( $value['id'] ) != "") { echo get_option( $value['id'] ); } else { echo $value['std']; } ?>" <?php if (  $value['placeholder']  != "") : ?>placeholder="<?php echo $value['placeholder']; ?>"<? endif ?> />
+              <!--<input id="<?php echo $value['id']; ?>_upload_button" type="button" class="button" value="<?php echo $upload_button_text; ?>" /> -->
               <br>
             </div>
             <div class="clear"></div>
           </div>
         </div>
-          
-  
+
+
       <?php
           break;
-              
+
       case "checkbox":
       ?>
-      
+
       <div class="section section-checkbox" id="section_<?php echo $value['id']; ?>">
         <div class="heading">
         	<h4><?php echo $value['name']; ?></h4>
@@ -719,11 +727,11 @@ function mytheme_admin() {
           <div class="clear"></div>
         </div>
       </div>
-              
+
           <?php 		break;
-          
+
           case "radio":?>
-          
+
       <div class="section section-radio <?php echo $value['class'] ?>" id="section_<?php echo $value['id']; ?>">
         <div class="heading">
           <h4><?php echo $value['name']; ?></h4>
@@ -742,14 +750,14 @@ function mytheme_admin() {
                 else {
                     $checked = ' ';
                 }
-                
+
                 if ($value['class'] == "thumbs") {
                     $bgimage = "".get_bloginfo('stylesheet_directory')."/screenshot-".$option_value.".png";
                 }
                 else {
                     $bgimage = '';
                 }
-            
+
                 echo '<label style="background-image:url('.$bgimage.');"><span><input type="radio" style="margin-right:10px;" name="'.$value['id'].'" value="'.
                     $option_value.'" '.$checked."/>".$option_text."</span></label>";
             } ?>
@@ -759,14 +767,14 @@ function mytheme_admin() {
       </div>
 
           <?php break;
-    
-  } 
+
+  }
   }
   ?>
-  
-  
+
+
   <span class="submit">
-  <input name="save" type="submit" value="Save changes" class="button-primary" />    
+  <input name="save" type="submit" value="Save changes" class="button-primary" />
   <input type="hidden" name="action" value="save" />
   </span>
   </form>
@@ -808,51 +816,51 @@ if ( function_exists('register_sidebar') )
 * This code does not support multi-page split numbering, attachments,
 * custom post types and custom taxonomies.
 ***********************************************************************/
- 
+
 function wp_bac_breadcrumb() {
     //Variable (symbol >> encoded) and can be styled separately.
     //Use >> for different level categories (parent >> child >> grandchild)
             $delimiter = '<span class="delimiter">/</span>';
     //Use bullets for same level categories ( parent . parent )
     $delimiter1 = '<span class="delimiter1"> &bull; </span>';
- 
+
     //text link for the 'Home' page
             $main = 'Home';
     //Display only the first 30 characters of the post title.
             $maxLength= 30;
- 
+
     //variable for archived year
     $arc_year = get_the_time('Y');
     //variable for archived month
     $arc_month = get_the_time('F');
     //variables for archived day number + full
     $arc_day = get_the_time('d');
-    $arc_day_full = get_the_time('l'); 
- 
+    $arc_day_full = get_the_time('l');
+
     //variable for the URL for the Year
     $url_year = get_year_link($arc_year);
     //variable for the URL for the Month
     $url_month = get_month_link($arc_year,$arc_month);
- 
+
     /*is_front_page(): If the front of the site is displayed, whether it is posts or a Page. This is true
     when the main blog page is being displayed and the 'Settings > Reading ->Front page displays'
     is set to "Your latest posts", or when 'Settings > Reading ->Front page displays' is set to
     "A static page" and the "Front Page" value is the current Page being displayed. In this case
     no need to add breadcrumb navigation. is_home() is a subset of is_front_page() */
- 
+
     //Check if NOT the front page (whether your latest posts or a static page) is displayed. Then add breadcrumb trail.
     if (!is_front_page()) {
         //If Breadcrump exists, wrap it up in a div container for styling.
         //You need to define the breadcrumb class in CSS file.
         echo '<ul class="breadcrumb">';
- 
+
         //global WordPress variable $post. Needed to display multi-page navigations.
         global $post, $cat;
         //A safe way of getting values for a named option from the options database table.
         $homeLink = get_option('home'); //same as: $homeLink = get_bloginfo('url');
         //If you don't like "You are here:", just remove it.
-        echo '<li><a href="' . $homeLink . '">' . $main . '</a></li>' . $delimiter;   
- 
+        echo '<li><a href="' . $homeLink . '">' . $main . '</a></li>' . $delimiter;
+
         //Display breadcrumb for single post
         if (is_single()) { //check if any single post is being displayed.
             //Returns an array of objects, one object for each category assigned to the post.
@@ -860,7 +868,7 @@ function wp_bac_breadcrumb() {
             //at the same time in a top category AND in a sub-category. But this is highly unlikely.
             $category = get_the_category();
             $num_cat = count($category); //counts the number of categories the post is listed in.
- 
+
             //If you have a single post assigned to one category.
             //If you don't set a post to a category, WordPress will assign it a default category.
             if ($num_cat <=1)  //I put less or equal than 1 just in case the variable is not set (a catch all).
@@ -919,10 +927,10 @@ function wp_bac_breadcrumb() {
             //of the current post as the argument.
             //get_post_ancestors() returns an indexed array containing the list of all the parent categories.
             $post_array = get_post_ancestors($post);
- 
+
             //Sorts in descending order by key, since the array is from top category to bottom.
             krsort($post_array);
- 
+
             //Loop through every post id which we pass as an argument to the get_post() function.
             //$post_ids contains a lot of info about the post, but we only need the title.
             foreach($post_array as $key=>$postid){
@@ -962,42 +970,42 @@ if ( !function_exists('base_rss_feed') ) {
 	{
 		// Include SimplePie RSS parsing engine
 		include_once ABSPATH . WPINC . '/feed.php';
- 
+
 		// Set the cache time for SimplePie
 		add_filter( 'wp_feed_cache_transient_lifetime', create_function( '$a', "return $cache_time;" ) );
- 
+
 		// Build the SimplePie object
 		$rss = fetch_feed($feed);
- 
+
 		// Check for errors in the RSS XML
 		if ( !is_wp_error( $rss ) ) {
- 
+
 			// Set a limit for the number of items to parse
 			$maxitems = $rss->get_item_quantity($size);
 			$rss_items = $rss->get_items(0, $maxitems);
- 
+
 			// Store the total number of items found in the feed
 			$i = 0;
 			$total_entries = count($rss_items);
- 
+
 			// Output HTML
 			$html = "<ul class='feedlist'>";
 			foreach ($rss_items as $item) {
 				$i++;
- 
+
 				// Add a class of "last" to the last item in the list
 				if( $total_entries == $i ) {
 					$last = " class='last'";
 				} else {
 					$last = "";
 				}
- 
+
 				// Store the data we need from the feed
 				$title = $item->get_title();
 				$link = $item->get_permalink();
 				$desc = $item->get_description();
 				$date_posted = $item->get_date('F j, Y');
- 
+
 				// Output
 				$html .= "<li id='post-$i'$last>";
 				$html .= "<h3><a href='$link'>$title</a></h3>";
@@ -1006,13 +1014,13 @@ if ( !function_exists('base_rss_feed') ) {
 				$html .= "</li>";
 			}
 			$html .= "</ul>";
- 
+
 		} else {
- 
+
 			$html = "An error occurred while parsing your RSS feed. Check that it's a valid XML file.";
- 
+
 		}
- 
+
 		return $html;
 	}
 }
@@ -1093,7 +1101,7 @@ function my_theme_register_required_plugins() {
 	 * end of each line for what each argument will be.
 	 */
 	$config = array(
-		'domain'       		=> $okfn,         	// Text domain - likely want to be the same as your theme.
+		'domain'       		=> $theme_text_domain,         	// Text domain - likely want to be the same as your theme.
 		'default_path' 		=> '',                         	// Default absolute path to pre-packaged plugins
 		'parent_menu_slug' 	=> 'themes.php', 				// Default parent menu slug
 		'parent_url_slug' 	=> 'themes.php', 				// Default parent URL slug
@@ -1127,7 +1135,7 @@ function my_theme_register_required_plugins() {
 
 
 add_theme_support( 'post-thumbnails' );
- 
+
 
 include('shortcodes.php');
 

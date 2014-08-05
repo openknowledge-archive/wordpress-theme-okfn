@@ -1,15 +1,23 @@
 <?
-global $options;
-foreach ($options as $value) {
-	if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
-}
+  global $options;
+  foreach ($options as $value) {
+    if(array_key_exists('id', $value)) {
+      if (get_option( $value['id'] ) === FALSE) {
+        if (array_key_exists('std', $value)) {
+          $$value['id'] = $value['std'] or NULL;
+        }
+      } else {
+        $$value['id'] = get_option( $value['id'] );
+      }
+    }
+  }
 if ( $okfn_mailchimp_bar == "true" or $okfn_mailinglist_bar == "true" or $okfn_mailinglist_bar2 == "true") : ?>
-	<? 
-  $mailinglist_counter = 0; 
+	<?
+  $mailinglist_counter = 0;
   $mailtab_id = 0;
   $mail_id = 0;
   ?>
-  <div class="tabbable mailing-lists"> 
+  <div class="tabbable mailing-lists">
     <div class="container">
       <ul class="nav nav-tabs">
         <? if ( $okfn_mailchimp_bar == "true") : ?><li class="mailtab<? echo ++$mailtab_id ?>"><a href="#tab<? echo $mailtab_id ?>" data-toggle="tab"><? if (!empty($okfn_mailchimp_heading)) { echo $okfn_mailchimp_heading;} else { echo 'Mailing List '.$mailtab_id ;} ?></a></li><? endif; ?>
@@ -38,7 +46,7 @@ if ( $okfn_mailchimp_bar == "true" or $okfn_mailinglist_bar == "true" or $okfn_m
             </div>
           <?
       }
-      
+
       // list 2
       if ( $okfn_mailinglist_bar == "true") {
          $mailinglist_counter += 1;
@@ -101,7 +109,7 @@ if ( $okfn_mailchimp_bar == "true" or $okfn_mailinglist_bar == "true" or $okfn_m
            <?
 				 }
       }
-      
+
       // list 3
       if ( $okfn_mailinglist_bar2 == "true") {
          $mailinglist_counter += 1;
@@ -197,7 +205,7 @@ if ( $okfn_mailchimp_bar == "true" or $okfn_mailinglist_bar == "true" or $okfn_m
 			}
 		})
     <? endif; ?>
-  </script> 
+  </script>
 
 <? endif; ?>
- 	
+

@@ -1,32 +1,40 @@
     </div> <!-- /container -->
-		
+
 		<?php do_action( 'bp_after_container' ) ?>
-    
+
 		<?php do_action( 'bp_before_footer' ) ?>
 
 		<?php do_action( 'bp_after_footer' ) ?>
-    
+
     <div class="topbar">
       <div class="padder">
-       
-		    
+
+
 				<?php wp_footer(); ?>
-      </div>     
+      </div>
     </div>
 	<?php do_action('cookie_bar'); ?>
-		<? 
-      global $options;
-      foreach ($options as $value) {
-          if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
+		<?
+    global $options;
+    foreach ($options as $value) {
+      if(array_key_exists('id', $value)) {
+        if (get_option( $value['id'] ) === FALSE) {
+          if (array_key_exists('std', $value)) {
+            $$value['id'] = $value['std'] or NULL;
+          }
+        } else {
+          $$value['id'] = get_option( $value['id'] );
+        }
       }
+    }
       if ( $okfn_mailinglist_bar_location == "footer" ) {
-				include('mailing-bar.php'); 
+				include('mailing-bar.php');
 			} ?>
 
     <footer>
     <div class="inner">
       <div class="container">
-        <?php 
+        <?php
         $active_footers = 0;
         if ( is_active_sidebar( 'first-footer-widget-area'  ) ) $active_footers++;
         if ( is_active_sidebar( 'second-footer-widget-area' ) ) $active_footers++;
@@ -50,7 +58,7 @@
               <?php if ( !empty( $okfn_facebook_username ) && $okfn_facebook_link == "true" && $okfn_facebook_location != "default" ) : ?>
                 <a class="facebook" href="http://www.facebook.com/<?php echo $okfn_facebook_username ?>">facebook</a>
               <? endif; ?>
-              
+
               <?php if ( $okfn_flattr_okfn == "true" ) : ?>
                 <a href="http://flattr.com/thing/605365/Open-Knowledge-Foundation" target="_blank">
                   <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
@@ -68,21 +76,21 @@
         <div id="row">
           <?php do_action( 'bp_footer' ) ?>
         </div>
-        
-      </div><!-- /container --> 
+
+      </div><!-- /container -->
     </div><!-- /inner -->
     <?php do_action('okf_footer'); ?>
     </footer>
-    
+
 		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/include/jquery.dotdotdot-1.5.6-packed.js"></script>
-    
+
 		<script>
 		  // Tweeter
 			$("div.tweeter.carousel .tweetfeed").addClass("carousel-inner");
 			$("div.tweeter.carousel .tweetfeed li").addClass("item");
 			$("div.tweeter.carousel .tweetfeed li:nth-child(1)").addClass("active");
-			
+
 		  // cycling for carousel
       $(".carousel.ticker").carousel({ interval: 6000 });
 			$(".carousel.cycle").carousel({ interval: 8000 });
@@ -90,12 +98,12 @@
 		  // allow button to hide elements
 			$(".hide-it").click(function () {
 				$(".hide-me").hide("slow");
-			});    
-			
+			});
+
 			// button for mailchimp form
 		  $("div.nm_mc_form input.nm_mc_button").addClass("btn btn-primary");
     </script>
-    
+
 		<? if (($okfn_header_search == "true") && ($okfn_subheader_search == "false")) : ?>
     <script>
 			$("div.header-search a").click(function(){
@@ -103,10 +111,10 @@
 			});
     </script>
     <? endif; ?>
-    
+
     <!-- sharethis -->
     <? if ($okfn_sharethis == "true") : ?>
-		  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 
+		  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
       <script type="text/javascript">stLight.options({publisher: "<? if ($okfn_sharethis_id) : echo $okfn_sharethis_id; else: ?>ur-c524706a-c88f-82a8-ea44-7140256786d3<? endif; ?>"}); </script>
 		<? endif; ?>
 	</body>
