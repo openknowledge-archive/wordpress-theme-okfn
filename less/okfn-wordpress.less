@@ -652,82 +652,91 @@ ul#members-list {
 
 
 /* JM Last Twit */
-#sidebar .widget .tweetfeed {
+#sidebar .widget .tweetfeed,
+#sidebar .widget .ttm-container {
 	margin:0 0 10px 0;
-}
-#sidebar .widget .tweetfeed li {
-	display:block;
-	border-bottom:dotted 1px #cccccc;
-	padding:10px 0 10px 50px;
-	position:relative;
-}
-#sidebar .widget .tweetfeed li:first-child {
-	padding-top:0;
-}
-#sidebar .widget .tweetfeed li img.tweet-twittar {
-	position:absolute;
-	left:0;
-	width:36px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
-#sidebar .widget .tweetfeed li .tweet-name a {
-	color:@text;
-	font-weight:bold;
-}
-#sidebar .widget .tweetfeed li .tweet-screen-name,
-#sidebar .widget .tweetfeed li .tweet-screen-name a {
-	color:lighten(@text, 50%);
-	font-size:12px;
-}
-#sidebar .widget .tweetfeed li .tweet-screen-name:before {
-	content:' ';
-}
-#sidebar .widget .tweetfeed li .tweet-content {
-	display:block;
-	margin:0;
-}
-#sidebar .widget .tweetfeed li .tweet-timestamp,
-#sidebar .widget .tweetfeed li .tweet-timestamp a {
-	color:lighten(@text, 50%);
-	font-size:12px;
-}
-#sidebar .widget .tweetfeed li .intent-meta {
-	display:block;
-	text-align:right;
-	margin-top:5px;
-	margin-bottom:-5px;
-}
-#sidebar .widget .tweetfeed li .intent-meta a {
-	display:inline-block;
-	background-image: url(images/twitter-icons.png);
-	background-repeat: no-repeat;
-	width:21px;
-	height:21px;
-	overflow:hidden;
-	text-indent:999px;
-	opacity:0.2;
-}
-#sidebar .widget .tweetfeed li .intent-meta a:hover {
-	opacity:0.8;
-}
-#sidebar .widget .tweetfeed li .intent-meta a:nth-of-type(1) {
-	background-position: center 2px;
-}
-#sidebar .widget .tweetfeed li .intent-meta a:nth-of-type(2) {
-	background-position: center -48px;
-}
-#sidebar .widget .tweetfeed li .intent-meta a:nth-of-type(3) {
-	background-position: center -98px;
-}
-@media (min-width: 768px) {
-	#sidebar .widget .tweetfeed li .intent-meta {
-		display:none;
-	}
-	#sidebar .widget .tweetfeed li:hover .intent-meta {
-		display:block;
-	}
+
+  li {
+    display:block;
+    border-bottom:dotted 1px #cccccc;
+    padding:10px 0 10px 50px;
+    position:relative;
+  }
+  li:first-child {
+    padding-top:0;
+  }
+  li img.tweet-twittar,
+  li img.twittar {
+    position:absolute;
+    left:0;
+    width:36px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+  li .tweet-name a,
+  li .name a {
+    color:@text;
+    font-weight:bold;
+  }
+  li .tweet-screen-name,
+  li .tweet-screen-name a,
+  li .screen-name,
+  li .screen-name a {
+    color:lighten(@text, 50%);
+    font-size:12px;
+  }
+  li .tweet-screen-name:before,
+  li .screen-name:before {
+    content:' ';
+  }
+  li .tweet-content,
+  li .text {
+    display:block;
+    margin:0;
+  }
+  li .tweet-timestamp,
+  li .tweet-timestamp a {
+    color:lighten(@text, 50%);
+    font-size:12px;
+  }
+  li .intent-meta {
+    display:block;
+    text-align:right;
+    margin-top:5px;
+    margin-bottom:-5px;
+    
+    @media (min-width: 768px) {
+      display:none;
+    }
+  }
+  li:hover .intent-meta {
+    @media (min-width: 768px) {
+      display:block;
+    }
+  }
+  li .intent-meta a {
+    display:inline-block;
+    background-image: url(images/twitter-icons.png);
+    background-repeat: no-repeat;
+    width:21px;
+    height:21px;
+    overflow:hidden;
+    text-indent:999px;
+    opacity:0.2;
+  }
+  li .intent-meta a:hover {
+    opacity:0.8;
+  }
+  li .intent-meta a:nth-of-type(1) {
+    background-position: center 2px;
+  }
+  li .intent-meta a:nth-of-type(2) {
+    background-position: center -48px;
+  }
+  li .intent-meta a:nth-of-type(3) {
+    background-position: center -98px;
+  }
 }
 
 
@@ -3609,7 +3618,8 @@ section.twitter .twitter.icon28 {
 	top:10px;
 	position:absolute;
 }
-section.twitter .tweetfeed {
+section.twitter .tweetfeed,
+section.twitter .ttm-container {
 	margin-left: -20px;
 	padding-left:60px;
 	height:54px;
@@ -3617,20 +3627,21 @@ section.twitter .tweetfeed {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box; 
-}
-section.twitter .tweetfeed li {
-	font-size:18px;
-	line-height:20px;
-	height:64px;
-	padding:10px 0 0 0;
-	list-style:none;
+
+  li {
+    font-size:18px;
+    line-height:20px;
+    height:64px;
+    padding:10px 0 0 0;
+    list-style:none;
+  }
+  li a {
+    color: #FFF;
+    font-weight:bold;
+  }
 }
 section.twitter .tweetfeed li em:last-of-type {
-	font-size:12px;
-}
-section.twitter .tweetfeed li a {
-	color: #FFF;
-	font-weight:bold;
+  font-size:12px;
 }
 
 
