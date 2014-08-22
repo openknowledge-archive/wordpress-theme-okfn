@@ -87,9 +87,9 @@
 
 		<script>
 		  // Tweeter
-			$("div.tweeter.carousel .tweetfeed").addClass("carousel-inner");
-			$("div.tweeter.carousel .tweetfeed li").addClass("item");
-			$("div.tweeter.carousel .tweetfeed li:nth-child(1)").addClass("active");
+			$("div.tweeter.carousel > ul").addClass("carousel-inner");
+			$("div.tweeter.carousel > ul li").addClass("item");
+			$("div.tweeter.carousel > ul li:nth-child(1)").addClass("active");
 
 		  // cycling for carousel
       $(".carousel.ticker").carousel({ interval: 6000 });
