@@ -1033,11 +1033,6 @@ function set_bp_default_avatar_style($avatar_default) {
 }
 
 
-// Fix output of custom cookie notification bar
-remove_action ( 'wp_footer', 'catapult_add_cookie_bar', 1000 );
-add_action ( 'cookie_bar', 'catapult_add_cookie_bar');
-
-
 /**
  * @package	   TGM-Plugin-Activation
  * @subpackage Example
