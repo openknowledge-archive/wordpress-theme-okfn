@@ -21,7 +21,7 @@
 					<div id="post-<?php the_ID(); ?>" <?php post_class('box extend'); ?>>
 
 						<div class="author-box">
-              <a href="<? echo bp_core_get_user_domain( $post->post_author ); ?>">
+              <a href="<?php echo bp_core_get_user_domain( $post->post_author ); ?>">
 							  <?php echo get_avatar( get_the_author_meta( 'user_email' ), '50' ); ?>
 							</a>
 

@@ -29,11 +29,11 @@ else {
     
               <div class="post-content">
                 <h2 class="posttitle"><?php the_title(); ?></h2>
-                <? if ($okfn_narrow_blog !== "true") : ?>
+                <?php if ($okfn_narrow_blog !== "true") : ?>
                   <div class="date">
                      <?php printf( __( '%1$s <span>in %2$s</span>', 'buddypress' ), get_the_date(), get_the_category_list( ', ' ) ); ?>
                    </div>
-                <? endif; ?>
+                <?php endif; ?>
     
                 <div class="entry">
                   <?php the_content( __( 'Read the rest of this entry &rarr;', 'buddypress' ) ); ?>
@@ -41,9 +41,9 @@ else {
                   <?php wp_link_pages( array( 'before' => '<div class="page-link"><p>' . __( 'Pages: ', 'buddypress' ), 'after' => '</p></div>', 'next_or_number' => 'number' ) ); ?>
                 </div>
                 
-                <? if ($okfn_narrow_blog !== "true") : ?>
+                <?php if ($okfn_narrow_blog !== "true") : ?>
                   <p class="post-utility"><?php edit_post_link( __( 'Edit this entry', 'buddypress' ) ); ?></p>
-                <? endif; ?>
+                <?php endif; ?>
     
                 <p class="postmetadata"><?php the_tags( '<span class="tags">' . __( 'Tags: ', 'buddypress' ), ', ', '</span>' ); ?></p>
     
@@ -66,9 +66,9 @@ else {
           <?php do_action( 'bp_after_blog_single_post' ) ?>
         </div><!-- #content -->
       
-        <? if ($okfn_narrow_blog == "true") : ?>
+        <?php if ($okfn_narrow_blog == "true") : ?>
         <div class="span2">
-          <? if ($okfn_large_avatars == "true") : ?>
+          <?php if ($okfn_large_avatars == "true") : ?>
           <div class="author-box">
             <?php echo get_avatar( get_the_author_meta( 'user_email' ), '130' ); ?>
             <h3><?php printf( _x( 'Written by %s', 'Post written by...', 'buddypress' ), str_replace( '<a href=', '<a rel="author" href=', bp_core_get_userlink( $post->post_author ) ) ); ?></h3>
@@ -80,23 +80,23 @@ else {
             <h3><?php printf( _x( 'Written by <br /> %s', 'Post written by...', 'buddypress' ), str_replace( '<a href=', '<a rel="author" href=', bp_core_get_userlink( $post->post_author ) ) ); ?></h3>
             <p><!--Replace this with buddypress field --><?php the_author_meta('user_description'); ?></p>
           </div>
-         <? endif; ?>
+         <?php endif; ?>
          
          <div class="date">
            <?php printf( __( '%1$s <span>in %2$s</span>', 'buddypress' ), get_the_date(), get_the_category_list( ', ' ) ); ?>
          </div>
          <span class="post-utility"><?php edit_post_link( __( 'Edit this entry', 'buddypress' ) ); ?></span>
        </div>
-       <? endif; ?>
+       <?php endif; ?>
        
        <div style="clear:both;"></div>
        </div>
     </div>
   </div>
   <div id="sidebar" class="span4" role="complementary">
-    <? if ($okfn_narrow_blog !== "true") : ?>
+    <?php if ($okfn_narrow_blog !== "true") : ?>
       <div class="widget">
-        <? if ($okfn_large_avatars == "true") : ?>
+        <?php if ($okfn_large_avatars == "true") : ?>
         <div class="author-box">
           <?php echo get_avatar( get_the_author_meta( 'user_email' ), '240' ); ?>
           <h3><?php printf( _x( 'Written by %s', 'Post written by...', 'buddypress' ), str_replace( '<a href=', '<a rel="author" href=', bp_core_get_userlink( $post->post_author ) ) ); ?></h3>
@@ -108,9 +108,9 @@ else {
           <h3><?php printf( _x( 'Written by <br /> %s', 'Post written by...', 'buddypress' ), str_replace( '<a href=', '<a rel="author" href=', bp_core_get_userlink( $post->post_author ) ) ); ?></h3>
           <p><!--Replace this with buddypress field --><?php the_author_meta('user_description'); ?></p>
         </div>
-        <? endif; ?>
+        <?php endif; ?>
       </div>
-    <? endif; ?>
+    <?php endif; ?>
     <?php get_sidebar() ?>
   </div>
 </div>

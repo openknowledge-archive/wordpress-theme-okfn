@@ -22,14 +22,14 @@ function browser_body_class($classes = '') {
 <?php if (has_post_thumbnail( $post->ID ) ): ?>
 <?php $bannerimage = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 <?php $bannercolour = get_post(get_post_thumbnail_id())->post_content; ?>
-<div class="banner" style="background-image: url('<?php echo $bannerimage[0]; ?>');<? if (!empty($bannercolour)) { echo 'background-color:' . $bannercolour; }?>">
+<div class="banner" style="background-image: url('<?php echo $bannerimage[0]; ?>');<?php if (!empty($bannercolour)) { echo 'background-color:' . $bannercolour; }?>">
   <div class="container">
   	<div class="text">
 	  	<h1><?php the_title(); ?></h1>
       <span class="caption">
-        <? echo get_post(get_post_thumbnail_id())->post_title; ?>
+        <?php echo get_post(get_post_thumbnail_id())->post_title; ?>
       </span>   
-      <? echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+      <?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
     </div>
   </div>
 </div>

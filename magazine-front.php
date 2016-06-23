@@ -70,8 +70,7 @@ function browser_body_class($classes = '') {
         <!-- Carousel items -->
         <div class="carousel-inner">
           <div class="item active">
-						<?
-            // Print the remaining posts
+						<?php // Print the remaining posts
             query_posts( $post_filter_etc );
             while (have_posts()) {
               the_post();
@@ -90,8 +89,7 @@ function browser_body_class($classes = '') {
         <div class="blog-nav">
           <a class="carousel-control left" href="#magCarousel" data-slide="prev">&lsaquo;</a>
           <a class="carousel-control right" href="#magCarousel" data-slide="next">&rsaquo;</a>
-          <?
-          global $options;
+          <?php global $options;
           foreach ($options as $value) {
             if(array_key_exists('id', $value)) {
               if (get_option( $value['id'] ) === FALSE) {
@@ -104,8 +102,8 @@ function browser_body_class($classes = '') {
             }
           }
 						if (!empty($okfn_blog_link)) : ?>
-						<a href="<? echo $okfn_blog_link ?>" class="all-posts">See all posts</a>
-					<? endif; ?>
+						<a href="<?php echo $okfn_blog_link ?>" class="all-posts">See all posts</a>
+					<?php endif; ?>
         </div>
       </div>
     </div>

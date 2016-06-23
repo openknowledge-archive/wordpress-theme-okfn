@@ -14,8 +14,7 @@
       </div>
     </div>
 	<?php do_action('cookie_bar'); ?>
-		<?
-    global $options;
+		<?php global $options;
     foreach ($options as $value) {
       if(array_key_exists('id', $value)) {
         if (get_option( $value['id'] ) === FALSE) {
@@ -54,20 +53,20 @@
             <div class="footer-buttons">
 				 			<?php if ( !empty( $okfn_twitter_username ) && $okfn_twitter_link == "true" && $okfn_twitter_location != "default" ) : ?>
                 <a class="twitter" href="https://twitter.com/<?php echo $okfn_twitter_username ?>">twitter</a>
-              <? endif; ?>
+              <?php endif; ?>
               <?php if ( !empty( $okfn_facebook_username ) && $okfn_facebook_link == "true" && $okfn_facebook_location != "default" ) : ?>
                 <a class="facebook" href="http://www.facebook.com/<?php echo $okfn_facebook_username ?>">facebook</a>
-              <? endif; ?>
+              <?php endif; ?>
 
               <?php if ( $okfn_flattr_okfn == "true" ) : ?>
                 <a href="http://flattr.com/thing/605365/Open-Knowledge-Foundation" target="_blank">
                   <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
                 </a>
-              <? endif; ?>
+              <?php endif; ?>
               <?php if ($okfn_sharethis == "true" && $okfn_sharethis_location == "footer") : ?>
                   <span class='st_facebook' displayText='Facebook'></span>
                   <span class='st_twitter' displayText='Twitter'></span>
-              <? endif; ?>
+              <?php endif; ?>
             </div>
           </div><!-- /footer-widgets -->
           </div><!-- /row -->
@@ -104,19 +103,19 @@
 		  $("div.nm_mc_form input.nm_mc_button").addClass("btn btn-primary");
     </script>
 
-		<? if (($okfn_header_search == "true") && ($okfn_subheader_search == "false")) : ?>
+		<?php if (($okfn_header_search == "true") && ($okfn_subheader_search == "false")) : ?>
     <script>
 			$("div.header-search a").click(function(){
 			  $("div.header-search").toggleClass("active");
 			});
     </script>
-    <? endif; ?>
+    <?php endif; ?>
 
     <!-- sharethis -->
-    <? if ($okfn_sharethis == "true") : ?>
+    <?php if ($okfn_sharethis == "true") : ?>
 		  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-      <script type="text/javascript">stLight.options({publisher: "<? if ($okfn_sharethis_id) : echo $okfn_sharethis_id; else: ?>ur-c524706a-c88f-82a8-ea44-7140256786d3<? endif; ?>"}); </script>
-		<? endif; ?>
+      <script type="text/javascript">stLight.options({publisher: "<?php if ($okfn_sharethis_id) : echo $okfn_sharethis_id; else: ?>ur-c524706a-c88f-82a8-ea44-7140256786d3<?php endif; ?>"}); </script>
+		<?php endif; ?>
 	</body>
 
 </html>

@@ -108,8 +108,7 @@ function browser_body_class($classes = '') {
         <!-- Carousel items -->
         <div class="carousel-inner">
           <div class="item active">
-						<?
-            // Print the remaining posts
+						<?php // Print the remaining posts
             query_posts( $post_filter_etc );
             while (have_posts()) {
               the_post();
@@ -128,14 +127,13 @@ function browser_body_class($classes = '') {
         <div class="blog-nav">
           <a class="carousel-control left" href="#magCarousel" data-slide="prev">&lsaquo;</a>
           <a class="carousel-control right" href="#magCarousel" data-slide="next">&rsaquo;</a>
-          <?
-					global $options;
+          <?php global $options;
 					foreach ($options as $value) {
 							if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
 					}
 						if (!empty($okfn_blog_link)) : ?>
-						<a href="<? echo $okfn_blog_link ?>" class="all-posts">See all posts</a>
-					<? endif; 
+						<a href="<?php echo $okfn_blog_link ?>" class="all-posts">See all posts</a>
+					<?php endif; 
 					restore_current_blog();
 				} 
 				?>
@@ -152,8 +150,8 @@ function browser_body_class($classes = '') {
   <?php if (!empty($featured_event_image)) { ?>
   <div class="widget widget_text">
     <div class="textwidget">
-     <a class="full" target="_blank" href="<? echo $featured_event_link; ?>">
-        <? echo $featured_event_image; ?>
+     <a class="full" target="_blank" href="<?php echo $featured_event_link; ?>">
+        <?php echo $featured_event_image; ?>
       </a>
     </div>
   </div>
@@ -166,10 +164,10 @@ function browser_body_class($classes = '') {
    <h3 class="widgettitle">Search</h3>
      <form method="get" id="search form" action="<?php bloginfo('siteurl'); ?>">
         <div>
-          <input type="text" value="" name="s" id="s" placeholder="Search <? if ($events_category_id != '0') { echo 'Events'; } ?>" />
-          <? if ($events_category_id != '0') : ?>
-          <input type="hidden" value="<? echo $events_category_id ?>" name="cat" id="scat" />
-          <? endif ?>
+          <input type="text" value="" name="s" id="s" placeholder="Search <?php if ($events_category_id != '0') { echo 'Events'; } ?>" />
+          <?php if ($events_category_id != '0') : ?>
+          <input type="hidden" value="<?php echo $events_category_id ?>" name="cat" id="scat" />
+          <?php endif ?>
           <input type="submit" id="search_submit" name="Search" value="Search"/>
         </div>
       </form>

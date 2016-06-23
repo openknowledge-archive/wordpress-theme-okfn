@@ -26,7 +26,7 @@ foreach ($options as $value) {
   <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/shower-okf.css"/>
   <?php }?>
   
-  <? if ($okfn_colours == "blue") : ?>
+  <?php if ($okfn_colours == "blue") : ?>
     <link rel="shortcut icon" href="http://assets.okfn.org/p/ckan/img/ckan.ico" />
   <?php elseif ($okfn_colours == "white" || $okfn_colours == "turquoise") : ?>
     <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/grey-favicon.ico" />
@@ -34,7 +34,7 @@ foreach ($options as $value) {
     <link rel="shortcut icon" href="http://assets.okfn.org/p/schoolofdata/img/favicon.ico" />
   <?php else: ?>
     <link rel="shortcut icon" href="http://assets.okfn.org/p/okfn/img/favicon.ico" />
-  <? endif; ?>
+  <?php endif; ?>
 </head>
 <body class="list">
 	<!--
@@ -56,16 +56,16 @@ foreach ($options as $value) {
   <?php endwhile; endif; ?>
 		<div class="badge">
       <div>
-				<? if (!empty($okfn_header_textarea) && $okfn_header_text == "true") : ?>
-          <div class="header-text"<? if ($okfn_header_text_align == "left") : ?> style="float:left; padding-left:0px; padding-right:5px;"<? endif; ?>>
-            <? echo stripslashes($okfn_header_textarea); ?>
+				<?php if (!empty($okfn_header_textarea) && $okfn_header_text == "true") : ?>
+          <div class="header-text"<?php if ($okfn_header_text_align == "left") : ?> style="float:left; padding-left:0px; padding-right:5px;"<?php endif; ?>>
+            <?php echo stripslashes($okfn_header_textarea); ?>
           </div>
-        <? endif; ?>
-        <? if (!empty($okfn_header_textarea2) && $okfn_header_text2 == "true") : ?>
-          <div class="header-text"<? if ($okfn_header_text_align2 == "left") : ?> style="float:left; padding-left:0px; padding-right:5px;"<? endif; ?>>
-            <? echo stripslashes($okfn_header_textarea2); ?>
+        <?php endif; ?>
+        <?php if (!empty($okfn_header_textarea2) && $okfn_header_text2 == "true") : ?>
+          <div class="header-text"<?php if ($okfn_header_text_align2 == "left") : ?> style="float:left; padding-left:0px; padding-right:5px;"<?php endif; ?>>
+            <?php echo stripslashes($okfn_header_textarea2); ?>
           </div>
-        <? endif; ?>
+        <?php endif; ?>
         
         <a title="<?php _ex( 'Home', 'Home page banner link title', 'buddypress' ); ?>" 
             class="brand" 
