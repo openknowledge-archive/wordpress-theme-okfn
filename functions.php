@@ -108,7 +108,7 @@ function choose_best_category( $categories) {
 		$category_priority = explode(',', $category_priority_custom);
 	}
 	else {
-	  $category_priority = file( get_bloginfo('stylesheet_directory').'/category-priority.txt', FILE_IGNORE_NEW_LINES);
+	  $category_priority = okfn_load_file( get_bloginfo('stylesheet_directory').'/category-priority.txt');
 	}
   // Choose the first category I have in the priority list
   $first = null;
@@ -164,7 +164,7 @@ function echo_magazine_post($post, $is_featured) {
  *  Theme Options
  */
  // Get default category priority list to use as placeholder
-		$default_category_priority = file( get_bloginfo('stylesheet_directory').'/category-priority.txt', FILE_IGNORE_NEW_LINES);
+		$default_category_priority = okfn_load_file( get_bloginfo('stylesheet_directory').'/category-priority.txt');
 		$default_category_priority_string = implode(', ',$default_category_priority);
  // Settings
     $themename = "OKF Theme";
@@ -1134,5 +1134,19 @@ add_theme_support( 'post-thumbnails' );
 
 
 include('shortcodes.php');
+
+// Workaround PHP slow file loading
+function okfn_load_file($url) {
+    $ch = curl_init();
+    
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_URL, $url);
+    
+    $data = curl_exec($ch);
+    curl_close($ch);
+    
+    return explode("\n", $data);
+}
 
 ?>
