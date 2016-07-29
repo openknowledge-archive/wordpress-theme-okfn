@@ -108,7 +108,7 @@ function choose_best_category( $categories) {
 		$category_priority = explode(',', $category_priority_custom);
 	}
 	else {
-	  $category_priority = okfn_load_file( get_bloginfo('stylesheet_directory').'/category-priority.txt');
+	  $category_priority = okfn_load_file( get_template_directory_uri().'/category-priority.txt');
 	}
   // Choose the first category I have in the priority list
   $first = null;
@@ -134,7 +134,7 @@ function echo_magazine_post($post, $is_featured) {
     }
     elseif (count($matches)) $post_img = $matches[1]; // else use old featured image
     else {
-      $post_img = 'http://assets.okfn.org/web/images/blog-placeholder.png'; // else use placeholder
+      $post_img = '//assets.okfn.org/web/images/blog-placeholder.png'; // else use placeholder
     }
     echo '<div class="box post '.$post_class.'">';
     echo '<div class="padder"> <a class="image" href="'.get_permalink().'" style="background-image:url('.$post_img.');"></a>';
@@ -164,7 +164,7 @@ function echo_magazine_post($post, $is_featured) {
  *  Theme Options
  */
  // Get default category priority list to use as placeholder
-		$default_category_priority = okfn_load_file( get_bloginfo('stylesheet_directory').'/category-priority.txt');
+		$default_category_priority = okfn_load_file( get_template_directory_uri().'/category-priority.txt');
 		$default_category_priority_string = implode(', ',$default_category_priority);
  // Settings
     $themename = "OKF Theme";
@@ -390,7 +390,7 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_mailinglist_description",
         "type" => "text"),
 		array(  "name" => "Action",
-        "desc" => "URL from form action attribute. Mailman example: http://lists.okfn.org/mailman/subscribe/XYZ",
+        "desc" => "URL from form action attribute. Mailman example: //lists.okfn.org/mailman/subscribe/XYZ",
         "id" => $shortname."_mailinglist_action",
         "type" => "text"),
 		array(  "name" => "Native Mailing List 2",
@@ -413,7 +413,7 @@ function echo_magazine_post($post, $is_featured) {
         "id" => $shortname."_mailinglist_description2",
         "type" => "text"),
 		array(  "name" => "Action",
-        "desc" => "URL from form action attribute. Mailman example: http://lists.okfn.org/mailman/subscribe/XYZ",
+        "desc" => "URL from form action attribute. Mailman example: //lists.okfn.org/mailman/subscribe/XYZ",
         "id" => $shortname."_mailinglist_action2",
         "type" => "text"),
 		array("name" => "Mailing List Location",
@@ -752,7 +752,7 @@ function mytheme_admin() {
                 }
 
                 if ($value['class'] == "thumbs") {
-                    $bgimage = "".get_bloginfo('stylesheet_directory')."/screenshot-".$option_value.".png";
+                    $bgimage = "".get_template_directory_uri()."/screenshot-".$option_value.".png";
                 }
                 else {
                     $bgimage = '';
