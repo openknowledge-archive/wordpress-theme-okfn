@@ -113,7 +113,7 @@
 
     <!-- sharethis -->
     <?php if ($okfn_sharethis == "true") : ?>
-		  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+		  <script type="text/javascript" src="//w.sharethis.com/button/buttons.js"></script>
       <script type="text/javascript">stLight.options({publisher: "<?php if ($okfn_sharethis_id) : echo $okfn_sharethis_id; else: ?>ur-c524706a-c88f-82a8-ea44-7140256786d3<?php endif; ?>"}); </script>
 		<?php endif; ?>
 	</body>
