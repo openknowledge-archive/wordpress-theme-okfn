@@ -83,6 +83,9 @@
       <style type="text/css">
 <?php if ($okfn_tall_header == "true") : ?>
           @media (min-width: 980px) {
+            .navbar{
+              max-height: 65px;
+            }
             .navbar .brand {
               line-height: 65px;
             }
