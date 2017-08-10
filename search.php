@@ -15,7 +15,7 @@
       </h1>
 				<!--<h3 class="pagetitle"><?php _e( 'Search Results', 'buddypress' ) ?></h3> -->
 
-				<?php bp_dtheme_content_nav( 'nav-above' ); ?>
+				<?php //bp_dtheme_content_nav( 'nav-above' ); ?>
 
 				<?php while (have_posts()) : the_post(); ?>
 
@@ -47,7 +47,7 @@
 
 				<?php endwhile; ?>
 
-				<?php bp_dtheme_content_nav( 'nav-below' ); ?>
+				<?php //bp_dtheme_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 

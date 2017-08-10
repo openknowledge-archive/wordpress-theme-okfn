@@ -49,7 +49,7 @@
 
 				<?php endwhile; ?>
 
-				<?php bp_dtheme_content_nav( 'nav-below' ); ?>
+				<?php //bp_dtheme_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 

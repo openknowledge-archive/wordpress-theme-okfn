@@ -11,7 +11,7 @@
 
 			<?php if ( have_posts() ) : ?>
 
-				<?php bp_dtheme_content_nav( 'nav-above' ); ?>
+				<?php //bp_dtheme_content_nav( 'nav-above' ); ?>
 
 				<?php while (have_posts()) : the_post(); ?>
 
@@ -44,7 +44,7 @@
 
 				<?php endwhile; ?>
 
-				<?php bp_dtheme_content_nav( 'nav-below' ); ?>
+				<?php //bp_dtheme_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 
